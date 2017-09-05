@@ -5,7 +5,6 @@
 //
 
 $url = 'https://data.lter-europe.net/deims/iso/harvest_list';
-echo $url."\n";
 $xml = simplexml_load_file($url) or die("feed not loading");
 
 $arr = json_decode(json_encode($xml), true);
