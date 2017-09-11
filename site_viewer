@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DEIMS SDR - Leaflet example</title>
+    <meta charset="utf-8" />
+    <title>Single Image WMS</title>
+    <link rel="stylesheet" href="https://openlayers.org/en/v4.3.2/css/ol.css" type="text/css">
+    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+    <script src="https://openlayers.org/en/v4.3.2/build/ol.js"></script>
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/lodash.min.js"></script>
+	
+	<style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body, #map {
+            height: 100%;
+            width: 100%;
+        }
+		#map {
+			  width: 100%;
+			  height: 100%;
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+		}
+		.ol-popup {
+			position: absolute;
+			background-color: white;
+			-webkit-filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+			filter: drop-shadow(0 1px 4px rgba(0,0,0,0.2));
+			padding: 15px;
+			border-radius: 10px;
+			border: 1px solid #cccccc;
+			bottom: 12px;
+			left: -50px;
+			min-width: 280px;
+		}
+      .ol-popup:after, .ol-popup:before {
+        top: 100%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+      .ol-popup:after {
+        border-top-color: white;
+        border-width: 10px;
+        left: 48px;
+        margin-left: -10px;
+      }
+      .ol-popup:before {
+        border-top-color: #cccccc;
+        border-width: 11px;
+        left: 48px;
+        margin-left: -11px;
+      }
+      .ol-popup-closer {
+        text-decoration: none;
+        position: absolute;
+        top: 2px;
+        right: 8px;
+      }
+      .ol-popup-closer:after {
+        content: "✖";
+      }
+
+    </style>
+	
+</head>
+<body>
+    <div id="map" class="map"></div>
+	<div id="popup" class="ol-popup">
+      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+      <div id="popup-content"></div>
+    </div>
+    <script>
+	
+		/**
+       * Elements that make up the popup.
+       */
+      var container = document.getElementById('popup');
+      var content = document.getElementById('popup-content');
+      var closer = document.getElementById('popup-closer');
+
+
+      /**
+       * Create an overlay to anchor the popup to the map.
+       */
+      var overlay = new ol.Overlay(/** @type {olx.OverlayOptions} */ ({
+        element: container,
+        autoPan: true,
+        autoPanAnimation: {
+          duration: 250
+        }
+      }));
+
+
+      /**
+       * Add a click handler to hide the popup.
+       * @return {boolean} Don't follow the href.
+       */
+      closer.onclick = function() {
+        overlay.setPosition(undefined);
+        closer.blur();
+        return false;
+      };
+	
+	
+	   var wmsSource = new ol.source.TileWMS({
+            url: 'https://data.lter-europe.net/geoserver/deims/wms?',
+            params: {'LAYERS': 'deims:lter_eu_formal'},
+            ratio: 1,
+            serverType: 'geoserver'
+        });
+       
+
+      var wmsLayer = new ol.layer.Tile({
+        source: wmsSource
+      });	
+	
+      var layers = [
+        new ol.layer.Tile({
+          source: new ol.source.OSM()
+        }),
+        wmsLayer
+      ];
+	  
+	    var view = new ol.View({
+        center: [0, 0],
+        zoom: 1
+      });
+	  
+      var map = new ol.Map({
+        layers: layers,
+		overlays: [overlay],
+        target: 'map',
+        view: view
+      });
+	  
+	  /**
+       * Add a click handler to the map to render the popup.
+       */
+      map.on('singleclick', function(evt) {
+		var viewResolution = /** @type {number} */ (view.getResolution());
+        var url = wmsSource.getGetFeatureInfoUrl(
+            evt.coordinate, viewResolution, 'EPSG:3857',
+            {'INFO_FORMAT': 'application/json'});
+        var coordinate = evt.coordinate;
+     	 
+		if (url) {
+		  
+			$.getJSON(url, function(data) {
+				
+				var features = data["features"];
+				var properties = features[0];
+				var information_obj = properties["properties"];
+				var site_url = "<a href='https://data.lter-europe.net/deims/site/" + information_obj["uuid"] + "' target='_blank'>Record on DEIMS-SDR</a>";
+				
+				content.innerHTML = "<b>Name:</b> " + information_obj["name"] + "<br>" + "<b>uuid:</b> " + information_obj["uuid"] + "<br>" + "<b>Classification:</b> " + information_obj["classification"] + "<br>" + "<b>url: </b>" + site_url;
+				overlay.setPosition(coordinate);
+				
+			});	
+			  	  
+        }
+        
+      });
+    </script>
+</body>
+</html>
