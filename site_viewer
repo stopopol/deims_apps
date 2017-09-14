@@ -108,6 +108,7 @@
     closer.onclick = function() {
 		overlay.setPosition(undefined);
         closer.blur();
+		vectorSource.clear();
         return false;
     };
 	
@@ -115,7 +116,7 @@
 	   color: 'rgba(255,153,51,1)'
 	 });
 	 var stroke = new ol.style.Stroke({
-	   color: '#3399CC',
+	   color: '#FFFFFF',
 	   width: 1.25
 	 });
 	
@@ -208,7 +209,7 @@
 						geometry: new ol.geom.Point(current_coords),
 					}); 
 					
-					
+					vectorSource.clear();
 					vectorSource.addFeature(featurething);
 					//console.log('a feature was added');
 					
