@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>DEIMS SDR - Leaflet example</title>
+    <title>DEIMS SDR - OpenLayers example</title>
     <meta charset="utf-8" />
     <title>Single Image WMS</title>
     <link rel="stylesheet" href="https://openlayers.org/en/v4.3.2/css/ol.css" type="text/css">
@@ -99,8 +99,8 @@
           duration: 250
         }
       }));
-
-
+	  
+	  
       /**
        * Add a click handler to hide the popup.
        * @return {boolean} Don't follow the href.
@@ -116,7 +116,7 @@
             url: 'https://data.lter-europe.net/geoserver/deims/wms?',
             params: {'LAYERS': 'deims:lter_eu_formal'},
             ratio: 1,
-            serverType: 'geoserver'
+            serverType: 'geoserver',
         });
        
 
@@ -152,25 +152,59 @@
         var url = wmsSource.getGetFeatureInfoUrl(
             evt.coordinate, viewResolution, 'EPSG:3857',
             {'INFO_FORMAT': 'application/json'});
-        var coordinate = evt.coordinate;
-     	 
+         
 		if (url) {
 		  
 			$.getJSON(url, function(data) {
-				
+			
 				var features = data["features"];
-				var properties = features[0];
-				var information_obj = properties["properties"];
-				var site_url = "<a href='https://data.lter-europe.net/deims/site/" + information_obj["uuid"] + "' target='_blank'>Record on DEIMS-SDR</a>";
 				
-				content.innerHTML = "<b>Name:</b> " + information_obj["name"] + "<br>" + "<b>uuid:</b> " + information_obj["uuid"] + "<br>" + "<b>Classification:</b> " + information_obj["classification"] + "<br>" + "<b>url: </b>" + site_url;
-				overlay.setPosition(coordinate);
+				if(features[0]){  
+					var properties = features[0];
+					var information_obj = properties["properties"];
+					var site_url = "<a href='https://data.lter-europe.net/deims/site/" + information_obj["uuid"] + "' target='_blank'>Record on DEIMS-SDR</a>";
 				
-			});	
-			  	  
+					content.innerHTML = "<b>Name:</b> " + information_obj["name"] + "<br>" + "<b>uuid:</b> " + information_obj["uuid"] + "<br>" + "<b>Classification:</b> " + information_obj["classification"] + "<br>" + "<b>url: </b>" + site_url;
+				
+					overlay.setPosition(ol.proj.transform([information_obj["field_coordinates_lon"], information_obj["field_coordinates_lat"]], 'EPSG:4326','EPSG:3857'));
+				};
+				
+			});	  
         }
         
       });
+	  
+	// so slow
+	var target = map.getTarget();
+	var jTarget = typeof target === "string" ? $("#" + target) : $(target);
+	
+	map.on('pointermove', function (evt) {
+		var viewResolution = /** @type {number} */ (view.getResolution());
+        var url = wmsSource.getGetFeatureInfoUrl(
+            evt.coordinate, viewResolution, 'EPSG:3857',
+            {'INFO_FORMAT': 'application/json'});
+         
+		if (url) {
+		  
+			$.getJSON(url, function(data) {
+			
+				var features = data["features"];
+				
+				if(features[0]){  
+					jTarget.css("cursor", "pointer");
+				}
+				else {
+					jTarget.css("cursor", "");
+				}
+				
+			});	  
+        }
+	}); 
+	
+
+		  
+
+	
     </script>
 </body>
 </html>
