@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
     <title>Single Image WMS</title>
     <link rel="stylesheet" href="https://openlayers.org/en/v4.3.2/css/ol.css" type="text/css">
+	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
     <script src="https://openlayers.org/en/v4.3.2/build/ol.js"></script>
@@ -38,6 +40,7 @@
 			bottom: 12px;
 			left: -50px;
 			min-width: 280px;
+			font-family: 'Open Sans';
 		}
       .ol-popup:after, .ol-popup:before {
         top: 100%;
@@ -141,45 +144,45 @@
     });
 	
 	
-	   var wmsSource = new ol.source.TileWMS({
-            url: 'https://data.lter-europe.net/geoserver/deims/wms?',
-            params: {'LAYERS': 'deims:lter_eu_formal'},
-            ratio: 1,
-            serverType: 'geoserver',
-        });
+	 var wmsSource = new ol.source.TileWMS({
+        url: 'https://data.lter-europe.net/geoserver/deims/wms?',
+        params: {'LAYERS': 'deims:lter_eu_formal'},
+        ratio: 1,
+        serverType: 'geoserver',
+    });
        
 
-      var wmsLayer = new ol.layer.Tile({
+    var wmsLayer = new ol.layer.Tile({
         source: wmsSource
-      });	
+    });	
 	
-      var osm = [
+    var osm = [
         new ol.layer.Tile({
-          source: new ol.source.OSM()
+			source: new ol.source.OSM()
         }),
         wmsLayer
-      ];
+    ];
 	  
 	  
 	  
-	    var view = new ol.View({
-			projection: 'EPSG:3857',
-			center: [1929025.946814, 7494089.923109],
-			zoom: 4
-      });
+	var view = new ol.View({
+		projection: 'EPSG:3857',
+		center: [1929025.946814, 7494089.923109],
+		zoom: 4
+    });
 	  
-      var map = new ol.Map({
-        layers: osm,
+    var map = new ol.Map({
+		layers: osm,
 		overlays: [overlay],
         target: 'map',
         view: view
-      });
-	  map.addLayer(point_layer)
+    });
+	map.addLayer(point_layer)
 	
-	  /**
-       * Add a click handler to the map to render the popup.
-       */
-      map.on('singleclick', function(evt) {
+	/**
+     * Add a click handler to the map to render the popup.
+     */
+    map.on('singleclick', function(evt) {
 		var viewResolution = /** @type {number} */ (view.getResolution());
         var url = wmsSource.getGetFeatureInfoUrl(
             evt.coordinate, viewResolution, 'EPSG:3857',
@@ -202,19 +205,12 @@
 				
 					overlay.setPosition(current_coords);
 					
-					
-					
-					var featurething = new ol.Feature({
-						name: "Thing",
+					var selected_site = new ol.Feature({
 						geometry: new ol.geom.Point(current_coords),
 					}); 
 					
 					vectorSource.clear();
-					vectorSource.addFeature(featurething);
-					//console.log('a feature was added');
-					
-					
-					
+					vectorSource.addFeature(selected_site);
 					
 				};
 				
@@ -222,7 +218,7 @@
 			});	  
         }
         
-      });
+    });
 	  
 	// so slow
 	var target = map.getTarget();
@@ -250,10 +246,6 @@
 			});	  
         }
 	}); 
-	
-	
-
-
 	
     </script>
 </body>
