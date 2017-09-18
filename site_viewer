@@ -118,7 +118,7 @@
     };
 	
 	 var fill = new ol.style.Fill({
-	   color: 'rgba(255,153,51,1)'
+	   color: 'rgba(255,153,51,0.75)'
 	 });
 	 var stroke = new ol.style.Stroke({
 	   color: '#FFFFFF',
@@ -274,6 +274,15 @@
 			});
 			
 			vectorSource.addFeature(poly_feature);
+			
+			
+			var feature = vectorSource.getFeatures()[0];
+			var zoom_polygon = /** @type {ol.geom.SimpleGeometry} */ (feature.getGeometry());
+			
+			//view.fit(zoom_polygon, {padding: [170, 50, 30, 150], constrainResolution: false});
+			//view.fit(zoom_polygon, {padding: [170, 50, 30, 150]});
+			view.fit(zoom_polygon, {duration: 2000}, {padding: [0, 0, 0, 0]});
+			
 			
 			
 		  }
