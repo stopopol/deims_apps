@@ -232,10 +232,8 @@
     });
 	
 	// function for parsing the ef	
-	function parse_ef(ef_address) {
+	function parse_ef(ef_address,map) {
 	
-	
-		//alert("it works");
 		var x = new XMLHttpRequest();
 		x.open("GET", ef_address, true);
 		x.onreadystatechange = function () {
@@ -247,12 +245,30 @@
 			var ef_content = jsonObj["EnvironmentalMonitoringFacility"];
 			var ef_geometry = ef_content["geometry"];
 			
-			
 			var multi_geom = ef_geometry["MultiGeometry"];
 			
 			var geom_poly = multi_geom["geometryMember"];
+			console.log("parse_ef");
+			var polygon = geom_poly[0];
+			var poly2 = polygon["Polygon"];
+			var exterior = poly2["exterior"];
+			var lin_ring = exterior["LinearRing"];
+			var pos_list = lin_ring["posList"];
+			var __text = pos_list["__text"];
 			
-			console.log(geom_poly[0]);
+			
+			var geom_array = __text.split(' ');
+			
+			coords_array = [];
+			
+			for (i = 0; i < geom_array.length; i+=2) { 
+				coords_array[i] = [geom_array[i],geom_array[i+1]];
+			}
+			
+			console.log("coords_array");	
+			console.log(coords_array);		
+	
+			
 		  }
 		};
 		x.send(null);
