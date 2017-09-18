@@ -278,10 +278,15 @@
 			
 			var feature = vectorSource.getFeatures()[0];
 			var zoom_polygon = /** @type {ol.geom.SimpleGeometry} */ (feature.getGeometry());
+		
+			
+			var zoom_extent = zoom_polygon.getExtent();
+			console.log('zoom polygon: ' + zoom_polygon);
+			console.log(zoom_polygon);
 			
 			//view.fit(zoom_polygon, {padding: [170, 50, 30, 150], constrainResolution: false});
 			//view.fit(zoom_polygon, {padding: [170, 50, 30, 150]});
-			view.fit(zoom_polygon, {duration: 2000}, {padding: [0, 0, 0, 0]});
+			view.fit(zoom_extent, {duration: 2000, padding: [0, 0, 0, 0], maxZoom: 12});
 			
 			
 			
