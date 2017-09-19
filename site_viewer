@@ -283,8 +283,7 @@
 			
 			vectorSource.addFeature(poly_feature);
 			
-			var feature = vectorSource.getFeatures()[0];
-			var zoom_polygon = /** @type {ol.geom.SimpleGeometry} */ (feature.getGeometry());
+			var zoom_polygon = /** @type {ol.geom.SimpleGeometry} */ (poly_feature.getGeometry());
 			var zoom_extent = zoom_polygon.getExtent();
 			
 			console.log('zoom polygon: ' + zoom_polygon);
