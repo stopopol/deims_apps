@@ -15,6 +15,7 @@
 	<script src="js/xml2json.min.js"></script>
 	<script src="js/xml2json.js"></script>
 	<script src="js/notify.js"></script>
+	<script src="bootstrap/js/bootstrap.js"></script>
 	
 	<style>
         body {
@@ -28,7 +29,7 @@
 		#map {
 			  width: 100%;
 			  height: 100%;
-			  position: absolute;
+			  position: relative;
 			  top: 0;
 			  left: 0;
 		}
@@ -80,16 +81,44 @@
 	
 </head>
 <body>
-    <div id="map" class="map"></div>
+    
+	
+	
+	<div class="container">
+		<div class="row">
+			<div id="map" class="col-xs-6">
+				<!--<div id="map" class="map"></div>-->
+			</div>
+			<div class="col-xs-6" id="site_info">
+				<!--<a id='site_details' href='javascript:;'>Close infobox</a> -->
+			</div>
+		</div>
+	</div>
+	<script>
+		// Listener for closes details 
+		$('#site_details').click( function() {
+			document.getElementById('map').setAttribute("style","width:100%");
+			document.getElementById('site_info').setAttribute("style","width:0%");
+			map.updateSize();
+			vectorSource.clear();
+
+			// reset map view
+			map.getView().animate({zoom: initial_zoom_level, center: map_centre});
+			
+					
+		})
+	</script>
+	
 	<div id="popup" class="ol-popup">
-      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
-      <div id="popup-content"></div>
+		<a href="#" id="popup-closer" class="ol-popup-closer"></a>
+		<div id="popup-content"></div>
     </div>
     <script>
 	
 	// cartography settings
 	var initial_zoom_level = 4;
 	var map_centre = [1929025.946814, 7494089.923109];
+	document.getElementById('site_info').setAttribute("style","width:0%");
 	
 	/**
      * Elements that make up the popup.
@@ -118,12 +147,6 @@
     closer.onclick = function() {
 		overlay.setPosition(undefined);
         closer.blur();
-		vectorSource.clear();
-
-		// reset map view
-		//map.getView().animate({zoom: initial_zoom_level, center: map_centre});
-		map.getView().animate({zoom: view.getZoom() - 3});
-		
         return false;
     };
 	
@@ -225,9 +248,33 @@
 					vectorSource.addFeature(selected_site);
 					
 					// Listener for details 
-					$('#something').click( function() { 
+					$('#something').click( function() {
+						document.getElementById('map').setAttribute("style","width:50%");
+						document.getElementById('site_info').setAttribute("style","width:50%");
+						//document.getElementById('site_info').innerHTML = "<a id='site_details' href='javascript:;'>Close infobox</a>";
+						map.updateSize();
+						
 						parse_ef(ef_address); 
+						
+						
+						
+						// Listener for closes details 
+						document.getElementById('site_info').innerHTML = "<a id='site_details' href='javascript:;'>Close infobox</a>";
+						$('#site_details').click( function() {
+							document.getElementById('map').setAttribute("style","width:100%");
+							document.getElementById('site_info').setAttribute("style","width:0%");
+							map.updateSize();
+							vectorSource.clear();
+							
+							// reset map view
+							map.getView().animate({zoom: initial_zoom_level, center: map_centre});
+							
+									
+						})
+						
+						
 					})
+					
 					
 				};
 				
@@ -236,6 +283,7 @@
         }
         
     });
+	
 	
 	// function for parsing the ef	
 	function parse_ef(ef_address) {
@@ -258,6 +306,10 @@
 					$.notify("There is no boundary information available for this site :(", {position:"top center"}, "error");
 					return;
 				}
+				
+				// close popup
+				overlay.setPosition(undefined);
+				closer.blur();
 				
 				var polygon = geom_poly[0];
 				var poly2 = polygon["Polygon"];
@@ -283,27 +335,24 @@
 				
 				var zoom_polygon = /** @type {ol.geom.SimpleGeometry} */ (poly_feature.getGeometry());
 				var zoom_extent = zoom_polygon.getExtent();
-				
-				console.log('zoom polygon: ' + zoom_polygon);
-				console.log(zoom_polygon);
-				
+					
 				//view.fit(zoom_extent, {duration: 1000, padding: [50, 50, 50, 50], maxZoom: 14});
 				view.fit(zoom_extent, {duration: 1000, padding: [50, 50, 50, 50]});
 				
 			}
 			if (x.readyState == 4 && x.status == 500) {
 				$.notify("The EF record could not be loaded :(", {position:"top center"}, "error");
+				return;
 			}
 		  
 		};
-		
-		
 		
 		x.send(null);
 
 		return true;             
 	}  
-	  
+	
+	
 	// so slow and not elegant
 	/*
 	var target = map.getTarget();
