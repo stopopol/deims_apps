@@ -14,6 +14,7 @@
 	<script src="js/lodash.min.js"></script>
 	<script src="js/xml2json.min.js"></script>
 	<script src="js/xml2json.js"></script>
+	<script src="js/notify.js"></script>
 	
 	<style>
         body {
@@ -119,7 +120,9 @@
         closer.blur();
 		vectorSource.clear();
 
-		map.getView().animate({zoom: initial_zoom_level, center: map_centre});
+		// reset map view
+		//map.getView().animate({zoom: initial_zoom_level, center: map_centre});
+		map.getView().animate({zoom: view.getZoom() - 3});
 		
         return false;
     };
@@ -251,6 +254,14 @@
 			var multi_geom = ef_geometry["MultiGeometry"];
 			
 			var geom_poly = multi_geom["geometryMember"];
+			
+			// if there is no boundary information available
+			if (geom_poly[0] === undefined || geom_poly[0] === null) {
+				$.notify("There is no boundary information for this site available!", {position:"top center"}, "error");
+				return;
+			}
+			
+			
 			var polygon = geom_poly[0];
 			var poly2 = polygon["Polygon"];
 			var exterior = poly2["exterior"];
