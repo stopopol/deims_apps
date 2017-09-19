@@ -206,12 +206,12 @@
 					var properties = features[0];
 					var information_obj = properties["properties"];
 					var site_url = "<a href='https://data.lter-europe.net/deims/site/" + information_obj["uuid"] + "' target='_blank'>Record on DEIMS-SDR</a>";
-					var ef_url = "<a href='https://data.lter-europe.net/deims/node/" + information_obj["nid"] + "/emf' target='_blank'>EF record</a>";
+					var ef_url = "<a href='https://data.lter-europe.net/deims/node/" + information_obj["nid"] + "/emf' target='_blank'>View EF record</a>";
 					var ef_address = "https://data.lter-europe.net/deims/node/" + information_obj["nid"] + "/emf";
 					
-					content.innerHTML = "<b>" + information_obj["name"] + "</b><br>" + "uuid: " + information_obj["uuid"] + "<br>" + "Classification: " + information_obj["classification"] + "<br>" + "url: " + site_url;
+					content.innerHTML = "<b>" + information_obj["name"] + "</b><br>" + "uuid: " + information_obj["uuid"] + "<br>" + "Classification: " + information_obj["classification"] + "<br>" + site_url;
 					content.innerHTML += '<br>' + ef_url;
-					content.innerHTML += "<br><a id='something'>Details ...</a>";
+					content.innerHTML += "<br><a id='something' href='javascript:;'>More details ...</a>";
 					
 					var current_coords = ol.proj.transform([information_obj["field_coordinates_lon"], information_obj["field_coordinates_lat"]], 'EPSG:4326','EPSG:3857');
 				
@@ -257,10 +257,9 @@
 			
 			// if there is no boundary information available
 			if (geom_poly[0] === undefined || geom_poly[0] === null) {
-				$.notify("There is no boundary information for this site available!", {position:"top center"}, "error");
+				$.notify("There is no boundary information available for this site :(", {position:"top center"}, "error");
 				return;
 			}
-			
 			
 			var polygon = geom_poly[0];
 			var poly2 = polygon["Polygon"];
@@ -269,13 +268,12 @@
 			var pos_list = lin_ring["posList"];
 			var __text = pos_list["__text"];
 			
-			
 			var geom_array = __text.split(' ');
 			
 			coords_array = [];
 			
 			for (i = 0; i < geom_array.length; i+=2) { 
-				coords_array.push(ol.proj.transform([geom_array[i+1]*1, geom_array[i] * 1], 'EPSG:4326', 'EPSG:3857'));
+				coords_array.push(ol.proj.transform([geom_array[i+1] * 1, geom_array[i] * 1], 'EPSG:4326', 'EPSG:3857'));
 			}
 			var linearRing = new ol.geom.LinearRing(coords_array);
 				
