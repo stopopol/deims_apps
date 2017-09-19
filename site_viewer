@@ -243,56 +243,62 @@
 		var x = new XMLHttpRequest();
 		x.open("GET", ef_address, true);
 		x.onreadystatechange = function () {
-		  if (x.readyState == 4 && x.status == 200)
-		  {
-			var doc = x.responseXML;
-			var x2js = new X2JS();
-			jsonObj = x2js.xml2json(doc);
-			var ef_content = jsonObj["EnvironmentalMonitoringFacility"];
-			var ef_geometry = ef_content["geometry"];
-			
-			var multi_geom = ef_geometry["MultiGeometry"];
-			
-			var geom_poly = multi_geom["geometryMember"];
-			
-			// if there is no boundary information available
-			if (geom_poly[0] === undefined || geom_poly[0] === null) {
-				$.notify("There is no boundary information available for this site :(", {position:"top center"}, "error");
-				return;
-			}
-			
-			var polygon = geom_poly[0];
-			var poly2 = polygon["Polygon"];
-			var exterior = poly2["exterior"];
-			var lin_ring = exterior["LinearRing"];
-			var pos_list = lin_ring["posList"];
-			var __text = pos_list["__text"];
-			
-			var geom_array = __text.split(' ');
-			
-			coords_array = [];
-			
-			for (i = 0; i < geom_array.length; i+=2) { 
-				coords_array.push(ol.proj.transform([geom_array[i+1] * 1, geom_array[i] * 1], 'EPSG:4326', 'EPSG:3857'));
-			}
-			var linearRing = new ol.geom.LinearRing(coords_array);
+			if (x.readyState == 4 && x.status == 200)
+			{
+				var doc = x.responseXML;
+				var x2js = new X2JS();
+				var jsonObj = x2js.xml2json(doc);
+				var ef_content = jsonObj["EnvironmentalMonitoringFacility"];
+				var ef_geometry = ef_content["geometry"];
+				var multi_geom = ef_geometry["MultiGeometry"];
+				var geom_poly = multi_geom["geometryMember"];
 				
-			var poly_feature = new ol.Feature({
-				geometry: new ol.geom.Polygon([coords_array])
-			});
-			
-			vectorSource.addFeature(poly_feature);
-			
-			var zoom_polygon = /** @type {ol.geom.SimpleGeometry} */ (poly_feature.getGeometry());
-			var zoom_extent = zoom_polygon.getExtent();
-			
-			console.log('zoom polygon: ' + zoom_polygon);
-			console.log(zoom_polygon);
-			
-			view.fit(zoom_extent, {duration: 1000, padding: [50, 50, 50, 50], maxZoom: 12});
-			
-		  }
+				// if there is no boundary information available
+				if (geom_poly[0] === undefined || geom_poly[0] === null) {
+					$.notify("There is no boundary information available for this site :(", {position:"top center"}, "error");
+					return;
+				}
+				
+				var polygon = geom_poly[0];
+				var poly2 = polygon["Polygon"];
+				var exterior = poly2["exterior"];
+				var lin_ring = exterior["LinearRing"];
+				var pos_list = lin_ring["posList"];
+				var __text = pos_list["__text"];
+				
+				var geom_array = __text.split(' ');
+				
+				coords_array = [];
+				
+				for (i = 0; i < geom_array.length; i+=2) { 
+					coords_array.push(ol.proj.transform([geom_array[i+1] * 1, geom_array[i] * 1], 'EPSG:4326', 'EPSG:3857'));
+				}
+				var linearRing = new ol.geom.LinearRing(coords_array);
+					
+				var poly_feature = new ol.Feature({
+					geometry: new ol.geom.Polygon([coords_array])
+				});
+				
+				vectorSource.addFeature(poly_feature);
+				
+				var zoom_polygon = /** @type {ol.geom.SimpleGeometry} */ (poly_feature.getGeometry());
+				var zoom_extent = zoom_polygon.getExtent();
+				
+				console.log('zoom polygon: ' + zoom_polygon);
+				console.log(zoom_polygon);
+				
+				//view.fit(zoom_extent, {duration: 1000, padding: [50, 50, 50, 50], maxZoom: 14});
+				view.fit(zoom_extent, {duration: 1000, padding: [50, 50, 50, 50]});
+				
+			}
+			if (x.readyState == 4 && x.status == 500) {
+				$.notify("The EF record could not be loaded :(", {position:"top center"}, "error");
+			}
+		  
 		};
+		
+		
+		
 		x.send(null);
 
 		return true;             
