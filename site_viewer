@@ -49,64 +49,66 @@
 			min-width: 280px;
 			font-family: 'Open Sans';
 		}
-      .ol-popup:after, .ol-popup:before {
-        top: 100%;
-        border: solid transparent;
-        content: " ";
-        height: 0;
-        width: 0;
-        position: absolute;
-        pointer-events: none;
-      }
-      .ol-popup:after {
-        border-top-color: white;
-        border-width: 10px;
-        left: 48px;
-        margin-left: -10px;
-      }
-      .ol-popup:before {
-        border-top-color: #cccccc;
-        border-width: 11px;
-        left: 48px;
-        margin-left: -11px;
-      }
-      .ol-popup-closer {
-        text-decoration: none;
-        position: absolute;
-        top: 2px;
-        right: 8px;
-      }
-      .ol-popup-closer:after {
-        content: "✖";
-      }
+		.ol-popup:after, .ol-popup:before {
+			top: 100%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+		}
+		.ol-popup:after {
+			border-top-color: white;
+			border-width: 10px;
+			left: 48px;
+			margin-left: -10px;
+		}
+		.ol-popup:before {
+			border-top-color: #cccccc;
+			border-width: 11px;
+			left: 48px;
+			margin-left: -11px;
+		}
+		.ol-popup-closer {
+			text-decoration: none;
+			position: absolute;
+			top: 2px;
+			right: 8px;
+		}
+		.ol-popup-closer:after {
+			content: "✖";
+		}
 
-	  .container {
-		height: 100% !important;
-		width: 100% !important;
-		padding-left: 0px;
-		padding-right: 0px;
-	  }
-	  .row {
-		height: 100% !important;
-		width: 100% !important;
-	  }
-	  #closer {
-		padding-bottom: 1em;
-		//text-align: right;
-	  }
+		.container {
+			height: 100% !important;
+			width: 100% !important;
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		
+		.row {
+			height: 100% !important;
+			width: 100% !important;
+		}
+		
+		#closer {
+			padding-bottom: 1em;
+			//text-align: right;
+		}
 	  
-	  #closer_button {
-		color: #EB0000;
-	  }
+		#closer_button {
+			color: #EB0000;
+		}
 	  
 		.scrollable_style {
-			// max-height: 700px;
 			overflow-y: scroll;
 		}
 	  
     </style>
 	
 </head>
+
 <body>
     
 	<div class="container">
@@ -231,9 +233,7 @@
             {'INFO_FORMAT': 'application/json'});
          
 		if (url) {
-		  
 			$.getJSON(url, function(data) {
-			
 				var features = data["features"];
 				
 				if (features[0]){  
@@ -276,28 +276,18 @@
 						// Listener for closes details 
 						$('#closer_button').click( function() {
 						
-						
 							document.getElementById('map').setAttribute("style","width:100%");
 							document.getElementById('site_info').setAttribute("style","width:0%","height:0%");
 					
 							map.updateSize();
 							vectorSource.clear();
 							// reset map view
-							map.getView().animate({zoom: initial_zoom_level, center: map_centre});
-							
-									
+							map.getView().animate({zoom: initial_zoom_level, center: map_centre});		
 						})
-						
-						
-					})
-					
-					
+					})	
 				};
-				
-			
 			});	  
-        }
-        
+        }  
     });
 	
 	
@@ -317,37 +307,51 @@
 				var curr_height = $( document ).height() - document.getElementById('closer').clientHeight;
 				$('.scrollable_style').css('max-height', curr_height);
 				
-				var ef_content = jsonObj["EnvironmentalMonitoringFacility"];
-				console.log(ef_content);
-				
 				var uuid = jsonObj["EnvironmentalMonitoringFacility"]["inspireId"]["Identifier"]["localId"]["__text"];
 				
 				// Clear previous text
 				document.getElementById('detailed_information').innerHTML = "";
 				
 				// Title
-				document.getElementById('detailed_information').innerHTML += "<h1>" + ef_content["name"]["__text"] + "</h1>";
+				document.getElementById('detailed_information').innerHTML += "<h1>" + jsonObj["EnvironmentalMonitoringFacility"]["name"]["__text"] + "</h1>";
 				
 				// <a href='https://data.lter-europe.net/deims/site/" + uuid + "' target='_blank'>Record on DEIMS-SDR</a>
 				document.getElementById('detailed_information').innerHTML += "<h4>" + "<a href='https://data.lter-europe.net/deims/site/" + uuid + "' target='_blank'>" + uuid + "</a></h4><br>";
 				
-				
-				if (ef_content["additionalDescription"]["__text"]) {
-					document.getElementById('detailed_information').innerHTML += "<b>Description: </b>" + ef_content["additionalDescription"]["__text"];
+				// description
+				if (jsonObj["EnvironmentalMonitoringFacility"]["additionalDescription"]["__text"]) {
+					document.getElementById('detailed_information').innerHTML += "<b>Description: </b>" + jsonObj["EnvironmentalMonitoringFacility"]["additionalDescription"]["__text"];
 				}
 				
-				if (ef_content["mediaMonitored"]["_xlink:title"]) {
-					document.getElementById('detailed_information').innerHTML += "<br><b>media monitored: </b>" + ef_content["mediaMonitored"]["_xlink:title"];
+				// media monitored
+				if (jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]["_xlink:title"]) {
+					document.getElementById('detailed_information').innerHTML += "<br><b>media monitored: </b>" + jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]["_xlink:title"];
 				}
 				
+				// Observing capabilities
 				document.getElementById('detailed_information').innerHTML += '<br><b>ObservingCapabilities: </b>'; 
-				for (x in ef_content["observingCapability"]) {
-					if (ef_content["observingCapability"][x]["ObservingCapability"]["observedProperty"]["_xlink:title"] != "" ) {
-						document.getElementById('detailed_information').innerHTML += ef_content["observingCapability"][x]["ObservingCapability"]["observedProperty"]["_xlink:title"] + "; ";
+				for (x in jsonObj["EnvironmentalMonitoringFacility"]["observingCapability"]) {
+					if (jsonObj["EnvironmentalMonitoringFacility"]["observingCapability"][x]["ObservingCapability"]["observedProperty"]["_xlink:title"] != "" ) {
+						document.getElementById('detailed_information').innerHTML += jsonObj["EnvironmentalMonitoringFacility"]["observingCapability"][x]["ObservingCapability"]["observedProperty"]["_xlink:title"] + "; ";
 					}
 				} 
 				
-				var geom_poly = ef_content["geometry"]["MultiGeometry"]["geometryMember"];
+				// activites
+				document.getElementById('detailed_information').innerHTML += '<br><b>Activities: </b><br>'; 
+				for (x in jsonObj["EnvironmentalMonitoringFacility"]["involvedIn"]) {
+					if (jsonObj["EnvironmentalMonitoringFacility"]["involvedIn"][x]["EnvironmentalMonitoringActivity"]["name"]["__text"] != "" ) {
+						 
+						var activity_url = jsonObj["EnvironmentalMonitoringFacility"]["involvedIn"][x]["EnvironmentalMonitoringActivity"]["onlineResource"]["__text"];
+						var activity_title = jsonObj["EnvironmentalMonitoringFacility"]["involvedIn"][x]["EnvironmentalMonitoringActivity"]["name"]["__text"];
+										
+						document.getElementById('detailed_information').innerHTML += "<a href=" + activity_url + " target='_blank'>" + activity_title + "</a><br>";
+						
+					}
+				} 
+				
+				
+				
+				var geom_poly = jsonObj["EnvironmentalMonitoringFacility"]["geometry"]["MultiGeometry"]["geometryMember"];
 				
 				// if there is no boundary information available
 				if (geom_poly[0] === undefined || geom_poly[0] === null) {
@@ -393,37 +397,7 @@
 		x.send(null);
 		
 		return true;             
-	}  
-	
-	
-	// so slow and not elegant
-	/*
-	var target = map.getTarget();
-	var jTarget = typeof target === "string" ? $("#" + target) : $(target);
-	
-	map.on('pointermove', function (evt) {
-		var viewResolution = (view.getResolution());
-        var url = wmsSource.getGetFeatureInfoUrl(
-            evt.coordinate, viewResolution, 'EPSG:3857',
-            {'INFO_FORMAT': 'application/json'});
-         
-		if (url) {
-		  
-			$.getJSON(url, function(data) {
-			
-				var features = data["features"];
-				
-				if(features[0]){  
-					jTarget.css("cursor", "pointer");
-				}
-				else {
-					jTarget.css("cursor", "");
-				}
-				
-			});	  
-        }
-	}); */
-	
+	}  	
 	
     </script>
 </body>
