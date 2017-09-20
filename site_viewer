@@ -87,14 +87,15 @@
 		height: 100% !important;
 		width: 100% !important;
 	  }
+	  #closer {
+		padding-bottom: 1em;
+	  }
 	  
     </style>
 	
 </head>
 <body>
     
-	
-	
 	<div class="container">
 		<div class="row" >
 			<div id="map" class="col-sm-4"></div>
@@ -104,12 +105,12 @@
 			</div>
 		</div>
 	</div>
-
 	
 	<div id="popup" class="ol-popup">
 		<a href="#" id="popup-closer" class="ol-popup-closer"></a>
 		<div id="popup-content"></div>
     </div>
+	
     <script>
 	
 	// cartography settings
@@ -257,10 +258,9 @@
 						closer.blur();
 						
 						parse_ef(ef_address); 
-						document.getElementById('closer').innerHTML = "<br><a id='closer_button' href='javascript:;'>Close infobox</a>"
+						document.getElementById('closer').innerHTML = "<br><a id='closer_button' href='javascript:;'>[X] Close</a>"
 						
 						// Listener for closes details 
-						//document.getElementById('site_info').innerHTML = "<b>" + information_obj["name"] + "</b><br>" + "uuid: " + information_obj["uuid"] + "<br>" + "Classification: " + information_obj["classification"] + "<br>" + site_url + "<br><a id='site_details' href='javascript:;'>Close infobox</a>";
 						$('#closer_button').click( function() {
 						
 						
@@ -269,7 +269,6 @@
 					
 							map.updateSize();
 							vectorSource.clear();
-							//document.getElementById('site_info').innerHTML = "";
 							// reset map view
 							map.getView().animate({zoom: initial_zoom_level, center: map_centre});
 							
@@ -300,18 +299,31 @@
 				var doc = x.responseXML;
 				var x2js = new X2JS();
 				var jsonObj = x2js.xml2json(doc);
+				console.log(jsonObj);
+				
 				var ef_content = jsonObj["EnvironmentalMonitoringFacility"];
 				console.log(ef_content);
+				var uuid = jsonObj["EnvironmentalMonitoringFacility"]["inspireId"]["Identifier"]["localId"]["__text"]
+				
+				// Clear previous text
+				document.getElementById('detailed_information').innerHTML = "";
+				
+				// Title
+				document.getElementById('detailed_information').innerHTML += "<h1>" + ef_content["name"]["__text"] + "</h1>";
+				document.getElementById('detailed_information').innerHTML += "<h4>" + uuid + "</h4><br>";
+				
 				
 				if (ef_content["additionalDescription"]["__text"]) {
-					document.getElementById('detailed_information').innerHTML = ef_content["additionalDescription"]["__text"];
+					document.getElementById('detailed_information').innerHTML += "<b>Description: </b> " + ef_content["additionalDescription"]["__text"];
 				}
-				//ar additional_description = ef_content["additionalDescription"]["__text"];
-				//document.getElementById('detailed_information').innerHTML = additional_description;
 				
-				var ef_geometry = ef_content["geometry"];
-				var multi_geom = ef_geometry["MultiGeometry"];
-				var geom_poly = multi_geom["geometryMember"];
+				//ef_content["additionalDescription"]["__text"]["mediaMonitored _xlink:title"]
+				if (ef_content["mediaMonitored"]["_xlink:title"]) {
+					document.getElementById('detailed_information').innerHTML += "<br><b>media monitored: </b>" + ef_content["mediaMonitored"]["_xlink:title"];
+				}
+				
+				
+				var geom_poly = ef_content["geometry"]["MultiGeometry"]["geometryMember"];
 				
 				// if there is no boundary information available
 				if (geom_poly[0] === undefined || geom_poly[0] === null) {
@@ -319,18 +331,13 @@
 					return;
 				}
 				
+				
 				// close popup
 				overlay.setPosition(undefined);
 				closer.blur();
 				
-				var polygon = geom_poly[0];
-				var poly2 = polygon["Polygon"];
-				var exterior = poly2["exterior"];
-				var lin_ring = exterior["LinearRing"];
-				var pos_list = lin_ring["posList"];
-				var __text = pos_list["__text"];
-				
-				var geom_array = __text.split(' ');
+				var geom_text = geom_poly[0]["Polygon"]["exterior"]["LinearRing"]["posList"]["__text"];		
+				var geom_array = geom_text.split(' ');
 				
 				coords_array = [];
 				
