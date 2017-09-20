@@ -17,6 +17,7 @@
 	<script src="js/notify.js"></script>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	
 	<style>
         body {
@@ -82,6 +83,8 @@
 	  .container {
 		height: 100% !important;
 		width: 100% !important;
+		padding-left: 0px;
+		padding-right: 0px;
 	  }
 	  .row {
 		height: 100% !important;
@@ -89,6 +92,11 @@
 	  }
 	  #closer {
 		padding-bottom: 1em;
+		//text-align: right;
+	  }
+	  
+	  #closer_button {
+		color: #EB0000;
 	  }
 	  
     </style>
@@ -101,7 +109,7 @@
 			<div id="map" class="col-sm-4"></div>
 			<div class="col-sm-8" id="site_info">
 				<div id="closer"></div>
-				<div id="detailed_information"></div>
+				<div id="detailed_information" class="pre-scrollable"></div>
 			</div>
 		</div>
 	</div>
@@ -258,7 +266,7 @@
 						closer.blur();
 						
 						parse_ef(ef_address); 
-						document.getElementById('closer').innerHTML = "<br><a id='closer_button' href='javascript:;'>[X] Close</a>"
+						document.getElementById('closer').innerHTML = "<br><a id='closer_button' href='javascript:;'><i class='fa fa-times' aria-hidden='true'></i> Close</a>"
 						
 						// Listener for closes details 
 						$('#closer_button').click( function() {
@@ -303,6 +311,7 @@
 				
 				var ef_content = jsonObj["EnvironmentalMonitoringFacility"];
 				console.log(ef_content);
+				
 				var uuid = jsonObj["EnvironmentalMonitoringFacility"]["inspireId"]["Identifier"]["localId"]["__text"]
 				
 				// Clear previous text
@@ -310,18 +319,25 @@
 				
 				// Title
 				document.getElementById('detailed_information').innerHTML += "<h1>" + ef_content["name"]["__text"] + "</h1>";
-				document.getElementById('detailed_information').innerHTML += "<h4>" + uuid + "</h4><br>";
+				
+				// <a href='https://data.lter-europe.net/deims/site/" + uuid + "' target='_blank'>Record on DEIMS-SDR</a>
+				document.getElementById('detailed_information').innerHTML += "<h4>" + "<a href='https://data.lter-europe.net/deims/site/" + uuid + "' target='_blank'>" + uuid + "</a></h4><br>";
 				
 				
 				if (ef_content["additionalDescription"]["__text"]) {
-					document.getElementById('detailed_information').innerHTML += "<b>Description: </b> " + ef_content["additionalDescription"]["__text"];
+					document.getElementById('detailed_information').innerHTML += "<b>Description: </b>" + ef_content["additionalDescription"]["__text"];
 				}
 				
-				//ef_content["additionalDescription"]["__text"]["mediaMonitored _xlink:title"]
 				if (ef_content["mediaMonitored"]["_xlink:title"]) {
 					document.getElementById('detailed_information').innerHTML += "<br><b>media monitored: </b>" + ef_content["mediaMonitored"]["_xlink:title"];
 				}
 				
+				document.getElementById('detailed_information').innerHTML += '<br><b>ObservingCapabilities: </b>'; 
+				for (x in ef_content["observingCapability"]) {
+					if (ef_content["observingCapability"][x]["ObservingCapability"]["observedProperty"]["_xlink:title"] != "" ) {
+						document.getElementById('detailed_information').innerHTML += ef_content["observingCapability"][x]["ObservingCapability"]["observedProperty"]["_xlink:title"] + "; ";
+					}
+				} 
 				
 				var geom_poly = ef_content["geometry"]["MultiGeometry"]["geometryMember"];
 				
