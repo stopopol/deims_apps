@@ -313,6 +313,9 @@
 				var x2js = new X2JS();
 				var jsonObj = x2js.xml2json(doc);
 				console.log(jsonObj);
+				 
+				var curr_height = $( document ).height() - document.getElementById('closer').clientHeight;
+				$('.scrollable_style').css('max-height', curr_height);
 				
 				var ef_content = jsonObj["EnvironmentalMonitoringFacility"];
 				console.log(ef_content);
