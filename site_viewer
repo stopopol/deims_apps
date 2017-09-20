@@ -99,6 +99,11 @@
 		color: #EB0000;
 	  }
 	  
+		.scrollable_style {
+			// max-height: 700px;
+			overflow-y: scroll;
+		}
+	  
     </style>
 	
 </head>
@@ -109,7 +114,7 @@
 			<div id="map" class="col-sm-4"></div>
 			<div class="col-sm-8" id="site_info">
 				<div id="closer"></div>
-				<div id="detailed_information" class="pre-scrollable"></div>
+				<div id="detailed_information" class="scrollable_style"></div>
 			</div>
 		</div>
 	</div>
@@ -312,7 +317,7 @@
 				var ef_content = jsonObj["EnvironmentalMonitoringFacility"];
 				console.log(ef_content);
 				
-				var uuid = jsonObj["EnvironmentalMonitoringFacility"]["inspireId"]["Identifier"]["localId"]["__text"]
+				var uuid = jsonObj["EnvironmentalMonitoringFacility"]["inspireId"]["Identifier"]["localId"]["__text"];
 				
 				// Clear previous text
 				document.getElementById('detailed_information').innerHTML = "";
