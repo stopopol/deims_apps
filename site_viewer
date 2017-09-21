@@ -393,25 +393,28 @@
 				
 				// responsibleParty
 				if (jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"]) {
-					document.getElementById('detailed_information').innerHTML += '<br><b>responsibleParty: </b><br>'; 
+					document.getElementById('detailed_information').innerHTML += '<br><b>responsibleParties: </b><br>';
+					var responsibleParty = [];
+				
 					for (x in jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"]) {
-						if (jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"] != "" ) {
-													
-							var responsibleParty;
-							
-							if (responsibleParty = jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"][x]["RelatedParty"]["individualName"]) {
+						if (jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"] != "" ) {						
+							if (jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"][x]["RelatedParty"]["individualName"]) {
 								// person case 	
-								responsibleParty = jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"][x]["RelatedParty"]["individualName"]["CharacterString"]["__text"];
+								responsibleParty.push(jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"][x]["RelatedParty"]["individualName"]["CharacterString"]["__text"]);	
 							}
 							else {
 								// organisation case
-								responsibleParty = jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"][x]["RelatedParty"]["organisationName"]["CharacterString"]["__text"];
+								responsibleParty.push(jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"][x]["RelatedParty"]["organisationName"]["CharacterString"]["__text"]);
 							}
-							
-							document.getElementById('detailed_information').innerHTML += responsibleParty + "<br>";
-							
 						}
 					} 
+					
+					// filter duplicates - on DEIMS the same person can have multiple functions which all get exported
+					var filtered_responsibleParty = responsibleParty.filter(function(elem, index, self) {
+						return index == self.indexOf(elem);
+					});
+					var sorted_responsibleParty = filtered_responsibleParty.sort();
+					document.getElementById('detailed_information').innerHTML += sorted_responsibleParty.join("<br>") + "<br>";	
 				}
 				
 				
@@ -425,7 +428,7 @@
 						if (jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"].length == null){
 							var belongsTo_url = jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"]["_xlink:href"];
 							var belongsTo_title = jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"]["NetworkFacility"]["name"]["__text"];
-											
+							
 							document.getElementById('detailed_information').innerHTML += "<a href=" + belongsTo_url + " target='_blank'>" + belongsTo_title + "</a><br>";
 							return;
 							
@@ -436,9 +439,13 @@
 							 
 							var belongsTo_url = jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"][x]["_xlink:href"];
 							var belongsTo_title = jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"][x]["NetworkFacility"]["name"]["__text"];
-											
-							document.getElementById('detailed_information').innerHTML += "<a href=" + belongsTo_url + " target='_blank'>" + belongsTo_title + "</a><br>";
 							
+							if (belongsTo_url) {						
+								document.getElementById('detailed_information').innerHTML += "<a href=" + belongsTo_url + " target='_blank'>" + belongsTo_title + "</a><br>";
+							}
+							else {
+								document.getElementById('detailed_information').innerHTML += belongsTo_title + "<br>";
+							}
 						}
 					} 
 				}
