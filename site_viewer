@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>DEIMS SDR - OpenLayers example</title>
+<head>  
     <meta charset="utf-8" />
-    <title>Single Image WMS</title>
+    <title>DEIMS SDR - OpenLayers example</title>
     <link rel="stylesheet" href="https://openlayers.org/en/v4.3.2/css/ol.css" type="text/css">
 	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
 	
@@ -324,8 +323,6 @@
 				
 				// Title
 				document.getElementById('detailed_information').innerHTML += "<h1>" + jsonObj["EnvironmentalMonitoringFacility"]["name"]["__text"] + "</h1>";
-				
-				// <a href='https://data.lter-europe.net/deims/site/" + uuid + "' target='_blank'>Record on DEIMS-SDR</a>
 				document.getElementById('detailed_information').innerHTML += "<h4>" + "<a href='https://data.lter-europe.net/deims/site/" + uuid + "' target='_blank'>" + uuid + "</a></h4><br>";
 				
 				// description
@@ -334,12 +331,12 @@
 				}
 				
 				// media monitored
-				if (jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]["_xlink:title"]) {
+				if (jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]) {
 					document.getElementById('detailed_information').innerHTML += "<br><b>media monitored: </b>" + jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]["_xlink:title"] + "<br>";
 				}
 				
 				// onlineResource
-				if (jsonObj["EnvironmentalMonitoringFacility"]["onlineResource"]) {
+				if (jsonObj["EnvironmentalMonitoringFacility"]["onlineResource(s)"]) {
 					document.getElementById('detailed_information').innerHTML += '<br><b>onlineResource: </b><br>'; 
 					for (x in jsonObj["EnvironmentalMonitoringFacility"]["onlineResource"]) {
 						if (jsonObj["EnvironmentalMonitoringFacility"]["onlineResource"][x]["__text"] != "" ) {
@@ -377,7 +374,7 @@
 				
 				// hasObservation
 				if (jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"]) {
-					document.getElementById('detailed_information').innerHTML += '<br><b>hasObservation: </b><br>'; 
+					document.getElementById('detailed_information').innerHTML += '<br><b>hasObservation(s): </b><br>'; 
 					for (x in jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"]) {
 						if (jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"][x]["_xlink:title"] != "" ) {
 							 
