@@ -375,6 +375,22 @@
 					} 
 				}
 				
+				// hasObservation
+				if (jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"]) {
+					document.getElementById('detailed_information').innerHTML += '<br><b>hasObservation: </b><br>'; 
+					for (x in jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"]) {
+						if (jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"][x]["_xlink:title"] != "" ) {
+							 
+							var hasObservation_url = jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"][x]["_xlink:href"];
+							var hasObservation_title = jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"][x]["_xlink:title"];
+											
+							document.getElementById('detailed_information').innerHTML += "<a href=" + hasObservation_url + " target='_blank'>" + hasObservation_title + "</a><br>";
+							
+						}
+					} 
+				}
+				
+				
 				// responsibleParty
 				if (jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"]) {
 					document.getElementById('detailed_information').innerHTML += '<br><b>responsibleParty: </b><br>'; 
@@ -408,7 +424,6 @@
 						// what if there is only one belongsTo
 						if (jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"].length == null){
 							var belongsTo_url = jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"]["_xlink:href"];
-							console.log(belongsTo_url)
 							var belongsTo_title = jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"]["NetworkFacility"]["name"]["__text"];
 											
 							document.getElementById('detailed_information').innerHTML += "<a href=" + belongsTo_url + " target='_blank'>" + belongsTo_title + "</a><br>";
