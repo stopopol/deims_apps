@@ -311,7 +311,7 @@
 				var doc = x.responseXML;
 				var x2js = new X2JS();
 				var jsonObj = x2js.xml2json(doc);
-				console.log(jsonObj);
+				//console.log(jsonObj);
 				 
 				var curr_height = $( document ).height() - document.getElementById('closer').clientHeight;
 				$('.scrollable_style').css('max-height', curr_height);
@@ -428,7 +428,7 @@
 							var belongsTo_title = jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"]["NetworkFacility"]["name"]["__text"];
 							
 							document.getElementById('detailed_information').innerHTML += "<a href=" + belongsTo_url + " target='_blank'>" + belongsTo_title + "</a><br>";
-							return;
+							break;
 							
 						};
 					
