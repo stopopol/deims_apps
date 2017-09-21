@@ -311,7 +311,7 @@
 				var doc = x.responseXML;
 				var x2js = new X2JS();
 				var jsonObj = x2js.xml2json(doc);
-				console.log(jsonObj);
+				//console.log(jsonObj);
 				 
 				var curr_height = $( document ).height() - document.getElementById('closer').clientHeight;
 				$('.scrollable_style').css('max-height', curr_height);
@@ -378,7 +378,7 @@
 				if (jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"]) {
 					document.getElementById('detailed_information').innerHTML += '<br><b>hasObservation(s): </b><br>'; 
 					for (x in jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"]) {
-						if (jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"][x]["_xlink:title"] != "" ) {
+						if (jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"][x]["_xlink:title"] != "" || jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"][x]["_xlink:title"]) {
 							 
 							var hasObservation_url = jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"][x]["_xlink:href"];
 							var hasObservation_title = jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"][x]["_xlink:title"];
