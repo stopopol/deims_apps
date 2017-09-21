@@ -332,7 +332,9 @@
 				
 				// media monitored
 				if (jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]) {
-					document.getElementById('detailed_information').innerHTML += "<br><b>media monitored: </b>" + jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]["_xlink:title"] + "<br>";
+					if (jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]["_xlink:title"] != null ) {
+						document.getElementById('detailed_information').innerHTML += "<br><b>media monitored: </b>" + jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]["_xlink:title"] + "<br>";
+					}
 				}
 				
 				// onlineResource
