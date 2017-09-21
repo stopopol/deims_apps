@@ -9,6 +9,7 @@
 	
     <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+	
     <script src="https://openlayers.org/en/v4.3.2/build/ol.js"></script>
 	<script src="js/jquery-3.2.1.min.js"></script>
 	<script src="js/lodash.min.js"></script>
@@ -329,23 +330,38 @@
 				
 				// description
 				if (jsonObj["EnvironmentalMonitoringFacility"]["additionalDescription"]["__text"]) {
-					document.getElementById('detailed_information').innerHTML += "<b>Description: </b>" + jsonObj["EnvironmentalMonitoringFacility"]["additionalDescription"]["__text"];
+					document.getElementById('detailed_information').innerHTML += "<b>Description: </b>" + jsonObj["EnvironmentalMonitoringFacility"]["additionalDescription"]["__text"] + "<br>";
 				}
 				
 				// media monitored
 				if (jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]["_xlink:title"]) {
-					document.getElementById('detailed_information').innerHTML += "<br><b>media monitored: </b>" + jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]["_xlink:title"];
+					document.getElementById('detailed_information').innerHTML += "<br><b>media monitored: </b>" + jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]["_xlink:title"] + "<br>";
+				}
+				
+				// onlineResource
+				if (jsonObj["EnvironmentalMonitoringFacility"]["onlineResource"]) {
+					document.getElementById('detailed_information').innerHTML += '<br><b>onlineResource: </b><br>'; 
+					for (x in jsonObj["EnvironmentalMonitoringFacility"]["onlineResource"]) {
+						if (jsonObj["EnvironmentalMonitoringFacility"]["onlineResource"][x]["__text"] != "" ) {
+							var online_resource_url = jsonObj["EnvironmentalMonitoringFacility"]["onlineResource"][x]["__text"];
+							//document.getElementById('detailed_information').innerHTML += jsonObj["EnvironmentalMonitoringFacility"]["onlineResource"][x]["__text"] + "<br>";
+							document.getElementById('detailed_information').innerHTML += "<a href=" + online_resource_url + " target='_blank'>" + online_resource_url + "</a><br>";
+						}
+					}
 				}
 				
 				// Observing capabilities
-				document.getElementById('detailed_information').innerHTML += '<br><b>ObservingCapabilities: </b>'; 
-				for (x in jsonObj["EnvironmentalMonitoringFacility"]["observingCapability"]) {
-					if (jsonObj["EnvironmentalMonitoringFacility"]["observingCapability"][x]["ObservingCapability"]["observedProperty"]["_xlink:title"] != "" ) {
-						document.getElementById('detailed_information').innerHTML += jsonObj["EnvironmentalMonitoringFacility"]["observingCapability"][x]["ObservingCapability"]["observedProperty"]["_xlink:title"] + "; ";
+				if (jsonObj["EnvironmentalMonitoringFacility"]["observingCapability"]) {
+					document.getElementById('detailed_information').innerHTML += '<br><b>ObservingCapabilities: </b>'; 
+					for (x in jsonObj["EnvironmentalMonitoringFacility"]["observingCapability"]) {
+						if (jsonObj["EnvironmentalMonitoringFacility"]["observingCapability"][x]["ObservingCapability"]["observedProperty"]["_xlink:title"] != "" ) {
+							document.getElementById('detailed_information').innerHTML += jsonObj["EnvironmentalMonitoringFacility"]["observingCapability"][x]["ObservingCapability"]["observedProperty"]["_xlink:title"] + "; ";
+						}
 					}
-				} 
+					document.getElementById('detailed_information').innerHTML += "<br>";
+				}
 				
-				// activites
+				// activities
 				if (jsonObj["EnvironmentalMonitoringFacility"]["involvedIn"]) {
 					document.getElementById('detailed_information').innerHTML += '<br><b>Activities: </b><br>'; 
 					for (x in jsonObj["EnvironmentalMonitoringFacility"]["involvedIn"]) {
@@ -355,6 +371,21 @@
 							var activity_title = jsonObj["EnvironmentalMonitoringFacility"]["involvedIn"][x]["EnvironmentalMonitoringActivity"]["name"]["__text"];
 											
 							document.getElementById('detailed_information').innerHTML += "<a href=" + activity_url + " target='_blank'>" + activity_title + "</a><br>";
+							
+						}
+					} 
+				}
+				
+				// belongsTo
+				if (jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"]) {
+					document.getElementById('detailed_information').innerHTML += '<br><b>belongsTo: </b><br>'; 
+					for (x in jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"]) {
+						if (jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"][x]["NetworkFacility"]["name"]["__text"] != "" ) {
+							 
+							var belongsTo_url = jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"][x]["NetworkFacility"]["_xlink:href"];
+							var belongsTo_title = jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"][x]["NetworkFacility"]["name"]["__text"];
+											
+							document.getElementById('detailed_information').innerHTML += "<a href=" + belongsTo_url + " target='_blank'>" + belongsTo_title + "</a><br>";
 							
 						}
 					} 
