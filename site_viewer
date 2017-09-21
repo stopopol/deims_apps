@@ -383,7 +383,8 @@
 					
 						// what if there is only one belongsTo
 						if (jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"].length == null){
-							var belongsTo_url = jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"]["NetworkFacility"]["_xlink:href"];
+							var belongsTo_url = jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"]["_xlink:href"];
+							console.log(belongsTo_url)
 							var belongsTo_title = jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"]["NetworkFacility"]["name"]["__text"];
 											
 							document.getElementById('detailed_information').innerHTML += "<a href=" + belongsTo_url + " target='_blank'>" + belongsTo_title + "</a><br>";
@@ -394,7 +395,7 @@
 					
 						if (jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"][x]["NetworkFacility"]["name"]["__text"] != "" ) {
 							 
-							var belongsTo_url = jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"][x]["NetworkFacility"]["_xlink:href"];
+							var belongsTo_url = jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"][x]["_xlink:href"];
 							var belongsTo_title = jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"][x]["NetworkFacility"]["name"]["__text"];
 											
 							document.getElementById('detailed_information').innerHTML += "<a href=" + belongsTo_url + " target='_blank'>" + belongsTo_title + "</a><br>";
