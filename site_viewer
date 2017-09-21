@@ -128,6 +128,15 @@
 	
     <script>
 	
+	// resize infobox on window change
+	$(window).on('resize', function(){
+		
+		var curr_height = $( document ).height() - document.getElementById('closer').clientHeight;
+		$('.scrollable_style').css('max-height', curr_height);
+		
+	});
+	
+	
 	// cartography settings
 	var initial_zoom_level = 4;
 	var map_centre = [1929025.946814, 7494089.923109];
@@ -337,18 +346,19 @@
 				} 
 				
 				// activites
-				document.getElementById('detailed_information').innerHTML += '<br><b>Activities: </b><br>'; 
-				for (x in jsonObj["EnvironmentalMonitoringFacility"]["involvedIn"]) {
-					if (jsonObj["EnvironmentalMonitoringFacility"]["involvedIn"][x]["EnvironmentalMonitoringActivity"]["name"]["__text"] != "" ) {
-						 
-						var activity_url = jsonObj["EnvironmentalMonitoringFacility"]["involvedIn"][x]["EnvironmentalMonitoringActivity"]["onlineResource"]["__text"];
-						var activity_title = jsonObj["EnvironmentalMonitoringFacility"]["involvedIn"][x]["EnvironmentalMonitoringActivity"]["name"]["__text"];
-										
-						document.getElementById('detailed_information').innerHTML += "<a href=" + activity_url + " target='_blank'>" + activity_title + "</a><br>";
-						
-					}
-				} 
-				
+				if (jsonObj["EnvironmentalMonitoringFacility"]["involvedIn"]) {
+					document.getElementById('detailed_information').innerHTML += '<br><b>Activities: </b><br>'; 
+					for (x in jsonObj["EnvironmentalMonitoringFacility"]["involvedIn"]) {
+						if (jsonObj["EnvironmentalMonitoringFacility"]["involvedIn"][x]["EnvironmentalMonitoringActivity"]["name"]["__text"] != "" ) {
+							 
+							var activity_url = jsonObj["EnvironmentalMonitoringFacility"]["involvedIn"][x]["EnvironmentalMonitoringActivity"]["onlineResource"]["__text"];
+							var activity_title = jsonObj["EnvironmentalMonitoringFacility"]["involvedIn"][x]["EnvironmentalMonitoringActivity"]["name"]["__text"];
+											
+							document.getElementById('detailed_information').innerHTML += "<a href=" + activity_url + " target='_blank'>" + activity_title + "</a><br>";
+							
+						}
+					} 
+				}
 				
 				
 				var geom_poly = jsonObj["EnvironmentalMonitoringFacility"]["geometry"]["MultiGeometry"]["geometryMember"];
@@ -397,7 +407,7 @@
 		x.send(null);
 		
 		return true;             
-	}  	
+	}  		
 	
     </script>
 </body>
