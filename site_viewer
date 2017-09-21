@@ -375,6 +375,21 @@
 					} 
 				}
 				
+				// responsibleParty
+				if (jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"]) {
+					document.getElementById('detailed_information').innerHTML += '<br><b>responsibleParty: </b><br>'; 
+					for (x in jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"]) {
+						if (jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"][x]["RelatedParty"]["individualName"]["CharacterString"]["__text"] != "" ) {
+							 
+							var person_name = jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"][x]["RelatedParty"]["individualName"]["CharacterString"]["__text"];
+											
+							document.getElementById('detailed_information').innerHTML += jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"][x]["RelatedParty"]["individualName"]["CharacterString"]["__text"] + "<br>";
+							
+						}
+					} 
+				}
+				
+				
 				// belongsTo
 				if (jsonObj["EnvironmentalMonitoringFacility"]["belongsTo"]) {
 					document.getElementById('detailed_information').innerHTML += '<br><b>belongsTo: </b><br>';
