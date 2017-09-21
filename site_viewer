@@ -311,7 +311,7 @@
 				var doc = x.responseXML;
 				var x2js = new X2JS();
 				var jsonObj = x2js.xml2json(doc);
-				//console.log(jsonObj);
+				console.log(jsonObj);
 				 
 				var curr_height = $( document ).height() - document.getElementById('closer').clientHeight;
 				$('.scrollable_style').css('max-height', curr_height);
@@ -353,7 +353,7 @@
 					document.getElementById('detailed_information').innerHTML += '<br><b>ObservingCapabilities: </b>'; 
 					for (x in jsonObj["EnvironmentalMonitoringFacility"]["observingCapability"]) {
 						if (jsonObj["EnvironmentalMonitoringFacility"]["observingCapability"][x]["ObservingCapability"]["observedProperty"]["_xlink:title"] != "" ) {
-							document.getElementById('detailed_information').innerHTML += jsonObj["EnvironmentalMonitoringFacility"]["observingCapability"][x]["ObservingCapability"]["observedProperty"]["_xlink:title"] + "; ";
+							document.getElementById('detailed_information').innerHTML += jsonObj["EnvironmentalMonitoringFacility"]["observingCapability"][x]["ObservingCapability"]["observedProperty"]["__text"] + "; ";
 						}
 					}
 					document.getElementById('detailed_information').innerHTML += "<br>";
@@ -388,7 +388,6 @@
 						}
 					} 
 				}
-				
 				
 				// responsibleParty
 				if (jsonObj["EnvironmentalMonitoringFacility"]["responsibleParty"]) {
