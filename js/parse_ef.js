@@ -20,7 +20,7 @@ function parse_ef(ef_address) {
 			var doc = x.responseXML;
 			var x2js = new X2JS();
 			var jsonObj = x2js.xml2json(doc);
-			console.log(jsonObj);
+			//console.log(jsonObj);
 			 
 			var curr_height = $( document ).height() - document.getElementById('closer').clientHeight;
 			$('.scrollable_style').css('max-height', curr_height);
@@ -42,7 +42,19 @@ function parse_ef(ef_address) {
 			// media monitored
 			if (jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]) {
 				if (jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]["_xlink:title"] != null ) {
-					document.getElementById('detailed_information').innerHTML += "<br><b>media monitored: </b>" + jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]["_xlink:title"] + "<br>";
+					document.getElementById('detailed_information').innerHTML += "<br><b>media monitored: </b>" + jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]["_xlink:title"];
+									
+					switch(jsonObj["EnvironmentalMonitoringFacility"]["mediaMonitored"]["_xlink:title"]) {
+						case "Terrestrial":
+							document.getElementById('detailed_information').innerHTML += " <i class='fa fa-tree' aria-hidden='true'></i>";
+							break;
+						case "Fresh water rivers":
+						case "Fresh water Lakes":
+						case "Marine":
+							document.getElementById('detailed_information').innerHTML += " <i class='fa fa-tint' aria-hidden='true'></i>";
+							break;
+					}
+					document.getElementById('detailed_information').innerHTML += "<br>";
 				}
 			}
 				
