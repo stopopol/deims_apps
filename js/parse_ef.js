@@ -20,7 +20,7 @@ function parse_ef(ef_address) {
 			var doc = x.responseXML;
 			var x2js = new X2JS();
 			var jsonObj = x2js.xml2json(doc);
-			//console.log(jsonObj);
+			console.log(jsonObj);
 			 
 			var curr_height = $( document ).height() - document.getElementById('closer').clientHeight;
 			$('.scrollable_style').css('max-height', curr_height);
@@ -85,7 +85,16 @@ function parse_ef(ef_address) {
 				
 			// hasObservation
 			if (jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"]) {
-				document.getElementById('detailed_information').innerHTML += '<br><b>hasObservation(s): </b><br>'; 
+				document.getElementById('detailed_information').innerHTML += '<br><b>hasObservation(s): </b><br>';
+				
+				// if only 1 observation
+				if (jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"].length == null) {
+					var hasSingleObservation_url = jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"]["_xlink:href"];
+						var hasSingleObservation_title = jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"]["_xlink:title"];
+						document.getElementById('detailed_information').innerHTML += "<a href=" + hasSingleObservation_url + " target='_blank'>" + hasSingleObservation_title + "</a><br>";
+						return;							
+				};
+				
 				for (x in jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"]) {
 					if (jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"][x]["_xlink:title"] != "" || jsonObj["EnvironmentalMonitoringFacility"]["hasObservation"][x]["_xlink:title"]) {
 						 
