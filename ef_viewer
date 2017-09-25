@@ -26,8 +26,6 @@
 		<script src="js/notify.js"></script> <!-- v. from Oct 2016, used for status messages -->
 		<script src="js/parse_ef.js"></script> <!-- This is the code where the parsing of Inspire EF files happens -->
 		
-		<!-- everything regarding the initialisation and setup of the map -->
-		
 		<!-- for the layout; mandatory -->
 		<link rel="stylesheet" href="css/ef_viewer.css">
 		
