@@ -8,7 +8,7 @@
 				var doc = x.responseXML;
 				var x2js = new X2JS();
 				var jsonObj = x2js.xml2json(doc);
-				console.log(jsonObj);
+				//console.log(jsonObj);
 				 
 				var curr_height = $( document ).height() - document.getElementById('closer').clientHeight;
 				$('.scrollable_style').css('max-height', curr_height);
@@ -149,10 +149,10 @@
 							else {
 								document.getElementById('detailed_information').innerHTML += belongsTo_title + "<br>";
 							}
+							
 						}
 					} 
 				}
-				
 				
 				var geom_poly = jsonObj["EnvironmentalMonitoringFacility"]["geometry"]["MultiGeometry"]["geometryMember"];
 				
@@ -161,7 +161,6 @@
 					$.notify("There is no boundary information available for this site :(", {position:"bottom center"}, "error");
 					return;
 				}
-				
 				
 				// close popup
 				overlay.setPosition(undefined);
@@ -190,6 +189,7 @@
 				view.fit(zoom_extent, {duration: 1000, padding: [50, 50, 50, 50]});
 				
 			}
+			
 			if (x.readyState == 4 && x.status == 500) {
 				$.notify("The EF record could not be loaded :(", {position:"bottom center"}, "error");
 				
