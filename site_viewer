@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
-<head>  
+<head> 
+	<!-- Map viewer for Inspire EF records provided by DEIMS-SDR - v.0.9 -->
+	
+	<!-- It uses a WMS layer provided by the DEIMS-SDR geoserver. This layer includes the url to the respective Inspire EF record of each site
+	it will parse that record and visualise the content both on a map and inside of an infobox
+	
+	-->
     <meta charset="utf-8" />
     <title>DEIMS SDR - OpenLayers example</title>
     
@@ -8,7 +14,7 @@
     <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
 	
 	<!-- Mandatory libraries for this to work -->
-    <script src="https://openlayers.org/en/v4.3.2/build/ol.js"></script> <!-- for the map -->
+    <script src="js/ol.js"></script> <!-- v.4.3.3 for the map -->
 	<script src="js/jquery-3.2.1.min.js"></script> <!-- for handling the xml, listeners, etc. -->
 	<script src="js/lodash.min.js"></script> <!--  v.1.8.3, lodash just makes your life easier -->
 	<script src="js/xml2json.min.js"></script> <!-- https://github.com/abdmob/x2js from 4 Jan 2016-->
@@ -21,6 +27,7 @@
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+	<link rel="stylesheet" href="js/ol.css">
 	
 	
 	<style>
