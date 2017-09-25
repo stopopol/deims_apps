@@ -1,29 +1,9 @@
-		
-		// settings for cartography
-		var initial_zoom_level = 4;
-		var map_centre = [1929025.946814, 7494089.923109]; // EPSG:3857
-		
-		var fill = new ol.style.Fill({
-		   color: 'rgba(255,153,51,0.75)'
-		});
-		
-		var stroke = new ol.style.Stroke({
-		   color: '#FFFFFF',
-		   width: 1.25
-		});
-		
-		var styles = [
-		   new ol.style.Style({
-			 image: new ol.style.Circle({
-			   fill: fill,
-			   stroke: stroke,
-			   radius: 5
-			 }),
-			 fill: fill,
-			 stroke: stroke
-		   })
-		 ];
-		 
+/*
+ * map_setup.js
+ *
+ * Initialises the map and all of its sub-elements
+ *
+ */	
 	
 		// resize infobox on window change
 		$(window).on('resize', function(){
@@ -33,14 +13,14 @@
 			
 		});
 		
-		/**
+		/*
 		 * Elements that make up the popup.
 		 */
 		container = document.getElementById('popup');
 		content = document.getElementById('popup-content');
 		closer = document.getElementById('popup-closer');
 		
-		/**
+		/*
 		 * Create an overlay to anchor the popup to the map.
 		 */
 		var overlay = new ol.Overlay(/** @type {olx.OverlayOptions} */ ({
@@ -51,7 +31,7 @@
 			}
 		}));
 		  
-		/**
+		/*
 		 * Add a click handler to hide the popup.
 		 * @return {boolean} Don't follow the href.
 		 */
@@ -69,6 +49,7 @@
 			projection: 'EPSG:3857',
 		});
 		
+		// here could change the layer to queried, add a cql filter, etc. 
 		var wmsSource = new ol.source.TileWMS({
 			url: 'https://data.lter-europe.net/geoserver/deims/wms?',
 			params: {'LAYERS': 'deims:lter_eu_formal'},
