@@ -7,6 +7,7 @@
  *
  * is currently still heavily intersected with the index.html :(
  * might be fixed in future versions
+ *
  */	
 	
 function parse_ef(ef_address) {
