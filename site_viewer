@@ -1,64 +1,66 @@
 <!DOCTYPE html>
 <html>
-<head> 
+	<head> 
 
-	<!-- 
-	
-	Map viewer for Inspire EF records provided by DEIMS-SDR - v.0.9 
-	
-	It uses a WMS layer provided by the DEIMS-SDR geoserver. This layer includes the url to the respective Inspire EF record of each site
-	it will parse that record and visualise the content both on a map and inside of an infobox
-	
-	-->
-
-    <meta charset="utf-8" />
-    <title>DEIMS SDR - OpenLayers example</title>
-    
-    <!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
-    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
-	
-	<!-- Mandatory libraries for this to work -->
-    <script src="js/ol.js"></script> <!-- v.4.3.3 for the map -->
-	<script src="js/jquery-3.2.1.min.js"></script> <!-- for handling the xml, listeners, etc. -->
-	<script src="js/lodash.min.js"></script> <!--  v.1.8.3, lodash just makes your life easier -->
-	<script src="js/xml2json.min.js"></script> <!-- https://github.com/abdmob/x2js from 4 Jan 2016-->
-	<script src="js/xml2json.js"></script> <!-- needed for transforming the xml into json; for easier handling -->
-	<script src="js/notify.js"></script> <!-- v. from Oct 2016, used for status messages -->
-	<script src="js/parse_ef.js"></script> <!-- This is the code where the parsing of Inspire EF files happens -->
-	
-	<!-- everything regarding the initialisation and setup of the map -->
-	
-	<!-- for the layout; mandatory -->
-	<link rel="stylesheet" href="css/ef_viewer.css">
-	
-	<!-- for the layout; optional -->
-	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-	<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
-	<link rel="stylesheet" href="css/ol.css">
+		<!-- 
 		
-</head>
+		Map viewer for Inspire EF records provided by DEIMS-SDR - v.0.9 
+		
+		It uses a WMS layer provided by the DEIMS-SDR geoserver. This layer includes the url to the respective Inspire EF record of each site
+		it will parse that record and visualise the content both on a map and inside of an infobox
+		
+		-->
 
-<!-- This page only includes everything you need for the map and the infobox -->
+		<meta charset="utf-8" />
+		<title>DEIMS SDR - OpenLayers example</title>
+		
+		<!-- The line below is only needed for old environments like Internet Explorer and Android 4.x -->
+		<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
+		
+		<!-- Mandatory libraries for this to work -->
+		<script src="js/ol.js"></script> <!-- v.4.3.3 for the map -->
+		<script src="js/jquery-3.2.1.min.js"></script> <!-- for handling the xml, listeners, etc. -->
+		<script src="js/lodash.min.js"></script> <!--  v.1.8.3, lodash just makes your life easier -->
+		<script src="js/xml2json.min.js"></script> <!-- https://github.com/abdmob/x2js from 4 Jan 2016-->
+		<script src="js/xml2json.js"></script> <!-- needed for transforming the xml into json; for easier handling -->
+		<script src="js/notify.js"></script> <!-- v. from Oct 2016, used for status messages -->
+		<script src="js/parse_ef.js"></script> <!-- This is the code where the parsing of Inspire EF files happens -->
+		
+		<!-- everything regarding the initialisation and setup of the map -->
+		
+		<!-- for the layout; mandatory -->
+		<link rel="stylesheet" href="css/ef_viewer.css">
+		
+		<!-- for the layout; optional -->
+		<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+		<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+		<link rel="stylesheet" href="css/ol.css">
+			
+	</head>
 
-<body>
-    
-	<div class="container">
-		<div class="row" >
-			<div id="map" class="col-sm-4"></div>
-			<div class="col-sm-8" id="site_info">
-				<div id="closer"></div>
-				<div id="detailed_information" class="scrollable_style"></div>
+	<!-- This page only includes everything you need for the map and the infobox -->
+
+	<body>
+		
+		<div class="container">
+			<div class="row" >
+				<div id="map" class="col-sm-4"></div>
+				<div class="col-sm-8" id="site_info">
+					<div id="closer"></div>
+					<div id="detailed_information" class="scrollable_style"></div>
+				</div>
 			</div>
 		</div>
-	</div>
-	
-	<div id="popup" class="ol-popup">
-		<a href="#" id="popup-closer" class="ol-popup-closer"></a>
-		<div id="popup-content"></div>
-    </div>
-	
-	<script type="text/javascript" src="js/map_setup.js"></script> 
-</body>
+		
+		<div id="popup" class="ol-popup">
+			<a href="#" id="popup-closer" class="ol-popup-closer"></a>
+			<div id="popup-content"></div>
+		</div>
+		
+		<script type="text/javascript" src="js/map_setup.js"></script>
+
+	</body>
+
 </html>
