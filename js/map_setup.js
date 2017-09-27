@@ -52,7 +52,8 @@
 		// here could change the layer to queried, add a cql filter, etc. 
 		var wmsSource = new ol.source.TileWMS({
 			url: 'https://data.lter-europe.net/geoserver/deims/wms?',
-			params: {'LAYERS': 'deims:lter_eu_formal'},
+			params: {'LAYERS': 'deims:lter_all_formal'},
+			// params: {'LAYERS': 'deims:lter_eu_formal'},
 			ratio: 1,
 			serverType: 'geoserver',
 		});
