@@ -3,6 +3,8 @@
 //
 // Download script for ISO 19139 metadata records from DEIMS-SDR
 //
+// 0 3 7 * 6 /usr/bin/php /home/ilter_cwohner/metadata_caching/iso19139_harvesting.php > /home/ilter_cwohner/metadata_caching/iso19139.log
+//
 
 $url = 'https://data.lter-europe.net/deims/iso/harvest_list';
 $xml = simplexml_load_file($url) or die("feed not loading");
