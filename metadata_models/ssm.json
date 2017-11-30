@@ -252,7 +252,7 @@
         "Recommendation & Hints": "Please provide the name of the country in which the observation or experimentation facility is located. This might be different from the LTER member network. It describes in which country the site is located, even if the member network is located in another country. Please select a country from the reference list.",
         "Format": "Reference list",
         "Multiplicity": [
-          1
+          "[1..1]"
         ],
         "Required": {
           "LTER Europe": "TRUE",
