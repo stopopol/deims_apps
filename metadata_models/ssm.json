@@ -86,9 +86,7 @@
         "Definition": "Description of the monitoring or research objectives of the site, e.g. including the legal framework (e.g. UN-ECE CLTRAP, national monitoring programme) for the observation or experimental site. This includes an explanation why the observation or experimentation facility was established.",
         "Recommendation & Hints": "Please provide a short description that summarises the purpose of the site, as well as the main research or monitoring objectives.",
         "Format": "Text",
-        "Multiplicity": [
-          1
-        ],
+        "Multiplicity": "[0..1]",
         "Required": {
           "LTER Europe": "TRUE",
           "ILTER": "TRUE"
