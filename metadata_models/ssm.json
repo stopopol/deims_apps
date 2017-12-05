@@ -251,9 +251,7 @@
         "Definition": "Country in which the site is located.",
         "Recommendation & Hints": "Please provide the name of the country in which the observation or experimentation facility is located. This might be different from the LTER member network. It describes in which country the site is located, even if the member network is located in another country. Please select a country from the reference list.",
         "Format": "Reference list",
-        "Multiplicity": [
-          "[1..1]"
-        ],
+        "Multiplicity": "[1..1]",
         "Required": {
           "LTER Europe": "TRUE",
           "ILTER": "TRUE"
@@ -267,9 +265,7 @@
         "Definition": "This is the location of the site in the geographic space, given as a center coordinates expressed in latitude and longitude in decimal degrees (projection EPSG:4258 ETRS89 for Europe, EPSG:4326 WGS84 for outside Europe).",
         "Recommendation & Hints": "Please provide the center coordinates of the site in decimal degrees. Enter the center point latitude and longitude. Supports entering data as both Decimal Degrees (-122.340932) OR Degrees-Minutes-Seconds (-123° 49' 55.2\\\" W). Please be careful to display southern hemisphere latitude values as as \"-\" and western hemisphere latitudes as \"-\".",
         "Format": "Number(decimal) for each center coordinate, format XX.XXXXX",
-        "Multiplicity": [
-          1
-        ],
+        "Multiplicity": "[1..1]",
         "Required": {
           "LTER Europe": "TRUE",
           "ILTER": "TRUE"
