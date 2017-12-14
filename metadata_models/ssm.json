@@ -224,16 +224,14 @@
         "Definition": "Provides date of metadata creation or last update.",
         "Recommendation & Hints": "Is automatically generated and cannot be entered manually",
         "Format": "Date as YYYY-MM-DD",
-        "Multiplicity": [
-          1
-        ],
+        "Multiplicity": "[1..1]",
         "Required": {
           "LTER Europe": "TRUE",
           "ILTER": "TRUE"
         },
         "Example": "2017-08-22",
         "Reference List": "",
-        "Comment": "",
+        "Comment": "Generated automatically",
         "Changes from Version 1.0": ""
       }
     },
