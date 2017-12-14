@@ -431,9 +431,7 @@
             "Definition": "Assignment of the main habitat type based on the ILTER Reference list for biomes as well as the GEO-BON reference list on biomes. Note: the list needs to be discussed in detail also on relation to the 'main ecosystem types'.",
             "Recommendation & Hints": "Please provide the main habitat type (global classification) which is characterising the site. Please select the values from the list.",
             "Format": "Reference",
-            "Multiplicity": [
-              1
-            ],
+            "Multiplicity": "[0..1]",
             "Required": {
               "LTER Europe": "TRUE",
               "ILTER": "TRUE"
