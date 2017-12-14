@@ -96,12 +96,12 @@
         "Format": "Image [png, jpg, jpeg, gif, ...]",
         "Multiplicity": "[0..n]",
         "Required": {
-          "LTER Europe": "FALSE, but recommended",
-          "ILTER": "FALSE, but recommended"
+          "LTER Europe": "FALSE",
+          "ILTER": "FALSE"
         },
         "Example": "",
         "Reference List": "",
-        "Comment": "",
+        "Comment": "Not mandatory, but highly recommended",
         "Changes from Version 1.0": ""
       },
       "Parent site name": {
