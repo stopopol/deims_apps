@@ -26,12 +26,12 @@
         "Format": "UUID (alpha-numeric)",
         "Multiplicity": "[1..1]",
         "Required": {
-          "LTER Europe": "automatically generated",
-          "ILTER": "automatically generated"
+          "LTER Europe": "TRUE",
+          "ILTER": "TRUE"
         },
         "Example": "8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6",
         "Reference List": "",
-        "Comment": "",
+        "Comment": "utomatically generated",
         "Changes from Version 1.0": "field added"
       },
       "Site Code": {
