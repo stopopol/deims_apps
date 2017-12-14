@@ -268,9 +268,7 @@
         "Definition": "Delineation of the site boundaries or the bounding box.",
         "Recommendation & Hints": "Please delineate the site boundaries on the map. The minimal requirement is the bounding box of your site.",
         "Format": "Map/WKT Text field",
-        "Multiplicity": [
-          1
-        ],
+        "Multiplicity": "[0..1]",
         "Required": {
           "LTER Europe": "FALSE",
           "ILTER": "FALSE"
