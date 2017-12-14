@@ -38,9 +38,7 @@
         "Definition": "Unique alpha-numeric identifier for the site (e.g. LTER Site or LTSER Platform) within the DEIMS-SDR ecosystem site registry. The site code is composed of a network identification, a country identification and a sequential number following the template [Network]_[Country]_[SequentialNumber]. The site code is defined by the responsible network coordinators (e.g. LTER member network representative) and should be provided to the site manager.",
         "Recommendation & Hints": "The Site code as unique alpha-numeric identifier is composed of a network identification, a country identification and a sequential number. For LTER-Europe, the template is : LTER_EU_XX_YY(Y); For East Asia-Pacific: LTER_AP_XX_YY(Y); for North America: LTER_NAM_XX_YY(Y); for South America: LTER_SAM_XX_YY(Y); for Southern Africa: LTER_SAF_XX_YY(Y); where XX is the 2-letter ISO country code and YY(Y) represents a sequential number. Use (Y) for a subsite. Please make sure that the number is not used for any site in your country. For example: LTER_EU_AT_001. For other networks than LTER a different prefix for the network identification is used. If you are part of the Critical Zones or Soiltrek Network, then the format for your code is: CZO_EU_XX_YY(Y); where XX is the 2-letter country code and YY(Y) represents a number. For example: CZO_FR_01 or RBV_FR_100.",
         "Format": "Text(64)",
-        "Multiplicity": [
-          1
-        ],
+        "Multiplicity": "[1..1]",
         "Required": {
           "LTER Europe": "TRUE",
           "ILTER": "TRUE"
