@@ -12,7 +12,9 @@
         "Recommendation & Hints": "The UUID is generated automatically by the system. The UUID is used for creating the URL for the site, e.g. https://data.lter-europe.net/deims/site/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6.The UUID is taken as network independent unique identifier for the observation and experimentation facility. In addition the SITE CODE can be added as a network specific identifier.",
         "Format": "UUID (alpha-numeric)",
         "Multiplicity": "[1..1]",
-        "Required": "TRUE",
+        "Required": "TRUE"
+        "Example": "8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6",
+        "Reference List": "",
         "Comment": "automatically generated"
       },
       "Metadata update date": "",
