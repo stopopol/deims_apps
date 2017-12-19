@@ -21,25 +21,53 @@
         "Reference List": "",
         "Comment": "automatically generated"
       },
-      "Metadata update date": "",
-      "Related Site": "",
-      "sensorType": "",
-      "Description": "",
-      "Keywords": "",
-      "Contact": ""
+      "Metadata update date": {
+        "field_name": "field_date"
+      },
+      "Related Site": {
+        "field_name": "field_parent_site_name"
+      },
+      "sensorType": {
+        "field_name": "field_sensortype"
+      },
+      "Description": {
+        "field_name": "field_description"
+      },
+      "Keywords": {
+        "field_name": "field_keywords_envthes"
+      },
+      "Contact": {
+        "field_name": "field_person_contact"
+      }
     },
     "Geographic": {
-      "Is the sensor mobile": "",
-      "Position (elevation)": "",
-      "Trajectory": ""
+      "Is the sensor mobile": {
+        "field_name": "field_mobile"
+      },
+      "Position (elevation)": {
+        "field_name": "field_elevation_average"
+      },
+      "Trajectory": {
+        "field_name": "field_geo_bounding_box"
+      }
     },
     "Observation": {
-      "Sensor operational since": "",
-      "resultAcquisitionSource": "",
-      "media monitored": "",
+      "Sensor operational since": {
+        "field_name": "field_publication_date"
+      },
+      "resultAcquisitionSource": {
+        "field_name": "field_resultacquisitionsource"
+      },
+      "media monitored": {
+        "field_name": "field_parameters_taxonomy"
+      },
       "Obersation(s)": {
-        "Measure": "",
-        "Unit of measurements": ""
+        "Measure": {
+          "field_name": ""
+        },
+        "Unit of measurements": {
+          "field_name": ""
+        }
       }
     }
   }
