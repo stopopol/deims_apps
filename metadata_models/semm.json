@@ -9,7 +9,13 @@
       "Name/ID\n": {
         "field_name": "title",
         "Definition": "Custom name or identifier that describes the sensor.",
-        "Recommendation & Hints": ""
+        "Recommendation & Hints": "",
+        "Format": "text",
+        "Multiplicity": "[1..1]",
+        "Required": "TRUE",
+        "Example": "Zöbelboden precipitation sensor",
+        "Reference List": "",
+        "Comment": ""
       },
       "UUID": {
         "field_name": "field_uuid",
