@@ -22,51 +22,65 @@
         "Comment": "automatically generated"
       },
       "Metadata update date": {
-        "field_name": "field_date"
+        "field_name": "field_date",
+        "Definition": ""
       },
       "Related Site": {
-        "field_name": "field_parent_site_name"
+        "field_name": "field_parent_site_name",
+        "Definition": ""
       },
       "sensorType": {
-        "field_name": "field_sensortype"
+        "field_name": "field_sensortype",
+        "Definition": ""
       },
       "Description": {
-        "field_name": "field_description"
+        "field_name": "field_description",
+        "Definition": ""
       },
       "Keywords": {
-        "field_name": "field_keywords_envthes"
+        "field_name": "field_keywords_envthes",
+        "Definition": ""
       },
       "Contact": {
-        "field_name": "field_person_contact"
+        "field_name": "field_person_contact",
+        "Definition": ""
       }
     },
     "Geographic": {
       "Is the sensor mobile": {
-        "field_name": "field_mobile"
+        "field_name": "field_mobile",
+        "Definition": ""
       },
       "Position (elevation)": {
-        "field_name": "field_elevation_average"
+        "field_name": "field_elevation_average",
+        "Definition": ""
       },
       "Trajectory": {
-        "field_name": "field_geo_bounding_box"
+        "field_name": "field_geo_bounding_box",
+        "Definition": ""
       }
     },
     "Observation": {
       "Sensor operational since": {
-        "field_name": "field_publication_date"
+        "field_name": "field_publication_date",
+        "Definition": ""
       },
       "resultAcquisitionSource": {
-        "field_name": "field_resultacquisitionsource"
+        "field_name": "field_resultacquisitionsource",
+        "Definition": ""
       },
       "media monitored": {
-        "field_name": "field_parameters_taxonomy"
+        "field_name": "field_parameters_taxonomy",
+        "Definition": ""
       },
       "Obersation(s)": {
         "Measure": {
-          "field_name": ""
+          "field_name": "",
+          "Definition": ""
         },
         "Unit of measurements": {
-          "field_name": ""
+          "field_name": "",
+          "Definition": ""
         }
       }
     }
