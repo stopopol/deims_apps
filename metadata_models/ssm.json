@@ -1356,7 +1356,7 @@
         "Multiplicity": "[0..1]",
         "Dependency": "",
         "Required": {
-          "LTER Europe": "TRZE",
+          "LTER Europe": "TRUE",
           "ILTER": "TRUE"
         },
         "Example": "Co-authorship on publications resulting from use of the dataset",
