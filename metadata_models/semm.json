@@ -8,7 +8,8 @@
     "General information": {
       "Name/ID\n": {
         "field_name": "title",
-        "Definition": "Custom name or identifier that describes the sensor."
+        "Definition": "Custom name or identifier that describes the sensor.",
+        "Recommendation & Hints": ""
       },
       "UUID": {
         "field_name": "field_uuid",
@@ -23,64 +24,162 @@
       },
       "Metadata update date": {
         "field_name": "field_date",
-        "Definition": ""
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
       },
       "Related Site": {
         "field_name": "field_parent_site_name",
-        "Definition": ""
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
       },
       "sensorType": {
         "field_name": "field_sensortype",
-        "Definition": ""
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
       },
       "Description": {
         "field_name": "field_description",
-        "Definition": ""
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
       },
       "Keywords": {
         "field_name": "field_keywords_envthes",
-        "Definition": ""
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
       },
       "Contact": {
         "field_name": "field_person_contact",
-        "Definition": ""
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
       }
     },
     "Geographic": {
       "Is the sensor mobile": {
         "field_name": "field_mobile",
-        "Definition": ""
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
       },
       "Position (elevation)": {
         "field_name": "field_elevation_average",
-        "Definition": ""
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
       },
       "Trajectory": {
         "field_name": "field_geo_bounding_box",
-        "Definition": ""
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
       }
     },
     "Observation": {
       "Sensor operational since": {
         "field_name": "field_publication_date",
-        "Definition": ""
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
       },
       "resultAcquisitionSource": {
         "field_name": "field_resultacquisitionsource",
-        "Definition": ""
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
       },
       "media monitored": {
         "field_name": "field_parameters_taxonomy",
-        "Definition": ""
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
       },
       "Obersation(s)": {
         "Measure": {
           "field_name": "",
-          "Definition": ""
+          "Definition": "",
+          "Recommendation & Hints": "",
+          "Format": "",
+          "Multiplicity": "",
+          "Required": "",
+          "Example": "",
+          "Reference List": "",
+          "Comment": ""
         },
         "Unit of measurements": {
           "field_name": "",
-          "Definition": ""
+          "Definition": "",
+          "Recommendation & Hints": "",
+          "Format": "",
+          "Multiplicity": "",
+          "Required": "",
+          "Example": "",
+          "Reference List": "",
+          "Comment": ""
         }
       }
     }
