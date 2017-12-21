@@ -1272,58 +1272,24 @@
         }
       },
       "Operation": {
-        "Permanent Operation": {
-          "Permanent Operation": {
-            "field_name": "field_site_ops_ispermanent",
-            "Definition": "The data type 'Permanent operation' describes if a site is operated permanently throughout the year. It is composed of the general information on the permanent operation, the interval and frequency in which samples are taken from the site and the interval and frequency in which maintenance personnel is visiting the site. Permanent operation is defined that the whole year in regular intervalls samples are taken and collected by the sampling personnel visiting the site. In part of the year (e.g. winter) the frequency might be less than in others (e.g. summer).",
-            "Recommendation & Hints": "Please provide information on the all year operation of the site. All year operation is defined that throughout the year samples are taken or observations (e.g. sensors) are made. The frequency of sampling and maintenance might be unequally through the year (e.g. less frequent in winter than in summer). Please provide therefore the average sampling frequency and maintenance frequency throughout the year.",
-            "Format": "boolean",
-            "Multiplicity": "[0..1]",
-            "Dependency": "",
-            "Required": {
-              "LTER Europe": "TRUE",
-              "ILTER": "TRUE"
-            },
-            "Example": "yes",
-            "Reference List": [
-              "yes",
-              "no"
-            ],
-            "Comment": "",
-            "Changes from Version 1.0": ""
+        "Permanent operation": {
+          "field_name": "field_site_ops_ispermanent",
+          "Definition": "The data type 'Permanent operation' describes if a site is operated permanently throughout the year. It is composed of the general information on the permanent operation, the interval and frequency in which samples are taken from the site and the interval and frequency in which maintenance personnel is visiting the site. Permanent operation is defined that the whole year in regular intervalls samples are taken and collected by the sampling personnel visiting the site. In part of the year (e.g. winter) the frequency might be less than in others (e.g. summer).",
+          "Recommendation & Hints": "Please provide information on the all year operation of the site. All year operation is defined that throughout the year samples are taken or observations (e.g. sensors) are made. The frequency of sampling and maintenance might be unequally through the year (e.g. less frequent in winter than in summer). Please provide therefore the average sampling frequency and maintenance frequency throughout the year.",
+          "Format": "boolean",
+          "Multiplicity": "[0..1]",
+          "Dependency": "",
+          "Required": {
+            "LTER Europe": "TRUE",
+            "ILTER": "TRUE"
           },
-          "Sampling interval": {
-            "field_name": "",
-            "Definition": "",
-            "Recommendation & Hints": "",
-            "Format": "integer",
-            "Multiplicity": "[0..1]",
-            "Dependency": "",
-            "Required": {
-              "LTER Europe": "FALSE",
-              "ILTER": "FALSE"
-            },
-            "Example": "4",
-            "Reference List": "",
-            "Comment": "",
-            "Changes from Version 1.0": ""
-          },
-          "Maintenance interval": {
-            "field_name": "",
-            "Definition": "",
-            "Recommendation & Hints": "",
-            "Format": "integer",
-            "Multiplicity": "[0..1]",
-            "Dependency": "",
-            "Required": {
-              "LTER Europe": "FALSE",
-              "ILTER": "FALSE"
-            },
-            "Example": "7",
-            "Reference List": "",
-            "Comment": "",
-            "Changes from Version 1.0": ""
-          }
+          "Example": "yes",
+          "Reference List": [
+            "yes",
+            "no"
+          ],
+          "Comment": "",
+          "Changes from Version 1.0": ""
         },
         "Operation costs": {
           "field_name": "",
@@ -1349,7 +1315,23 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Operations Notes": {
+        "Sampling interval": {
+          "field_name": "",
+          "Definition": "",
+          "Recommendation & Hints": "",
+          "Format": "integer",
+          "Multiplicity": "[0..1]",
+          "Dependency": "",
+          "Required": {
+            "LTER Europe": "FALSE",
+            "ILTER": "FALSE"
+          },
+          "Example": "4",
+          "Reference List": "",
+          "Comment": "",
+          "Changes from Version 1.0": ""
+        },
+        "Operations notes": {
           "field_name": "field_site_ops_notes",
           "Definition": "Additional textual description about the operation of the site. This can contain additional information which is not covered by the other items.",
           "Recommendation & Hints": "Please provide additional information on the operation of the infrastructure which are not covered by the other items.",
@@ -1361,6 +1343,22 @@
             "ILTER": "FALSE"
           },
           "Example": "The Zöbelboden is managed by the Umweltbundesamt GmbH. Sampling of chemical specimen is done by local staff of the Kalkalpen national park. Chemical analyses are carried out by the laboratory of the Umweltbundesamt in Vienna. Maintenance is done on a regular basis by a local contractor.",
+          "Reference List": "",
+          "Comment": "",
+          "Changes from Version 1.0": ""
+        },
+        "Maintenance interval": {
+          "field_name": "",
+          "Definition": "",
+          "Recommendation & Hints": "",
+          "Format": "integer",
+          "Multiplicity": "[0..1]",
+          "Dependency": "",
+          "Required": {
+            "LTER Europe": "FALSE",
+            "ILTER": "FALSE"
+          },
+          "Example": "7",
           "Reference List": "",
           "Comment": "",
           "Changes from Version 1.0": ""
