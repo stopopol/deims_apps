@@ -229,29 +229,29 @@
         "Example": "",
         "Reference List": "",
         "Comment": ""
+      },
+      "Method Description": {
+        "field_name": "",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
+      },
+      "Instrumentation": {
+        "field_name": "",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
       }
-    },
-    "Method Description": {
-      "field_name": "",
-      "Definition": "",
-      "Recommendation & Hints": "",
-      "Format": "",
-      "Multiplicity": "",
-      "Required": "",
-      "Example": "",
-      "Reference List": "",
-      "Comment": ""
-    },
-    "Instrumentation": {
-      "field_name": "",
-      "Definition": "",
-      "Recommendation & Hints": "",
-      "Format": "",
-      "Multiplicity": "",
-      "Required": "",
-      "Example": "",
-      "Reference List": "",
-      "Comment": ""
     },
     "Sampling Description": {
       "Spatial scale/design": {
