@@ -31,7 +31,7 @@
     },
     "Responsible Parties": {
       "Owner/Creator": {
-        "field_name": "field_mobile",
+        "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
         "Format": "",
@@ -42,7 +42,7 @@
         "Comment": ""
       },
       "Contact": {
-        "field_name": "field_elevation_average",
+        "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
         "Format": "",
@@ -53,7 +53,7 @@
         "Comment": ""
       },
       "Metadata provider": {
-        "field_name": "field_geo_bounding_box",
+        "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
         "Format": "",
@@ -66,7 +66,7 @@
     },
     "Language": {
       "Language": {
-        "field_name": "field_language",
+        "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
         "Format": "",
@@ -79,7 +79,7 @@
     },
     "Keywords": {
       "Keywords originating from EnvThes": {
-        "field_name": "field_language",
+        "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
         "Format": "",
@@ -90,7 +90,7 @@
         "Comment": ""
       },
       "Free Keywords": {
-        "field_name": "field_language",
+        "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
         "Format": "",
@@ -103,7 +103,7 @@
     },
     "Parameters": {
       "Parameters": {
-        "field_name": "field_language",
+        "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
         "Format": "",
@@ -116,7 +116,7 @@
     },
     "Access and Use Constraints": {
       "Principal and granted permission": {
-        "field_name": "field_language",
+        "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
         "Format": "",
@@ -129,7 +129,7 @@
     },
     "Intellectual Rights": {
       "Intellectual Rights": {
-        "field_name": "field_language",
+        "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
         "Format": "",
@@ -142,38 +142,188 @@
     },
     "Online Distribution\t": {
       "Resource Locator": {
-        "DOI": "",
-        "Online Location": ""
+        "DOI": {
+          "field_name": "",
+          "Definition": "",
+          "Recommendation & Hints": "",
+          "Format": "",
+          "Multiplicity": "",
+          "Required": "",
+          "Example": "",
+          "Reference List": "",
+          "Comment": ""
+        },
+        "Online Location": {
+          "field_name": "",
+          "Definition": "",
+          "Recommendation & Hints": "",
+          "Format": "",
+          "Multiplicity": "",
+          "Required": "",
+          "Example": "",
+          "Reference List": "",
+          "Comment": ""
+        }
       }
     },
     "Data Sources": {
-      "Data Sources": ""
+      "Data Sources": {
+        "field_name": "",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
+      }
     },
     "Geographic": {
-      "Bounding Box, Elev, etc.": ""
+      "Bounding Box, Elev, etc.": {
+        "field_name": "",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
+      }
     },
     "Temporal Extent": {
-      "Date Range": ""
+      "Date Range": {
+        "field_name": "",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
+      }
     },
     "Taxonomic Coverage": {
-      "Biological Classification": ""
+      "Biological Classification": {
+        "field_name": "",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
+      }
     },
     "Methods and Instrumentation": {
-      "Method": "",
-      "Method Description": "",
-      "Instrumentation": ""
+      "Method": {
+        "field_name": "",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
+      }
+    },
+    "Method Description": {
+      "field_name": "",
+      "Definition": "",
+      "Recommendation & Hints": "",
+      "Format": "",
+      "Multiplicity": "",
+      "Required": "",
+      "Example": "",
+      "Reference List": "",
+      "Comment": ""
+    },
+    "Instrumentation": {
+      "field_name": "",
+      "Definition": "",
+      "Recommendation & Hints": "",
+      "Format": "",
+      "Multiplicity": "",
+      "Required": "",
+      "Example": "",
+      "Reference List": "",
+      "Comment": ""
     },
     "Sampling Description": {
-      "Spatial scale/design": "",
-      "Sampling Time Span": "",
-      "Minimum Sampling Unit": "",
-      "Quality Assurance": ""
+      "Spatial scale/design": {
+        "field_name": "",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
+      },
+      "Sampling Time Span": {
+        "field_name": "",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
+      }
+    },
+    "Minimum Sampling Unit": {
+      "field_name": "",
+      "Definition": "",
+      "Recommendation & Hints": "",
+      "Format": "",
+      "Multiplicity": "",
+      "Required": "",
+      "Example": "",
+      "Reference List": "",
+      "Comment": ""
+    },
+    "Quality Assurance": {
+      "field_name": "",
+      "Definition": "",
+      "Recommendation & Hints": "",
+      "Format": "",
+      "Multiplicity": "",
+      "Required": "",
+      "Example": "",
+      "Reference List": "",
+      "Comment": ""
     },
     "Reporting": {
-      "Legal Act": ""
-    },
-    "Related Information\t": {
-      "Related publications": ""
+      "Legal Act": {
+        "field_name": "",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
+      },
+      "Related Information\t": {
+        "Related publications": {
+          "field_name": "",
+          "Definition": "",
+          "Recommendation & Hints": "",
+          "Format": "",
+          "Multiplicity": "",
+          "Required": "",
+          "Example": "",
+          "Reference List": "",
+          "Comment": ""
+        }
+      }
     }
   }
 }
