@@ -36,7 +36,7 @@
         "Comment": "automatically generated",
         "Changes from Version 1.0": "field added"
       },
-      "Site Code": {
+      "Site code": {
         "field_name": "field__site_sitecode",
         "Definition": "Unique alpha-numeric identifier for the site (e.g. LTER Site or LTSER Platform) within the DEIMS-SDR ecosystem site registry. The site code is composed of a network identification, a country identification and a sequential number following the template [Network]_[Country]_[SequentialNumber]. The site code is defined by the responsible network coordinators (e.g. LTER member network representative) and should be provided to the site manager.",
         "Recommendation & Hints": "The Site code as unique alpha-numeric identifier is composed of a network identification, a country identification and a sequential number. For LTER-Europe, the template is : LTER_EU_XX_YY(Y); For East Asia-Pacific: LTER_AP_XX_YY(Y); for North America: LTER_NAM_XX_YY(Y); for South America: LTER_SAM_XX_YY(Y); for Southern Africa: LTER_SAF_XX_YY(Y); where XX is the 2-letter ISO country code and YY(Y) represents a sequential number. Use (Y) for a subsite. Please make sure that the number is not used for any site in your country. For example: LTER_EU_AT_001. For other networks than LTER a different prefix for the network identification is used. If you are part of the Critical Zones or Soiltrek Network, then the format for your code is: CZO_EU_XX_YY(Y); where XX is the 2-letter country code and YY(Y) represents a number. For example: CZO_FR_01 or RBV_FR_100.",
@@ -66,7 +66,7 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "Site Description": {
+      "Site description": {
         "field_name": "field_site_description",
         "Definition": "A short textual description of the site or platform which includes the location, biophysical characteristics, a brief history, the main scientific purpose at present and major plans for future, a brief overall description of infrastructure, and a brief overall description of available data/information.",
         "Recommendation & Hints": "Please provide a short site description which could also be used on the web site. This description should cover: a brief history of the LTER Site or LTSER Platform, the main scientific purpose at present and major plans for future, a brief overall description of infrastructure, and a brief overall description of available data/information. In the section ECOSYSTEM AND ENVIRONMENTAL CHARACTERISTICS additional detailed descriptions on Geology, Hydrology, Soils and Vegetation can be provided.",
@@ -141,7 +141,7 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "EnvThes Keywords": {
+      "EnvThes keywords": {
         "field_name": "field_keywords_envthes",
         "Definition": "rovides a set of related keywords characterising the site derived from the controlled vocabulary implemented by EnvThes - thesaurus for long term ecological research, monitoring, experiments EnvThes and other environmentally related thesauri as Catalogue of Life, EUNIS Habitats and INSPIRE Spatial Data Themes. Additional concepts can be defined as free keywords.",
         "Recommendation & Hints": "The field provides an autocomplete function, which allows selecting the values from the list. Begin typing a keyword. Select the one that most resembles the concept you want. You may add as many keywords as you need. The current version of EnvThes is cached in DEIMS-SDR. Therefore minor differences between the current version on the webserver and in DEIMS-SDR can occur. Updates of EnvThes in DEIMS-SDR are done automatically including updates of concepts.",
@@ -157,7 +157,7 @@
         "Changes from Version 1.0": "field was added to the Site Metadata Model"
       }
     },
-    "Site Contact Details": {
+    "Site contact details": {
       "Contact: Site Manager": {
         "field_name": "field_person_contact",
         "Definition": "Reference to the contact person responsible for the site. The person could be either the principal investigator (PI, co-PI), the information manager (IM), the site manager (SM) or a technician (TE). The details for the person/organisation needs to be specified in the persons module (PEMM).",
@@ -173,7 +173,7 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "Contact: Site Owner": {
+      "Contact: Site owner": {
         "field_name": "field_contact_site_owner",
         "Definition": "Reference to the contact person/organisation or the responsible national authority for funding and strategic decisions about the site. This could be e.g. the Ministry of Science as responsible national authority. The details for the person/organisation needs to be specified in the persons module (PEMM).",
         "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
@@ -188,7 +188,7 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "Contact: Funding Agency": {
+      "Contact: Funding agency": {
         "field_name": "field_contact_funding_agency",
         "Definition": "Reference to the contact person/organisation or the responsible national authority for funding and strategic decisions about the site. This could be e.g. the Ministry of Science as responsible national authority. The details for the person/organisation needs to be specified in the persons module (PEMM).",
         "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
@@ -235,7 +235,7 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "Metadata Date": {
+      "Metadata date": {
         "field_name": "",
         "Definition": "Provides date of metadata creation or last update.",
         "Recommendation & Hints": "Is automatically generated and cannot be entered manually",
@@ -251,7 +251,7 @@
         "Changes from Version 1.0": ""
       }
     },
-    "Geographic Location": {
+    "Geographic location": {
       "Country": {
         "field_name": "",
         "Definition": "Country the site is located in.",
@@ -282,7 +282,7 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "Site Boundaries": {
+      "Site boundaries": {
         "field_name": "",
         "Definition": "Delineation of the site boundaries or the bounding box.",
         "Recommendation & Hints": "Please delineate the site boundaries on the map. The minimal requirement is the bounding box of your site.",
@@ -313,7 +313,7 @@
         "Changes from Version 1.0": ""
       },
       "Elevation": {
-        "Elevation - Average": {
+        "Elevation - average": {
           "field_name": "field_elevation_average",
           "Definition": "Average and Bounding elevation range for the site (observation or experimentation facility).",
           "Recommendation & Hints": "This element consists of two numbers (minimum and maximum altitudes) and the average altitude defining height above or below the sea level. As a default vertical coordinate reference system of bounding altitudes is used Mean sea level height (EPSG: 5714). Negative values are below sea level.",
@@ -328,7 +328,7 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Elevation - From": {
+        "Elevation - from": {
           "field_name": "field_elevation_lowest",
           "Definition": "Average and Bounding elevation range for the site (observation or experimentation facility).",
           "Recommendation & Hints": "This element consists of two numbers (minimum and maximum altitudes) and the average altitude defining height above or below the sea level. As a default vertical coordinate reference system of bounding altitudes is used Mean sea level height (EPSG: 5714). Negative values are below sea level.",
@@ -343,7 +343,7 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Elevation - To": {
+        "Elevation - to": {
           "field_name": "field_elevation_maximum_",
           "Definition": "Average and Bounding elevation range for the site (observation or experimentation facility).",
           "Recommendation & Hints": "This element consists of two numbers (minimum and maximum altitudes) and the average altitude defining height above or below the sea level. As a default vertical coordinate reference system of bounding altitudes is used Mean sea level height (EPSG: 5714). Negative values are below sea level.",
@@ -378,7 +378,7 @@
             "Comment": "",
             "Changes from Version 1.0": ""
           },
-          "Temperature - From": {
+          "Temperature - from": {
             "field_name": "field_site_temp_min",
             "Definition": "Temperature characteristics of the site. The temperature characteristics are composed of the mean annual temperature, the monthly average of the coldest month (e.g. January) as the annual minimum temperature and the average of the hottest month (e.g. July) as the annual maximum temperature. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The temperature is given in [°C].",
             "Recommendation & Hints": "Temperature characteristics of the site. The temperature characteristics are composed of the mean annual temperature, the monthly average of the coldest month (e.g. January) as the annual minimum temperature and the average of the hottest month (e.g. July) as the annual maximum temperature. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The temperature is given in [°C].",
@@ -392,7 +392,7 @@
             "Comment": "",
             "Changes from Version 1.0": ""
           },
-          "Temperature - To": {
+          "Temperature - to": {
             "field_name": "field_site_temp_max",
             "Definition": "Temperature characteristics of the site. The temperature characteristics are composed of the mean annual temperature, the monthly average of the coldest month (e.g. January) as the annual minimum temperature and the average of the hottest month (e.g. July) as the annual maximum temperature. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The temperature is given in [°C].",
             "Recommendation & Hints": "This element consists of three values (annual average, minimum and maximum) of the air temperature. If possible site data should be used to calculate the mean, minimum and maximum air temperature based on a 10 or 30 years period. If no long term site data are available please use data or values from a comparable climatic station near to the site.",
@@ -514,7 +514,7 @@
             "Changes from Version 1.0": ""
           }
         },
-        "Ecosystem and Land Use": {
+        "Ecosystem and land use": {
           "field_name": "field_ecosystem_and_land_use",
           "Definition": "Assignment of the main habitat type based on list of main habitat types (or ecoregions) according to Olsen et al. 2001.",
           "Recommendation & Hints": "Please provide the main habitat type according to the list. Please select the values from the list.",
@@ -583,7 +583,7 @@
           "Comment": "Classification is focussing on European scale, an extension to global level needs to be discussed.",
           "Changes from Version 1.0": ""
         },
-        "EUNIS Habitat": {
+        "EUNIS habitat": {
           "field_name": "field_eunis_habitat_taxonomy",
           "Definition": "Assignment of the habitat type based on the EEA, EUNIS Habitat types. Only the levels 1-3 are used.",
           "Recommendation & Hints": "Please provide the habitat type according to the list. Please select the values from the list.",
@@ -711,7 +711,7 @@
       },
       "Network specific": {
         "LTER": {
-          "LTER Member Network": {
+          "LTER member network": {
             "field_name": "field_ilter_national_network_nam",
             "Definition": "Affiliation of the site to a LTER network (or related network).",
             "Recommendation & Hints": "",
@@ -727,7 +727,7 @@
             "Comment": "",
             "Changes from Version 1.0": ""
           },
-          "LTER Site Classification/Category": {
+          "LTER site classification/category": {
             "field_name": "",
             "Definition": "Characterisation of a SITE (observation or experimentation facility) according to their level of implementation. This includes the following characteristics: technical aspects of work at the sites (intervals of basic sampling, technical maintenance...) basic infrastructure (power supply, all year access...) technical equipment data and IT infrastructure",
             "Recommendation & Hints": "Please select the site type from the list. This can be used in order to reveal information requirements relevant for e.g. multi-site projects or identification as major research infrastructure. The classification was adopted at the 7th LTER-Europe conference in Lodz. Site co-ordinators are asked to apply this overall classification to their sites, but also provide detailed metadata on the above categories in order to facilitate quick responses to specific information requests on the network level, e.g. which sites do have all year access AND power supply AND weekly sampling.",
@@ -778,7 +778,7 @@
         }
       }
     },
-    "Site Classification": {
+    "Site classification": {
       "Site type (spatial design)": {
         "field_name": "",
         "Definition": "Type of the site of platform according to their inner heterogeneity. Simple sites are classical LTER sites measuring ecosystem processes in one or a very limited number of habitats. Complex sites are classical LTSER sites investigating processes and fluxes on a landscape or regional level or form the bracket over a number of LTER or simple sites.",
@@ -823,7 +823,7 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "Year Site Established": {
+      "Year site established": {
         "field_name": "",
         "Definition": "The site status describes the current status of the site, e.g. if it is planned or already existing. The site status is composed of the status value, the year of establishment of the site and in case the year when the site was closed.",
         "Recommendation & Hints": "Select the current status of the site from the list of values and provide beginning and end time of the operation of the site. In case the site is still operating the end time is kept blank. As year of site establishment select the year when substantial data was obtained and the operational period of the site started.",
@@ -838,7 +838,7 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "Year Site Closed": {
+      "Year site closed": {
         "field_name": "",
         "Definition": "The site status describes the current status of the site, e.g. if it is planned or already existing. The site status is composed of the status value, the year of establishment of the site and in case the year when the site was closed.",
         "Recommendation & Hints": "Select the current status of the site from the list of values and provide beginning and end time of the operation of the site. In case the site is still operating the end time is kept blank. As year of site establishment select the year when substantial data was obtained and the operational period of the site started.",
@@ -871,7 +871,7 @@
         "Changes from Version 1.0": ""
       }
     },
-    "Focus, Design and scale of sites": {
+    "Focus, design and scale of sites": {
       "Research topics": {
         "field_name": "field_research_topic_taxonomy",
         "Definition": "Description of the research, experimentation or observation focus of the site.",
@@ -998,7 +998,7 @@
           "Changes from Version 1.0": ""
         }
       },
-      "eLTER Parameters": {
+      "eLTER parameters": {
         "field_name": "field_elter_parameters",
         "Definition": "Description of the observed parameters and parameter groups at the site. The eLTER parameter list includes parameters, methods and instrumentation in the hierarchy. It further details information provided in the Site parameter field.",
         "Recommendation & Hints": "Please select the appropriate values from the list. Be aware to provide all necessary information on methods, instrumentation and spatial scale.",
@@ -1015,8 +1015,8 @@
         "Changes from Version 1.0": "added to the SMM 1.1 as requirement for the eLTER H2020 project. In the next version of the MD model for the site, the eLTER Parameter information needs to be merged with the Site parameters information. The reference list for the field is currently not included in EnvThes."
       }
     },
-    "Protection Status and Resource Management": {
-      "Protection Program": {
+    "Protection status and resource management": {
+      "Protection program": {
         "Protection program": {
           "field_name": "field_site_protection_prog_ref",
           "Definition": "Description of the protection status of the site. The information is composed of the protection program (e.g. IUCN National Park), the cover of protected areas within the site and additional notes on the protection. As each site can be protected by different programs and therefore more than one values can be given.",
@@ -1033,7 +1033,7 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Protection Program Cover": {
+        "Protection program cover": {
           "field_name": "field_protection_program_cover",
           "Definition": "",
           "Recommendation & Hints": "Please select the protection program and an estimate of the share of the protected area within the site from the list of values. In addition textual notes can be given.",
@@ -1054,7 +1054,7 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Protection Program Notes": {
+        "Protection program notes": {
           "field_name": "field_protection_program_notes",
           "Definition": "",
           "Recommendation & Hints": "Please select the protection program and an estimate of the share of the protected area within the site from the list of values. In addition textual notes can be given.",
@@ -1191,7 +1191,7 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "All parts of Site Accessible": {
+        "All parts of site accessible": {
           "field_name": "",
           "Definition": "",
           "Recommendation & Hints": "",
@@ -1210,7 +1210,7 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Access Type": {
+        "Access type": {
           "field_name": "",
           "Definition": "",
           "Recommendation & Hints": "",
@@ -1233,7 +1233,7 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Permanent Power Supply": {
+        "Permanent power supply": {
           "field_name": "",
           "Definition": "Information on the availability of permanent power at the site.",
           "Recommendation & Hints": "Please provide information on the availability of permanent power at the research site throughout the year. The includes the general information on the availability (48.1) or power. The amount of permanent power produced or available as well as the location of the production devices for the power is provided with the information on the infrastructure.",
@@ -1252,7 +1252,7 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Infrastructure Collection": {
+        "Infrastructure collection": {
           "Infrastructure": {
             "field_name": "field_infrastructure",
             "Definition": "Information on the equipment and infrastructure at the site. This includes all parts of the permanent (e.g. buildings), temporary (e.g. project installations) and mobile devices used at the site. It includes all different topics (e.g. maintenance, energy supply, supporting infrastructure, data infrastructure or observation devices).",
@@ -1365,7 +1365,7 @@
         }
       }
     },
-    "Data Sharing Policy": {
+    "Data sharing policy": {
       "Data Request Format": {
         "field_name": "",
         "Definition": "The data type 'Data request format' describes on how the data can be requested from the site.",
@@ -1387,7 +1387,7 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "General Data Policy": {
+      "General data policy": {
         "field_name": "",
         "Definition": "Information on the General Data Policy which is applied to share and publish the data and information from the site.",
         "Recommendation & Hints": "Please provide information on the general data policy which is applied to the data from the site.",
@@ -1417,7 +1417,7 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "Data Policy Notes": {
+      "Data policy notes": {
         "field_name": "",
         "Definition": "Additional textual description about the data policy applied to data from the site. This can contain additional information which are not covered by the other items.",
         "Recommendation & Hints": "Please provide additional information on the data policy which are not covered by the other items.",
@@ -1433,7 +1433,7 @@
         "Comment": "",
         "Changes from Version 1.0": "field added"
       },
-      "Data Policy URL": {
+      "Data policy URL": {
         "field_name": "",
         "Definition": "Link to website which provides further information on the data policy for the site. The web address is composed of the web link and a title which is shown.",
         "Recommendation & Hints": "",
@@ -1450,7 +1450,7 @@
         "Changes from Version 1.0": ""
       }
     },
-    "Data Management": {
+    "Data management": {
       "Data storage location": {
         "field_name": "",
         "Definition": "The data type 'Data storage location' describes the general design of the data storage and management. It is composed of the information on general design of the data storage and the number of storage locations for the data. The number of storage locations is including the storage locations within an organisation as well as the storage locations situated at other organisations (e.g. data repositories).",
