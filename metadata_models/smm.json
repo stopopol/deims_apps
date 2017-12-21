@@ -17,7 +17,7 @@
           "ILTER": "TRUE"
         },
         "Example": "Zöbelboden LTER",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -32,7 +32,7 @@
           "ILTER": "TRUE"
         },
         "Example": "8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "automatically generated",
         "Changes from Version 1.0": "field added"
       },
@@ -47,7 +47,7 @@
           "ILTER": "TRUE"
         },
         "Example": "LTER_EU_AT_003",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "The 'Site code' should be provided and verified by the member or regional network manager (e.g. LTER Europe). If during the process of entering the site metadata the site code is not provided by the responsible network manager the next sequential number for the site is used. The 'Site code' is than changed by the network manager during the acceptance process of the application of the site.",
         "Changes from Version 1.0": ""
       },
@@ -62,7 +62,7 @@
           "ILTER": "TRUE"
         },
         "Example": "90.5",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -77,7 +77,7 @@
           "ILTER": "TRUE"
         },
         "Example": "The Zöbelboden was established in 1992 as the only Integrated Monitoring station in Austria under the UN Convention on long-range transboundary air pollution (CLRTAP). In 2006 it became part of LTER Austria. The Zöbelboden covers a small forested catchment (90 ha) of a karstic mountain range (500 to 950 m above sea level) in the Kalkalpen national park. Monitoring and research is focussing on air pollution effects on forested catchments and its interaction with climate change. The Zöbelboden represents one of the best known karst catchments in Europe with long-term data series of the major components of its ecosystems. The Zöbelboden is managed by the Umweltbundesamt GmbH. Sampling of chemical specimen is done by local staff. Chemical analyses are carried out by the laboratory of the Umweltbundesamt in Vienna. All data and metadata from monitoring and research projects are stored in a semantically structured database.",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -92,7 +92,7 @@
           "ILTER": "TRUE"
         },
         "Example": "LTER (Long-Term Ecological Research) Zöbelboden was established in 1992 as the Austrian Integrated Monitoring station under the UN Convention on long-range trans-boundary air pollution (CLRTAP). In 2006 it became part of LTER Austria, the LTER member network. LTER Zöbelboden covers a small forested catchment (90 ha) of a karstic mountain range in the Kalkalpen national park. Today, LTER Zöbelboden represents one of the best known karst catchments in Europe with long-term data series of the major components of its ecosystems. Researchers from across Austria and Europe use the site for their studies when long-term data, expensive infrastructure or complex research logistics are on demand. Objectives of the project LTER Zöbelboden is a small, well definable catchment of 90 ha in a Europe-wide network of investigated areas. Material inputs, pollutants and nutrients via air and precipitation are measured as well as their effects on the ecosystem. Their behavior within the ecosystem is determined in a comprehensive manner. With standardized methods the long-term development of the ecosystem is studied. Outputs through surface waters and into groundwater are determined. The data is used to reveal long-term trends of ecosystem functions and services which they provide as affected by air pollution and climate change.",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -107,7 +107,7 @@
           "ILTER": "FALSE"
         },
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "Not mandatory, but highly recommended",
         "Changes from Version 1.0": ""
       },
@@ -122,7 +122,7 @@
           "ILTER": "FALSE"
         },
         "Example": "LTSER Platform Eisenwurzen (EW)",
-        "Reference List": "see [content type] site",
+        "Reference list": "see [content type] site",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -137,7 +137,7 @@
           "ILTER": "FALSE"
         },
         "Example": "Zöbelboden LTER IM master site (ICP_IM_AT01) - Austria",
-        "Reference List": "see [content type] site",
+        "Reference list": "see [content type] site",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -152,7 +152,7 @@
           "ILTER": "FALSE"
         },
         "Example": "microclimate, phenological stage, water properties",
-        "Reference List": "http://vocabs.ceh.ac.uk/evn/tbl/envthes.evn",
+        "Reference list": "http://vocabs.ceh.ac.uk/evn/tbl/envthes.evn",
         "Comment": "",
         "Changes from Version 1.0": "field was added to the Site Metadata Model"
       }
@@ -169,7 +169,7 @@
           "ILTER": "TRUE"
         },
         "Example": "Dirnböck, Thomas",
-        "Reference List": "Reference to [content type PERSON]",
+        "Reference list": "Reference to [content type PERSON]",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -184,7 +184,7 @@
           "ILTER": "FALSE"
         },
         "Example": "Umweltbundesamt GmbH",
-        "Reference List": "Reference to [content type PERSON]",
+        "Reference list": "Reference to [content type PERSON]",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -199,7 +199,7 @@
           "ILTER": "FALSE"
         },
         "Example": "Umweltbundesamt GmbH",
-        "Reference List": "Reference to [content type PERSON]",
+        "Reference list": "Reference to [content type PERSON]",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -214,7 +214,7 @@
           "ILTER": "FALSE"
         },
         "Example": "http://www.umweltbundesamt.at/umwelt/luft/messnetz/zoebelboden/",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       }
@@ -231,7 +231,7 @@
           "ILTER": "TRUE"
         },
         "Example": "Kobler, Johannes",
-        "Reference List": "Reference to [content type PERSON]",
+        "Reference list": "Reference to [content type PERSON]",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -246,7 +246,7 @@
           "ILTER": "TRUE"
         },
         "Example": "2017-08-22",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "Generated automatically",
         "Changes from Version 1.0": ""
       }
@@ -255,7 +255,7 @@
       "Country": {
         "field_name": "",
         "Definition": "Country the site is located in.",
-        "Recommendation & Hints": "Please provide the name of the country in which the observation or experimentation facility is located. This might be different from the LTER member network. It describes in which country the site is located, even if the member network is located in another country. Please select a country from the reference list.",
+        "Recommendation & Hints": "Please provide the name of the country in which the observation or experimentation facility is located. This might be different from the LTER member network. It describes in which country the site is located, even if the member network is located in another country. Please select a country from the Reference list.",
         "Format": "Reference list",
         "Multiplicity": "[1..1]",
         "Required": {
@@ -263,7 +263,7 @@
           "ILTER": "TRUE"
         },
         "Example": "Austria",
-        "Reference List": "location_get_iso3166_list() https://www.iso.org/obp/ui/#home",
+        "Reference list": "location_get_iso3166_list() https://www.iso.org/obp/ui/#home",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -278,7 +278,7 @@
           "ILTER": "TRUE"
         },
         "Example": "Latitude: 46.00936 Longitude: 8.56796",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -293,7 +293,7 @@
           "ILTER": "FALSE"
         },
         "Example": "boundaries or bounding box represented as POLYGON ((13.8043 48.2759, 15.4358 48.2759, 15.4358 47.2718, 13.8043 47.2718, 13.8043 48.2759)))",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -308,7 +308,7 @@
           "ILTER": "FALSE"
         },
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -324,7 +324,7 @@
             "ILTER": "TRUE"
           },
           "Example": 956,
-          "Reference List": "",
+          "Reference list": "",
           "Comment": "",
           "Changes from Version 1.0": ""
         },
@@ -339,7 +339,7 @@
             "ILTER": "FALSE"
           },
           "Example": 520,
-          "Reference List": "",
+          "Reference list": "",
           "Comment": "",
           "Changes from Version 1.0": ""
         },
@@ -354,7 +354,7 @@
             "ILTER": "FALSE"
           },
           "Example": 990,
-          "Reference List": "",
+          "Reference list": "",
           "Comment": "",
           "Changes from Version 1.0": ""
         }
@@ -374,7 +374,7 @@
               "ILTER": "TRUE"
             },
             "Example": "Temperature - average annual [°C]: 7.2",
-            "Reference List": "",
+            "Reference list": "",
             "Comment": "",
             "Changes from Version 1.0": ""
           },
@@ -388,7 +388,7 @@
               "ILTER": "FALSE"
             },
             "Example": -12.6,
-            "Reference List": "",
+            "Reference list": "",
             "Comment": "",
             "Changes from Version 1.0": ""
           },
@@ -403,7 +403,7 @@
               "ILTER": "FALSE"
             },
             "Example": 28.3,
-            "Reference List": "",
+            "Reference list": "",
             "Comment": "",
             "Changes from Version 1.0": ""
           }
@@ -420,7 +420,7 @@
               "ILTER": "TRUE"
             },
             "Example": "980",
-            "Reference List": "",
+            "Reference list": "",
             "Comment": "",
             "Changes from Version 1.0": ""
           },
@@ -435,7 +435,7 @@
               "ILTER": "FALSE"
             },
             "Example": "25",
-            "Reference List": "",
+            "Reference list": "",
             "Comment": "",
             "Changes from Version 1.0": ""
           },
@@ -450,7 +450,7 @@
               "ILTER": "FALSE"
             },
             "Example": "350",
-            "Reference List": "",
+            "Reference list": "",
             "Comment": "",
             "Changes from Version 1.0": ""
           }
@@ -458,7 +458,7 @@
         "Biomes": {
           "Biome": {
             "field_name": "field_site_biomeplus",
-            "Definition": "Assignment of the main habitat type based on the ILTER Reference list for biomes as well as the GEO-BON reference list on biomes. Note: the list needs to be discussed in detail also on relation to the 'main ecosystem types'.",
+            "Definition": "Assignment of the main habitat type based on the ILTER Reference list for biomes as well as the GEO-BON Reference list on biomes. Note: the list needs to be discussed in detail also on relation to the 'main ecosystem types'.",
             "Recommendation & Hints": "Please provide the main habitat type (global classification) which is characterising the site. Please select the values from the list.",
             "Format": "Reference",
             "Multiplicity": "[0..1]",
@@ -467,7 +467,7 @@
               "ILTER": "TRUE"
             },
             "Example": "Mixed forest",
-            "Reference List": [
+            "Reference list": [
               "none",
               "Agricultural",
               "Alpine",
@@ -502,7 +502,7 @@
               "ILTER": "FALSE"
             },
             "Example": "Terrestrial",
-            "Reference List": [
+            "Reference list": [
               "unknown",
               "Marine",
               "Coastal",
@@ -525,7 +525,7 @@
             "ILTER": "TRUE"
           },
           "Example": "Mixed forest",
-          "Reference List": [
+          "Reference list": [
             "2.1|Tropical and subtropical moist broadleaf forests",
             "2.2|Tropical and subtropical dry broadleaf forests",
             "2.3|Tropical and subtropical coniferous forests",
@@ -567,7 +567,7 @@
             "ILTER": "FALSE"
           },
           "Example": "Continental",
-          "Reference List": [
+          "Reference list": [
             "Arctic",
             "Boreal",
             "Alpine",
@@ -594,7 +594,7 @@
             "ILTER": "FALSE"
           },
           "Example": "I 1.1 Intensive unmixed crops",
-          "Reference List": [
+          "Reference list": [
             "A. Marine habitats",
             "B. Coastal habitats",
             "C. Inland surface waters",
@@ -623,7 +623,7 @@
             "ILTER": "FALSE"
           },
           "Example": "The site is characterised by crystalline bed rock ...",
-          "Reference List": "",
+          "Reference list": "",
           "Comment": "",
           "Changes from Version 1.0": ""
         },
@@ -638,7 +638,7 @@
             "ILTER": "FALSE"
           },
           "Example": "The site is characterised by karst ...",
-          "Reference List": "",
+          "Reference list": "",
           "Comment": "",
           "Changes from Version 1.0": ""
         },
@@ -653,7 +653,7 @@
             "ILTER": "FALSE"
           },
           "Example": "The site is characterised by fertile brown soils with a high content of ...",
-          "Reference List": "",
+          "Reference list": "",
           "Comment": "",
           "Changes from Version 1.0": ""
         },
@@ -668,7 +668,7 @@
             "ILTER": "FALSE"
           },
           "Example": "The site is characterised by beech forests ..",
-          "Reference List": "",
+          "Reference list": "",
           "Comment": "",
           "Changes from Version 1.0": ""
         }
@@ -686,7 +686,7 @@
           "ILTER": "FALSE"
         },
         "Example": "YES",
-        "Reference List": [
+        "Reference list": [
           "YES",
           "NO"
         ],
@@ -705,7 +705,7 @@
           "ILTER": "FALSE"
         },
         "Example": "UNECE ICP Integrated Monitoring, EcoPotential, eLTER H2020",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": "reorganised structure"
       },
@@ -723,7 +723,7 @@
               "ILTER": "TRUE"
             },
             "Example": "Austria (LTER-Austria)",
-            "Reference List": "Reference to [content type 'LTER member network']",
+            "Reference list": "Reference to [content type 'LTER member network']",
             "Comment": "",
             "Changes from Version 1.0": ""
           },
@@ -739,7 +739,7 @@
               "ILTER": "TRUE"
             },
             "Example": "Master site",
-            "Reference List": [
+            "Reference list": [
               "ad Site classification LTER Europe",
               "LTSER - is defined as LTSER Platform (Long-Term Socio-Ecological Research): Modular LTER-facility consisting of sites which are located in an area with defined boundaries. Besides this physical component, LTSER-Platforms provide multiple services like the networking of client groups (e.g. research, local stakeholders), data management, communication and representation (management component). The elements of LTSER Platforms represent the main habitats, land use forms and practices relevant for the broader region (up to 10000 km²) and cover all scales and levels relevant for LTSER (from local to landscape). LTSER-Platforms should represent economic and social units or coincide/overlap with such units where adequate information on land use history, economy and demography is available to allow for socio-ecological research.",
               "MASTER SITE - is defined as Master LTER Site (Synonyms: 'top site'; 'supersite'; 'LTER hub'; 'HIS=Highly Instrumented Site'; M-Site): Highly instrumented and permanently operated sites, featuring an ecosystem approach in terms of combining regular sampling (weekly as standard), permanent measurements and inventories at appropriate intervals across drivers and ecosystem compartments . Design of sites customized according to the ecological profile of the site and enabling integrated analyses across system strata (geosphere to atmosphere) and covering therefore required spatial scales. Experimental approaches shall be existent or possible. All year access and power supply must be secured in order to enable e.g. measurement of climate data according to international standards. A maximum of other networks and/or related projects shall have been using this category of site (e.g. EMEP, CarboEurope, UNECE ICPs, national monitoring networks...). Operation for at least 10 years. The intention is to flag sites, which can be considered as key ecosystem research infrastructures on the European scale.",
@@ -765,7 +765,7 @@
               "ILTER": "FALSE"
             },
             "Example": "Highly Instrumented Observational Site - HIOS",
-            "Reference List": [
+            "Reference list": [
               "N/A - not applicable",
               "Highly Instrumented Observational Site - HIOS",
               "Highly Instrumented Observational and Experimental Site - HIOS/HIES",
@@ -790,7 +790,7 @@
           "ILTER": "TRUE"
         },
         "Example": "Simple Site",
-        "Reference List": [
+        "Reference list": [
           "Platform - is defined as LTSER Platform (Long-Term Socio-Ecological Research): Modular LTER-facility consisting of sites which are located in an area with defined boundaries. Besides this physical component, LTSER-Platforms provide multiple services like the networking of client groups (e.g. research, local stakeholders), data management, communication and representation (management component). The elements of LTSER Platforms represent the main habitats, land use forms and practices relevant for the broader region (up to 10000 km²) and cover all scales and levels relevant for LTSER (from local to landscape). LTSER-Platforms should represent economic and social units or coincide/overlap with such units where adequate information on land use history, economy and demography is available to allow for socio-ecological research.",
           "Complex Site - SITE, where more then one ecosystem type is observed",
           "Simple Site - SITE, where one ecosystem type is observed",
@@ -807,14 +807,14 @@
         "field_name": "field_site_status",
         "Definition": "The site status describes the current status of the site, e.g. if it is planned or already existing. The site status is composed of the status value, the year of establishment of the site and in case the year when the site was closed.",
         "Recommendation & Hints": "Select the current status of the site from the list of values and provide beginning and end time of the operation of the site. In case the site is still operating the end time is kept blank. As year of site establishment select the year when substantial data was obtained and the operational period of the site started.",
-        "Format": "reference list",
+        "Format": "Reference list",
         "Multiplicity": "[0..1]",
         "Required": {
           "LTER Europe": "TRUE",
           "ILTER": "TRUE"
         },
         "Example": "LTER (Long-Term Ecological Research) Zöbelboden was established in 1992 as the Austrian Integrated Monitoring station under the UN Convention on long-range trans-boundary air pollution (CLRTAP). In 2006 it became part of LTER Austria, the LTER member network. LTER Zöbelboden covers a small forested catchment (90 ha) of a karstic mountain range in the Kalkalpen national park. Today, LTER Zöbelboden represents one of the best known karst catchments in Europe with long-term data series of the major components of its ecosystems ...",
-        "Reference List": [
+        "Reference list": [
           "N/A - not applicable",
           "preliminary - site is planned or under construction. no relevant data exist",
           "existing - site exists and data are obtained",
@@ -834,7 +834,7 @@
           "ILTER": "TRUE"
         },
         "Example": "LTER (Long-Term Ecological Research) Zöbelboden was established in 1992 as the Austrian Integrated Monitoring station under the UN Convention on long-range trans-boundary air pollution (CLRTAP). In 2006 it became part of LTER Austria, the LTER member network. LTER Zöbelboden covers a small forested catchment (90 ha) of a karstic mountain range in the Kalkalpen national park. Today, LTER Zöbelboden represents one of the best known karst catchments in Europe with long-term data series of the major components of its ecosystems ...",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -850,7 +850,7 @@
           "ILTER": "TRUE"
         },
         "Example": "LTER (Long-Term Ecological Research) Zöbelboden was established in 1992 as the Austrian Integrated Monitoring station under the UN Convention on long-range trans-boundary air pollution (CLRTAP). In 2006 it became part of LTER Austria, the LTER member network. LTER Zöbelboden covers a small forested catchment (90 ha) of a karstic mountain range in the Kalkalpen national park. Today, LTER Zöbelboden represents one of the best known karst catchments in Europe with long-term data series of the major components of its ecosystems ...",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -866,7 +866,7 @@
           "ILTER": "FALSE"
         },
         "Example": "LTER (Long-Term Ecological Research) Zöbelboden was established in 1992 as the Austrian Integrated Monitoring station under the UN Convention on long-range trans-boundary air pollution (CLRTAP). In 2006 it became part of LTER Austria, the LTER member network. LTER Zöbelboden covers a small forested catchment (90 ha) of a karstic mountain range in the Kalkalpen national park. Today, LTER Zöbelboden represents one of the best known karst catchments in Europe with long-term data series of the major components of its ecosystems ...",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       }
@@ -884,14 +884,14 @@
           "ILTER": "FALSE"
         },
         "Example": "Deposition",
-        "Reference List": "Taxonomy Research Topics based on EnvThes Research Topics",
+        "Reference list": "Taxonomy Research Topics based on EnvThes Research Topics",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
       "Parameters": {
         "field_name": "field_parameters_taxonomy",
         "Definition": "Description of the observed parameters and parameter groups at the site. The parameter is defined as property of the ecosystem or a ecosystem compartment which can be observed either by sensors or humans, e.g. pH, species number, radiation.",
-        "Recommendation & Hints": "Please indicate the parameters observed at the site. Please record every parameter for the site platform in one line. More than one entry is possible. The reference list is defined by the entries in EnvThes Measure and is frequently updated.",
+        "Recommendation & Hints": "Please indicate the parameters observed at the site. Please record every parameter for the site platform in one line. More than one entry is possible. The Reference list is defined by the entries in EnvThes Measure and is frequently updated.",
         "Format": "Text (LOV)",
         "Multiplicity": "[0..n]",
         "Dependency": "",
@@ -900,7 +900,7 @@
           "ILTER": "TRUE"
         },
         "Example": "pH",
-        "Reference List": "Taxonomy Parameter based on EnvThes Measure",
+        "Reference list": "Taxonomy Parameter based on EnvThes Measure",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -917,7 +917,7 @@
             "ILTER": "TRUE"
           },
           "Example": "entire catchment",
-          "Reference List": [
+          "Reference list": [
             "_unknown",
             "beyond catchment",
             "entire catchment",
@@ -940,7 +940,7 @@
             "ILTER": "TRUE"
           },
           "Example": "only observation",
-          "Reference List": [
+          "Reference list": [
             "_unknown",
             "no observation of natural environment",
             "partly observation",
@@ -964,7 +964,7 @@
             "ILTER": "FALSE"
           },
           "Example": "catchment scale",
-          "Reference List": [
+          "Reference list": [
             "_unknown",
             "beyond catchment scale",
             "catchment scale",
@@ -987,7 +987,7 @@
             "ILTER": "FALSE"
           },
           "Example": "mainly experimentation",
-          "Reference List": [
+          "Reference list": [
             "_unknown",
             "no experimentation",
             "partly experimentation",
@@ -1010,9 +1010,9 @@
           "ILTER": "FALSE"
         },
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "",
-        "Changes from Version 1.0": "added to the SMM 1.1 as requirement for the eLTER H2020 project. In the next version of the MD model for the site, the eLTER Parameter information needs to be merged with the Site parameters information. The reference list for the field is currently not included in EnvThes."
+        "Changes from Version 1.0": "added to the SMM 1.1 as requirement for the eLTER H2020 project. In the next version of the MD model for the site, the eLTER Parameter information needs to be merged with the Site parameters information. The Reference list for the field is currently not included in EnvThes."
       }
     },
     "Protection status and resource management": {
@@ -1029,7 +1029,7 @@
             "ILTER": "FALSE"
           },
           "Example": "",
-          "Reference List": "",
+          "Reference list": "",
           "Comment": "",
           "Changes from Version 1.0": ""
         },
@@ -1045,7 +1045,7 @@
             "ILTER": "FALSE"
           },
           "Example": "",
-          "Reference List": [
+          "Reference list": [
             "0 - 25%",
             "25 - 50%",
             "50 - 75%",
@@ -1066,7 +1066,7 @@
             "ILTER": "FALSE"
           },
           "Example": "",
-          "Reference List": "",
+          "Reference list": "",
           "Comment": "",
           "Changes from Version 1.0": ""
         }
@@ -1084,7 +1084,7 @@
             "ILTER": "FALSE"
           },
           "Example": "Yes",
-          "Reference List": [
+          "Reference list": [
             "yes",
             "no"
           ],
@@ -1103,7 +1103,7 @@
             "ILTER": "FALSE"
           },
           "Example": "",
-          "Reference List": [
+          "Reference list": [
             "0 - 25%",
             "25 - 50%",
             "50 - 75%",
@@ -1124,7 +1124,7 @@
             "ILTER": "FALSE"
           },
           "Example": "",
-          "Reference List": "",
+          "Reference list": "",
           "Comment": "",
           "Changes from Version 1.0": ""
         }
@@ -1144,7 +1144,7 @@
             "ILTER": "FALSE"
           },
           "Example": "50-100 k",
-          "Reference List": [
+          "Reference list": [
             "_unknown",
             "0-50 k",
             "100-700 k",
@@ -1168,7 +1168,7 @@
             "ILTER": "FALSE"
           },
           "Example": "he Zöbelboden covers a small forested catchment (90 ha) of a karstic mountain range in the Kalkalpen national park. meteorological and air pollution monitoring is carried out at a clearing area (EMEP station; includes measurement of fog deposition) and on a tower (45 m height). Three intensive plots exist for the detailed measurement of element fluxes through the main forest types (bi-weekly to monthly analyses of deposition and soil water). Catchment runoff chemistry is measured at the main spring with a measuring weir (weekly analyses) and through irregular sampling at all other springs. Additional karst-hydrological measurements are in place in the main rivers surrounding the ...",
-          "Reference List": "",
+          "Reference list": "",
           "Comment": "",
           "Changes from Version 1.0": ""
         },
@@ -1184,7 +1184,7 @@
             "ILTER": "TRUE"
           },
           "Example": "",
-          "Reference List": [
+          "Reference list": [
             "yes",
             "no"
           ],
@@ -1203,7 +1203,7 @@
             "ILTER": "FALSE"
           },
           "Example": "",
-          "Reference List": [
+          "Reference list": [
             "yes",
             "no"
           ],
@@ -1222,7 +1222,7 @@
             "ILTER": "FALSE"
           },
           "Example": "",
-          "Reference List": [
+          "Reference list": [
             "boat",
             "cable car",
             "dirt road (4WD)",
@@ -1245,7 +1245,7 @@
             "ILTER": "FALSE"
           },
           "Example": "",
-          "Reference List": [
+          "Reference list": [
             "yes",
             "no"
           ],
@@ -1265,7 +1265,7 @@
               "ILTER": "TRUE"
             },
             "Example": "",
-            "Reference List": "",
+            "Reference list": "",
             "Comment": "",
             "Changes from Version 1.0": "The field Infrastructure combines a series of fields from the SMM 1.0 version. This allows a bigger flexibility in terms of further requirements for documenting the devices and infrastructures at the site. The entries are managed using a taxonomy, which needs to be synchronised with EnvThes. The fields include not only physical infrastructure elements but also the data infrastructure. With the next version of the SMM model the data infrastructure fields need to be cleared. In the field infrastructure the following fields are included: Snow clearing equipment, Snow clearing frequency, Permanent power produced, Permanent power supply location, Data transmission within site, Data transmission type within site, Data transmission from site, Data transmission type from site, Temperature controlled container, Measuring tower, Measuring tower location, Marine platform, Staff room at site, Lodging at site, Number of beds at site, Data storage format, Data services"
           }
@@ -1284,7 +1284,7 @@
             "ILTER": "TRUE"
           },
           "Example": "yes",
-          "Reference List": [
+          "Reference list": [
             "yes",
             "no"
           ],
@@ -1303,7 +1303,7 @@
             "ILTER": "FALSE"
           },
           "Example": "50-100 k",
-          "Reference List": [
+          "Reference list": [
             "_unknown",
             "0-10 k",
             "10-30 k",
@@ -1327,7 +1327,7 @@
             "ILTER": "FALSE"
           },
           "Example": "4",
-          "Reference List": "",
+          "Reference list": "",
           "Comment": "",
           "Changes from Version 1.0": ""
         },
@@ -1343,7 +1343,7 @@
             "ILTER": "FALSE"
           },
           "Example": "The Zöbelboden is managed by the Umweltbundesamt GmbH. Sampling of chemical specimen is done by local staff of the Kalkalpen national park. Chemical analyses are carried out by the laboratory of the Umweltbundesamt in Vienna. Maintenance is done on a regular basis by a local contractor.",
-          "Reference List": "",
+          "Reference list": "",
           "Comment": "",
           "Changes from Version 1.0": ""
         },
@@ -1359,7 +1359,7 @@
             "ILTER": "FALSE"
           },
           "Example": "7",
-          "Reference List": "",
+          "Reference list": "",
           "Comment": "",
           "Changes from Version 1.0": ""
         }
@@ -1378,7 +1378,7 @@
           "ILTER": "TRUE"
         },
         "Example": "Offline (Mail or Telephone)",
-        "Reference List": [
+        "Reference list": [
           "N/A",
           "Offline (Mail or Telephone)",
           "Online (Reference for access)",
@@ -1399,7 +1399,7 @@
           "ILTER": "TRUE"
         },
         "Example": "Co-authorship on publications resulting from use of the dataset",
-        "Reference List": [
+        "Reference list": [
           "N/A",
           "Co-authorship on publications resulting from use of the dataset",
           "The data provider must be offered co-authorship for publications using this dataset at least within the metadata description",
@@ -1429,7 +1429,7 @@
           "ILTER": "FALSE"
         },
         "Example": "In general an open data policy is applied for scientific purposes. In addition aggregated data can be obtained free and open from the UNECE ICP IM Data portal. ...",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": "field added"
       },
@@ -1445,7 +1445,7 @@
           "ILTER": "FALSE"
         },
         "Example": "",
-        "Reference List": "http://www.umweltbundesamt.at/umwelt/luft/messnetz/zoebelboden/",
+        "Reference list": "http://www.umweltbundesamt.at/umwelt/luft/messnetz/zoebelboden/",
         "Comment": "",
         "Changes from Version 1.0": ""
       }
@@ -1463,7 +1463,7 @@
           "ILTER": "TRUE"
         },
         "Example": "Central",
-        "Reference List": [
+        "Reference list": [
           "N/A",
           "Central",
           "Distributed within institution",
@@ -1485,7 +1485,7 @@
           "ILTER": "FALSE"
         },
         "Example": "4",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -1501,7 +1501,7 @@
           "ILTER": "FALSE"
         },
         "Example": "Proprietary file format",
-        "Reference List": [
+        "Reference list": [
           "N/A",
           "Paper",
           "Proprietary file format",
@@ -1528,7 +1528,7 @@
           "ILTER": "FALSE"
         },
         "Example": "Web Map Service (WMS)",
-        "Reference List": [
+        "Reference list": [
           "N/A",
           "Data portal",
           "Web Catalog Service (CSW)",
@@ -1553,7 +1553,7 @@
           "ILTER": "FALSE"
         },
         "Example": "Additional file for download on the the main attributes of the monitoring are provided as well as map on the main results. ...",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       }
