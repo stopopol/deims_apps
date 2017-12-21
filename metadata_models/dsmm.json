@@ -145,6 +145,35 @@
         "DOI": "DOI",
         "Online Location": "Online Locator"
       }
+    },
+    "Data Sources": {
+      "Data Sources": ""
+    },
+    "Geographic": {
+      "Bounding Box, Elev, etc.": ""
+    },
+    "Temporal Extent": {
+      "Date Range": ""
+    },
+    "Taxonomic Coverage": {
+      "Biological Classification": ""
+    },
+    "Methods and Instrumentation": {
+      "Method": "",
+      "Method Description": "",
+      "Instrumentation": ""
+    },
+    "Sampling Description": {
+      "Spatial scale/design": "",
+      "Sampling Time Span": "",
+      "Minimum Sampling Unit": "",
+      "Quality Assurance": ""
+    },
+    "Reporting": {
+      "Legal Act": ""
+    },
+    "Related Information\t": {
+      "Related publications": ""
     }
   }
 }
