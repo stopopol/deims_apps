@@ -275,29 +275,29 @@
         "Example": "",
         "Reference List": "",
         "Comment": ""
+      },
+      "Minimum Sampling Unit": {
+        "field_name": "",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
+      },
+      "Quality Assurance": {
+        "field_name": "",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
       }
-    },
-    "Minimum Sampling Unit": {
-      "field_name": "",
-      "Definition": "",
-      "Recommendation & Hints": "",
-      "Format": "",
-      "Multiplicity": "",
-      "Required": "",
-      "Example": "",
-      "Reference List": "",
-      "Comment": ""
-    },
-    "Quality Assurance": {
-      "field_name": "",
-      "Definition": "",
-      "Recommendation & Hints": "",
-      "Format": "",
-      "Multiplicity": "",
-      "Required": "",
-      "Example": "",
-      "Reference List": "",
-      "Comment": ""
     },
     "Reporting": {
       "Legal Act": {
