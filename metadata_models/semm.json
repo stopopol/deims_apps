@@ -14,7 +14,7 @@
         "Multiplicity": "[1..1]",
         "Required": "TRUE",
         "Example": "Zöbelboden precipitation sensor",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
       "UUID": {
@@ -25,7 +25,7 @@
         "Multiplicity": "[1..1]",
         "Required": "TRUE",
         "Example": "8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "automatically generated"
       },
       "Metadata update date": {
@@ -36,7 +36,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
       "Related Site": {
@@ -47,7 +47,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
       "sensorType": {
@@ -58,7 +58,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
       "Description": {
@@ -69,7 +69,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
       "Keywords": {
@@ -80,7 +80,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
       "Contact": {
@@ -91,7 +91,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       }
     },
@@ -104,7 +104,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
       "Position (elevation)": {
@@ -115,7 +115,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
       "Trajectory": {
@@ -126,7 +126,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       }
     },
@@ -139,7 +139,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
       "resultAcquisitionSource": {
@@ -150,7 +150,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
       "media monitored": {
@@ -161,7 +161,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
       "Observation(s)": {
@@ -173,7 +173,7 @@
           "Multiplicity": "",
           "Required": "",
           "Example": "",
-          "Reference List": "",
+          "Reference list": "",
           "Comment": ""
         },
         "Unit of measurements": {
@@ -184,7 +184,7 @@
           "Multiplicity": "",
           "Required": "",
           "Example": "",
-          "Reference List": "",
+          "Reference list": "",
           "Comment": ""
         }
       }
