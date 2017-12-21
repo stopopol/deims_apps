@@ -142,8 +142,8 @@
     },
     "Online Distribution\t": {
       "Resource Locator": {
-        "DOI": "DOI",
-        "Online Location": "Online Locator"
+        "DOI": "",
+        "Online Location": ""
       }
     },
     "Data Sources": {
