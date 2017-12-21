@@ -76,6 +76,75 @@
         "Reference List": "",
         "Comment": ""
       }
+    },
+    "Keywords": {
+      "Keywords originating from EnvThes": {
+        "field_name": "field_language",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
+      },
+      "Free Keywords": {
+        "field_name": "field_language",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
+      }
+    },
+    "Parameters": {
+      "Parameters": {
+        "field_name": "field_language",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
+      }
+    },
+    "Access and Use Constraints": {
+      "Principal and granted permission": {
+        "field_name": "field_language",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
+      }
+    },
+    "Intellectual Rights": {
+      "Intellectual Rights": {
+        "field_name": "field_language",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "",
+        "Required": "",
+        "Example": "",
+        "Reference List": "",
+        "Comment": ""
+      }
+    },
+    "Online Distribution\t": {
+      "Resource Locator": {
+        "DOI": "DOI",
+        "Online Location": "Online Locator"
+      }
     }
   }
 }
