@@ -6,7 +6,7 @@
   "scope": "The Site Metadata Model (SMM) describes the metadata elements of a monitoring or experimentation site.",
   "content": {
     "Name and general description": {
-      "Site Name": {
+      "Site name": {
         "field_name": "field_site_sitelong",
         "Definition": "Name identifying the documented observation and/or experimentation facility (site, e.g LTER Site or LTSER Platform).",
         "Recommendation & Hints": "The site name should be concise and precise, e.g. by a given named place. It should not contain unexplained acronyms or abbreviations. It is recommended a maximum length of 200 characters and keeping the similarity with the ‘official naming’ established in the community.",
@@ -158,7 +158,7 @@
       }
     },
     "Site contact details": {
-      "Contact: Site Manager": {
+      "Contact: Site manager": {
         "field_name": "field_person_contact",
         "Definition": "Reference to the contact person responsible for the site. The person could be either the principal investigator (PI, co-PI), the information manager (IM), the site manager (SM) or a technician (TE). The details for the person/organisation needs to be specified in the persons module (PEMM).",
         "Recommendation & Hints": "Please provide the reference (Person) to the person responsible for the site. Please start typing the name of the person. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
@@ -363,7 +363,7 @@
     "Ecoystem and environmental characteristics": {
       "General characteristics": {
         "Temperature": {
-          "Temperature - Average annual": {
+          "Temperature - average annual": {
             "field_name": "field_temperature_average_annual",
             "Definition": "Temperature characteristics of the site. The temperature characteristics are composed of the mean annual temperature, the monthly average of the coldest month (e.g. January) as the annual minimum temperature and the average of the hottest month (e.g. July) as the annual maximum temperature. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The temperature is given in [°C].",
             "Recommendation & Hints": "This element consists of three values (annual average, minimum and maximum) of the air temperature. If possible site data should be used to calculate the mean, minimum and maximum air temperature based on a 10 or 30 years period. If no long term site data are available please use data or values from a comparable climatic station near to the site.",
@@ -373,7 +373,7 @@
               "LTER Europe": "TRUE",
               "ILTER": "TRUE"
             },
-            "Example": "Temperature - Average annual [°C]: 7.2",
+            "Example": "Temperature - average annual [°C]: 7.2",
             "Reference List": "",
             "Comment": "",
             "Changes from Version 1.0": ""
@@ -409,7 +409,7 @@
           }
         },
         "Precipitation": {
-          "Precipitation - Average annual": {
+          "Precipitation - average annual": {
             "field_name": "field_precipitation_annual_ilter",
             "Definition": "Precipitation characteristics of the site. The precipitation characteristics is composed of the total annual precipitation (sum), the long term average of the dryest month with the lowest precipitation (based on the monthly sum of precipitation) as the annual minimum precipitation and the long term average of the wettest month with the highest precipitation (based on the montly sum precipitation) as the annual maximum precipitation. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The precipitation is given in [mm].",
             "Recommendation & Hints": "This element consists of three values (annual average, minimum and maximum) of the precipitation. If possible site data should be used to calculate the mean, minimum and maximum precipitation based on a 10 or 30 years data period. If no long term site data are available please use data or values from a comparable climatic station near to the site.",
@@ -1366,7 +1366,7 @@
       }
     },
     "Data sharing policy": {
-      "Data Request Format": {
+      "Data request format": {
         "field_name": "",
         "Definition": "The data type 'Data request format' describes on how the data can be requested from the site.",
         "Recommendation & Hints": "Please provide information how the data can be requested from the site (external and internal).",
