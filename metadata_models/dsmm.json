@@ -1,12 +1,12 @@
 {
   "name": "Dataset Metadata Model",
-  "abbreviation": "DMM",
+  "abbreviation": "DSMM",
   "version": 1.01,
   "releaseDate": "2017-12-21T00:00:00.000Z",
   "scope": "The dataset metadata model (DSMM) is based on requirements defined by the target stakeholder groups. The user requirements for the content were harmonized with the INSPIRE metadata regulation and implemented using Ecological Metadata Language (EML) metadata specification, version 2.1.1. EnvEurope focused on the EML metadata standard (stemming from the US LTER activities) but also provides an interface to discover ISO compliant metadata based on XSLT transformation EML2ISO developed in the project and Geonetwork opensource CSW implementation.",
   "content": {
     "Identification": {
-      "Related Site": {
+      "Related site": {
         "field_name": "field_dataset_site_name_ref",
         "Definition": "",
         "Recommendation & Hints": "",
@@ -14,7 +14,7 @@
         "Multiplicity": "[1..1]",
         "Required": "TRUE",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
       "UUID": {
@@ -25,11 +25,11 @@
         "Multiplicity": "[1..1]",
         "Required": "TRUE",
         "Example": "8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": "automatically generated"
       }
     },
-    "Responsible Parties": {
+    "Responsible parties": {
       "Owner/Creator": {
         "field_name": "",
         "Definition": "",
@@ -38,7 +38,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
       "Contact": {
@@ -49,7 +49,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
       "Metadata provider": {
@@ -60,7 +60,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       }
     },
@@ -73,7 +73,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       }
     },
@@ -86,10 +86,10 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
-      "Free Keywords": {
+      "Free keywords": {
         "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
@@ -97,7 +97,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       }
     },
@@ -110,11 +110,11 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       }
     },
-    "Access and Use Constraints": {
+    "Access and use constraints": {
       "Principal and granted permission": {
         "field_name": "",
         "Definition": "",
@@ -123,12 +123,12 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       }
     },
-    "Intellectual Rights": {
-      "Intellectual Rights": {
+    "Intellectual rights": {
+      "Intellectual rights": {
         "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
@@ -136,12 +136,12 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       }
     },
-    "Online Distribution\t": {
-      "Resource Locator": {
+    "Online distribution\t": {
+      "Resource locator": {
         "DOI": {
           "field_name": "",
           "Definition": "",
@@ -150,10 +150,10 @@
           "Multiplicity": "",
           "Required": "",
           "Example": "",
-          "Reference List": "",
+          "Reference list": "",
           "Comment": ""
         },
-        "Online Location": {
+        "Online location": {
           "field_name": "",
           "Definition": "",
           "Recommendation & Hints": "",
@@ -161,13 +161,13 @@
           "Multiplicity": "",
           "Required": "",
           "Example": "",
-          "Reference List": "",
+          "Reference list": "",
           "Comment": ""
         }
       }
     },
-    "Data Sources": {
-      "Data Sources": {
+    "Data sources": {
+      "Data sources": {
         "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
@@ -175,12 +175,12 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       }
     },
     "Geographic": {
-      "Bounding Box, Elev, etc.": {
+      "Bounding box, elevation, etc.": {
         "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
@@ -188,12 +188,12 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       }
     },
-    "Temporal Extent": {
-      "Date Range": {
+    "Temporal extent": {
+      "Date range": {
         "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
@@ -201,12 +201,12 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       }
     },
-    "Taxonomic Coverage": {
-      "Biological Classification": {
+    "Taxonomic coverage": {
+      "Biological classification": {
         "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
@@ -214,11 +214,11 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       }
     },
-    "Methods and Instrumentation": {
+    "Methods and instrumentation": {
       "Method": {
         "field_name": "",
         "Definition": "",
@@ -227,10 +227,10 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
-      "Method Description": {
+      "Method description": {
         "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
@@ -238,7 +238,7 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
       "Instrumentation": {
@@ -249,11 +249,11 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       }
     },
-    "Sampling Description": {
+    "Sampling description": {
       "Spatial scale/design": {
         "field_name": "",
         "Definition": "",
@@ -262,10 +262,10 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
-      "Sampling Time Span": {
+      "Sampling time span": {
         "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
@@ -273,10 +273,10 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
-      "Minimum Sampling Unit": {
+      "Minimum sampling unit": {
         "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
@@ -284,10 +284,10 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
-      "Quality Assurance": {
+      "Quality assurance": {
         "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
@@ -295,12 +295,12 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       }
     },
     "Reporting": {
-      "Legal Act": {
+      "Legal act": {
         "field_name": "",
         "Definition": "",
         "Recommendation & Hints": "",
@@ -308,10 +308,10 @@
         "Multiplicity": "",
         "Required": "",
         "Example": "",
-        "Reference List": "",
+        "Reference list": "",
         "Comment": ""
       },
-      "Related Information\t": {
+      "Related information": {
         "Related publications": {
           "field_name": "",
           "Definition": "",
@@ -320,7 +320,7 @@
           "Multiplicity": "",
           "Required": "",
           "Example": "",
-          "Reference List": "",
+          "Reference list": "",
           "Comment": ""
         }
       }
