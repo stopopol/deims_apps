@@ -424,7 +424,7 @@
             "Comment": "",
             "Changes from Version 1.0": ""
           },
-          "Precipitation range (monthly minimum) FROM": {
+          "Precipitation range (monthly minimum) from": {
             "field_name": "field_site_precip_max",
             "Definition": "Precipitation characteristics of the site. The precipitation characteristics is composed of the total annual precipitation (sum), the long term average of the dryest month with the lowest precipitation (based on the monthly sum of precipitation) as the annual minimum precipitation and the long term average of the wettest month with the highest precipitation (based on the montly sum precipitation) as the annual maximum precipitation. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The precipitation is given in [mm].",
             "Recommendation & Hints": "This element consists of three values (annual average, minimum and maximum) of the precipitation. If possible site data should be used to calculate the mean, minimum and maximum precipitation based on a 10 or 30 years data period. If no long term site data are available please use data or values from a comparable climatic station near to the site.",
@@ -439,7 +439,7 @@
             "Comment": "",
             "Changes from Version 1.0": ""
           },
-          "Precipitation range (monthly maximum) TO": {
+          "Precipitation range (monthly maximum) to": {
             "field_name": "field_site_precip_min",
             "Definition": "Precipitation characteristics of the site. The precipitation characteristics is composed of the total annual precipitation (sum), the long term average of the dryest month with the lowest precipitation (based on the monthly sum of precipitation) as the annual minimum precipitation and the long term average of the wettest month with the highest precipitation (based on the montly sum precipitation) as the annual maximum precipitation. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The precipitation is given in [mm].",
             "Recommendation & Hints": "This element consists of three values (annual average, minimum and maximum) of the precipitation. If possible site data should be used to calculate the mean, minimum and maximum precipitation based on a 10 or 30 years data period. If no long term site data are available please use data or values from a comparable climatic station near to the site.",
