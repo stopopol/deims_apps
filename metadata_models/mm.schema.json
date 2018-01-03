@@ -11,9 +11,9 @@
     "content"
   ],
   "properties": {
-	"field_name": {
-	  "type": "string",
-	  "not": {"type":  null}
+    "field_name": {
+      "type": "string",
+      "not": {"type":  null}
     }
   } 
 }
