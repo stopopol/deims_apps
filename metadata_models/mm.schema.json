@@ -9,11 +9,5 @@
     "releaseDate",
     "scope",
     "content"
-  ],
-  "properties": {
-    "field_name": {
-      "type": "text",
-      "description": "Product identifier"
-    }
-  }
+  ]
 }
