@@ -2,6 +2,9 @@
   "$schema": "http://json-schema.org/schema#",
   "title": "DEIMS-SDR Metadata Model",
   "type": "object",
+  "properties": {
+	"field_name": { "not": {"type":  null}}
+  },
   "required": [
     "name",
     "abbreviation",
@@ -9,11 +12,5 @@
     "releaseDate",
     "scope",
     "content"
-  ],
-  "properties": {
-    "field_name": {
-      "type": "string",
-      "not": {"type":  null}
-    }
-  } 
+  ]
 }
