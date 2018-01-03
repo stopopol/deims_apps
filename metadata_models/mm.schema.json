@@ -9,5 +9,12 @@
     "releaseDate",
     "scope",
     "content"
-  ]
+  ],
+  "properties": {
+    "field_name": {
+      "not": {
+        "type": null
+      }
+    }
+  }
 }
