@@ -12,7 +12,8 @@
   ],
   "patternProperties": {
     "field_name": {
-      "nullable": false
+        "type": "string",
+        "minLength": 1
     }
   }
 }
