@@ -12,7 +12,7 @@
   ],
   "properties": {
     "field_name": {
-	  "nullable": false,
+	  "nullable": false
     }
   }
 }
