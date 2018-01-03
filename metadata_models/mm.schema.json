@@ -12,6 +12,7 @@
   ],
   "properties": {
     "field_name": {
+	  "type": "string",
       "not": {
         "type": null
       }
