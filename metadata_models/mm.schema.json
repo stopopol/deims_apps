@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/schema#",
-  "title": "DEIMS-SDR Metadata Model",
+  "title": "Metadata Model",
   "type": "object",
   "required": [
     "name",
@@ -11,11 +11,6 @@
     "content"
   ],
   "anyOf": [
-    {
-      "not": {
-        "type": "object"
-      }
-    },
     {
       "properties": {
         "field_name": {
