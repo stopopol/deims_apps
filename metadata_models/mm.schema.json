@@ -10,10 +10,23 @@
     "scope",
     "content"
   ],
-  "patternProperties": {
-    "field_name": {
-        "type": "string",
-        "minLength": 1
+  "anyOf": [
+    {
+      "not": {
+        "type": "object"
+      }
+    },
+    {
+      "properties": {
+        "field_name": {
+          "not": {
+            "type": "null"
+          }
+        }
+      },
+      "additionalProperties": {
+        "$ref": "#"
+      }
     }
-  }
+  ]
 }
