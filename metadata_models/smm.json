@@ -771,6 +771,46 @@
             ],
             "Comment": "",
             "Changes from Version 1.0": ""
+          },
+          "Accreditation Status by LTER Member Network": {
+            "field_name": "field_site_eu__status_accred",
+            "Definition": "Represents the determination by LTER-Europe of the status of the site. It is not modifiable by the site.",
+            "Recommendation & Hints": "",
+            "Format": "text",
+            "Multiplicity": "[0..1]",
+            "Dependency": "field_networks_term_ref",
+            "Required": {
+              "LTER Europe": "FALSE",
+              "ILTER": "FALSE"
+            },
+            "Example": "Accredited formal LTER facility",
+            "Reference list": [
+              "Accredited formal LTER facility",
+              "Accepted as potential LTER facility",
+              "Rejected as LTER  facility"
+            ],
+            "Comment": "Cannot be edited by user",
+            "Changes from Version 1.0": ""
+          },
+          "Accreditation Status by ILTER": {
+            "field_name": "field_declaration_status_accredi",
+            "Definition": "Status of the sites accredited by ILTER",
+            "Recommendation & Hints": "",
+            "Format": "text",
+            "Multiplicity": "[0..1]",
+            "Dependency": "field_networks_term_ref",
+            "Required": {
+              "LTER Europe": "FALSE",
+              "ILTER": "FALSE"
+            },
+            "Example": "Accredited formal LTER facility",
+            "Reference list": [
+              "Accredited formal LTER facility",
+              "Accepted as potential LTER facility",
+              "Rejected as LTER  facility"
+            ],
+            "Comment": "Cannot be edited by user",
+            "Changes from Version 1.0": ""
           }
         },
         "Other networks": {
