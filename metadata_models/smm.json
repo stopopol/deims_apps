@@ -751,7 +751,7 @@
             "Comment": "",
             "Changes from Version 1.0": ""
           },
-          "LTER Declaration Status requested by site holder": {
+          "LTER declaration status requested by site holder": {
             "field_name": "field_site_eu_declaration_status",
             "Definition": "Characterisation of a SITE (observation or experimentation facility) according to their level of implementation. This includes the following characteristics: technical aspects of work at the sites (intervals of basic sampling, technical maintenance...) basic infrastructure (power supply, all year access...) technical equipment data and IT infrastructure",
             "Recommendation & Hints": "Please select the site type from the list. This can be used in order to reveal information requirements relevant for e.g. multi-site projects or identification as major research infrastructure. The classification was adopted at the 7th LTER-Europe conference in Lodz. Site co-ordinators are asked to apply this overall classification to their sites, but also provide detailed metadata on the above categories in order to facilitate quick responses to specific information requests on the network level, e.g. which sites do have all year access AND power supply AND weekly sampling.",
@@ -772,7 +772,7 @@
             "Comment": "",
             "Changes from Version 1.0": ""
           },
-          "Accreditation Status by LTER Member Network": {
+          "Accreditation status by LTER member network": {
             "field_name": "field_site_eu__status_accred",
             "Definition": "Represents the determination by LTER-Europe of the status of the site. It is not modifiable by the site.",
             "Recommendation & Hints": "",
@@ -792,7 +792,7 @@
             "Comment": "Cannot be edited by user",
             "Changes from Version 1.0": ""
           },
-          "Accreditation Status by ILTER": {
+          "Accreditation status by ILTER": {
             "field_name": "field_declaration_status_accredi",
             "Definition": "Status of the sites accredited by ILTER",
             "Recommendation & Hints": "",
