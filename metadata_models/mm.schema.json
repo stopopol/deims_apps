@@ -1,7 +1,6 @@
 {
   "title": "DEIMS-SDR Metadata Model",
   "$schema": "http://json-schema.org/schema#",
-  "type": "object",
   "properties": {
     "name": {
       "type": "string"
@@ -22,21 +21,11 @@
       "type": "object"
     }
   },
-  "anyOf": [
-    {
-      "properties": {
-        "field_name": {
-          "type": "string",
-          "minLength": 1
-        }
-      }
-    }
-  ],
   "required": [
     "name",
     "abbreviation",
-    "releaseDate",
     "version",
+    "releaseDate",
     "scope",
     "content"
   ]
