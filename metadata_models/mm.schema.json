@@ -12,6 +12,11 @@
   ],
   "anyOf": [
     {
+      "not": {
+        "type": "object"
+      }
+    },
+    {
       "properties": {
         "field_name": {
           "not": {
