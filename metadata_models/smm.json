@@ -750,11 +750,32 @@
             ],
             "Comment": "",
             "Changes from Version 1.0": ""
+          },
+          "LTER Declaration Status requested by site holder": {
+            "field_name": "field_site_eu_declaration_status",
+            "Definition": "Characterisation of a SITE (observation or experimentation facility) according to their level of implementation. This includes the following characteristics: technical aspects of work at the sites (intervals of basic sampling, technical maintenance...) basic infrastructure (power supply, all year access...) technical equipment data and IT infrastructure",
+            "Recommendation & Hints": "Please select the site type from the list. This can be used in order to reveal information requirements relevant for e.g. multi-site projects or identification as major research infrastructure. The classification was adopted at the 7th LTER-Europe conference in Lodz. Site co-ordinators are asked to apply this overall classification to their sites, but also provide detailed metadata on the above categories in order to facilitate quick responses to specific information requests on the network level, e.g. which sites do have all year access AND power supply AND weekly sampling.",
+            "Format": "text",
+            "Multiplicity": "[1..1]",
+            "Dependency": "field_networks_term_ref",
+            "Required": {
+              "LTER Europe": "TRUE",
+              "ILTER": "TRUE"
+            },
+            "Example": "Master site",
+            "Reference list": [
+              "Formal LTER facility",
+              "Potential LTER facility",
+              "Candidate LTER facility",
+              "N/A - not applicable"
+            ],
+            "Comment": "",
+            "Changes from Version 1.0": ""
           }
         },
         "Other networks": {
           "Site classification ExpeER": {
-            "field_name": "",
+            "field_name": "field_site_expeer_classif",
             "Definition": "Site classification based on ExpeER",
             "Recommendation & Hints": "Please select the site type from the list.",
             "Format": "text",
