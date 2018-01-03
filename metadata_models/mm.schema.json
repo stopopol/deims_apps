@@ -10,9 +10,9 @@
     "scope",
     "content"
   ],
-  "properties": {
+  "patternProperties": {
     "field_name": {
-	  "nullable": false
+      "nullable": false
     }
   }
 }
