@@ -1134,9 +1134,9 @@
       },
       "Management of resources": {
         "Management of resources": {
-          "field_name": "",
-          "Definition": "Description if resources (e.g. timber, game animal, etc.) are frequently and regularly used within the site. This also includes agricultural management if the site is an agricultural landscape. The information is composed of the information on the existence of management efforts (e.g. yes), the cover of area which affected by management practises within the site and additional notes on the management (42.3), e.g. as the type of management.",
-          "Recommendation & Hints": "lease select if management activities are present at the site and an estimate of the share of the area within the site which is affected by the management. In addition textual notes, e.g. on the type of management can be given.",
+          "field_name": "field_site_mgtres",
+          "Definition": "Is the site or parts of the site managed for resources such as forestry, fishery?",
+          "Recommendation & Hints": "",
           "Format": "boolean",
           "Multiplicity": "[0..n]",
           "Dependency": "",
@@ -1153,8 +1153,8 @@
           "Changes from Version 1.0": ""
         },
         "Management of resources cover": {
-          "field_name": "",
-          "Definition": "",
+          "field_name": "field_site_mgmnt_res_percent",
+          "Definition": "How much of the site is used for the management of resources , for example, forestry, fishery",
           "Recommendation & Hints": "",
           "Format": "text [LOV]",
           "Multiplicity": "[0..n]",
@@ -1174,10 +1174,10 @@
           "Changes from Version 1.0": ""
         },
         "Management of resources notes": {
-          "field_name": "",
-          "Definition": "text",
+          "field_name": "field_site_mgtres_notes",
+          "Definition": "Additional notes to describe the management of resources",
           "Recommendation & Hints": "",
-          "Format": "",
+          "Format": "text",
           "Multiplicity": "[0..n]",
           "Dependency": "",
           "Required": {
@@ -1194,7 +1194,7 @@
     "Infrastructure and operation": {
       "Infrastructure": {
         "Infrastructure value": {
-          "field_name": "",
+          "field_name": "field_site_inf_val",
           "Definition": "The cumulative infrastructure value is the total sum of investments for infrastructure (e.g. buildings, roads, labs), instrumentation (e.g. devices, sensors) and other related costs (e.g. energy provision, land purchase) for the setup, establishment and operation of the site since the establishment or the site. It does not contain the yearly operation and maintenance costs. The cumulative infrastructure value is given in €.",
           "Recommendation & Hints": "Please give an estimate on the cumulative infrastructure value (in €) of all investments for the setup and instrumentation of the site since the establishment. This includes all kind of infrastructure existing at or belonging to the site. If no historic values are available please make the estimation on the estimation of the current costs for setting up the current devices based on actual costs.",
           "Format": "text (LOV)",
@@ -1218,7 +1218,7 @@
           "Changes from Version 1.0": ""
         },
         "Infrastructure notes": {
-          "field_name": "",
+          "field_name": "field_site_inf_notes",
           "Definition": "Additional textual description about the infrastructure present at the site. This can contain additional information which is not covered by the other items.",
           "Recommendation & Hints": "Please provide additional information on the infrastructure which are not covered by the other items.",
           "Format": "text",
@@ -1234,7 +1234,7 @@
           "Changes from Version 1.0": ""
         },
         "Accessible all year": {
-          "field_name": "",
+          "field_name": "field_site_access_allyear",
           "Definition": "The data type 'Access to site' describes the accessibility of the site throughout the year. The information is composed of the general information on the accessibility, the general information if all parts of the site can be visited throughout the year and the type of vehicle/device which is needed to reach the site.",
           "Recommendation & Hints": "Please provide information on the accessibility of the research site throughout the year. The includes the general information on the accessibility, the general information if all parts of the site can be visited throughout the year and the type of vehicle/device which is needed to reach the site.",
           "Format": "boolean",
@@ -1253,7 +1253,7 @@
           "Changes from Version 1.0": ""
         },
         "All parts of site accessible": {
-          "field_name": "",
+          "field_name": "field_site_allparts_access",
           "Definition": "",
           "Recommendation & Hints": "",
           "Format": "boolean",
@@ -1272,8 +1272,8 @@
           "Changes from Version 1.0": ""
         },
         "Access type": {
-          "field_name": "",
-          "Definition": "",
+          "field_name": "field_site_access_type",
+          "Definition": "What kind of vehicle is required to access the site?",
           "Recommendation & Hints": "",
           "Format": "text (LOV)",
           "Multiplicity": "[0..1]",
@@ -1295,7 +1295,7 @@
           "Changes from Version 1.0": ""
         },
         "Permanent power supply": {
-          "field_name": "",
+          "field_name": "field_site_inf_perm_powersup",
           "Definition": "Information on the availability of permanent power at the site.",
           "Recommendation & Hints": "Please provide information on the availability of permanent power at the research site throughout the year. The includes the general information on the availability (48.1) or power. The amount of permanent power produced or available as well as the location of the production devices for the power is provided with the information on the infrastructure.",
           "Format": "boolean",
@@ -1323,7 +1323,8 @@
             "Dependency": "",
             "Required": {
               "LTER Europe": "TRUE",
-              "ILTER": "TRUE"
+              "ILTER": "TRUE",
+              "Ecopotential": "TRUE"
             },
             "Example": "",
             "Reference list": "",
@@ -1353,7 +1354,7 @@
           "Changes from Version 1.0": ""
         },
         "Operation costs": {
-          "field_name": "",
+          "field_name": "field_site_ops_cost",
           "Definition": "The yearly operation costs are the total sum of costs needed for the operation of the site. This includes all costs of maintenance, energy consumption or land rent. It also includes cost for lab analysis of the permanent monitoring program. Costs for campaigns are not included in the yearly operation costs. The operation costs are given in €.",
           "Recommendation & Hints": "please give an estimate on the yearly operational costs for the site. This includes maintenance and operation of all kind of infrastructure existing at or belonging to the site.",
           "Format": "text (LOV)",
@@ -1376,22 +1377,6 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Sampling interval": {
-          "field_name": "",
-          "Definition": "",
-          "Recommendation & Hints": "",
-          "Format": "integer",
-          "Multiplicity": "[0..1]",
-          "Dependency": "",
-          "Required": {
-            "LTER Europe": "FALSE",
-            "ILTER": "FALSE"
-          },
-          "Example": "4",
-          "Reference list": "",
-          "Comment": "",
-          "Changes from Version 1.0": ""
-        },
         "Operations notes": {
           "field_name": "field_site_ops_notes",
           "Definition": "Additional textual description about the operation of the site. This can contain additional information which is not covered by the other items.",
@@ -1408,8 +1393,24 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
+        "Sampling interval": {
+          "field_name": "field_site_ops_sampling_intr",
+          "Definition": "",
+          "Recommendation & Hints": "",
+          "Format": "integer",
+          "Multiplicity": "[0..1]",
+          "Dependency": "",
+          "Required": {
+            "LTER Europe": "FALSE",
+            "ILTER": "FALSE"
+          },
+          "Example": "4",
+          "Reference list": "",
+          "Comment": "",
+          "Changes from Version 1.0": ""
+        },
         "Maintenance interval": {
-          "field_name": "",
+          "field_name": "field_site_ops_maint_freq",
           "Definition": "",
           "Recommendation & Hints": "",
           "Format": "integer",
@@ -1428,7 +1429,7 @@
     },
     "Data sharing policy": {
       "Data request format": {
-        "field_name": "",
+        "field_name": "field_site_datareq",
         "Definition": "The data type 'Data request format' describes on how the data can be requested from the site.",
         "Recommendation & Hints": "Please provide information how the data can be requested from the site (external and internal).",
         "Format": "text (LOV)",
@@ -1449,7 +1450,7 @@
         "Changes from Version 1.0": ""
       },
       "General data policy": {
-        "field_name": "",
+        "field_name": "field_dataset_rights",
         "Definition": "Information on the General Data Policy which is applied to share and publish the data and information from the site.",
         "Recommendation & Hints": "Please provide information on the general data policy which is applied to the data from the site.",
         "Format": "text (LOV)",
@@ -1479,7 +1480,7 @@
         "Changes from Version 1.0": ""
       },
       "Data policy notes": {
-        "field_name": "",
+        "field_name": "field_site_data_policy",
         "Definition": "Additional textual description about the data policy applied to data from the site. This can contain additional information which are not covered by the other items.",
         "Recommendation & Hints": "Please provide additional information on the data policy which are not covered by the other items.",
         "Format": "text",
@@ -1495,7 +1496,7 @@
         "Changes from Version 1.0": "field added"
       },
       "Data policy URL": {
-        "field_name": "",
+        "field_name": "field_data_policy_url",
         "Definition": "Link to website which provides further information on the data policy for the site. The web address is composed of the web link and a title which is shown.",
         "Recommendation & Hints": "",
         "Format": "text",
@@ -1513,7 +1514,7 @@
     },
     "Data management": {
       "Data storage location": {
-        "field_name": "",
+        "field_name": "field_site_datastorloc",
         "Definition": "The data type 'Data storage location' describes the general design of the data storage and management. It is composed of the information on general design of the data storage and the number of storage locations for the data. The number of storage locations is including the storage locations within an organisation as well as the storage locations situated at other organisations (e.g. data repositories).",
         "Recommendation & Hints": "Please provide information on the design of the data management being either central or distributed and the number of different data storage location (being either within or outside the organisation), e.g. as the number of databases.",
         "Format": "text (LOV)",
@@ -1535,7 +1536,7 @@
         "Changes from Version 1.0": ""
       },
       "Data storage location number": {
-        "field_name": "",
+        "field_name": "field_site_datastornum",
         "Definition": "",
         "Recommendation & Hints": "",
         "Format": "",
@@ -1551,10 +1552,10 @@
         "Changes from Version 1.0": ""
       },
       "Data storage format": {
-        "field_name": "",
+        "field_name": "field_site_dataformat",
         "Definition": "The data type 'Data storage format' describes the different formats in which the data are available and managed.",
         "Recommendation & Hints": "Please provide information about in which data formats the data are managed or provided to the end users.",
-        "Format": "",
+        "Format": "text (LOV)",
         "Multiplicity": "[0..n]",
         "Dependency": "",
         "Required": {
@@ -1578,7 +1579,7 @@
         "Changes from Version 1.0": ""
       },
       "Data services": {
-        "field_name": "",
+        "field_name": "field_site_dataservi",
         "Definition": "The data type 'Data services' describes the availability of data services (e.g. WFS) to connect to the data.",
         "Recommendation & Hints": "Please provide information about which data services are provided to the end users (external and internal).",
         "Format": "text (LOV)",
@@ -1603,7 +1604,7 @@
         "Changes from Version 1.0": ""
       },
       "Data notes": {
-        "field_name": "",
+        "field_name": "field_site_data_notes",
         "Definition": "The data type 'Data notes' describes other relevant information on data management and data exchange which are not covered by the other items of the section on data management and data exchange.",
         "Recommendation & Hints": "Please provide a textual description on information which is not covered by the other items.",
         "Format": "text",
