@@ -159,12 +159,12 @@
     },
     "Intellectual rights": {
       "Intellectual rights": {
-        "field_name": "",
-        "Definition": "",
-        "Recommendation & Hints": "",
+        "field_name": "field_dataset_rights",
+        "Definition": "Intellectual Rights provides a list of rights management statements for the dataset, or reference a URL (web address) that provides such information. Rights information encompasses Intellectual Property Rights (IPR), copyright, and various property rights. Moreover these rights might include detailed requirements for use, requirements for attribution, or other requirements the owner would like to impose.",
+        "Recommendation & Hints": "Select an option from the list, if any matching. If none matching, use an option Other IPR and provide free textual description, or if IPR information available on an online source, paste the URL pointing to this source. For multiple selection use the CTRL button.",
         "Format": "",
-        "Multiplicity": "",
-        "Required": "",
+        "Multiplicity": "[0..n]",
+        "Required": "FALSE",
         "Example": "",
         "Reference list": "",
         "Comment": ""
@@ -173,23 +173,23 @@
     "Online distribution\t": {
       "Resource locator": {
         "DOI": {
-          "field_name": "",
+          "field_name": "field_doi",
           "Definition": "",
           "Recommendation & Hints": "",
           "Format": "",
-          "Multiplicity": "",
-          "Required": "",
+          "Multiplicity": "[0..1]",
+          "Required": "FALSE",
           "Example": "",
           "Reference list": "",
           "Comment": ""
         },
         "Online location": {
-          "field_name": "",
-          "Definition": "",
+          "field_name": "field_online_locator",
+          "Definition": "Web address is the 'navigation section' of a metadata record pointing users to the location (URL) where a dataset can be retrieved directly, or provides information about how to acquire a dataset.",
           "Recommendation & Hints": "",
           "Format": "",
-          "Multiplicity": "",
-          "Required": "",
+          "Multiplicity": "[0..n]",
+          "Required": "FALSE",
           "Example": "",
           "Reference list": "",
           "Comment": ""
