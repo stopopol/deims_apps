@@ -99,7 +99,8 @@
         "Example": "Dataset provides monthly precipitation data collected at different weather stations that are closest to Lake Santo Parmense and Lake Scuro Parmense. We provide a long-term dataset (1951-2010) collected at two stations near the town of Bosco di Corniglio. In particular, from 1951 to 1998 precipitation data were collected at the weather station of Bosco Centrale. Between 1999 and july 2000 the station was out of order (no data available) and from 2001 the Bosco Centrale weather station was substituted by the Bosco di Corniglio station. The two weather stations are less than 1 km apart and they are about 6 km far from Lake Santo Parmense and 7 km far from Lake Scuro Parmense. We also provide a shorter dataset of precipitation data collected from 1994 to 2010 at the weather station of Lagdei. This station is closer to our sampling sites (about 1 km from Lake Santo Parmense and 5 km from Lake Scuro Parmense), but a shorter time series is available. All weather stations are managed by the the Environmental Protection Agency of the Emilia-Romagna region (ARPA Emilia-Romagna), which ...",
         "Reference list": "",
         "Comment": ""
-      },
+      }
+    },
     "Keywords": {
       "Keywords originating from EnvThes": {
         "field_name": "",
