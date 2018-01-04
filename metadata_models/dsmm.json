@@ -212,7 +212,7 @@
     "Geographic": {
       "Bounding box, elevation, etc.": {
         "field_name": "",
-        "Definition": "	The Geographic reference for the dataset is done by the entity type Research site, which is the location, where specific observations are done. By grouping the information the entity type RESEARCH SITE can be reused. A RESEARCH SITE are the observtion plots within a SITE (e.g. LTER SITE or LTSER PLATFORM).The RESEARCH SITE is the extent of the dataset in the geographic space, given as a bounding box. Defining the coordinates of a boundary rectangle representing the dataset area on a map allows the discovery by geographical area. It consists of: Northern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Southern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Western bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east) and Eastern bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east). In addition the bounding altitudes, images and additional details can be provided.",
+        "Definition": "\tThe Geographic reference for the dataset is done by the entity type Research site, which is the location, where specific observations are done. By grouping the information the entity type RESEARCH SITE can be reused. A RESEARCH SITE are the observtion plots within a SITE (e.g. LTER SITE or LTSER PLATFORM).The RESEARCH SITE is the extent of the dataset in the geographic space, given as a bounding box. Defining the coordinates of a boundary rectangle representing the dataset area on a map allows the discovery by geographical area. It consists of: Northern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Southern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Western bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east) and Eastern bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east). In addition the bounding altitudes, images and additional details can be provided.",
         "Recommendation & Hints": "Please select a Research site from the list, or create a new one with 'Create Research Site' if missing. For the Research Site the bounding box shall be as small as possible and shall be expressed in decimal degree with a precision of at least two decimals. The coordinates of the bounding boxes shall be expressed in any geodetic coordinate reference system with the Greenwich Prime Meridian. You can define bounding box either by drawing a polygon on a map or inserting manually the bounding coordinates. To activate drawing functionality and to (move, delete, reshape) use the editing toolbar in the right top corner of the map. If you would like to define more bounding coordinates, please add more RESEARCH SITES for the dataset MD record.",
         "Format": "Reference to [Content Type] RESEARCH SITE",
         "Multiplicity": "[1..n]",
@@ -224,7 +224,7 @@
     },
     "Temporal extent": {
       "Date range": {
-        "field_name": "field_date_range	",
+        "field_name": "field_date_range\t",
         "Definition": "Defines the time period covered by the content of the dataset. This period may be expressed as a time (an individual date) or date ranges (interval of dates/From-To) or a mix of individual and interval dates.",
         "Recommendation & Hints": "",
         "Format": "Date",
@@ -286,69 +286,77 @@
     "Sampling description": {
       "Spatial scale/design": {
         "field_name": "field_spatial_scale",
-        "Definition": "",
+        "Definition": "Provides information about sampling part of the method as measurement frequency, and spatial scale.",
         "Recommendation & Hints": "",
         "Format": "",
-        "Multiplicity": "",
-        "Required": "",
+        "Multiplicity": "[1..n]",
+        "Required": "TRUE",
         "Example": "",
         "Reference list": "",
         "Comment": ""
       },
       "Sampling time span": {
-        "field_name": "",
-        "Definition": "",
+        "field_name": "Provides information about sampling part of the method as measurement frequency, and spatial scale.",
+        "Definition": "field_sampling_time_span",
         "Recommendation & Hints": "",
         "Format": "",
-        "Multiplicity": "",
-        "Required": "",
+        "Multiplicity": "[1..n]",
+        "Required": "TRUE",
         "Example": "",
         "Reference list": "",
         "Comment": ""
       },
       "Minimum sampling unit": {
-        "field_name": "",
-        "Definition": "",
+        "field_name": "Provides information about sampling part of the method as measurement frequency, and spatial scale.",
+        "Definition": "field_minimum_sampling_unit",
         "Recommendation & Hints": "",
         "Format": "",
-        "Multiplicity": "",
-        "Required": "",
+        "Multiplicity": "[1..n]",
+        "Required": "TRUE",
         "Example": "",
         "Reference list": "",
         "Comment": ""
       },
       "Quality assurance": {
-        "field_name": "",
-        "Definition": "",
-        "Recommendation & Hints": "",
-        "Format": "",
-        "Multiplicity": "",
-        "Required": "",
-        "Example": "",
+        "field_name": "field_quality_assurance",
+        "Definition": "Provides information on QA/QC procedures applied for the data.",
+        "Recommendation & Hints": "Please provide information on QA/QC procedures applied for the data and quality information in the data.",
+        "Format": "text",
+        "Multiplicity": "[0..1]",
+        "Required": "FALSE",
+        "Example": "Values are quality checked using automatic outlier control (R-Script) as well as visual inspection of data. The QA/QC procedure is applied ...",
         "Reference list": "",
         "Comment": ""
       }
     },
     "Reporting": {
       "Legal act": {
-        "field_name": "",
-        "Definition": "",
+        "field_name": "field_dataset_legal",
+        "Definition": "Provides information whether the dataset has been reported to the local, regional or national bodies to fulfil the obligations from particular legal regulations.",
         "Recommendation & Hints": "",
-        "Format": "",
+        "Format": "[0..n]",
         "Multiplicity": "",
-        "Required": "",
+        "Required": "FALSE",
         "Example": "",
-        "Reference list": "",
+        "Reference list": [
+          "Habitats Directive (92/43/EEC)",
+          "Water Framework Directive (00/60/EEC)",
+          "Bird Directive (79/409/EEC)",
+          "Marine Strategy Framework Directive",
+          "Water Policy Directive",
+          "None",
+          "Other directive"
+        ],
         "Comment": ""
       },
       "Related information": {
         "Related publications": {
-          "field_name": "",
+          "field_name": "field_related_publications",
           "Definition": "",
           "Recommendation & Hints": "",
           "Format": "",
           "Multiplicity": "",
-          "Required": "",
+          "Required": "FALSE",
           "Example": "",
           "Reference list": "",
           "Comment": ""
