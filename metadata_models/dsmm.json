@@ -117,7 +117,7 @@
         "field_name": "field_free_keywords_ref",
         "Definition": "Allows to describe the dataset with free keywords",
         "Recommendation & Hints": "",
-        "Format": "[1..n]",
+        "Format": "",
         "Multiplicity": "[1..n]",
         "Required": "FALSE",
         "Example": "",
@@ -127,27 +127,33 @@
     },
     "Parameters": {
       "Parameters": {
-        "field_name": "",
-        "Definition": "",
+        "field_name": "field_parameters_taxonomy",
+        "Definition": "Description of the observed parameters and parameter groups. The parameter is defined as property of the ecosystem or a ecosystem compartment which can be observed either by sensors or humans, e.g. pH, species number, radiation.",
         "Recommendation & Hints": "",
         "Format": "",
-        "Multiplicity": "",
-        "Required": "",
-        "Example": "",
+        "Multiplicity": "[0..n]",
+        "Required": "FALSE",
+        "Example": "pH",
         "Reference list": "",
-        "Comment": ""
+        "Comment": "Added to form, but not used in metadata exports."
       }
     },
     "Access and use constraints": {
       "Principal and granted permission": {
-        "field_name": "",
-        "Definition": "",
-        "Recommendation & Hints": "",
+        "field_name": "field_access_use_termref",
+        "Definition": "Provide a list of rules defining permissions granted for a dataset.",
+        "Recommendation & Hints": "It is recommended that the 3-year rule be implemented and that the data owner must take specific actions to change this.",
         "Format": "",
-        "Multiplicity": "",
-        "Required": "",
+        "Multiplicity": "[1..n]",
+        "Required": "FALSE",
         "Example": "",
-        "Reference list": "",
+        "Reference list": [
+          "Free for access",
+          "Free for access and use upon request",
+          "Other restrictions according to rules defined in itellectual rights",
+          "Restricted access detaily defined in intellectual property information",
+          "No access"
+        ],
         "Comment": ""
       }
     },
