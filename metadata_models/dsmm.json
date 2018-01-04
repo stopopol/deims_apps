@@ -198,12 +198,12 @@
     },
     "Data sources": {
       "Data sources": {
-        "field_name": "",
-        "Definition": "",
+        "field_name": "field_data_sources",
+        "Definition": "A data source is defined as a physical data upload of a dataset to DEIMS. A data source is described by a number of fields, describing the structure of the data file. For a dataset MD record [0..n] data files can be physically uploaded and described.",
         "Recommendation & Hints": "",
         "Format": "",
-        "Multiplicity": "",
-        "Required": "",
+        "Multiplicity": "[0..n]",
+        "Required": "FALSE",
         "Example": "",
         "Reference list": "",
         "Comment": ""
@@ -212,26 +212,26 @@
     "Geographic": {
       "Bounding box, elevation, etc.": {
         "field_name": "",
-        "Definition": "",
-        "Recommendation & Hints": "",
-        "Format": "",
-        "Multiplicity": "",
-        "Required": "",
-        "Example": "",
-        "Reference list": "",
+        "Definition": "	The Geographic reference for the dataset is done by the entity type Research site, which is the location, where specific observations are done. By grouping the information the entity type RESEARCH SITE can be reused. A RESEARCH SITE are the observtion plots within a SITE (e.g. LTER SITE or LTSER PLATFORM).The RESEARCH SITE is the extent of the dataset in the geographic space, given as a bounding box. Defining the coordinates of a boundary rectangle representing the dataset area on a map allows the discovery by geographical area. It consists of: Northern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Southern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Western bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east) and Eastern bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east). In addition the bounding altitudes, images and additional details can be provided.",
+        "Recommendation & Hints": "Please select a Research site from the list, or create a new one with 'Create Research Site' if missing. For the Research Site the bounding box shall be as small as possible and shall be expressed in decimal degree with a precision of at least two decimals. The coordinates of the bounding boxes shall be expressed in any geodetic coordinate reference system with the Greenwich Prime Meridian. You can define bounding box either by drawing a polygon on a map or inserting manually the bounding coordinates. To activate drawing functionality and to (move, delete, reshape) use the editing toolbar in the right top corner of the map. If you would like to define more bounding coordinates, please add more RESEARCH SITES for the dataset MD record.",
+        "Format": "Reference to [Content Type] RESEARCH SITE",
+        "Multiplicity": "[1..n]",
+        "Required": "TRUE",
+        "Example": "Zöbelboden_IP1, Zöbelboden_IP2, Zöbelboden_IP3",
+        "Reference list": "Reference to [Content Type] RESEARCH SITE",
         "Comment": ""
       }
     },
     "Temporal extent": {
       "Date range": {
-        "field_name": "",
-        "Definition": "",
+        "field_name": "field_date_range	",
+        "Definition": "Defines the time period covered by the content of the dataset. This period may be expressed as a time (an individual date) or date ranges (interval of dates/From-To) or a mix of individual and interval dates.",
         "Recommendation & Hints": "",
-        "Format": "",
-        "Multiplicity": "",
-        "Required": "",
+        "Format": "Date",
+        "Multiplicity": "[1..1]",
+        "Required": "TRUE",
         "Example": "",
-        "Reference list": "",
+        "Reference list": "From date: 01/01/2014; To date: 12/31/2014",
         "Comment": ""
       }
     },
