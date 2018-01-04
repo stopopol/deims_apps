@@ -77,13 +77,13 @@
     },
     "Language": {
       "Language": {
-        "field_name": "",
-        "Definition": "",
-        "Recommendation & Hints": "",
-        "Format": "",
-        "Multiplicity": "",
-        "Required": "",
-        "Example": "",
+        "field_name": "field_language",
+        "Definition": "The language in which the textual parts of the dataset are written.",
+        "Recommendation & Hints": "The names of parameters and their units collected within the dataset. Any other language used in textual information shall be referenced here as well. If the dataset does not contain any textual information (e.g. only codes and digits), the language should be defaulted to the value of the metadata language, which is defined as a default value - English. Start typing the language name and the system will offer you options to select.",
+        "Format": "Reference (LOV) based on ISO 639 standardized nomenclature used to classify all known languages",
+        "Multiplicity": "[0..1]",
+        "Required": "FALSE",
+        "Example": "English",
         "Reference list": "",
         "Comment": ""
       }
