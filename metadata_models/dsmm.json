@@ -6,15 +6,15 @@
   "scope": "The dataset metadata model (DSMM) is based on requirements defined by the target stakeholder groups. The user requirements for the content were harmonized with the INSPIRE metadata regulation and implemented using Ecological Metadata Language (EML) metadata specification, version 2.1.1. EnvEurope focused on the EML metadata standard (stemming from the US LTER activities) but also provides an interface to discover ISO compliant metadata based on XSLT transformation EML2ISO developed in the project and Geonetwork opensource CSW implementation.",
   "content": {
     "Title": {
-        "field_name": "title",
-        "Definition": "Provides a name of the dataset that is being documented as is known within the community described in detail by following elements. Title is a characteristic, and often unique and is the most informative element of a metadata record and usually with the highest priority as search engines go to this element.",
-        "Recommendation & Hints": "Title has to be concise and precisely describing the point. It should not contain unexplained acronyms or abbreviations. It is recommended a maximum length of 200 characters and keeping the similarity with the original title of the dataset in the sense of the ‘official naming’ established in the community. If the dataset is part of a larger project, it is recommended to indicate the Project at the end of the title, in brackets. In case of Project names, abbreviations are allowed, as long as the rest of the title follows the guidelines above and the abbreviation is spelled out immediately in the abstract",
-        "Format": "text",
-        "Multiplicity": "[1..1]",
-        "Required": "TRUE",
-        "Example": "Precipitation measured near Lake Santo Parmense and Lake Scuro Parmense (1951-2010)",
-        "Reference list": "",
-        "Comment": ""  
+      "field_name": "title",
+      "Definition": "Provides a name of the dataset that is being documented as is known within the community described in detail by following elements. Title is a characteristic, and often unique and is the most informative element of a metadata record and usually with the highest priority as search engines go to this element.",
+      "Recommendation & Hints": "Title has to be concise and precisely describing the point. It should not contain unexplained acronyms or abbreviations. It is recommended a maximum length of 200 characters and keeping the similarity with the original title of the dataset in the sense of the ‘official naming’ established in the community. If the dataset is part of a larger project, it is recommended to indicate the Project at the end of the title, in brackets. In case of Project names, abbreviations are allowed, as long as the rest of the title follows the guidelines above and the abbreviation is spelled out immediately in the abstract",
+      "Format": "text",
+      "Multiplicity": "[1..1]",
+      "Required": "TRUE",
+      "Example": "Precipitation measured near Lake Santo Parmense and Lake Scuro Parmense (1951-2010)",
+      "Reference list": "",
+      "Comment": ""
     },
     "Identification": {
       "Related site": {
@@ -44,7 +44,7 @@
       "Owner/Creator": {
         "field_name": "field_person_creator",
         "Definition": "Provides the full name of person(s), who created the dataset.",
-        "Recommendation & Hints": "	By typing the name of a person, the system provides a list of people matching the query. If none available, it's strongly recommended to first create a person metadata using the editing form available and then return back to dataset metadata definition.",
+        "Recommendation & Hints": "\tBy typing the name of a person, the system provides a list of people matching the query. If none available, it's strongly recommended to first create a person metadata using the editing form available and then return back to dataset metadata definition.",
         "Format": "Reference to [Content Type] PERSON",
         "Multiplicity": "[1..n]",
         "Required": "TRUE",
@@ -66,7 +66,7 @@
       "Metadata provider": {
         "field_name": "field_person_metadata_provider",
         "Definition": "Provides the full name of person(s), who created the documentation of a dataset.",
-        "Recommendation & Hints": "	By typing the name of a person, the system provides a list of people matching the query. If none available, it's strongly recommended to first create a person metadata using the editing form available and then return back to dataset metadata definition.",
+        "Recommendation & Hints": "\tBy typing the name of a person, the system provides a list of people matching the query. If none available, it's strongly recommended to first create a person metadata using the editing form available and then return back to dataset metadata definition.",
         "Format": "Reference to [Content Type] PERSON",
         "Multiplicity": "[1..n]",
         "Required": "TRUE",
