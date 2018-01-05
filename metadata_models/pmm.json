@@ -56,7 +56,7 @@
         "Definition": "Affiliation of the site to a LTER network (or related network).",
         "Recommendation & Hints": "",
         "Format": "Reference to [content type 'LTER member network']",
-        "Multiplicity": "[1..1]",
+        "Multiplicity": "[0..1]",
         "Dependency": "field_networks_term_ref",
         "Required": {
           "LTER Europe": "TRUE",
@@ -67,18 +67,31 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "Site description": {
-        "field_name": "field_site_description",
-        "Definition": "A short textual description of the site or platform which includes the location, biophysical characteristics, a brief history, the main scientific purpose at present and major plans for future, a brief overall description of infrastructure, and a brief overall description of available data/information.",
-        "Recommendation & Hints": "Please provide a short site description which could also be used on the web site. This description should cover: a brief history of the LTER Site or LTSER Platform, the main scientific purpose at present and major plans for future, a brief overall description of infrastructure, and a brief overall description of available data/information. In the section ECOSYSTEM AND ENVIRONMENTAL CHARACTERISTICS additional detailed descriptions on Geology, Hydrology, Soils and Vegetation can be provided.",
+      "Position": {
+        "field_name": "field_person_role",
+        "Definition": "The attribute 'Position' is defined as the role or position the person has within the organisation. For organisations this information is kept blank.",
+        "Recommendation & Hints": "Please provide information on the role and position the person has within the organisation or research network/site. For organisations this information is kept blank.",
         "Format": "Text",
         "Multiplicity": "[0..1]",
         "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
+          "LTER Europe": "FALSE",
+          "ILTER": "FALSE"
         },
-        "Example": "The Zöbelboden was established in 1992 as the only Integrated Monitoring station in Austria under the UN Convention on long-range transboundary air pollution (CLRTAP). In 2006 it became part of LTER Austria. The Zöbelboden covers a small forested catchment (90 ha) of a karstic mountain range (500 to 950 m above sea level) in the Kalkalpen national park. Monitoring and research is focussing on air pollution effects on forested catchments and its interaction with climate change. The Zöbelboden represents one of the best known karst catchments in Europe with long-term data series of the major components of its ecosystems. The Zöbelboden is managed by the Umweltbundesamt GmbH. Sampling of chemical specimen is done by local staff. Chemical analyses are carried out by the laboratory of the Umweltbundesamt in Vienna. All data and metadata from monitoring and research projects are stored in a semantically structured database.",
-        "Reference list": "",
+        "Example": "Lead Principal Investigator",
+        "Reference list": [
+          "COPI|Researcher",
+          "SC|Site Coordinator",
+          "NC|Network Coordinator",
+          "IM|Information Manager",
+          "FA|Faculty Associate",
+          "PDA|Post Doctoral Associate",
+          "OP|Other Professional",
+          "GS|Graduate Student",
+          "US|Undergraduate Student",
+          "OS|Other Staff",
+          "I|Interested Party",
+          "LPI|Lead Principal Investigator"
+        ],
         "Comment": "",
         "Changes from Version 1.0": ""
       },
