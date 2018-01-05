@@ -1,26 +1,6 @@
 {
-  "title": "DEIMS-SDR Metadata Model",
-  "$schema": "http://json-schema.org/schema#",
-  "properties": {
-    "name": {
-      "type": "string"
-    },
-    "abbreviation": {
-      "type": "string"
-    },
-    "version": {
-      "type": "number"
-    },
-    "releaseDate": {
-      "type": "string"
-    },
-    "scope": {
-      "type": "string"
-    },
-    "content": {
-      "type": "object"
-    }
-  },
+  "title": "Metadata Model",
+  "type": "object",
   "required": [
     "name",
     "abbreviation",
@@ -28,5 +8,17 @@
     "releaseDate",
     "scope",
     "content"
-  ]
+  ],
+  "allOf": [{ "$ref": "#/definitions/field_name-not-empty-deep" }],
+  "definitions": {
+    "field_name-not-empty-deep": {
+      "properties": {
+        "field_name": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": { "$ref": "#/definitions/field_name-not-empty-deep" }
+    }
+  }
 }
