@@ -162,7 +162,7 @@
         "Changes from Version 1.0": ""
       },
       "Spatial resolution": {
-        "field_name": "",
+        "field_name": "field_data_product_type",
         "Definition": "Provides date of metadata creation or last update.",
         "Recommendation & Hints": "Is automatically generated and cannot be entered manually",
         "Format": "Date as YYYY-MM-DD",
@@ -179,7 +179,7 @@
     },
     "Availability": {
       "Source": {
-        "field_name": "",
+        "field_name": "field_source",
         "Definition": "Country the site is located in.",
         "Recommendation & Hints": "Please provide the name of the country in which the observation or experimentation facility is located. This might be different from the LTER member network. It describes in which country the site is located, even if the member network is located in another country. Please select a country from the reference list.",
         "Format": "Reference list",
@@ -194,7 +194,7 @@
         "Changes from Version 1.0": ""
       },
       "Source Notes": {
-        "field_name": "",
+        "field_name": "field_site_data_notes",
         "Definition": "This is the location of the site in the geographic space, given as a center coordinates expressed in latitude and longitude in decimal degrees (projection EPSG:4258 ETRS89 for Europe, EPSG:4326 WGS84 for outside Europe).",
         "Recommendation & Hints": "Please provide the center coordinates of the site in decimal degrees. Enter the center point latitude and longitude. Supports entering data as both Decimal Degrees (-122.340932) OR Degrees-Minutes-Seconds (-123° 49' 55.2\\\" W). Please be careful to display southern hemisphere latitude values as as \"-\" and western hemisphere latitudes as \"-\".",
         "Format": "Number(decimal) for each center coordinate, format XX.XXXXX",
@@ -209,7 +209,7 @@
         "Changes from Version 1.0": ""
       },
       "Data digitally available": {
-        "field_name": "",
+        "field_name": "field_availability",
         "Definition": "Delineation of the site boundaries or the bounding box.",
         "Recommendation & Hints": "Please delineate the site boundaries on the map. The minimal requirement is the bounding box of your site.",
         "Format": "Map/WKT Text field",
@@ -224,7 +224,7 @@
         "Changes from Version 1.0": ""
       },
       "Open data": {
-        "field_name": "",
+        "field_name": "field_open_data",
         "Definition": "Shapefile representing the boundaries of the site using the geographic projection WGS84 (EPSG:4326).",
         "Recommendation & Hints": "Please upload the zipped shapefile with geographic projection (Europe: ETRS89 (EPSG:4258), outside Europe WGS84 (EPSG:4326)). If you don't have a shapefile at hand you can easily create one at: http://gis.ucla.edu/apps/click2shp/ You can also easily edit existing shapefiles at http://www.mapshaper.org/. Files must be less than 10 MB. Allowed file types: zip 7z. Please provide site boundaries and internal organisation (e.g. observation plots) as documented dataset. All datasets are linked with the site.",
         "Format": "binary file - zipped shapefile",
