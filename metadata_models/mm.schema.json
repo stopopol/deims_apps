@@ -9,16 +9,30 @@
     "scope",
     "content"
   ],
-  "allOf": [{ "$ref": "#/definitions/field_name-not-empty-deep" }],
+  "allOf": [
+    {
+      "$ref": "#/definitions/field_name-not-empty-deep"
+    }
+  ],
   "definitions": {
     "field_name-not-empty-deep": {
       "properties": {
         "field_name": {
           "type": "string",
           "minLength": 1
+        },
+        "Definition": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Multiplicity": {
+          "type": "string",
+          "minLength": 1
         }
       },
-      "additionalProperties": { "$ref": "#/definitions/field_name-not-empty-deep" }
+      "additionalProperties": {
+        "$ref": "#/definitions/field_name-not-empty-deep"
+      }
     }
   }
 }
