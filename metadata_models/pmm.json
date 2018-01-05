@@ -97,9 +97,41 @@
       },
       "Photo": {
         "field_name": "field_images",
-        "Definition": "Image showing a characteristic situation at the site. This can include instrumentation, observation plots, etc.",
-        "Recommendation & Hints": "Please provide an image showing a characteristic situation at the site. Please select the file from a directory and press the 'UPLOAD' button to upload the image to DEIMS-SDR. The formats can be png, jpg, jpeg or gif.",
+        "Definition": "Photograph of person or logo of a organisation.",
+        "Recommendation & Hints": "Please provide a photograph for the person or a logo for the organisation. You can use any of this image types: png, gif, jpg or jpeg.",
         "Format": "Image [png, jpg, jpeg, gif, ...]",
+        "Multiplicity": "[0..1]",
+        "Required": {
+          "LTER Europe": "FALSE",
+          "ILTER": "FALSE"
+        },
+        "Example": "",
+        "Reference list": "",
+        "Comment": "",
+        "Changes from Version 1.0": ""
+      }
+    },
+    "Contact information": {
+      "Academic degree": {
+        "field_name": "field_person_title",
+        "Definition": "",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "[0..1]",
+        "Required": {
+          "LTER Europe": "FALSE",
+          "ILTER": "FALSE"
+        },
+        "Example": "MSc",
+        "Reference list": "",
+        "Comment": "",
+        "Changes from Version 1.0": ""
+      },
+      "Address": {
+        "field_name": "field_contact_site_owner",
+        "Definition": "Contact information for persons and organisations composed of the adress and phone details.",
+        "Recommendation & Hints": "",
+        "Format": "",
         "Multiplicity": "[0..n]",
         "Required": {
           "LTER Europe": "FALSE",
@@ -107,82 +139,50 @@
         },
         "Example": "",
         "Reference list": "",
-        "Comment": "Not mandatory, but highly recommended",
-        "Changes from Version 1.0": ""
-      }
-    },
-    "Contact information": {
-      "Title (academic)": {
-        "field_name": "field_person_contact",
-        "Definition": "Reference to the contact person responsible for the site. The person could be either the principal investigator (PI, co-PI), the information manager (IM), the site manager (SM) or a technician (TE). The details for the person/organisation needs to be specified in the persons module (PEMM).",
-        "Recommendation & Hints": "Please provide the reference (Person) to the person responsible for the site. Please start typing the name of the person. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
-        "Format": "Reference to [content type PERSON]",
-        "Multiplicity": "[1..n]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
-        "Example": "Dirnböck, Thomas",
-        "Reference list": "Reference to [content type PERSON]",
-        "Comment": "",
-        "Changes from Version 1.0": ""
-      },
-      "Address": {
-        "field_name": "field_contact_site_owner",
-        "Definition": "Reference to the contact person/organisation or the responsible national authority for funding and strategic decisions about the site. This could be e.g. the Ministry of Science as responsible national authority. The details for the person/organisation needs to be specified in the persons module (PEMM).",
-        "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
-        "Format": "Reference to [content type PERSON]",
-        "Multiplicity": "[1..n]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "FALSE"
-        },
-        "Example": "Umweltbundesamt GmbH",
-        "Reference list": "Reference to [content type PERSON]",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
       "URL": {
-        "field_name": "field_contact_funding_agency",
-        "Definition": "Reference to the contact person/organisation or the responsible national authority for funding and strategic decisions about the site. This could be e.g. the Ministry of Science as responsible national authority. The details for the person/organisation needs to be specified in the persons module (PEMM).",
-        "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
-        "Format": "Reference to [content type PERSON]",
-        "Multiplicity": "[1..n]",
+        "field_name": "field_url",
+        "Definition": "The data type 'Online information' is defined as link to web resources about the person or organisation. It can be either a personal webpage or the webpage the affiliated organisation. In case of a organisation it is the organisation webpage.",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "[0..1]",
         "Required": {
-          "LTER Europe": "TRUE",
+          "LTER Europe": "FALSE",
           "ILTER": "FALSE"
         },
-        "Example": "Umweltbundesamt GmbH",
-        "Reference list": "Reference to [content type PERSON]",
+        "Example": "",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
       "Phone": {
-        "field_name": "field_ilter_network_url",
-        "Definition": "Link to website which provides a description and further information about the site. The web address is composed of the web link (8.2) and a title (8.1) which is shown.",
-        "Recommendation & Hints": "Web address title - provide a human readable title for the website. Web address URL - provide a URL (http://... or https://..)",
+        "field_name": "field_phone",
+        "Definition": "Contact information for persons and organisations composed of the adress and phone details..",
+        "Recommendation & Hints": "",
         "Format": "",
-        "Multiplicity": "[0..n]",
+        "Multiplicity": "[0..1]",
         "Required": {
-          "LTER Europe": "TRUE",
+          "LTER Europe": "FALSE",
           "ILTER": "FALSE"
         },
-        "Example": "http://www.umweltbundesamt.at/umwelt/luft/messnetz/zoebelboden/",
+        "Example": "",
         "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
       "Fax": {
-        "field_name": "field_ilter_network_url",
-        "Definition": "Link to website which provides a description and further information about the site. The web address is composed of the web link (8.2) and a title (8.1) which is shown.",
-        "Recommendation & Hints": "Web address title - provide a human readable title for the website. Web address URL - provide a URL (http://... or https://..)",
+        "field_name": "field_fax",
+        "Definition": "Contact information for persons and organisations composed of the adress and phone details.",
+        "Recommendation & Hints": "",
         "Format": "",
-        "Multiplicity": "[0..n]",
+        "Multiplicity": "[0..1]",
         "Required": {
-          "LTER Europe": "TRUE",
+          "LTER Europe": "FALSE",
           "ILTER": "FALSE"
         },
-        "Example": "http://www.umweltbundesamt.at/umwelt/luft/messnetz/zoebelboden/",
+        "Example": "",
         "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
@@ -190,17 +190,17 @@
     },
     "Organization": {
       "Organization": {
-        "field_name": "field_person_metadata_provider",
-        "Definition": "Provides the full name of person(s), who created the documentation for the site. The details for the organisation needs to be specified in the persons module (PMM).",
-        "Recommendation & Hints": "By typing the name of a person, the system provides a list of people matching the query. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
+        "field_name": "field_organization",
+        "Definition": "",
+        "Recommendation & Hints": "",
         "Format": "Reference to [content type PERSON]",
-        "Multiplicity": "[1..n]",
+        "Multiplicity": "[0..1]",
         "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
+          "LTER Europe": "FALSE",
+          "ILTER": "FALSE"
         },
-        "Example": "Kobler, Johannes",
-        "Reference list": "Reference to [content type PERSON]",
+        "Example": "Environment Agency Austria",
+        "Reference list": "Reference to [content type ORGANIZATION]",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -211,12 +211,12 @@
         "Format": "Date as YYYY-MM-DD",
         "Multiplicity": "[1..1]",
         "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
+          "LTER Europe": "FALSE",
+          "ILTER": "FALSE"
         },
-        "Example": "2017-08-22",
+        "Example": "",
         "Reference list": "",
-        "Comment": "Generated automatically",
+        "Comment": "",
         "Changes from Version 1.0": ""
       }
     },
