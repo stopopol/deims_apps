@@ -120,7 +120,7 @@
     },
     "Data resolution": {
       "Temporal resolution": {
-        "field_name": "field_temporal_resolution\t",
+        "field_name": "field_temporal_resolution",
         "Definition": "Description of the temporal resolution of the data. This describes the update frequency of the data, e.g. weekly or only one observation.",
         "Recommendation & Hints": "Please select the appropriate value from the list. If there are deviations or important issues to be mentioned, please describe that in addition in the abstract.",
         "Format": "Reference to [content type PERSON]",
@@ -188,10 +188,7 @@
         "Recommendation & Hints": "Please provide the center coordinates of the site in decimal degrees. Enter the center point latitude and longitude. Supports entering data as both Decimal Degrees (-122.340932) OR Degrees-Minutes-Seconds (-123° 49' 55.2\\\" W). Please be careful to display southern hemisphere latitude values as as \"-\" and western hemisphere latitudes as \"-\".",
         "Format": "Number(decimal) for each center coordinate, format XX.XXXXX",
         "Multiplicity": "[1..1]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
+        "Required": false,
         "Example": "Latitude: 46.00936 Longitude: 8.56796",
         "Reference List": "",
         "Comment": "",
@@ -199,68 +196,44 @@
       },
       "Data digitally available": {
         "field_name": "field_availability",
-        "Definition": "Delineation of the site boundaries or the bounding box.",
-        "Recommendation & Hints": "Please delineate the site boundaries on the map. The minimal requirement is the bounding box of your site.",
-        "Format": "Map/WKT Text field",
+        "Definition": "Average and Bounding elevation range for the site (observation or experimentation facility).",
+        "Recommendation & Hints": "This element consists of two numbers (minimum and maximum altitudes) and the average altitude defining height above or below the sea level. As a default vertical coordinate reference system of bounding altitudes is used Mean sea level height (EPSG: 5714). Negative values are below sea level.",
+        "Format": "numeric(double) in [m] above or below sea level",
         "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
-        "Example": "boundaries or bounding box represented as POLYGON ((13.8043 48.2759, 15.4358 48.2759, 15.4358 47.2718, 13.8043 47.2718, 13.8043 48.2759)))",
+        "Required": false,
+        "Example": 956,
         "Reference List": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
       "Open data": {
         "field_name": "field_open_data",
-        "Definition": "Shapefile representing the boundaries of the site using the geographic projection WGS84 (EPSG:4326).",
-        "Recommendation & Hints": "Please upload the zipped shapefile with geographic projection (Europe: ETRS89 (EPSG:4258), outside Europe WGS84 (EPSG:4326)). If you don't have a shapefile at hand you can easily create one at: http://gis.ucla.edu/apps/click2shp/ You can also easily edit existing shapefiles at http://www.mapshaper.org/. Files must be less than 10 MB. Allowed file types: zip 7z. Please provide site boundaries and internal organisation (e.g. observation plots) as documented dataset. All datasets are linked with the site.",
-        "Format": "binary file - zipped shapefile",
+        "Definition": "Indication if the data are freely available within the EcoPotential H2020 project.",
+        "Recommendation & Hints": "Please indicate, if the data are freely available within the EcoPotential H2020 project.",
+        "Format": "boolean",
         "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
-        "Example": "",
-        "Reference List": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
-      },
-      "Data available": {
-        "field_name": "field_elevation_average",
-        "Definition": "Average and Bounding elevation range for the site (observation or experimentation facility).",
-        "Recommendation & Hints": "This element consists of two numbers (minimum and maximum altitudes) and the average altitude defining height above or below the sea level. As a default vertical coordinate reference system of bounding altitudes is used Mean sea level height (EPSG: 5714). Negative values are below sea level.",
-        "Format": "numeric(double) in [m] above or below sea level",
-        "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
-        "Example": 956,
-        "Reference List": "",
+        "Required": false,
+        "Example": "yes",
+        "Reference List": [
+          "yes",
+          "no"
+        ],
         "Comment": "",
         "Changes from Version 1.0": ""
       }
     },
     "Contact": {
       "Responsible party": {
-        "field_name": "field_network",
-        "Definition": "Specifiy whether your site is part of any networks or projects",
-        "Recommendation & Hints": "Please check yes or no. If you select yes, the 'Networks/Project' field will appear.",
-        "Format": "boolean",
-        "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
-        "Example": "YES",
-        "Reference List": [
-          "YES",
-          "NO"
-        ],
+        "field_name": "field_person_creator",
+        "Definition": "Provides the full name of person(s), who created the dataset and/or who serve as contact points.",
+        "Recommendation & Hints": "By typing the name of a person, the system provides a list of people matching the query. If none available, it's strongly recommended to first create a person metadata using the editing form available and then return back to dataset metadata definition.",
+        "Format": "Reference [Content Type] Person",
+        "Multiplicity": "[1..n]",
+        "Required": false,
+        "Example": "Johannes Kobler",
+        "Reference List": "Reference [Content Type] Person",
         "Comment": "",
-        "Changes from Version 1.0": "field added"
+        "Changes from Version 1.0": ""
       }
     }
   }
