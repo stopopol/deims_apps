@@ -236,7 +236,7 @@
         "Changes from Version 1.0": ""
       },
       "Metadata date": {
-        "field_name": "",
+        "field_name": "field_date",
         "Definition": "Provides date of metadata creation or last update.",
         "Recommendation & Hints": "Is automatically generated and cannot be entered manually",
         "Format": "Date as YYYY-MM-DD",
@@ -253,7 +253,7 @@
     },
     "Geographic location": {
       "Country": {
-        "field_name": "",
+        "field_name": "field_ilter_network_country",
         "Definition": "Country the site is located in.",
         "Recommendation & Hints": "Please provide the name of the country in which the observation or experimentation facility is located. This might be different from the LTER member network. It describes in which country the site is located, even if the member network is located in another country. Please select a country from the Reference list.",
         "Format": "Reference list",
@@ -283,7 +283,7 @@
         "Changes from Version 1.0": ""
       },
       "Site boundaries": {
-        "field_name": "",
+        "field_name": "field_geo_bounding_box",
         "Definition": "Delineation of the site boundaries or the bounding box.",
         "Recommendation & Hints": "Please delineate the site boundaries on the map. The minimal requirement is the bounding box of your site.",
         "Format": "Map/WKT Text field",
@@ -298,7 +298,7 @@
         "Changes from Version 1.0": ""
       },
       "Shapefile": {
-        "field_name": "",
+        "field_name": "field_upload_shapefile",
         "Definition": "Shapefile representing the boundaries of the site using the geographic projection WGS84 (EPSG:4326).",
         "Recommendation & Hints": "Please upload the zipped shapefile with geographic projection (Europe: ETRS89 (EPSG:4258), outside Europe WGS84 (EPSG:4326)). If you don't have a shapefile at hand you can easily create one at: http://gis.ucla.edu/apps/click2shp/ You can also easily edit existing shapefiles at http://www.mapshaper.org/. Files must be less than 10 MB. Allowed file types: zip 7z. Please provide site boundaries and internal organisation (e.g. observation plots) as documented dataset. All datasets are linked with the site.",
         "Format": "binary file - zipped shapefile",
@@ -728,7 +728,7 @@
             "Changes from Version 1.0": ""
           },
           "LTER site classification/category": {
-            "field_name": "",
+            "field_name": "field_site_eu_classification",
             "Definition": "Characterisation of a SITE (observation or experimentation facility) according to their level of implementation. This includes the following characteristics: technical aspects of work at the sites (intervals of basic sampling, technical maintenance...) basic infrastructure (power supply, all year access...) technical equipment data and IT infrastructure",
             "Recommendation & Hints": "Please select the site type from the list. This can be used in order to reveal information requirements relevant for e.g. multi-site projects or identification as major research infrastructure. The classification was adopted at the 7th LTER-Europe conference in Lodz. Site co-ordinators are asked to apply this overall classification to their sites, but also provide detailed metadata on the above categories in order to facilitate quick responses to specific information requests on the network level, e.g. which sites do have all year access AND power supply AND weekly sampling.",
             "Format": "text",
@@ -841,7 +841,7 @@
     },
     "Site classification": {
       "Site type (spatial design)": {
-        "field_name": "",
+        "field_name": "field_site_eu_site_type",
         "Definition": "Type of the site of platform according to their inner heterogeneity. Simple sites are classical LTER sites measuring ecosystem processes in one or a very limited number of habitats. Complex sites are classical LTSER sites investigating processes and fluxes on a landscape or regional level or form the bracket over a number of LTER or simple sites.",
         "Recommendation & Hints": "Please select the site type from the list.",
         "Format": "text",
@@ -885,7 +885,7 @@
         "Changes from Version 1.0": ""
       },
       "Year site established": {
-        "field_name": "",
+        "field_name": "field_year",
         "Definition": "The site status describes the current status of the site, e.g. if it is planned or already existing. The site status is composed of the status value, the year of establishment of the site and in case the year when the site was closed.",
         "Recommendation & Hints": "Select the current status of the site from the list of values and provide beginning and end time of the operation of the site. In case the site is still operating the end time is kept blank. As year of site establishment select the year when substantial data was obtained and the operational period of the site started.",
         "Format": "Date as YYYY",
@@ -900,7 +900,7 @@
         "Changes from Version 1.0": ""
       },
       "Year site closed": {
-        "field_name": "",
+        "field_name": "field_year_closed",
         "Definition": "The site status describes the current status of the site, e.g. if it is planned or already existing. The site status is composed of the status value, the year of establishment of the site and in case the year when the site was closed.",
         "Recommendation & Hints": "Select the current status of the site from the list of values and provide beginning and end time of the operation of the site. In case the site is still operating the end time is kept blank. As year of site establishment select the year when substantial data was obtained and the operational period of the site started.",
         "Format": "Date as YYYY",
@@ -1096,8 +1096,8 @@
         },
         "Protection program cover": {
           "field_name": "field_protection_program_cover",
-          "Definition": "",
-          "Recommendation & Hints": "Please select the protection program and an estimate of the share of the protected area within the site from the list of values. In addition textual notes can be given.",
+          "Definition": "Please select the protection program and an estimate of the share of the protected area within the site from the list of values. In addition textual notes can be given.",
+          "Recommendation & Hints": "",
           "Format": "text (LOV)",
           "Multiplicity": "[0..n]",
           "Dependency": "",
@@ -1117,8 +1117,8 @@
         },
         "Protection program notes": {
           "field_name": "field_protection_program_notes",
-          "Definition": "",
-          "Recommendation & Hints": "Please select the protection program and an estimate of the share of the protected area within the site from the list of values. In addition textual notes can be given.",
+          "Definition": "Please select the protection program and an estimate of the share of the protected area within the site from the list of values. In addition textual notes can be given.",
+          "Recommendation & Hints": "",
           "Format": "text (LOV)",
           "Multiplicity": "[0..n]",
           "Dependency": "",
@@ -1254,7 +1254,7 @@
         },
         "All parts of site accessible": {
           "field_name": "field_site_allparts_access",
-          "Definition": "",
+          "Definition": "State whether or not all parts of the site can be accessed",
           "Recommendation & Hints": "",
           "Format": "boolean",
           "Multiplicity": "[0..1]",
@@ -1411,7 +1411,7 @@
         },
         "Maintenance interval": {
           "field_name": "field_site_ops_maint_freq",
-          "Definition": "",
+          "Definition": "Frequency in which maintenance personnel is visiting the site",
           "Recommendation & Hints": "",
           "Format": "integer",
           "Multiplicity": "[0..1]",
@@ -1537,7 +1537,7 @@
       },
       "Data storage location number": {
         "field_name": "field_site_datastornum",
-        "Definition": "",
+        "Definition": "The number of storage locations is including the storage locations within an organisation as well as the storage locations situated at other organisations (e.g. data repositories).",
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[0..1]",
