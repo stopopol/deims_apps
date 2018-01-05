@@ -5,8 +5,8 @@
   "releaseDate": "2018-01-02T00:00:00.000Z",
   "scope": "The person metadata model (PMM) serves several purposes. First, it provides a source for dataset metadata creators, contact points, and metadata providers (basic contact information). The required information is a surname and email address. The person MD model apply for physical persons, e.g. researcher, as well as for administrative persons, e.g. funding organisation. In this context, organisations are considered to be persons. For an “organizational” person, the organization name is entered in the surname field.",
   "content": {
-    "Name": {
-      "General information": {
+    "General information": {
+      "Name": {
         "field_name": "field_site_sitelong",
         "Definition": "Name identifying the documented observation and/or experimentation facility (site, e.g LTER Site or LTSER Platform).",
         "Recommendation & Hints": "The site name should be concise and precise, e.g. by a given named place. It should not contain unexplained acronyms or abbreviations. It is recommended a maximum length of 200 characters and keeping the similarity with the ‘official naming’ established in the community.",
