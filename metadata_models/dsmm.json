@@ -11,7 +11,7 @@
       "Recommendation & Hints": "Title has to be concise and precisely describing the point. It should not contain unexplained acronyms or abbreviations. It is recommended a maximum length of 200 characters and keeping the similarity with the original title of the dataset in the sense of the ‘official naming’ established in the community. If the dataset is part of a larger project, it is recommended to indicate the Project at the end of the title, in brackets. In case of Project names, abbreviations are allowed, as long as the rest of the title follows the guidelines above and the abbreviation is spelled out immediately in the abstract",
       "Format": "text",
       "Multiplicity": "[1..1]",
-      "Required": "TRUE",
+      "Required": true,
       "Example": "Precipitation measured near Lake Santo Parmense and Lake Scuro Parmense (1951-2010)",
       "Reference list": "",
       "Comment": ""
@@ -23,7 +23,7 @@
         "Recommendation & Hints": "The identifier shall contain standardized codes of the Network and the Site that are derived from the Site Name. Additionally it should identify the dataset within your working environment (network, organization, laboratory, parameters observed, time coverage, etc.) with internal codes used. By typing the site name the system provides a list of research sites matching the query. If none available, it's strongly recommended to first create a site metadata using the editing form available and then return back to dataset metadata definition.",
         "Format": "Reference to [Content Type] SITE",
         "Multiplicity": "[1..1]",
-        "Required": "TRUE",
+        "Required": true,
         "Example": "Zone Atelier Seine - France",
         "Reference list": "[Content Type] SITE",
         "Comment": ""
@@ -34,7 +34,7 @@
         "Recommendation & Hints": "The UUID is generated automatically by the system. The UUID is used for creating the URL for the site, e.g. https://data.lter-europe.net/deims/site/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6.The UUID is taken as network independent unique identifier for the observation and experimentation facility. In addition the SITE CODE can be added as a network specific identifier.",
         "Format": "UUID (alpha-numeric)",
         "Multiplicity": "[1..1]",
-        "Required": "TRUE",
+        "Required": true,
         "Example": "8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6",
         "Reference list": "",
         "Comment": "automatically generated"
@@ -47,7 +47,7 @@
         "Recommendation & Hints": "\tBy typing the name of a person, the system provides a list of people matching the query. If none available, it's strongly recommended to first create a person metadata using the editing form available and then return back to dataset metadata definition.",
         "Format": "Reference to [Content Type] PERSON",
         "Multiplicity": "[1..n]",
-        "Required": "TRUE",
+        "Required": true,
         "Example": "Johannes Peterseil",
         "Reference list": "Reference to [Content Type] PERSON",
         "Comment": ""
@@ -58,7 +58,7 @@
         "Recommendation & Hints": "",
         "Format": "Reference to [Content Type] PERSON",
         "Multiplicity": "[1..n]",
-        "Required": "TRUE",
+        "Required": true,
         "Example": "Alessandro Oggioni",
         "Reference list": "Reference to [Content Type] PERSON",
         "Comment": ""
@@ -69,7 +69,7 @@
         "Recommendation & Hints": "\tBy typing the name of a person, the system provides a list of people matching the query. If none available, it's strongly recommended to first create a person metadata using the editing form available and then return back to dataset metadata definition.",
         "Format": "Reference to [Content Type] PERSON",
         "Multiplicity": "[1..n]",
-        "Required": "TRUE",
+        "Required": true,
         "Example": "Mark Frenzel",
         "Reference list": "Reference to [Content Type] PERSON",
         "Comment": ""
@@ -82,7 +82,7 @@
         "Recommendation & Hints": "The names of parameters and their units collected within the dataset. Any other language used in textual information shall be referenced here as well. If the dataset does not contain any textual information (e.g. only codes and digits), the language should be defaulted to the value of the metadata language, which is defined as a default value - English. Start typing the language name and the system will offer you options to select.",
         "Format": "Reference (LOV) based on ISO 639 standardized nomenclature used to classify all known languages",
         "Multiplicity": "[0..1]",
-        "Required": "FALSE",
+        "Required": false,
         "Example": "English",
         "Reference list": "",
         "Comment": ""
@@ -95,7 +95,7 @@
         "Recommendation & Hints": "The dataset abstract is a succinct description that shall include: A brief summary with the most important details that summarise the data aggregated in this dataset. Coverage: linguistic transcriptions of the extent or location in addition to the bounding box. Main attributes - e.g. values of the parameters X,Y within the time frame T1-T2, etc. Data sources, Legal references. Importance of the work. Do not use unexplained acronyms. Summarise the most important details in the first sentence or first 100 characters.",
         "Format": "text",
         "Multiplicity": "[1..1]",
-        "Required": "TRUE",
+        "Required": true,
         "Example": "Dataset provides monthly precipitation data collected at different weather stations that are closest to Lake Santo Parmense and Lake Scuro Parmense. We provide a long-term dataset (1951-2010) collected at two stations near the town of Bosco di Corniglio. In particular, from 1951 to 1998 precipitation data were collected at the weather station of Bosco Centrale. Between 1999 and july 2000 the station was out of order (no data available) and from 2001 the Bosco Centrale weather station was substituted by the Bosco di Corniglio station. The two weather stations are less than 1 km apart and they are about 6 km far from Lake Santo Parmense and 7 km far from Lake Scuro Parmense. We also provide a shorter dataset of precipitation data collected from 1994 to 2010 at the weather station of Lagdei. This station is closer to our sampling sites (about 1 km from Lake Santo Parmense and 5 km from Lake Scuro Parmense), but a shorter time series is available. All weather stations are managed by the the Environmental Protection Agency of the Emilia-Romagna region (ARPA Emilia-Romagna), which ...",
         "Reference list": "",
         "Comment": ""
@@ -108,7 +108,7 @@
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[1..n]",
-        "Required": "TRUE",
+        "Required": true,
         "Example": "",
         "Reference list": "",
         "Comment": ""
@@ -119,7 +119,7 @@
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[1..n]",
-        "Required": "FALSE",
+        "Required": false,
         "Example": "",
         "Reference list": "",
         "Comment": ""
@@ -132,7 +132,7 @@
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[0..n]",
-        "Required": "FALSE",
+        "Required": false,
         "Example": "pH",
         "Reference list": "",
         "Comment": "Added to form, but not used in metadata exports."
@@ -145,7 +145,7 @@
         "Recommendation & Hints": "It is recommended that the 3-year rule be implemented and that the data owner must take specific actions to change this.",
         "Format": "",
         "Multiplicity": "[1..n]",
-        "Required": "FALSE",
+        "Required": false,
         "Example": "",
         "Reference list": [
           "Free for access",
@@ -164,7 +164,7 @@
         "Recommendation & Hints": "Select an option from the list, if any matching. If none matching, use an option Other IPR and provide free textual description, or if IPR information available on an online source, paste the URL pointing to this source. For multiple selection use the CTRL button.",
         "Format": "",
         "Multiplicity": "[0..n]",
-        "Required": "FALSE",
+        "Required": false,
         "Example": "",
         "Reference list": "",
         "Comment": ""
@@ -178,7 +178,7 @@
           "Recommendation & Hints": "",
           "Format": "",
           "Multiplicity": "[0..1]",
-          "Required": "FALSE",
+          "Required": false,
           "Example": "",
           "Reference list": "",
           "Comment": ""
@@ -189,7 +189,7 @@
           "Recommendation & Hints": "",
           "Format": "",
           "Multiplicity": "[0..n]",
-          "Required": "FALSE",
+          "Required": false,
           "Example": "",
           "Reference list": "",
           "Comment": ""
@@ -203,7 +203,7 @@
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[0..n]",
-        "Required": "FALSE",
+        "Required": "false,
         "Example": "",
         "Reference list": "",
         "Comment": ""
@@ -216,7 +216,7 @@
         "Recommendation & Hints": "Please select a Research site from the list, or create a new one with 'Create Research Site' if missing. For the Research Site the bounding box shall be as small as possible and shall be expressed in decimal degree with a precision of at least two decimals. The coordinates of the bounding boxes shall be expressed in any geodetic coordinate reference system with the Greenwich Prime Meridian. You can define bounding box either by drawing a polygon on a map or inserting manually the bounding coordinates. To activate drawing functionality and to (move, delete, reshape) use the editing toolbar in the right top corner of the map. If you would like to define more bounding coordinates, please add more RESEARCH SITES for the dataset MD record.",
         "Format": "Reference to [Content Type] RESEARCH SITE",
         "Multiplicity": "[1..n]",
-        "Required": "TRUE",
+        "Required": true,
         "Example": "Zöbelboden_IP1, Zöbelboden_IP2, Zöbelboden_IP3",
         "Reference list": "Reference to [Content Type] RESEARCH SITE",
         "Comment": ""
@@ -229,7 +229,7 @@
         "Recommendation & Hints": "",
         "Format": "Date",
         "Multiplicity": "[1..1]",
-        "Required": "TRUE",
+        "Required": true,
         "Example": "",
         "Reference list": "From date: 01/01/2014; To date: 12/31/2014",
         "Comment": ""
@@ -242,7 +242,7 @@
         "Recommendation & Hints": "This field is applicable only for biotic data, e.g. when biotic diversity has been chosen in the Keyword tab. Depending on the content of the dataset, provide information about the most common level of taxonomy aggregation (e.g. plants: family, marine invertebrates: phylum or class, etc.) Recommendation is to use common catalogue of species, for example, GBIF, or EUNIS.",
         "Format": "text (LOV)",
         "Multiplicity": "[0..n]",
-        "Required": "FALSE",
+        "Required": false,
         "Example": "",
         "Reference list": "",
         "Comment": ""
@@ -255,7 +255,7 @@
         "Recommendation & Hints": "If the method description is available online (e.g. previous research resulting in new methodologies, guidelines, specifications, and standards) provide the Method title and URL pointing to the description. This information shall include information about procedure steps, software used within individual steps, source data and any quality measures taken. All information included here should help future data user to evaluate and understand more about the dataset content, thus allow the user to determine whether he/she would be able to combine the dataset within his/her workflows.",
         "Format": "",
         "Multiplicity": "[0..n]",
-        "Required": "TRUE",
+        "Required": true,
         "Example": "",
         "Reference list": "",
         "Comment": ""
@@ -266,7 +266,7 @@
         "Recommendation & Hints": "",
         "Format": "text",
         "Multiplicity": "[0..n]",
-        "Required": "FALSE",
+        "Required": false,
         "Example": "Reversing thermometer associated with sampling bottle.",
         "Reference list": "",
         "Comment": ""
@@ -277,7 +277,7 @@
         "Recommendation & Hints": "Instrumentation is a textual description of the used devices including the parameter observed. The description should provide information about: parameter, device type, device brand and type number, producer: company or country, additional notes",
         "Format": "",
         "Multiplicity": "[0..n]",
-        "Required": "",
+        "Required": false,
         "Example": "",
         "Reference list": "",
         "Comment": ""
@@ -290,7 +290,7 @@
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[1..n]",
-        "Required": "TRUE",
+        "Required": true,
         "Example": "",
         "Reference list": "",
         "Comment": ""
@@ -301,7 +301,7 @@
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[1..n]",
-        "Required": "TRUE",
+        "Required": true,
         "Example": "",
         "Reference list": "",
         "Comment": ""
@@ -312,7 +312,7 @@
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[1..n]",
-        "Required": "TRUE",
+        "Required": true,
         "Example": "",
         "Reference list": "",
         "Comment": ""
@@ -323,7 +323,7 @@
         "Recommendation & Hints": "Please provide information on QA/QC procedures applied for the data and quality information in the data.",
         "Format": "text",
         "Multiplicity": "[0..1]",
-        "Required": "FALSE",
+        "Required": false,
         "Example": "Values are quality checked using automatic outlier control (R-Script) as well as visual inspection of data. The QA/QC procedure is applied ...",
         "Reference list": "",
         "Comment": ""
@@ -336,7 +336,7 @@
         "Recommendation & Hints": "",
         "Format": "[0..n]",
         "Multiplicity": "[0..1]",
-        "Required": "FALSE",
+        "Required": false,
         "Example": "",
         "Reference list": [
           "Habitats Directive (92/43/EEC)",
@@ -356,7 +356,7 @@
           "Recommendation & Hints": "",
           "Format": "",
           "Multiplicity": "[0..n]",
-          "Required": "FALSE",
+          "Required": false,
           "Example": "",
           "Reference list": "",
           "Comment": ""
