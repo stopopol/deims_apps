@@ -192,7 +192,7 @@
         "Changes from Version 1.0": ""
       },
       "Networks/Projects": {
-        "field_name": "",
+        "field_name": "field_networks_term_ref",
         "Definition": "Provides date of metadata creation or last update.",
         "Recommendation & Hints": "Is automatically generated and cannot be entered manually",
         "Format": "Date as YYYY-MM-DD",
@@ -209,17 +209,17 @@
     },
     "Records": {
       "ORCID": {
-        "field_name": "",
-        "Definition": "Country the site is located in.",
+        "field_name": "field_person_orcid",
+        "Definition": "Nonproprietary alphanumeric code to uniquely identify scientific and other academic authors and contributors.",
         "Recommendation & Hints": "Please provide the name of the country in which the observation or experimentation facility is located. This might be different from the LTER member network. It describes in which country the site is located, even if the member network is located in another country. Please select a country from the Reference list.",
         "Format": "Reference list",
-        "Multiplicity": "[1..1]",
+        "Multiplicity": "[0..1]",
         "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
+          "LTER Europe": "FALSE",
+          "ILTER": "FALSE"
         },
-        "Example": "Austria",
-        "Reference list": "location_get_iso3166_list() https://www.iso.org/obp/ui/#home",
+        "Example": "https://orcid.org/0000-0002-1825-0097",
+        "Reference list": "https://orcid.org",
         "Comment": "",
         "Changes from Version 1.0": ""
       }
