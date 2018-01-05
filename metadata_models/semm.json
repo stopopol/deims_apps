@@ -52,44 +52,44 @@
       },
       "sensorType": {
         "field_name": "field_sensortype",
-        "Definition": "",
+        "Definition": "Type of sensor, usually further qualified by an application specific code space",
         "Recommendation & Hints": "",
         "Format": "",
-        "Multiplicity": "",
-        "Required": "",
+        "Multiplicity": "[1..1]",
+        "Required": true,
         "Example": "",
         "Reference list": "",
         "Comment": ""
       },
       "Description": {
         "field_name": "field_description",
-        "Definition": "",
+        "Definition": "Textual description of the sensor",
         "Recommendation & Hints": "",
-        "Format": "",
-        "Multiplicity": "",
-        "Required": "",
+        "Format": "text",
+        "Multiplicity": "[1..1]",
+        "Required": true,
         "Example": "",
         "Reference list": "",
         "Comment": ""
       },
       "Keywords": {
         "field_name": "field_keywords_envthes",
-        "Definition": "",
+        "Definition": "Describes the sensor with keywords",
         "Recommendation & Hints": "",
         "Format": "",
-        "Multiplicity": "",
-        "Required": "",
+        "Multiplicity": "[1..n]",
+        "Required": true,
         "Example": "",
         "Reference list": "",
         "Comment": ""
       },
       "Contact": {
         "field_name": "field_person_contact",
-        "Definition": "",
+        "Definition": "Person that is associated with the sensor",
         "Recommendation & Hints": "",
         "Format": "",
-        "Multiplicity": "",
-        "Required": "",
+        "Multiplicity": "[1..n]",
+        "Required": true,
         "Example": "",
         "Reference list": "",
         "Comment": ""
@@ -98,32 +98,45 @@
     "Geographic": {
       "Is the sensor mobile": {
         "field_name": "field_mobile",
-        "Definition": "",
+        "Definition": "State whether or not the sensor is mobile",
         "Recommendation & Hints": "",
         "Format": "",
-        "Multiplicity": "",
-        "Required": "",
+        "Multiplicity": "[1..1]",
+        "Required": true,
         "Example": "",
         "Reference list": "",
         "Comment": ""
+      },
+      "Coordinates": {
+        "field_name": "field_coordinates",
+        "Definition": "Describe the location of the sensor using coordinates",
+        "Recommendation & Hints": "",
+        "Format": "",
+        "Multiplicity": "[0..1]",
+        "Required": false,
+        "Dependency": "field_mobile",
+        "Example": "",
+        "Reference list": "",
+        "Comment": "Is mandatory if sensor is stationary"
       },
       "Position (elevation)": {
         "field_name": "field_elevation_average",
-        "Definition": "",
+        "Definition": "Elevation in [m] above or below sea level",
         "Recommendation & Hints": "",
-        "Format": "",
-        "Multiplicity": "",
-        "Required": "",
+        "Format": "number",
+        "Multiplicity": "[0..1]",
+        "Required": false,
+        "Dependency": "field_mobile",
         "Example": "",
         "Reference list": "",
-        "Comment": ""
+        "Comment": "Is mandatory if sensor is mobile"
       },
       "Trajectory": {
         "field_name": "field_geo_bounding_box",
-        "Definition": "",
+        "Definition": "Describes the trajectory of the sensor ",
         "Recommendation & Hints": "",
         "Format": "",
-        "Multiplicity": "",
+        "Multiplicity": "[1..1]",
         "Required": "",
         "Example": "",
         "Reference list": "",
@@ -133,33 +146,38 @@
     "Observation": {
       "Sensor operational since": {
         "field_name": "field_publication_date",
-        "Definition": "",
+        "Definition": "Date when the sensor was installed",
         "Recommendation & Hints": "",
-        "Format": "",
-        "Multiplicity": "",
-        "Required": "",
+        "Format": "date",
+        "Multiplicity": "[0..1]",
+        "Required": false,
         "Example": "",
         "Reference list": "",
         "Comment": ""
       },
       "resultAcquisitionSource": {
         "field_name": "field_resultacquisitionsource",
-        "Definition": "",
+        "Definition": "Categories for different types of the ResultAcquisitionSource.",
         "Recommendation & Hints": "",
         "Format": "",
-        "Multiplicity": "",
-        "Required": "",
+        "Multiplicity": "[0..1]",
+        "Required": false,
         "Example": "",
-        "Reference list": "",
+        "Reference list": [
+          "ex-situ",
+          "in-situ",
+          "remote-sensing",
+          "subsumed"
+        ],
         "Comment": ""
       },
       "media monitored": {
         "field_name": "field_parameters_taxonomy",
-        "Definition": "",
+        "Definition": "Describes the media(s) that are observed/measured by the sensor",
         "Recommendation & Hints": "",
         "Format": "",
-        "Multiplicity": "",
-        "Required": "",
+        "Multiplicity": "[0..n]",
+        "Required": false,
         "Example": "",
         "Reference list": "",
         "Comment": ""
@@ -178,14 +196,14 @@
         },
         "Unit of measurements": {
           "field_name": "",
-          "Definition": "",
+          "Definition": "Describes the units which are used to describe the measurements",
           "Recommendation & Hints": "",
           "Format": "",
-          "Multiplicity": "",
+          "Multiplicity": "[1..1]",
           "Required": "",
           "Example": "",
           "Reference list": "",
-          "Comment": ""
+          "Comment": "One uom per measurement"
         }
       }
     }
