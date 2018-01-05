@@ -12,10 +12,7 @@
         "Recommendation & Hints": "The site name should be concise and precise, e.g. by a given named place. It should not contain unexplained acronyms or abbreviations. It is recommended a maximum length of 200 characters and keeping the similarity with the ‘official naming’ established in the community.",
         "Format": "Text(255)",
         "Multiplicity": "[1..1]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
+        "Required": "TRUE",
         "Example": "Zöbelboden LTER",
         "Reference list": "",
         "Comment": "",
@@ -27,10 +24,7 @@
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
+        "Required": "FALSE",
         "Example": "MSc",
         "Reference list": "",
         "Comment": "",
@@ -42,10 +36,7 @@
         "Recommendation & Hints": "Please provide information on the role and position the person has within the organisation or research network/site. For organisations this information is kept blank.",
         "Format": "Text",
         "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
+        "Required": "FALSE",
         "Example": "Lead Principal Investigator",
         "Reference list": [
           "COPI|Researcher",
@@ -70,10 +61,7 @@
         "Recommendation & Hints": "Please provide a photograph for the person or a logo for the organisation. You can use any of this image types: png, gif, jpg or jpeg.",
         "Format": "Image [png, jpg, jpeg, gif, ...]",
         "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
+        "Required": "FALSE",
         "Example": "",
         "Reference list": "",
         "Comment": "",
@@ -87,10 +75,7 @@
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
+        "Required": "FALSE",
         "Example": "",
         "Reference list": "",
         "Comment": "",
@@ -102,10 +87,7 @@
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[0..n]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
+        "Required": "FALSE",
         "Example": "",
         "Reference list": "",
         "Comment": "",
@@ -117,10 +99,7 @@
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
+        "Required": "FALSE",
         "Example": "",
         "Reference list": "",
         "Comment": "",
@@ -132,10 +111,7 @@
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
+        "Required": "FALSE",
         "Example": "",
         "Reference list": "",
         "Comment": "",
@@ -147,10 +123,7 @@
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
+        "Required": "FALSE",
         "Example": "",
         "Reference list": "",
         "Comment": "",
@@ -164,10 +137,7 @@
         "Recommendation & Hints": "",
         "Format": "Reference to [content type PERSON]",
         "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
+        "Required": "FALSE",
         "Example": "Environment Agency Austria",
         "Reference list": "Reference to [content type ORGANIZATION]",
         "Comment": "",
@@ -179,10 +149,7 @@
         "Recommendation & Hints": "Is automatically generated and cannot be entered manually",
         "Format": "Date as YYYY-MM-DD",
         "Multiplicity": "[1..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
+        "Required": "FALSE",
         "Example": "",
         "Reference list": "",
         "Comment": "",
@@ -212,10 +179,7 @@
         "Recommendation & Hints": "Please provide the name of the country in which the observation or experimentation facility is located. This might be different from the LTER member network. It describes in which country the site is located, even if the member network is located in another country. Please select a country from the Reference list.",
         "Format": "Reference list",
         "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
+        "Required": "FALSE",
         "Example": "https://orcid.org/0000-0002-1825-0097",
         "Reference list": "https://orcid.org",
         "Comment": "",
@@ -224,18 +188,15 @@
     },
     "Specialities": {
       "Speciality": {
-        "field_name": "field_parameters_taxonomy",
-        "Definition": "Description of the observed parameters and parameter groups at the site. The parameter is defined as property of the ecosystem or a ecosystem compartment which can be observed either by sensors or humans, e.g. pH, species number, radiation.",
-        "Recommendation & Hints": "Please indicate the parameters observed at the site. Please record every parameter for the site platform in one line. More than one entry is possible. The Reference list is defined by the entries in EnvThes Measure and is frequently updated.",
+        "field_name": "field_person_specialty_term",
+        "Definition": "Description of domain/field of work a person is proficient in.",
+        "Recommendation & Hints": "",
         "Format": "Text (LOV)",
         "Multiplicity": "[0..n]",
         "Dependency": "",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
-        "Example": "pH",
-        "Reference list": "Taxonomy Parameter based on EnvThes Measure",
+        "Required": "FALSE",
+        "Example": "Climatology",
+        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       }
