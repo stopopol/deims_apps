@@ -52,7 +52,7 @@
         "Changes from Version 1.0": "field added"
       },
       "Country": {
-        "field_name": "",
+        "field_name": "field_ilter_network_country",
         "Definition": "Country the site is located in.",
         "Recommendation & Hints": "Please provide the name of the country in which the observation or experimentation facility is located. This might be different from the LTER member network. It describes in which country the site is located, even if the member network is located in another country. Please select a country from the Reference list.",
         "Format": "Reference list",
