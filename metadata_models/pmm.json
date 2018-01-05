@@ -82,7 +82,7 @@
         "Changes from Version 1.0": ""
       },
       "Address": {
-        "field_name": "field_address	",
+        "field_name": "field_address\t",
         "Definition": "Contact information for persons and organisations composed of the adress and phone details.",
         "Recommendation & Hints": "",
         "Format": "",
