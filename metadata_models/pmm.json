@@ -97,7 +97,7 @@
         "Changes from Version 1.0": ""
       },
       "Address": {
-        "field_name": "field_contact_site_owner",
+        "field_name": "field_address	",
         "Definition": "Contact information for persons and organisations composed of the adress and phone details.",
         "Recommendation & Hints": "",
         "Format": "",
