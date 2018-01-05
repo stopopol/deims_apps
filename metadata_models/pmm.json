@@ -20,7 +20,7 @@
       },
       "Academic degree": {
         "field_name": "field_person_title",
-        "Definition": "",
+        "Definition": "Add all academic degrees you hold",
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[0..1]",
@@ -133,7 +133,7 @@
     "Organization": {
       "Organization": {
         "field_name": "field_organization",
-        "Definition": "",
+        "Definition": "The organization name that this person is affiliated with. If the \"Person\" is an Organization, then this field can be left blank or if the \"Person/Organzation\" is part of a larger organization, then this field can be used for the larger organization. For example, the \"Person\" is \"Gilat Agricultural Research Station\", the organization might be \"Ministry of Agriculture\"",
         "Recommendation & Hints": "",
         "Format": "Reference to [content type PERSON]",
         "Multiplicity": "[0..1]",
