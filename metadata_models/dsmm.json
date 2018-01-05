@@ -203,7 +203,7 @@
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[0..n]",
-        "Required": "false,
+        "Required": false,
         "Example": "",
         "Reference list": "",
         "Comment": ""
