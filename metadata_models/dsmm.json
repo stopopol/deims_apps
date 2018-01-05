@@ -174,7 +174,7 @@
       "Resource locator": {
         "DOI": {
           "field_name": "field_doi",
-          "Definition": "",
+          "Definition": "Web address is the 'navigation section' of a metadata record pointing users to the location (URL) where a dataset can be retrieved directly, or provides information about how to acquire a dataset.",
           "Recommendation & Hints": "",
           "Format": "",
           "Multiplicity": "[0..1]",
@@ -211,8 +211,8 @@
     },
     "Geographic": {
       "Bounding box, elevation, etc.": {
-        "field_name": "",
-        "Definition": "\tThe Geographic reference for the dataset is done by the entity type Research site, which is the location, where specific observations are done. By grouping the information the entity type RESEARCH SITE can be reused. A RESEARCH SITE are the observtion plots within a SITE (e.g. LTER SITE or LTSER PLATFORM).The RESEARCH SITE is the extent of the dataset in the geographic space, given as a bounding box. Defining the coordinates of a boundary rectangle representing the dataset area on a map allows the discovery by geographical area. It consists of: Northern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Southern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Western bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east) and Eastern bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east). In addition the bounding altitudes, images and additional details can be provided.",
+        "field_name": "field_related_sites",
+        "Definition": "The Geographic reference for the dataset is done by the entity type Research site, which is the location, where specific observations are done. By grouping the information the entity type RESEARCH SITE can be reused. A RESEARCH SITE are the observtion plots within a SITE (e.g. LTER SITE or LTSER PLATFORM).The RESEARCH SITE is the extent of the dataset in the geographic space, given as a bounding box. Defining the coordinates of a boundary rectangle representing the dataset area on a map allows the discovery by geographical area. It consists of: Northern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Southern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Western bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east) and Eastern bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east). In addition the bounding altitudes, images and additional details can be provided.",
         "Recommendation & Hints": "Please select a Research site from the list, or create a new one with 'Create Research Site' if missing. For the Research Site the bounding box shall be as small as possible and shall be expressed in decimal degree with a precision of at least two decimals. The coordinates of the bounding boxes shall be expressed in any geodetic coordinate reference system with the Greenwich Prime Meridian. You can define bounding box either by drawing a polygon on a map or inserting manually the bounding coordinates. To activate drawing functionality and to (move, delete, reshape) use the editing toolbar in the right top corner of the map. If you would like to define more bounding coordinates, please add more RESEARCH SITES for the dataset MD record.",
         "Format": "Reference to [Content Type] RESEARCH SITE",
         "Multiplicity": "[1..n]",
@@ -262,7 +262,7 @@
       },
       "Method description": {
         "field_name": "field_methods",
-        "Definition": "",
+        "Definition": "Provides repeated sets of elements that document a series of procedures followed to produce any dataset object.",
         "Recommendation & Hints": "",
         "Format": "text",
         "Multiplicity": "[0..n]",
@@ -335,7 +335,7 @@
         "Definition": "Provides information whether the dataset has been reported to the local, regional or national bodies to fulfil the obligations from particular legal regulations.",
         "Recommendation & Hints": "",
         "Format": "[0..n]",
-        "Multiplicity": "",
+        "Multiplicity": "[0..1]",
         "Required": "FALSE",
         "Example": "",
         "Reference list": [
@@ -352,10 +352,10 @@
       "Related information": {
         "Related publications": {
           "field_name": "field_related_publications",
-          "Definition": "",
+          "Definition": "Link to publication related to the dataset",
           "Recommendation & Hints": "",
           "Format": "",
-          "Multiplicity": "",
+          "Multiplicity": "[0..n]",
           "Required": "FALSE",
           "Example": "",
           "Reference list": "",
