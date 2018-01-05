@@ -137,7 +137,7 @@
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[1..1]",
-        "Required": "",
+        "Required": false,
         "Example": "",
         "Reference list": "",
         "Comment": ""
@@ -188,8 +188,8 @@
           "Definition": "",
           "Recommendation & Hints": "",
           "Format": "",
-          "Multiplicity": "",
-          "Required": "",
+          "Multiplicity": "[0..n]",
+          "Required": false,
           "Example": "",
           "Reference list": "",
           "Comment": ""
@@ -199,11 +199,11 @@
           "Definition": "Describes the units which are used to describe the measurements",
           "Recommendation & Hints": "",
           "Format": "",
-          "Multiplicity": "[1..1]",
-          "Required": "",
+          "Multiplicity": "[0..n]",
+          "Required": false,
           "Example": "",
           "Reference list": "",
-          "Comment": "One uom per measurement"
+          "Comment": "One UOM per measurement"
         }
       }
     }
