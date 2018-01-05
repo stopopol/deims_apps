@@ -107,12 +107,12 @@
       },
       "Date range": {
         "field_name": "field_date_range",
-        "Definition": "Link to website which provides a description and further information about the site. The web address is composed of the web link (8.2) and a title (8.1) which is shown.",
-        "Recommendation & Hints": "Web address title - provide a human readable title for the website. Web address URL - provide a URL (http://... or https://..)",
-        "Format": "",
+        "Definition": "Defines the time period covered by the content of the data product (and the related datasets). This period may be expressed as a time (an individual date) or date ranges (interval of dates/From-To) or a mix of individual and interval date.",
+        "Recommendation & Hints": "Please provide the most appropriate range for the data collected. If the collection is still going on, please leave the to date blank.",
+        "Format": "Date",
         "Multiplicity": "[0..n]",
         "Required": false,
-        "Example": "http://www.umweltbundesamt.at/umwelt/luft/messnetz/zoebelboden/",
+        "Example": "",
         "Reference List": "",
         "Comment": "",
         "Changes from Version 1.0": ""
@@ -152,17 +152,28 @@
       },
       "Spatial resolution": {
         "field_name": "field_spatial_resolution",
-        "Definition": "Provides date of metadata creation or last update.",
-        "Recommendation & Hints": "Is automatically generated and cannot be entered manually",
-        "Format": "Date as YYYY-MM-DD",
-        "Multiplicity": "[1..1]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
-        "Example": "2017-08-22",
-        "Reference List": "",
-        "Comment": "Generated automatically",
+        "Definition": "Description of the spatial resolution of the data. This describes the spatial design for the data collection, e.g. area covering observations or grid points.",
+        "Recommendation & Hints": "Please select the appropriate value from the list. If there are deviations or important issues to be mentioned, please describe that in addition in the abstract.",
+        "Format": "Reference [Taxonomy] Spatial Resolution (Data Products)",
+        "Multiplicity": "[0..n]",
+        "Required": true,
+        "Example": "",
+        "Reference List": [
+          "single point",
+          "representative sampling",
+          "transect",
+          "vertical profile",
+          "regular sampling",
+          "random sampling",
+          "stratified random sampling",
+          "block design",
+          "full area coverage",
+          "catchment",
+          "plot",
+          "no spatial design",
+          "_unknown"
+        ],
+        "Comment": "",
         "Changes from Version 1.0": ""
       }
     },
