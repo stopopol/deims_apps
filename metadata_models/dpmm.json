@@ -3,7 +3,7 @@
   "abbreviation": "DPMM",
   "version": 1.01,
   "releaseDate": "2018-01-01T00:00:00.000Z",
-  "scope": "The Data Product Metadata Model (DPMM) describe the metadata elements of a Data Product. The metadata model is based on requirements defined by research projects (e.g. EcoPotential) as well as target stakeholder groups (e.g. LTER). The concept of ‘data product’ was added in order to allow a summarised description of a series of data.",
+  "scope": "The Data Product Metadata Model (DPMM) describe the metadata elements of a Data Product. The metadata model is based on requirements defined by research projects (e.g. EcoPotential) as well as target stakeholder groups (e.g. LTER). The concept of ‘data product’ was added in order to allow a summarised description of a series of data. By this a fast overview on available data sources in a protected area can be created without a full description of each single dataset. This needs to be the logical second step and can not be replaced by the information on the data products.",
   "content": {
     "Title": {
       "field_name": "title",
@@ -11,10 +11,7 @@
       "Recommendation & Hints": "The data product title should be concise and precise, e.g. by a given named place. It should not contain unexplained acronyms or abbreviations. It is recommended a maximum length of 200 characters and keeping the similarity with the ‘official naming’ established in the community.",
       "Format": "Text(255)",
       "Multiplicity": "[1..1]",
-      "Required": {
-        "LTER Europe": "TRUE",
-        "ILTER": "TRUE"
-      },
+      "Required": true,
       "Example": "Zöbelboden Precipitation",
       "Reference List": "",
       "Comment": "",
@@ -27,10 +24,7 @@
         "Recommendation & Hints": "The UUID is generated automatically by the system. The UUID is used for creating the URL for the site, e.g. https://data.lter-europe.net/deims/site/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6.The UUID is taken as network independent unique identifier for the observation and experimentation facility. In addition the SITE CODE can be added as a network specific identifier.",
         "Format": "UUID (alpha-numeric)",
         "Multiplicity": "[1..1]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
+        "Required": true,
         "Example": "8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6",
         "Reference list": "",
         "Comment": "automatically generated",
@@ -42,10 +36,7 @@
         "Recommendation & Hints": "Please provide the reference to the LTSER Platform (by Site name) in which the site is located.",
         "Format": "Reference to a Site name [content type site]",
         "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
+        "Required": true,
         "Example": "LTSER Platform Eisenwurzen (EW)",
         "Reference List": "see [content type] site",
         "Comment": "",
@@ -57,10 +48,7 @@
         "Recommendation & Hints": "Please provide the reference to the sites (by Site name) which belong to the LTSER Platform.",
         "Format": "Reference to Site name [content type site]",
         "Multiplicity": "[0..n]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
+        "Required": false,
         "Example": "Zöbelboden LTER IM master site (ICP_IM_AT01) - Austria",
         "Reference List": "see [content type] site",
         "Comment": "",
@@ -74,27 +62,21 @@
         "Recommendation & Hints": "Please provide the reference (Person) to the person responsible for the site. Please start typing the name of the person. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
         "Format": "Reference to [content type PERSON]",
         "Multiplicity": "[1..n]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
+        "Required": true,
         "Example": "Dirnböck, Thomas",
         "Reference List": "Reference to [content type PERSON]",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
       "Abstract": {
-        "field_name": "field_contact_site_owner",
-        "Definition": "Reference to the contact person/organisation or the responsible national authority for funding and strategic decisions about the site. This could be e.g. the Ministry of Science as responsible national authority. The details for the person/organisation needs to be specified in the persons module (PEMM).",
-        "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
-        "Format": "Reference to [content type PERSON]",
-        "Multiplicity": "[1..n]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "FALSE"
-        },
-        "Example": "Umweltbundesamt GmbH",
-        "Reference List": "Reference to [content type PERSON]",
+        "field_name": "field_abstract",
+        "Definition": "Textual description of the data product.",
+        "Recommendation & Hints": "",
+        "Format": "text",
+        "Multiplicity": "[1..1]",
+        "Required": true,
+        "Example": "This data product covers all precipitation datasets",
+        "Reference List": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -105,40 +87,31 @@
         "Format": "Text (LOV)",
         "Multiplicity": "[0..n]",
         "Dependency": "",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
+        "Required": false,
         "Example": "pH",
         "Reference List": "Taxonomy Parameter based on EnvThes Measure",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
       "Keywords": {
-        "field_name": "field_contact_funding_agency",
-        "Definition": "Reference to the contact person/organisation or the responsible national authority for funding and strategic decisions about the site. This could be e.g. the Ministry of Science as responsible national authority. The details for the person/organisation needs to be specified in the persons module (PEMM).",
-        "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
-        "Format": "Reference to [content type PERSON]",
-        "Multiplicity": "[1..n]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "FALSE"
-        },
-        "Example": "Umweltbundesamt GmbH",
-        "Reference List": "Reference to [content type PERSON]",
+        "field_name": "field_keywords_envthes",
+        "Definition": "Provides a set of related keywords describing the content of the dataset derived from the controlled vocabulary implemented by EnvThes - thesaurus for long term ecological research, monitoring, experiments EnvThes and other environmentally related thesauri as EUNIS Habitats and INSPIRE Spatial Data Themes. Additional concepts can be defined as free keywords.",
+        "Recommendation & Hints": "",
+        "Format": "Reference to [Taxonomy] LTER Controlled Vocabulary",
+        "Multiplicity": "[0..n]",
+        "Required": false,
+        "Example": "microclimate, water properties",
+        "Reference List": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
       "Date range": {
-        "field_name": "field_ilter_network_url",
+        "field_name": "field_date_range",
         "Definition": "Link to website which provides a description and further information about the site. The web address is composed of the web link (8.2) and a title (8.1) which is shown.",
         "Recommendation & Hints": "Web address title - provide a human readable title for the website. Web address URL - provide a URL (http://... or https://..)",
         "Format": "",
         "Multiplicity": "[0..n]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "FALSE"
-        },
+        "Required": false,
         "Example": "http://www.umweltbundesamt.at/umwelt/luft/messnetz/zoebelboden/",
         "Reference List": "",
         "Comment": "",
@@ -147,22 +120,38 @@
     },
     "Data resolution": {
       "Temporal resolution": {
-        "field_name": "field_person_metadata_provider",
-        "Definition": "Provides the full name of person(s), who created the documentation for the site. The details for the organisation needs to be specified in the persons module (PMM).",
-        "Recommendation & Hints": "By typing the name of a person, the system provides a list of people matching the query. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
+        "field_name": "field_temporal_resolution\t",
+        "Definition": "Description of the temporal resolution of the data. This describes the update frequency of the data, e.g. weekly or only one observation.",
+        "Recommendation & Hints": "Please select the appropriate value from the list. If there are deviations or important issues to be mentioned, please describe that in addition in the abstract.",
         "Format": "Reference to [content type PERSON]",
-        "Multiplicity": "[1..n]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
-        "Example": "Kobler, Johannes",
-        "Reference List": "Reference to [content type PERSON]",
+        "Multiplicity": "[1..1]",
+        "Required": true,
+        "Example": "minutes",
+        "Reference List": [
+          "N/A",
+          "other temporal resolution",
+          "single measurement",
+          "less than seconds",
+          "seconds",
+          "minutes",
+          "hourly",
+          "half daily",
+          "daily",
+          "weekly",
+          "bi-weekly",
+          "monthly",
+          "bi-monthly",
+          "half yearly",
+          "yearly",
+          "bi-annual",
+          "every 2-5 years",
+          "..."
+        ],
         "Comment": "",
         "Changes from Version 1.0": ""
       },
       "Spatial resolution": {
-        "field_name": "field_data_product_type",
+        "field_name": "field_spatial_resolution",
         "Definition": "Provides date of metadata creation or last update.",
         "Recommendation & Hints": "Is automatically generated and cannot be entered manually",
         "Format": "Date as YYYY-MM-DD",
