@@ -12,10 +12,7 @@
         "Recommendation & Hints": "The site name should be concise and precise, e.g. by a given named place. It should not contain unexplained acronyms or abbreviations. It is recommended a maximum length of 200 characters and keeping the similarity with the ‘official naming’ established in the community.",
         "Format": "Text(255)",
         "Multiplicity": "[1..1]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
+        "Required": true,
         "Example": "Zöbelboden LTER",
         "Reference list": "",
         "Comment": "",
@@ -27,10 +24,7 @@
         "Recommendation & Hints": "The UUID is generated automatically by the system. The UUID is used for creating the URL for the site, e.g. https://data.lter-europe.net/deims/site/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6.The UUID is taken as network independent unique identifier for the observation and experimentation facility. In addition the SITE CODE can be added as a network specific identifier.",
         "Format": "UUID (alpha-numeric)",
         "Multiplicity": "[1..1]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
+        "Required": true,
         "Example": "8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6",
         "Reference list": "",
         "Comment": "automatically generated",
@@ -41,7 +35,7 @@
         "Definition": "Unique alpha-numeric identifier for the site (e.g. LTER Site or LTSER Platform) within the DEIMS-SDR ecosystem site registry. The site code is composed of a network identification, a country identification and a sequential number following the template [Network]_[Country]_[SequentialNumber]. The site code is defined by the responsible network coordinators (e.g. LTER member network representative) and should be provided to the site manager.",
         "Recommendation & Hints": "The Site code as unique alpha-numeric identifier is composed of a network identification, a country identification and a sequential number. For LTER-Europe, the template is : LTER_EU_XX_YY(Y); For East Asia-Pacific: LTER_AP_XX_YY(Y); for North America: LTER_NAM_XX_YY(Y); for South America: LTER_SAM_XX_YY(Y); for Southern Africa: LTER_SAF_XX_YY(Y); where XX is the 2-letter ISO country code and YY(Y) represents a sequential number. Use (Y) for a subsite. Please make sure that the number is not used for any site in your country. For example: LTER_EU_AT_001. For other networks than LTER a different prefix for the network identification is used. If you are part of the Critical Zones or Soiltrek Network, then the format for your code is: CZO_EU_XX_YY(Y); where XX is the 2-letter country code and YY(Y) represents a number. For example: CZO_FR_01 or RBV_FR_100.",
         "Format": "Text(64)",
-        "Multiplicity": "[1..1]",
+        "Multiplicity": "[0..1]",
         "Required": {
           "LTER Europe": "TRUE",
           "ILTER": "TRUE"
@@ -164,10 +158,7 @@
         "Recommendation & Hints": "Please provide the reference (Person) to the person responsible for the site. Please start typing the name of the person. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
         "Format": "Reference to [content type PERSON]",
         "Multiplicity": "[1..n]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
+        "Required": true,
         "Example": "Dirnböck, Thomas",
         "Reference list": "Reference to [content type PERSON]",
         "Comment": "",
@@ -258,10 +249,7 @@
         "Recommendation & Hints": "Please provide the name of the country in which the observation or experimentation facility is located. This might be different from the LTER member network. It describes in which country the site is located, even if the member network is located in another country. Please select a country from the Reference list.",
         "Format": "Reference list",
         "Multiplicity": "[1..1]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
+        "Required": true,
         "Example": "Austria",
         "Reference list": "location_get_iso3166_list() https://www.iso.org/obp/ui/#home",
         "Comment": "",
@@ -681,10 +669,7 @@
         "Recommendation & Hints": "Please check yes or no. If you select yes, the 'Networks/Project' field will appear.",
         "Format": "boolean",
         "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
+        "Required": true,
         "Example": "YES",
         "Reference list": [
           "YES",
