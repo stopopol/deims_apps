@@ -170,7 +170,7 @@
         "Comment": ""
       }
     },
-    "Online distribution\t": {
+    "Online distribution": {
       "Resource locator": {
         "DOI": {
           "field_name": "field_doi",
@@ -191,8 +191,53 @@
           "Multiplicity": "[0..n]",
           "Required": false,
           "Example": "",
-          "Reference list": "",
-          "Comment": ""
+          "Reference list": [
+            "ArcIMS Map Service Configuration File (*.AXL)",
+            "ArcIMS Internet Feature Map Service",
+            "ArcIMS Internet Image Map Service",
+            "Google Earth KML service (ver 2.0)",
+            "OGC-CSW Catalogue Service for the Web",
+            "OGC-KML Keyhole Markup Language",
+            "OGC-GML Geography Markup Language",
+            "OGC-ODS OpenLS Directory Service",
+            "OGC-ODS OpenLS Gateway Service",
+            "OGC-ODS OpenLS Utility Service",
+            "OGC-ODS OpenLS Presentation Service",
+            "OGC-ODS OpenLS Route Service",
+            "OGC-SOS Sensor Observation Service",
+            "OGC-SPS Sensor Planning Service",
+            "OGC-SAS Sensor Alert Service",
+            "OGC-WCS Web Coverage Service",
+            "OGC-WCS Web Coverage Service (ver 1.1.0)",
+            "OGC-WCTS Web Coordinate Transformation Service",
+            "OGC-WFS Web Feature Service",
+            "OGC-WFS Web Feature Service (ver 1.0.0)",
+            "OGC-WFS-G Gazetteer Service",
+            "OGC-WMC Web Map Context",
+            "OGC-WMS Web Map Service",
+            "OGC-WMS Capabilities service (ver 1.1.1)",
+            "OGC-WMS Capabilities service (ver 1.3.0)",
+            "OGC Web Map Service (ver 1.1.1)",
+            "OGC Web Map Service (ver 1.3.0)",
+            "OGC-SOS Get Observation (ver 1.0.0)",
+            "OGC-SOS Get Observation (POST) (ver 1.0.0)",
+            "OGC-WNS Web Notification Service",
+            "OGC-WPS Web Processing Service",
+            "OGC OWS Context",
+            "File for download through FTP",
+            "File for download",
+            "GIS file",
+            "GIS RASTER file",
+            "Web address (URL)",
+            "RSS News feed (URL)",
+            "PostGIS database table",
+            "ORACLE database table",
+            "OPeNDAP URL",
+            "Data Turbine",
+            "E-mail address",
+            "Unknown Service Type"
+          ],
+          "Comment": "Consists of three subfields (Distribution Function, Distribution URL, Email)"
         }
       }
     },
