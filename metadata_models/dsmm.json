@@ -237,7 +237,7 @@
             "E-mail address",
             "Unknown Service Type"
           ],
-          "Comment": "Consists of three subfields (Distribution Function, Distribution URL, Email)"
+          "Comment": "Consists of three subfields (Distribution Function, Distribution URL, Email), depending on choice in distribution function distribution url and email are visible and required "
         }
       }
     },
