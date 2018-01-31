@@ -27,4 +27,31 @@ for ($x = 0; $x < count($zwischen_var); $x++) {
 	file_put_contents($file_name, fopen($temp_record["path"], 'r'));	
 }
 
+// copy files from emf2iso folder to metadata caching folder
+$src_folder = __DIR__ . "/emf2iso/data/emf2iso";
+$dst_folder = __DIR__ . "/iso19139_files/";
+
+recurse_copy($src_folder,$dst_folder);
+
+// copy files from product2iso folder to metadata caching folder
+$src_folder = __DIR__ . "/emf2iso/data/emf2iso";
+recurse_copy($src_folder,$dst_folder);
+
+// function for recursive copying
+function recurse_copy($src,$dst) { 
+    $dir = opendir($src); 
+    @mkdir($dst); 
+    while(false !== ( $file = readdir($dir)) ) { 
+        if (( $file != '.' ) && ( $file != '..' )) { 
+            if ( is_dir($src . '/' . $file) ) { 
+                recurse_copy($src . '/' . $file,$dst . '/' . $file); 
+            } 
+            else { 
+                copy($src . '/' . $file,$dst . '/' . $file); 
+            } 
+        } 
+    } 
+    closedir($dir); 
+} 
+
 ?>
