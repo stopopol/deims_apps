@@ -36,7 +36,7 @@ $dst_folder = __DIR__ . "/iso19139_files/";
 recurse_copy($src_folder,$dst_folder);
 
 // copy files from product2iso folder to metadata caching folder
-$src_folder = __DIR__ . "/emf2iso/data/emf2iso";
+$src_folder = __DIR__ . "/emf2iso/data/product2iso";
 recurse_copy($src_folder,$dst_folder);
 
 // function for recursive copying
