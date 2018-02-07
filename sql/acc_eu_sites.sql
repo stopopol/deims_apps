@@ -2,7 +2,7 @@ CREATE OR REPLACE VIEW `acc_eu_sites` AS
 
 SELECT 
 
-`NAME`.`field_site_sitelong_value`                                                 AS `NAME`,
+`NAME`.`field_site_sitelong_value`                                                 AS `name`,
 `basetable`.`uuid`                                                                 AS `uuid`,
 `basetable`.`nid`                                                                  AS `nid`,
 `network`.`title`                                                                  AS `network`,
