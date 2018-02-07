@@ -1,7 +1,7 @@
 CREATE OR REPLACE VIEW `ecopotential_sites` AS 
 SELECT
 
-`NAME`.`field_site_sitelong_value`                                                 AS `NAME`,
+`NAME`.`field_site_sitelong_value`                                                 AS `name`,
 `basetable`.`uuid`                                                                 AS `uuid`,
 `basetable`.`nid`                                                                  AS `nid`,
 `coordinates`.`field_coordinates_lat`                                              AS `field_coordinates_lat`,
