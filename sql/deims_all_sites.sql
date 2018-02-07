@@ -1,4 +1,4 @@
-CREATE VIEW deims_all_sites AS
+CREATE OR REPLACE VIEW deims_all_sites AS
 
 SELECT 
 name.`field_site_sitelong_value` AS name,
