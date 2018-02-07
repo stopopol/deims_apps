@@ -1,6 +1,4 @@
-CREATE OR REPLACE 
-
-VIEW `teabag_all` AS 
+CREATE OR REPLACE VIEW `teabag_all` AS 
 
 SELECT 
 
