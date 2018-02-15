@@ -1380,7 +1380,7 @@
         },
         "Sampling interval": {
           "field_name": "field_site_ops_sampling_intr",
-          "Definition": "",
+          "Definition": "The frequency in which samples are taken from the site",
           "Recommendation & Hints": "",
           "Format": "integer",
           "Multiplicity": "[0..1]",
