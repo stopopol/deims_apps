@@ -15,8 +15,8 @@ $arr = json_decode(json_encode($xml), true);
 $zwischen_var = $arr["dataset"]; 
 
 // empty folder before downloading new files
-$files = glob(__DIR__ . "/iso19139_files/*"); // get all file names
-foreach($files as $file){ // iterate files
+$files = glob("/home/ilter_cwohner/cswdatabase/iso19139_files/*"); // get all file names
+foreach ($files as $file) { // iterate files
   if(is_file($file))
     unlink($file); // delete file
 }
@@ -25,13 +25,13 @@ foreach($files as $file){ // iterate files
 for ($x = 0; $x < count($zwischen_var); $x++) {
     $temp_record = $zwischen_var[$x];	
 	// get current directory
-	$file_name = __DIR__ . "/iso19139_files/".$temp_record["UUID"].".xml";	
+	$file_name = "/home/ilter_cwohner/cswdatabase/iso19139_files/".$temp_record["UUID"].".xml";	
 	file_put_contents($file_name, fopen($temp_record["path"], 'r'));	
 }
 
 // copy files from emf2iso folder to metadata caching folder
 $src_folder = __DIR__ . "/emf2iso/data/emf2iso";
-$dst_folder = __DIR__ . "/iso19139_files/";
+$dst_folder = __DIR__ . "/home/ilter_cwohner/cswdatabase/iso19139_files/";
 
 recurse_copy($src_folder,$dst_folder);
 
