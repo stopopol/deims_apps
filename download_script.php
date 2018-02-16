@@ -6,7 +6,7 @@
 // 0 1 * * 0 /usr/bin/php /home/ilter_cwohner/metadata_caching/emf2iso/emf2iso.php > /home/ilter_cwohner/metadata_caching/iso19139.log 		// create records for ef
 // 0 2 * * 0 /usr/bin/php /home/ilter_cwohner/metadata_caching/emf2iso/product2iso.php > /home/ilter_cwohner/metadata_caching/iso19139.log	// create records for data products
 // 0 3 * * 0 /usr/bin/php /home/ilter_cwohner/metadata_caching/iso19139_harvesting.php > /home/ilter_cwohner/metadata_caching/iso19139.log	// download iso19139 records
-// 0 4 * * 0 /usr/bin/php rm /home/ilter_cwohner/cswdatabase/cite.db > /home/ilter_cwohner/metadata_caching/iso19139.log					// delete db
+// 0 4 * * 0 rm /home/ilter_cwohner/cswdatabase/cite.db > /home/ilter_cwohner/metadata_caching/iso19139.log					// delete db
 // 1 4 * * 0 docker exec -ti pycsw pycsw-admin.py -c setup_db -f /etc/pycsw/pycsw.cfg > /home/ilter_cwohner/metadata_caching/iso19139.log	// recreate db
 // 9 4 * * 0 docker exec -ti pycsw pycsw-admin.py -c load_records -p /var/lib/pycsw/iso19139_files -f /etc/pycsw/pycsw.cfg -y -r 			// import files to db
 //
