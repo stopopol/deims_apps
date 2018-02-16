@@ -3,9 +3,9 @@
 //
 // Download script for ISO 19139 metadata records from DEIMS-SDR
 //
-// 0 1 7 * 0 /usr/bin/php /home/ilter_cwohner/metadata_caching/emf2iso/emf2iso.php > /home/ilter_cwohner/metadata_caching/iso19139.log
-// 0 2 7 * 0 /usr/bin/php /home/ilter_cwohner/metadata_caching/emf2iso/product2iso.php > /home/ilter_cwohner/metadata_caching/iso19139.log
-// 0 3 7 * 6 /usr/bin/php /home/ilter_cwohner/metadata_caching/iso19139_harvesting.php > /home/ilter_cwohner/metadata_caching/iso19139.log
+// 0 1 * * 0 /usr/bin/php /home/ilter_cwohner/metadata_caching/emf2iso/emf2iso.php > /home/ilter_cwohner/metadata_caching/iso19139.log 		// create records for ef
+// 0 2 * * 0 /usr/bin/php /home/ilter_cwohner/metadata_caching/emf2iso/product2iso.php > /home/ilter_cwohner/metadata_caching/iso19139.log	// create records for data products
+// 0 3 * * 0 /usr/bin/php /home/ilter_cwohner/metadata_caching/iso19139_harvesting.php > /home/ilter_cwohner/metadata_caching/iso19139.log	// download iso19139 records//
 //
 
 $url = 'https://data.lter-europe.net/deims/iso/harvest_list';
