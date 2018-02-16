@@ -8,7 +8,7 @@
 // 0 3 * * 0 /usr/bin/php /home/ilter_cwohner/metadata_caching/iso19139_harvesting.php > /home/ilter_cwohner/metadata_caching/iso19139.log	// download iso19139 records
 // 0 4 * * 0 rm /home/ilter_cwohner/cswdatabase/cite.db > /home/ilter_cwohner/metadata_caching/iso19139.log					// delete db
 // 1 4 * * 0 docker exec -ti pycsw pycsw-admin.py -c setup_db -f /etc/pycsw/pycsw.cfg > /home/ilter_cwohner/metadata_caching/iso19139.log	// recreate db
-// 9 4 * * 0 docker exec -ti pycsw pycsw-admin.py -c load_records -p /var/lib/pycsw/iso19139_files -f /etc/pycsw/pycsw.cfg -y -r 			// import files to db
+// 5 4 * * 0 docker exec -ti pycsw pycsw-admin.py -c load_records -p /var/lib/pycsw/iso19139_files -f /etc/pycsw/pycsw.cfg -y -r 			// import files to db
 //
 
 $url = 'https://data.lter-europe.net/deims/iso/harvest_list';
