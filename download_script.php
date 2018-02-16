@@ -31,7 +31,7 @@ for ($x = 0; $x < count($zwischen_var); $x++) {
 
 // copy files from emf2iso folder to metadata caching folder
 $src_folder = __DIR__ . "/emf2iso/data/emf2iso";
-$dst_folder = __DIR__ . "/home/ilter_cwohner/cswdatabase/iso19139_files/";
+$dst_folder = "/home/ilter_cwohner/cswdatabase/iso19139_files/";
 
 recurse_copy($src_folder,$dst_folder);
 
