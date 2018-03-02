@@ -31,7 +31,7 @@ ON `coordinates`.`entity_id` = `basetable`.`nid`
 JOIN `field_data_field_site_sitelong` `name` 
 ON `name`.`entity_id` = `basetable`.`nid`
 
-INNER JOIN `field_data_field_elevation_average` msl
+LEFT JOIN `field_data_field_elevation_average` msl
 ON msl.`entity_id` = basetable.`nid`
  
 JOIN `node` `network` 
