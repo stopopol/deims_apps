@@ -20,7 +20,7 @@
       "Related site": {
         "field_name": "field_dataset_site_name_ref",
         "Definition": "Value uniquely identifying a dataset. Its final form is composed of the Site Code retrieved from the Site Name and an unique identifier defined be proposed template.",
-        "Recommendation & Hints": "The identifier shall contain standardized codes of the Network and the Site that are derived from the Site Name. Additionally it should identify the dataset within your working environment (network, organization, laboratory, parameters observed, time coverage, etc.) with internal codes used. By typing the site name the system provides a list of research sites matching the query. If none available, it's strongly recommended to first create a site metadata using the editing form available and then return back to dataset metadata definition.",
+        "Recommendation & Hints": "The identifier shall contain standardized codes of the Network and the Site that are derived from the Site Name. Additionally it should identify the dataset within your working environment (network, organization, laboratory, parameters observed, time coverage, etc.) with internal codes used. By typing the site name the system provides a list of sites matching the query. If none available, it's strongly recommended to first create a site metadata using the editing form available and then return back to dataset metadata definition.",
         "Format": "Reference to [Content Type] SITE",
         "Multiplicity": "[1..1]",
         "Required": true,
@@ -150,8 +150,8 @@
         "Reference list": [
           "Free for access",
           "Free for access and use upon request",
-          "Other restrictions according to rules defined in itellectual rights",
-          "Restricted access detaily defined in intellectual property information",
+          "Other restrictions according to rules defined in intellectual rights",
+          "Restricted access defined in detail in intellectual property information",
           "No access"
         ],
         "Comment": ""
@@ -257,13 +257,13 @@
     "Geographic": {
       "Bounding box, elevation, etc.": {
         "field_name": "field_related_sites",
-        "Definition": "The Geographic reference for the dataset is done by the entity type Research site, which is the location, where specific observations are done. By grouping the information the entity type RESEARCH SITE can be reused. A RESEARCH SITE are the observtion plots within a SITE (e.g. LTER SITE or LTSER PLATFORM).The RESEARCH SITE is the extent of the dataset in the geographic space, given as a bounding box. Defining the coordinates of a boundary rectangle representing the dataset area on a map allows the discovery by geographical area. It consists of: Northern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Southern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Western bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east) and Eastern bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east). In addition the bounding altitudes, images and additional details can be provided.",
-        "Recommendation & Hints": "Please select a Research site from the list, or create a new one with 'Create Research Site' if missing. For the Research Site the bounding box shall be as small as possible and shall be expressed in decimal degree with a precision of at least two decimals. The coordinates of the bounding boxes shall be expressed in any geodetic coordinate reference system with the Greenwich Prime Meridian. You can define bounding box either by drawing a polygon on a map or inserting manually the bounding coordinates. To activate drawing functionality and to (move, delete, reshape) use the editing toolbar in the right top corner of the map. If you would like to define more bounding coordinates, please add more RESEARCH SITES for the dataset MD record.",
-        "Format": "Reference to [Content Type] RESEARCH SITE",
+        "Definition": "The Geographic reference for the dataset is done by the entity type observation location, which is the location, where specific observations are done. By grouping the information the entity type observation location can be reused. An observation location are the observation plots within a SITE (e.g. LTER SITE or LTSER PLATFORM).The observation location is the extent of the dataset in the geographic space, given as a bounding box. Defining the coordinates of a boundary rectangle representing the dataset area on a map allows the discovery by geographical area. It consists of: Northern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Southern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Western bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east) and Eastern bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east). In addition the bounding altitudes, images and additional details can be provided.",
+        "Recommendation & Hints": "Please select an observation location from the list, or create a new one with 'Create observation location' if missing. For the observation location the bounding box shall be as small as possible and shall be expressed in decimal degree with a precision of at least two decimals. The coordinates of the bounding boxes shall be expressed in any geodetic coordinate reference system with the Greenwich Prime Meridian. You can define bounding box either by drawing a polygon on a map or inserting manually the bounding coordinates. To activate drawing functionality and to (move, delete, reshape) use the editing tool-bar in the right top corner of the map. If you would like to define more bounding coordinates, please add more observation location for the dataset MD record.",
+        "Format": "Reference to [Content Type] observation location",
         "Multiplicity": "[1..n]",
         "Required": true,
         "Example": "Zöbelboden_IP1, Zöbelboden_IP2, Zöbelboden_IP3",
-        "Reference list": "Reference to [Content Type] RESEARCH SITE",
+        "Reference list": "Reference to [Content Type] observation location",
         "Comment": ""
       }
     },
