@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW `acc_eu_sites` AS
+CREATE OR REPLACE VIEW `acc_eap_sites` AS
 
 SELECT 
 
