@@ -29,7 +29,7 @@ ON  `coordinates`.`entity_id` = `basetable`.`nid`
 
 JOIN   `field_data_field_ilter_network_region` `region` 
 ON `ilter`.`field_ilter_national_network_nam_target_id` = `region`.`entity_id`
-AND `region`.`field_ilter_network_region_value` = 'North America' 
+AND `region`.`field_ilter_network_region_value` IN ('North America', 'South America')
 
 JOIN   `field_data_field_site_sitelong` `NAME` 
 ON `NAME`.`entity_id` = `basetable`.`nid`
