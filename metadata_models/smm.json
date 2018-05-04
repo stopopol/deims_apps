@@ -668,7 +668,7 @@
         "Definition": "Specifiy whether your site is part of any networks or projects",
         "Recommendation & Hints": "Please check yes or no. If you select yes, the 'Networks/Project' field will appear.",
         "Format": "boolean",
-        "Multiplicity": "[0..1]",
+        "Multiplicity": "[1..1]",
         "Required": true,
         "Example": "YES",
         "Reference list": [
