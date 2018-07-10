@@ -30,21 +30,6 @@
         "Comment": "automatically generated",
         "Changes from Version 1.0": "field added"
       },
-      "Site code": {
-        "field_name": "field__site_sitecode",
-        "Definition": "Unique alpha-numeric identifier for the site (e.g. LTER Site or LTSER Platform) within the DEIMS-SDR ecosystem site registry. The site code is composed of a network identification, a country identification and a sequential number following the template [Network]_[Country]_[SequentialNumber]. The site code is defined by the responsible network coordinators (e.g. LTER member network representative) and should be provided to the site manager.",
-        "Recommendation & Hints": "The Site code as unique alpha-numeric identifier is composed of a network identification, a country identification and a sequential number. For LTER-Europe, the template is : LTER_EU_XX_YY(Y); For East Asia-Pacific: LTER_AP_XX_YY(Y); for North America: LTER_NAM_XX_YY(Y); for South America: LTER_SAM_XX_YY(Y); for Southern Africa: LTER_SAF_XX_YY(Y); where XX is the 2-letter ISO country code and YY(Y) represents a sequential number. Use (Y) for a subsite. Please make sure that the number is not used for any site in your country. For example: LTER_EU_AT_001. For other networks than LTER a different prefix for the network identification is used. If you are part of the Critical Zones or Soiltrek Network, then the format for your code is: CZO_EU_XX_YY(Y); where XX is the 2-letter country code and YY(Y) represents a number. For example: CZO_FR_01 or RBV_FR_100.",
-        "Format": "Text(64)",
-        "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
-        "Example": "LTER_EU_AT_003",
-        "Reference list": "",
-        "Comment": "The 'Site code' should be provided and verified by the member or regional network manager (e.g. LTER Europe). If during the process of entering the site metadata the site code is not provided by the responsible network manager the next sequential number for the site is used. The 'Site code' is than changed by the network manager during the acceptance process of the application of the site.",
-        "Changes from Version 1.0": ""
-      },
       "Size": {
         "field_name": "field_site_size",
         "Definition": "Size of the site in hectare (ha). The size refers to the boundary of the catchment, the observed area or the relevant area for extrapolation dependent on the observed ecosystem type (e.g. forest, lake, rivers).",
@@ -710,6 +695,21 @@
             "Example": "Austria (LTER-Austria)",
             "Reference list": "Reference to [content type 'LTER member network']",
             "Comment": "",
+            "Changes from Version 1.0": ""
+          },
+          "Site code": {
+            "field_name": "field__site_sitecode",
+            "Definition": "Unique alpha-numeric identifier for the site (e.g. LTER Site or LTSER Platform) within the DEIMS-SDR ecosystem site registry. The site code is composed of a network identification, a country identification and a sequential number following the template LTER_[Regional Group]_[Network]_[SequentialNumber]. The site code is defined by the responsible network coordinators (e.g. LTER member network representative) and should be provided to the site manager.",
+            "Recommendation & Hints": "The Site code as unique alpha-numeric identifier is composed of a network identification, a country identification and a sequential number. For LTER-Europe, the template is : LTER_EU_XX_YY(Y); For East Asia-Pacific: LTER_AP_XX_YY(Y); for North America: LTER_NAM_XX_YY(Y); for South America: LTER_SAM_XX_YY(Y); for Southern Africa: LTER_SAF_XX_YY(Y); where XX is the 2-letter ISO country code and YY(Y) represents a sequential number. Use (Y) for a subsite. Please make sure that the number is not used for any site in your country. For example: LTER_EU_AT_001. For other networks than LTER a different prefix for the network identification is used. If you are part of the Critical Zones or Soiltrek Network, then the format for your code is: CZO_EU_XX_YY(Y); where XX is the 2-letter country code and YY(Y) represents a number. For example: CZO_FR_01 or RBV_FR_100.",
+            "Format": "Text(64)",
+            "Multiplicity": "[0..1]",
+            "Required": {
+              "LTER Europe": "TRUE",
+              "ILTER": "TRUE"
+            },
+            "Example": "LTER_EU_AT_003",
+            "Reference list": "",
+            "Comment": "The 'Site code' should be provided and verified by the member or regional network manager (e.g. LTER Europe). If during the process of entering the site metadata the site code is not provided by the responsible network manager the next sequential number for the site is used. The 'Site code' is than changed by the network manager during the acceptance process of the application of the site.",
             "Changes from Version 1.0": ""
           },
           "LTER site classification/category": {
