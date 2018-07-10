@@ -21,7 +21,7 @@
       "Short name": {
         "field_name": "field_short_name",
         "Definition": "Short version of site name",
-        "Recommendation & Hints": "Enter either a site's short name  or acronym or other site name. In certain applications the short name might be used if the full site name exceed a certain amount of characters.",
+        "Recommendation & Hints": " Enter either a site's short name  or acronym. In certain applications the short name might be used if the full site name exceeds a certain amount of characters, e.g. for map labels.",
         "Format": "Text(60)",
         "Multiplicity": "[0..1]",
         "Required": false,
