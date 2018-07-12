@@ -808,7 +808,9 @@
             ],
             "Comment": "Cannot be edited by user",
             "Changes from Version 1.0": ""
-          },
+          }
+        },
+        "Other networks": {
           "ICP Forests Code": {
             "field_name": "field_site_icpforests_code",
             "Definition": "ICP Forests Station Code",
@@ -823,9 +825,7 @@
             "Reference list": "",
             "Comment": "Please enter your ICP Forests Station code here",
             "Changes from Version 1.0": ""
-          }
-        },
-        "Other networks": {
+          },
           "Site classification ExpeER": {
             "field_name": "field_site_expeer_classif",
             "Definition": "Site classification based on ExpeER",
