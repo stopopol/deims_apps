@@ -722,7 +722,7 @@
             "Example": "LTER_EU_AT_003",
             "Reference list": "",
             "Comment": "The 'Site code' should be provided and verified by the member or regional network manager (e.g. LTER Europe). If during the process of entering the site metadata the site code is not provided by the responsible network manager the next sequential number for the site is used. The 'Site code' is than changed by the network manager during the acceptance process of the application of the site.",
-            "Changes from Version 1.0": ""
+            "Changes from Version 1.0": "Renamed and now LTER-specific"
           },
           "LTER site classification/category": {
             "field_name": "field_site_eu_classification",
@@ -807,6 +807,21 @@
               "Rejected as LTER  facility"
             ],
             "Comment": "Cannot be edited by user",
+            "Changes from Version 1.0": ""
+          },
+          "ICP Forests Code": {
+            "field_name": "field_site_icpforests_code",
+            "Definition": "ICP Forests Station Code",
+            "Recommendation & Hints": "The Site code as unique alpha-numeric identifier is composed of a network identification, a country identification and a sequential number. For LTER-Europe, the template is : LTER_EU_XX_YY(Y); For East Asia-Pacific: LTER_AP_XX_YY(Y); for North America: LTER_NAM_XX_YY(Y); for South America: LTER_SAM_XX_YY(Y); for Southern Africa: LTER_SAF_XX_YY(Y); where XX is the 2-letter ISO country code and YY(Y) represents a sequential number. Use (Y) for a subsite. Please make sure that the number is not used for any site in your country. For example: LTER_EU_AT_001. For other networks than LTER a different prefix for the network identification is used. If you are part of the Critical Zones or Soiltrek Network, then the format for your code is: CZO_EU_XX_YY(Y); where XX is the 2-letter country code and YY(Y) represents a number. For example: CZO_FR_01 or RBV_FR_100.",
+            "Format": "Text(64)",
+            "Multiplicity": "[0..1]",
+            "Required": {
+              "LTER Europe": "FALSE",
+              "ILTER": "FALSE"
+            },
+            "Example": "",
+            "Reference list": "",
+            "Comment": "Please enter your ICP Forests Station code here",
             "Changes from Version 1.0": ""
           }
         },
