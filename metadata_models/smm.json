@@ -396,7 +396,7 @@
         "Precipitation": {
           "Precipitation - average annual": {
             "field_name": "field_precipitation_annual_ilter",
-            "Definition": "Precipitation characteristics of the site. The precipitation characteristics is composed of the total annual precipitation (sum), the long term average of the dryest month with the lowest precipitation (based on the monthly sum of precipitation) as the annual minimum precipitation and the long term average of the wettest month with the highest precipitation (based on the montly sum precipitation) as the annual maximum precipitation. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The precipitation is given in [mm].",
+            "Definition": "Precipitation characteristics of the site. The precipitation characteristics is composed of the total annual precipitation (sum), the long term average of the driest month with the lowest precipitation (based on the monthly sum of precipitation) as the annual minimum precipitation and the long term average of the wettest month with the highest precipitation (based on the monthly sum precipitation) as the annual maximum precipitation. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The precipitation is given in [mm].",
             "Recommendation & Hints": "This element consists of three values (annual average, minimum and maximum) of the precipitation. If possible site data should be used to calculate the mean, minimum and maximum precipitation based on a 10 or 30 years data period. If no long term site data are available please use data or values from a comparable climatic station near to the site.",
             "Format": "numeric(double) in [mm]",
             "Multiplicity": "[0..1]",
@@ -411,7 +411,7 @@
           },
           "Precipitation range (monthly minimum) from": {
             "field_name": "field_site_precip_max",
-            "Definition": "Precipitation characteristics of the site. The precipitation characteristics is composed of the total annual precipitation (sum), the long term average of the dryest month with the lowest precipitation (based on the monthly sum of precipitation) as the annual minimum precipitation and the long term average of the wettest month with the highest precipitation (based on the montly sum precipitation) as the annual maximum precipitation. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The precipitation is given in [mm].",
+            "Definition": "Precipitation characteristics of the site. The precipitation characteristics is composed of the total annual precipitation (sum), the long term average of the dryest month with the lowest precipitation (based on the monthly sum of precipitation) as the annual minimum precipitation and the long term average of the wettest month with the highest precipitation (based on the monthly sum precipitation) as the annual maximum precipitation. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The precipitation is given in [mm].",
             "Recommendation & Hints": "This element consists of three values (annual average, minimum and maximum) of the precipitation. If possible site data should be used to calculate the mean, minimum and maximum precipitation based on a 10 or 30 years data period. If no long term site data are available please use data or values from a comparable climatic station near to the site.",
             "Format": "numeric(double) in [mm]",
             "Multiplicity": "[0..1]",
@@ -614,7 +614,7 @@
         },
         "Hydrology": {
           "field_name": "field_hydrology",
-          "Definition": "Textual description of the hydological characteristics of the site",
+          "Definition": "Textual description of the hydrological characteristics of the site",
           "Recommendation & Hints": "Please provide a textual description of the hydrological characteristics at the site (e.g. karst).",
           "Format": "text",
           "Multiplicity": "[0..1]",
@@ -662,7 +662,7 @@
     "Network affiliation": {
       "Is your site part of any network or project?": {
         "field_name": "field_network",
-        "Definition": "Specifiy whether your site is part of any networks or projects",
+        "Definition": "Specify whether your site is part of any networks or projects",
         "Recommendation & Hints": "Please check yes or no. If you select yes, the 'Networks/Project' field will appear.",
         "Format": "boolean",
         "Multiplicity": "[1..1]",
@@ -1041,7 +1041,7 @@
             "_unknown",
             "beyond catchment scale",
             "catchment scale",
-            "smicro sites",
+            "micro sites",
             "plot scale",
             "ecotron"
           ],
@@ -1240,7 +1240,7 @@
             "LTER Europe": "FALSE",
             "ILTER": "FALSE"
           },
-          "Example": "he Zöbelboden covers a small forested catchment (90 ha) of a karstic mountain range in the Kalkalpen national park. meteorological and air pollution monitoring is carried out at a clearing area (EMEP station; includes measurement of fog deposition) and on a tower (45 m height). Three intensive plots exist for the detailed measurement of element fluxes through the main forest types (bi-weekly to monthly analyses of deposition and soil water). Catchment runoff chemistry is measured at the main spring with a measuring weir (weekly analyses) and through irregular sampling at all other springs. Additional karst-hydrological measurements are in place in the main rivers surrounding the ...",
+          "Example": "he Zöbelboden covers a small forested catchment (90 ha) of a karstic mountain range in the Kalkalpen national park. Meteorological and air pollution monitoring is carried out at a clearing area (EMEP station; includes measurement of fog deposition) and on a tower (45 m height). Three intensive plots exist for the detailed measurement of element fluxes through the main forest types (bi-weekly to monthly analyses of deposition and soil water). Catchment runoff chemistry is measured at the main spring with a measuring weir (weekly analyses) and through irregular sampling at all other springs. Additional karst-hydrological measurements are in place in the main rivers surrounding the ...",
           "Reference list": "",
           "Comment": "",
           "Changes from Version 1.0": ""
@@ -1248,7 +1248,7 @@
         "Accessible all year": {
           "field_name": "field_site_access_allyear",
           "Definition": "The data type 'Access to site' describes the accessibility of the site throughout the year. The information is composed of the general information on the accessibility, the general information if all parts of the site can be visited throughout the year and the type of vehicle/device which is needed to reach the site.",
-          "Recommendation & Hints": "Please provide information on the accessibility of the research site throughout the year. The includes the general information on the accessibility, the general information if all parts of the site can be visited throughout the year and the type of vehicle/device which is needed to reach the site.",
+          "Recommendation & Hints": "Please provide information on the accessibility of the research site throughout the year. This includes the general information on the accessibility, the general information if all parts of the site can be visited throughout the year and the type of vehicle/device which is needed to reach the site.",
           "Format": "boolean",
           "Multiplicity": "[0..1]",
           "Dependency": "",
@@ -1348,7 +1348,7 @@
       "Operation": {
         "Permanent operation": {
           "field_name": "field_site_ops_ispermanent",
-          "Definition": "The data type 'Permanent operation' describes if a site is operated permanently throughout the year. It is composed of the general information on the permanent operation, the interval and frequency in which samples are taken from the site and the interval and frequency in which maintenance personnel is visiting the site. Permanent operation is defined that the whole year in regular intervalls samples are taken and collected by the sampling personnel visiting the site. In part of the year (e.g. winter) the frequency might be less than in others (e.g. summer).",
+          "Definition": "The data type 'Permanent operation' describes if a site is operated permanently throughout the year. It is composed of the general information on the permanent operation, the interval and frequency in which samples are taken from the site and the interval and frequency in which maintenance personnel is visiting the site. Permanent operation is defined that the whole year in regular intervals samples are taken and collected by the sampling personnel visiting the site. In part of the year (e.g. winter) the frequency might be less than in others (e.g. summer).",
           "Recommendation & Hints": "Please provide information on the all year operation of the site. All year operation is defined that throughout the year samples are taken or observations (e.g. sensors) are made. The frequency of sampling and maintenance might be unequally through the year (e.g. less frequent in winter than in summer). Please provide therefore the average sampling frequency and maintenance frequency throughout the year.",
           "Format": "boolean",
           "Multiplicity": "[0..1]",
