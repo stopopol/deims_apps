@@ -23,7 +23,7 @@
       },
       "Network name": {
         "field_name": "field_site_sitelong",
-        "Definition": "Name identifying the documented observation and/or experimentation facility (site, e.g LTER Site or LTSER Platform).",
+        "Definition": "Name identifying the documented observation and/or experimentation facility (site, e.g. LTER Site or LTSER Platform).",
         "Recommendation & Hints": "The site name should be concise and precise, e.g. by a given named place. It should not contain unexplained acronyms or abbreviations. It is recommended a maximum length of 200 characters and keeping the similarity with the ‘official naming’ established in the community.",
         "Format": "Text(255)",
         "Multiplicity": "[1..1]",
