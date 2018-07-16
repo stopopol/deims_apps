@@ -102,24 +102,13 @@
       }
     },
     "Keywords": {
-      "Keywords originating from EnvThes": {
-        "field_name": "field_keywords",
-        "Definition": "Provides a set of related keywords describing the content of the dataset derived from the controlled vocabulary implemented by EnvThes - thesaurus for long term ecological research, monitoring, experiments EnvThes and other environmentally related thesauri as EUNIS Habitats and INSPIRE Spatial Data Themes. Additional concepts can be defined as free keywords.",
+      "Keywords": {
+        "field_name": "field_keywords_envthes",
+        "Definition": "Provides a set of related keywords describing the content of the dataset derived from the controlled vocabulary implemented by EnvThes - thesaurus for long term ecological research, monitoring, experiments EnvThes and other environmentally related thesauri as the EUNIS Habitats. Additional concepts can be defined as free keywords.",
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[1..n]",
         "Required": true,
-        "Example": "",
-        "Reference list": "",
-        "Comment": ""
-      },
-      "Free keywords": {
-        "field_name": "field_free_keywords_ref",
-        "Definition": "Allows to describe the dataset with free keywords",
-        "Recommendation & Hints": "",
-        "Format": "",
-        "Multiplicity": "[0..n]",
-        "Required": false,
         "Example": "",
         "Reference list": "",
         "Comment": ""
