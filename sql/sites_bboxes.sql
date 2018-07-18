@@ -4,8 +4,19 @@ SELECT
 name.`field_site_sitelong_value` AS name,
 basetable.`uuid`,
 basetable.`nid`,
-coordinates.`field_geo_bounding_box_geom` as geom, 
-msl.`field_elevation_average_value`
+msl.`field_elevation_average_value`,
+
+
+POLYFROMTEXT(concat(
+		'Polygon((', 
+			coordinates.`field_geo_bounding_box_left`	, ' ', coordinates.`field_geo_bounding_box_bottom` 	, ', ', 	
+			coordinates.`field_geo_bounding_box_right`	, ' ', coordinates.`field_geo_bounding_box_bottom`	, ', ',	
+			coordinates.`field_geo_bounding_box_right`	, ' ', coordinates.`field_geo_bounding_box_top`		, ', ',
+			coordinates.`field_geo_bounding_box_left`	, ' ', coordinates.`field_geo_bounding_box_top`		, ', ',	
+			coordinates.`field_geo_bounding_box_left`	, ' ', coordinates.`field_geo_bounding_box_bottom`	, 
+		'))'
+	))
+ AS GEOM
 
 
 FROM `node` basetable
@@ -18,4 +29,4 @@ ON name.`entity_id` = basetable.`nid`
 LEFT JOIN `field_data_field_elevation_average` msl
 ON msl.`entity_id` = basetable.`nid`
 
-WHERE basetable.`status` = 1
+WHERE basetable.`status` = 1 AND `field_geo_bounding_box_geo_type` = 'polygon'
