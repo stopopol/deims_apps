@@ -19,3 +19,4 @@ LEFT JOIN `field_data_field_elevation_average` msl
 ON msl.`entity_id` = basetable.`nid`
 
 WHERE basetable.`status` = 1 
+AND coordinates.`field_geo_bounding_box_geo_type` = 'polygon'
