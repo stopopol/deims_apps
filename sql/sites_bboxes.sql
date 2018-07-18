@@ -4,7 +4,7 @@ SELECT
 name.`field_site_sitelong_value` AS name,
 basetable.`uuid`,
 basetable.`nid`,
-coordinates.`field_geo_bounding_box_geom`, 
+coordinates.`field_geo_bounding_box_geom` as geom, 
 msl.`field_elevation_average_value`
 
 
