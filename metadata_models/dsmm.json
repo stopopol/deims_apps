@@ -115,7 +115,7 @@
       },
       "INSPIRE Data Theme": {
         "field_name": "field_inspire_data_theme",
-        "Definition": "Allows to specifiy the INSPIRE Data Theme",
+        "Definition": "Allows to specify the INSPIRE Data Theme",
         "Recommendation & Hints": "In order for your metadata to be fully INSPIRE-compliant, please select at least one Data Theme (<a href='http://inspire.ec.europa.eu/theme' target='_blank'>http://inspire.ec.europa.eu/theme</a>).",
         "Format": "",
         "Multiplicity": "[0..n]",
