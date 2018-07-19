@@ -15,7 +15,7 @@ POLYFROMTEXT(concat(
 			coordinates.`field_geo_bounding_box_left`	, ' ', coordinates.`field_geo_bounding_box_bottom`	, 
 		'))'
 	))
- AS GEOM
+ AS geom
 
 
 FROM `node` basetable
