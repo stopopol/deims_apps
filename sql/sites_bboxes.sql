@@ -4,7 +4,6 @@ SELECT
 name.`field_site_sitelong_value` AS name,
 basetable.`uuid`,
 basetable.`nid`,
-msl.`field_elevation_average_value`,
 
 
 POLYFROMTEXT(concat(
@@ -25,8 +24,5 @@ ON coordinates.`entity_id` = basetable.`nid`
 
 INNER JOIN `field_data_field_site_sitelong` name
 ON name.`entity_id` = basetable.`nid`
-
-LEFT JOIN `field_data_field_elevation_average` msl
-ON msl.`entity_id` = basetable.`nid`
 
 WHERE basetable.`status` = 1 AND `field_geo_bounding_box_geo_type` = 'polygon'
