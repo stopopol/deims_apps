@@ -1,7 +1,7 @@
 {
-  "name": "Site Metadata Model",
+  "name": "Site Metadata Model ",
   "abbreviation": "SMM",
-  "version": 1.11,
+  "version": 1.12,
   "releaseDate": "2017-11-29T00:00:00.000Z",
   "scope": "The Site Metadata Model (SMM) describes the metadata elements of a monitoring or experimentation site. The metadata model is based on requirements defined by target stakeholder groups (e.g. ILTER/LTER) and research projects (e.g. EnvEurope, ExpeER, eLTER H2020 or EcoPotential). It defines metadata elements about the organisation (e.g. contact, information, networks), the location, the observation characteristics (e.g. climate, habitats) or available equipment to name just a few. The basic metadata elements are in line with the data specification of the INSPIRE data theme Environmental Monitoring Facilities (EF). An initial mapping was done within the EnvEurope project showing the basic overall compliance.",
   "content": {
@@ -134,7 +134,7 @@
       },
       "EnvThes keywords": {
         "field_name": "field_keywords_envthes",
-        "Definition": "rovides a set of related keywords characterising the site derived from the controlled vocabulary implemented by EnvThes - thesaurus for long term ecological research, monitoring, experiments EnvThes and other environmentally related thesauri as Catalogue of Life, EUNIS Habitats and INSPIRE Spatial Data Themes. Additional concepts can be defined as free keywords.",
+        "Definition": "Provides a set of related keywords characterising the site derived from the controlled vocabulary implemented by EnvThes - thesaurus for long term ecological research, monitoring, experiments EnvThes and other environmentally related thesauri as Catalogue of Life, EUNIS Habitats and INSPIRE Spatial Data Themes. Additional concepts can be defined as free keywords.",
         "Recommendation & Hints": "The field provides an autocomplete function, which allows selecting the values from the list. Begin typing a keyword. Select the one that most resembles the concept you want. You may add as many keywords as you need. The current version of EnvThes is cached in DEIMS-SDR. Therefore minor differences between the current version on the webserver and in DEIMS-SDR can occur. Updates of EnvThes in DEIMS-SDR are done automatically including updates of concepts.",
         "Format": "Predefined hierarchically structured concepts",
         "Multiplicity": "[0..n]",
@@ -163,7 +163,7 @@
       },
       "Contact: Site owner": {
         "field_name": "field_contact_site_owner",
-        "Definition": "Reference to the contact person/organisation or the responsible national authority for funding and strategic decisions about the site. This could be e.g. the Ministry of Science as responsible national authority. The details for the person/organisation needs to be specified in the persons module (PEMM).",
+        "Definition": "Reference to the contact person/organisation owning the site. The details for the person/organisation needs to be specified in the persons module (PEMM).",
         "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
         "Format": "Reference to [content type PERSON]",
         "Multiplicity": "[1..n]",
@@ -284,15 +284,15 @@
       },
       "Shapefile": {
         "field_name": "field_upload_shapefile",
-        "Definition": "Shapefile representing the boundaries of the site using the geographic projection WGS84 (EPSG:4326).",
-        "Recommendation & Hints": "Please upload the zipped shapefile with geographic projection (Europe: ETRS89 (EPSG:4258), outside Europe WGS84 (EPSG:4326)). If you don't have a shapefile at hand you can easily create one at: http://gis.ucla.edu/apps/click2shp/ You can also easily edit existing shapefiles at http://www.mapshaper.org/. Files must be less than 10 MB. Allowed file types: zip 7z. Please provide site boundaries and internal organisation (e.g. observation plots) as documented dataset. All datasets are linked with the site.",
+        "Definition": "Shapefile representing the boundaries of the site using the geographic projections ETRS89 (EPSG: 4258) for within Europe and WGS84 (EPSG: 4326) for outside Europe.",
+        "Recommendation & Hints": "Please upload the zipped shapefile with geographic projection (Europe: ETRS89 (EPSG:4258), outside Europe WGS84 (EPSG:4326)). If you don't have a shapefile at hand you can easily create one at: http://gis.ucla.edu/apps/click2shp/. You can also easily edit existing shapefiles at http://www.mapshaper.org/. Files must be less than 10 MB. Allowed file types: zip 7z. Please provide site boundaries and internal organisation (e.g. observation plots) as documented dataset. All datasets are linked with the site.",
         "Format": "binary file - zipped shapefile",
         "Multiplicity": "[0..1]",
         "Required": {
           "LTER Europe": "FALSE",
           "ILTER": "FALSE"
         },
-        "Example": "",
+        "Example": "NP_Kalkalpen_ETRS89.zip",
         "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
@@ -410,7 +410,7 @@
             "Changes from Version 1.0": ""
           },
           "Precipitation range (monthly minimum) from": {
-            "field_name": "field_site_precip_max",
+            "field_name": "field_site_precip_min",
             "Definition": "Precipitation characteristics of the site. The precipitation characteristics is composed of the total annual precipitation (sum), the long term average of the dryest month with the lowest precipitation (based on the monthly sum of precipitation) as the annual minimum precipitation and the long term average of the wettest month with the highest precipitation (based on the monthly sum precipitation) as the annual maximum precipitation. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The precipitation is given in [mm].",
             "Recommendation & Hints": "This element consists of three values (annual average, minimum and maximum) of the precipitation. If possible site data should be used to calculate the mean, minimum and maximum precipitation based on a 10 or 30 years data period. If no long term site data are available please use data or values from a comparable climatic station near to the site.",
             "Format": "numeric(double) in [mm]",
@@ -425,7 +425,7 @@
             "Changes from Version 1.0": ""
           },
           "Precipitation range (monthly maximum) to": {
-            "field_name": "field_site_precip_min",
+            "field_name": "field_site_precip_max",
             "Definition": "Precipitation characteristics of the site. The precipitation characteristics is composed of the total annual precipitation (sum), the long term average of the dryest month with the lowest precipitation (based on the monthly sum of precipitation) as the annual minimum precipitation and the long term average of the wettest month with the highest precipitation (based on the montly sum precipitation) as the annual maximum precipitation. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The precipitation is given in [mm].",
             "Recommendation & Hints": "This element consists of three values (annual average, minimum and maximum) of the precipitation. If possible site data should be used to calculate the mean, minimum and maximum precipitation based on a 10 or 30 years data period. If no long term site data are available please use data or values from a comparable climatic station near to the site.",
             "Format": "numeric(double) in [mm]",
@@ -600,7 +600,7 @@
         "Geology": {
           "field_name": "field_geology",
           "Definition": "Textual description of the geological characteristics of the site.",
-          "Recommendation & Hints": "Please provide a textual description of the geological situation of the site (e.g. bed rock",
+          "Recommendation & Hints": "Please provide a textual description of the geological situation of the site (e.g. bed rock).",
           "Format": "text",
           "Multiplicity": "[0..1]",
           "Required": {
@@ -1108,8 +1108,8 @@
         },
         "Protection program cover": {
           "field_name": "field_protection_program_cover",
-          "Definition": "Please select the protection program and an estimate of the share of the protected area within the site from the list of values. In addition textual notes can be given.",
-          "Recommendation & Hints": "",
+          "Definition": "Description of the protection status of the site. The information is composed of the protection program (e.g. IUCN National Park), the cover of protected areas within the site and additional notes on the protection. As each site can be protected by different programs and therefore more than one values can be given.",
+          "Recommendation & Hints": "Please select the protection program and an estimate of the share of the protected area within the site from the list of values. In addition textual notes can be given.",
           "Format": "text (LOV)",
           "Multiplicity": "[0..n]",
           "Dependency": "",
