@@ -7,13 +7,13 @@
   "content": {
     "General information": {
       "Name": {
-        "field_name": "field_site_sitelong",
-        "Definition": "Name identifying the documented observation and/or experimentation facility (site, e.g LTER Site or LTSER Platform).",
-        "Recommendation & Hints": "The site name should be concise and precise, e.g. by a given named place. It should not contain unexplained acronyms or abbreviations. It is recommended a maximum length of 200 characters and keeping the similarity with the ‘official naming’ established in the community.",
+        "field_name": "field_name",
+        "Definition": "The data type 'Full name' is defined as the full name of a physical or administrative person (organisation). It is composed of the title (1.1), the first name (1.2) and the last name (1.3). Title and first name does not apply to organisations.",
+        "Recommendation & Hints": "Please provide the full name for the person. In case of a organisation the name of the organisation is provided in 1.3 Last name. For physical persons please provide title, first and last name.",
         "Format": "Text(255)",
         "Multiplicity": "[1..1]",
         "Required": true,
-        "Example": "Zöbelboden LTER",
+        "Example": "Person McPersonface",
         "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
