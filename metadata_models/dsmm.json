@@ -1,8 +1,8 @@
 {
   "name": "Dataset Metadata Model",
   "abbreviation": "DSMM",
-  "version": 1.03,
-  "releaseDate": "2017-12-21T00:00:00.000Z",
+  "version": 1.04,
+  "releaseDate": "2018-07-24T00:00:00.000Z",
   "scope": "The dataset metadata model (DSMM) is based on requirements defined by the target stakeholder groups. The user requirements for the content were harmonized with the INSPIRE metadata regulation and implemented using Ecological Metadata Language (EML) metadata specification, version 2.1.1. EnvEurope focused on the EML metadata standard (stemming from the US LTER activities) but also provides an interface to discover ISO compliant metadata based on XSLT transformation EML2ISO developed in the project and Geonetwork opensource CSW implementation.",
   "content": {
     "Title": {
@@ -55,7 +55,7 @@
       "Contact": {
         "field_name": "field_person_contact",
         "Definition": "Provides the full name of person(s), who serve(s) as contact point(s).",
-        "Recommendation & Hints": "",
+        "Recommendation & Hints": "By typing the name of a person, the system provides a list of people matching the query. If none available, it's strongly recommended to first create a person metadata using the editing form available and then return back to dataset metadata definition.",
         "Format": "Reference to [Content Type] PERSON",
         "Multiplicity": "[1..n]",
         "Required": true,
@@ -96,7 +96,7 @@
         "Format": "text",
         "Multiplicity": "[1..1]",
         "Required": true,
-        "Example": "Dataset provides monthly precipitation data collected at different weather stations that are closest to Lake Santo Parmense and Lake Scuro Parmense. We provide a long-term dataset (1951-2010) collected at two stations near the town of Bosco di Corniglio. In particular, from 1951 to 1998 precipitation data were collected at the weather station of Bosco Centrale. Between 1999 and july 2000 the station was out of order (no data available) and from 2001 the Bosco Centrale weather station was substituted by the Bosco di Corniglio station. The two weather stations are less than 1 km apart and they are about 6 km far from Lake Santo Parmense and 7 km far from Lake Scuro Parmense. We also provide a shorter dataset of precipitation data collected from 1994 to 2010 at the weather station of Lagdei. This station is closer to our sampling sites (about 1 km from Lake Santo Parmense and 5 km from Lake Scuro Parmense), but a shorter time series is available. All weather stations are managed by the Environmental Protection Agency of the Emilia-Romagna region (ARPA Emilia-Romagna), which ...",
+        "Example": "Dataset provides monthly precipitation data collected at different weather stations that are closest to Lake Santo Parmense and Lake Scuro Parmense. We provide a long-term dataset (1951-2010) collected at two stations near the town of Bosco di Corniglio. In particular, from 1951 to 1998 precipitation data were collected at the weather station of Bosco Centrale. Between 1999 and july 2000 the station was out of order (no data available) and from 2001 the Bosco Centrale weather station was substituted by the Bosco di Corniglio station. The two weather stations are less than 1 km apart and they are about 6 km far from Lake Santo Parmense and 7 km far from Lake Scuro Parmense. We also provide a shorter dataset of precipitation data collected from 1994 to 2010 at the weather station of Lagdei. This station is closer to our sampling sites (about 1 km from Lake Santo Parmense and 5 km from Lake Scuro Parmense), but a shorter time series is available. All weather stations are managed by the Environmental Protection Agency of the Emilia-Romagna region (ARPA Emilia-Romagna).",
         "Reference list": "",
         "Comment": ""
       }
@@ -146,7 +146,7 @@
         "Format": "",
         "Multiplicity": "[1..n]",
         "Required": false,
-        "Example": "",
+        "Example": "Research >> Free for access",
         "Reference list": [
           "Free for access",
           "Free for access and use upon request",
@@ -245,7 +245,7 @@
       "Data sources": {
         "field_name": "field_data_sources",
         "Definition": "A data source is defined as a physical data upload of a dataset to DEIMS. A data source is described by a number of fields, describing the structure of the data file. For a dataset MD record [0..n] data files can be physically uploaded and described.",
-        "Recommendation & Hints": "",
+        "Recommendation & Hints": "The concept of the data source is used, when data files are physically uploaded to DEIMS. This is not recommended. Please used the 'online distribution link' instead, pointing to an online resource, e.g. file uploaded to B2SHARE.",
         "Format": "",
         "Multiplicity": "[0..n]",
         "Required": false,
@@ -319,7 +319,7 @@
       "Instrumentation": {
         "field_name": "field_instrumentation",
         "Definition": "Provides information about any instruments used in the data collection or quality control and quality assurance.",
-        "Recommendation & Hints": "Instrumentation is a textual description of the used devices including the parameter observed. The description should provide information about: parameter, device type, device brand and type number, producer: company or country, additional notes",
+        "Recommendation & Hints": "Instrumentation is a textual description of the used devices including the parameter observed. The description should provide information about: parameter, device type, device brand and type number, producer: company or country, additional notes. Use the instruments already available in the system through autocomplete functionality if applicable.",
         "Format": "",
         "Multiplicity": "[0..n]",
         "Required": false,
@@ -341,8 +341,8 @@
         "Comment": ""
       },
       "Sampling time span": {
-        "field_name": "Provides information about sampling part of the method as measurement frequency, and spatial scale.",
-        "Definition": "field_sampling_time_span",
+        "field_name": "field_sampling_time_span",
+        "Definition": "Provides information about sampling part of the method as measurement frequency, and spatial scale.",
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[1..n]",
@@ -352,8 +352,8 @@
         "Comment": ""
       },
       "Minimum sampling unit": {
-        "field_name": "Provides information about sampling part of the method as measurement frequency, and spatial scale.",
-        "Definition": "field_minimum_sampling_unit",
+        "field_name": "field_minimum_sampling_unit",
+        "Definition": "Provides information about sampling part of the method as measurement frequency, and spatial scale.",
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[1..n]",
@@ -378,7 +378,7 @@
       "Legal act": {
         "field_name": "field_dataset_legal",
         "Definition": "Provides information whether the dataset has been reported to the local, regional or national bodies to fulfil the obligations from particular legal regulations.",
-        "Recommendation & Hints": "",
+        "Recommendation & Hints": "Select from list of EU or other relevant directives. For national or regional directives use option Other and provide references. Even if the element is optional it is recommended to provide information linking to related policies through the regulations.",
         "Format": "[0..n]",
         "Multiplicity": "[0..1]",
         "Required": false,
