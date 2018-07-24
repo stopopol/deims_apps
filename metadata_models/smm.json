@@ -2,7 +2,7 @@
   "name": "Site Metadata Model",
   "abbreviation": "SMM",
   "version": 1.12,
-  "releaseDate": "2017-11-29T00:00:00.000Z",
+  "releaseDate": "2018-07-20T00:00:00.000Z",
   "scope": "The Site Metadata Model (SMM) describes the metadata elements of a monitoring or experimentation site. The metadata model is based on requirements defined by target stakeholder groups (e.g. ILTER/LTER) and research projects (e.g. EnvEurope, ExpeER, eLTER H2020 or EcoPotential). It defines metadata elements about the organisation (e.g. contact, information, networks), the location, the observation characteristics (e.g. climate, habitats) or available equipment to name just a few. The basic metadata elements are in line with the data specification of the INSPIRE data theme Environmental Monitoring Facilities (EF). An initial mapping was done within the EnvEurope project showing the basic overall compliance.",
   "content": {
     "Name and general description": {
