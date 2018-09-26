@@ -3,7 +3,7 @@
   "abbreviation": "PMM",
   "version": 1.01,
   "releaseDate": "2018-01-02T00:00:00.000Z",
-  "scope": "The person metadata model (PMM) serves several purposes. First, it provides a source for dataset metadata creators, contact points, and metadata providers (basic contact information). The required information is a surname and email address. The person MD model applies for physical persons, e.g. researcher, as well as for administrative persons, e.g. funding organisation. In this context, organisations are considered to be persons.",
+  "scope": "The person data model describes the metadata elements of any person record on DEIMS-SDR. It provides a source for metadata provider, contact points and site managers (basic contact information). The required information is a the full name. The person data model applies for physical persons, e.g. researcher or administrative persons.",
   "content": {
     "General information": {
       "Name": {
