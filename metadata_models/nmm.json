@@ -3,7 +3,7 @@
   "abbreviation": "NMM",
   "version": 1.01,
   "releaseDate": "2018-01-02T00:00:00.000Z",
-  "scope": "The network metadata model (NMM) is based on the ILTER and LTER Europe requirements. It is meant to collect basic information on the network itself as well as the associated information provided within DEIMS-SDR. This includes the links to associated persons as well as research sites and datasets. For Networks managed as specific entries within DEIMS-SDR the affiliation of Research sites can be managed and the status of affiliation can be changed. The content type Network applies therefore to ILTER/LTER networks especially.",
+  "scope": "The network metadata model (NMM) is based on the ILTER and LTER Europe requirements. It is meant to collect basic information on the network itself as well as the associated information provided within DEIMS-SDR. This includes the links to associated persons. For Networks managed as specific entries within DEIMS-SDR the affiliation of Research sites can be managed and the status of affiliation can be changed. The content type Network applies therefore to ILTER/LTER networks especially.",
   "content": {
     "Basic information": {
       "UUID": {
