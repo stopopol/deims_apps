@@ -223,7 +223,7 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "Metadata date": {
+      "Metadata Update Date	": {
         "field_name": "field_date",
         "Definition": "Provides date of metadata creation or last update.",
         "Recommendation & Hints": "Is automatically generated and cannot be entered manually",
