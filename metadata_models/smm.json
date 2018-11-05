@@ -1014,11 +1014,10 @@
           },
           "Example": "only observation",
           "Reference list": [
-            "_unknown",
-            "no observation of natural environment",
-            "partly observation",
+            "only observation",
             "mainly observation",
-            "only observation"
+            "partly observation",
+            "no observation"
           ],
           "Comment": "The information is linked to Experimental design. The link needs to be discussed in the next release of the data model for the site. This field should not be considered for LTSER Platforms.",
           "Changes from Version 1.0": ""
