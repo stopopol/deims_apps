@@ -1035,12 +1035,11 @@
           },
           "Example": "catchment scale",
           "Reference list": [
-            "_unknown",
             "beyond catchment scale",
             "catchment scale",
             "micro sites",
             "plot scale",
-            "ecotron"
+            "not applicable"
           ],
           "Comment": "The information is linked to Observation design. The link needs to be discussed in the next release of the data model for the site. This field should not be considered for LTSER Platforms.",
           "Changes from Version 1.0": ""
