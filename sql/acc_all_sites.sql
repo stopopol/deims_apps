@@ -15,14 +15,14 @@ Point(`coordinates`.`field_coordinates_lon`, `coordinates`.`field_coordinates_la
 
 FROM  `node` `basetable` 
 
-JOIN `field_data_field_site_eu__status_accred` `acc` 
+JOIN `field_data_field_declaration_status_accredi` `acc` 
 ON `acc`.`entity_id` = `basetable`.`nid` 
-AND  `acc`.`field_site_eu__status_accred_value` = 'acc_formal'  
+AND  `acc`.`field_declaration_status_accredi_value` = 'acc_formal'
 
 JOIN `field_data_field_ilter_national_network_nam` `ilter` 
 ON `ilter`.`entity_id` = `basetable`.`nid`
 
-JOIN `field_data_field_site_eu_classification` `classi` 
+LEFT JOIN `field_data_field_site_eu_classification` `classi` 
 ON `classi`.`entity_id` = `basetable`.`nid` 
 
 JOIN `field_data_field_coordinates` `coordinates` 
