@@ -1384,7 +1384,7 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Operations notes": {
+        "Operation notes": {
           "field_name": "field_site_ops_notes",
           "Definition": "Additional textual description about the operation of the site. This can contain additional information which is not covered by the other items.",
           "Recommendation & Hints": "Please provide additional information on the operation of the infrastructure which are not covered by the other items.",
