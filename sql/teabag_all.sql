@@ -2,11 +2,11 @@ CREATE OR REPLACE VIEW `teabag_all` AS
 
 SELECT 
 
-`NAME`.`field_site_sitelong_value`                                                 AS `name`,
-`basetable`.`nid`                                                                  AS `nid`,
-`uuid`.`field_uuid_value`                                                          AS `uuid`,
-`coordinates`.`field_coordinates_lat`                                              AS `field_coordinates_lat`,
-`coordinates`.`field_coordinates_lon`                                              AS `field_coordinates_lon`,
+`NAME`.`field_site_sitelong_value`                                                 AS name,
+`basetable`.`nid`                                                                  AS nid,
+CONCAT('https://deims.org/', basetable.`uuid`)                                     AS deimsID,
+`coordinates`.`field_coordinates_lat`                                              AS field_coordinates_lat,
+`coordinates`.`field_coordinates_lon`                                              AS field_coordinates_lon,
 msl.`field_elevation_average_value`,
 point(`coordinates`.`field_coordinates_lon`,`coordinates`.`field_coordinates_lat`) AS `geom`
 
