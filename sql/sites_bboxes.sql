@@ -2,7 +2,7 @@ CREATE OR REPLACE VIEW deims_sites_bboxes AS
 
 SELECT 
 name.`field_site_sitelong_value` AS name,
-basetable.`uuid`,
+CONCAT('https://deims.org/', basetable.`uuid`) AS deimsID,
 basetable.`nid`,
 
 
