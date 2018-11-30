@@ -2,7 +2,7 @@ CREATE OR REPLACE VIEW deims_all_sites AS
 
 SELECT 
 name.`field_site_sitelong_value` AS name,
-basetable.`uuid`,
+CONCAT('https://deims.org/', basetable.`uuid`) as deimsID,
 basetable.`nid`,
 coordinates.`field_coordinates_lat`, 
 coordinates.`field_coordinates_lon`,
@@ -20,4 +20,4 @@ ON name.`entity_id` = basetable.`nid`
 LEFT JOIN `field_data_field_elevation_average` msl
 ON msl.`entity_id` = basetable.`nid`
 
-WHERE basetable.`status` = 1 and coordinates.`field_coordinates_lat` 
+WHERE basetable.`status` = 1 and coordinates.`field_coordinates_lat`
