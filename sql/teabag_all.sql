@@ -4,7 +4,7 @@ SELECT
 
 `NAME`.`field_site_sitelong_value`                                                 AS name,
 `basetable`.`nid`                                                                  AS nid,
-CONCAT('https://deims.org/', basetable.`uuid`)                                     AS deimsID,
+CONCAT('https://deims.org/', basetable.`uuid`)                                     AS deimsid,
 `coordinates`.`field_coordinates_lat`                                              AS field_coordinates_lat,
 `coordinates`.`field_coordinates_lon`                                              AS field_coordinates_lon,
 msl.`field_elevation_average_value`,
