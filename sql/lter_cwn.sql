@@ -2,7 +2,7 @@ CREATE OR REPLACE VIEW lter_cwn_sites AS
 
 SELECT 
 `name`.`field_site_sitelong_value`                                                  AS name,
-CONCAT('https://deims.org/', basetable.`uuid`)                                      AS deimsID,
+CONCAT('https://deims.org/', basetable.`uuid`)                                      AS deimsid,
 `basetable`.`nid`                                                                   AS nid,
 classi.`field_site_eu_classification_value`                                         AS classification,
 `coordinates`.`field_coordinates_lat`                                               AS field_coordinates_lat,
