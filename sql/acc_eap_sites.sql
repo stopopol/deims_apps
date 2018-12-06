@@ -3,7 +3,7 @@ CREATE OR REPLACE VIEW `acc_eap_sites` AS
 SELECT 
 
 `NAME`.`field_site_sitelong_value`                                                 AS name,
-CONCAT('https://deims.org/', basetable.`uuid`)                                     AS deimsID,
+CONCAT('https://deims.org/', basetable.`uuid`)                                     AS deimsid,
 `basetable`.`nid`                                                                  AS nid,
 `network`.`title`                                                                  AS network,
 `classi`.`field_site_eu_classification_value`                                      AS classification,
