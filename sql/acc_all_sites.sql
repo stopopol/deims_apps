@@ -3,7 +3,7 @@ CREATE OR REPLACE VIEW acc_all_sites AS
 select
 
 `name`.`field_site_sitelong_value` AS `name`, 
-`basetable`.`uuid` AS `uuid`, 
+`basetable`.`uuid`                            AS `deimsid`, 
 `basetable`.`nid`                             AS `nid`, 
 `network`.`title`                             AS `network`, 
 `classi`.`field_site_eu_classification_value` AS `classification`, 
