@@ -2,7 +2,7 @@ CREATE OR REPLACE VIEW `ecopotential_sites` AS
 SELECT
 
 `NAME`.`field_site_sitelong_value`                                                 AS name,
-CONCAT('https://deims.org/', basetable.`uuid`)                                     AS deimsID,
+CONCAT('https://deims.org/', basetable.`uuid`)                                     AS deimsid,
 `basetable`.`nid`                                                                  AS nid,
 `coordinates`.`field_coordinates_lat`                                              AS field_coordinates_lat,
 `coordinates`.`field_coordinates_lon`                                              AS field_coordinates_lon,
