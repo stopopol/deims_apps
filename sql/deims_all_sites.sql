@@ -20,4 +20,8 @@ ON name.`entity_id` = basetable.`nid`
 LEFT JOIN `field_data_field_elevation_average` msl
 ON msl.`entity_id` = basetable.`nid`
 
-WHERE basetable.`status` = 1 and coordinates.`field_coordinates_lat`
+LEFT JOIN `field_data_field_site_status` status
+ON status.`entity_id` = basetable.`nid`
+
+WHERE basetable.`status` = 1 AND coordinates.`field_coordinates_lat` AND NOT status.`field_site_status_value` = 'abandoned'
+
