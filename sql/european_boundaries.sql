@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW `europe_boundaries` AS
+CREATE OR REPLACE VIEW `lter_europe_boundaries` AS
 
 SELECT 
 
