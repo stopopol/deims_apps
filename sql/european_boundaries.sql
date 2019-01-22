@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW `acc_eu_sites` AS
+CREATE OR REPLACE VIEW `europe_boundaries` AS
 
 SELECT 
 
@@ -7,10 +7,8 @@ CONCAT('https://deims.org/', basetable.`uuid`)                                  
 `basetable`.`nid`                                                                  AS nid,
 `network`.`title`                                                                  AS network,
 `classi`.`field_site_eu_classification_value`                                      AS classification,
-`coordinates`.`field_coordinates_lat`                                              AS field_coordinates_lat,
-`coordinates`.`field_coordinates_lon`                                              AS field_coordinates_lon,
-msl.`field_elevation_average_value`,
-point(`coordinates`.`field_coordinates_lon`,`coordinates`.`field_coordinates_lat`) AS `geom`
+msl.`field_elevation_average_value`,									
+`boundaries`.`field_geo_bounding_box_geom` 											AS geom
 
 
 FROM   `node` `basetable` 
@@ -24,8 +22,8 @@ ON `ilter`.`entity_id` = `basetable`.`nid`
 JOIN   `field_data_field_site_eu_classification` `classi` 
 ON `classi`.`entity_id` = `basetable`.`nid`
 
-JOIN `field_data_field_coordinates` `coordinates` 
-ON  `coordinates`.`entity_id` = `basetable`.`nid`
+JOIN `field_data_field_geo_bounding_box` `boundaries` 
+ON  `boundaries`.`entity_id` = `basetable`.`nid`
 
 JOIN   `field_data_field_ilter_network_region` `region` 
 ON `ilter`.`field_ilter_national_network_nam_target_id` = `region`.`entity_id`
