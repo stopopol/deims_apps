@@ -1,8 +1,8 @@
 {
   "name": "Site Metadata Model",
   "abbreviation": "SMM",
-  "version": 1.12,
-  "releaseDate": "2018-07-20T00:00:00.000Z",
+  "version": 1.13,
+  "releaseDate": "2019-02-04T00:00:00.000Z",
   "scope": "A 'Site' is defined as a basic generic in-situ observation or experimentation facility (of any size and organisation level), where the collection of e.g. bio-physical, environmental, biological or socio-ecological data is conducted. The Site Metadata Model (SMM) describes the metadata elements of a monitoring or experimentation site. The metadata model is based on requirements defined by target stakeholder groups (e.g. ILTER/LTER) and research projects (e.g. EnvEurope, ExpeER, eLTER H2020 or EcoPotential). It defines metadata elements about the organisation (e.g. contact, information, networks), the location, the observation characteristics (e.g. climate, habitats) or available equipment to name just a few. The basic metadata elements are in line with the data specification of the INSPIRE data theme Environmental Monitoring Facilities (EF). An initial mapping was done within the EnvEurope project showing the basic overall compliance.",
   "content": {
     "Name and general description": {
@@ -814,7 +814,7 @@
           "ICP Forests Code": {
             "field_name": "field_site_icpforests_code",
             "Definition": "ICP Forests Station Code",
-            "Recommendation & Hints": "The Site code as unique alpha-numeric identifier is composed of a network identification, a country identification and a sequential number. For LTER-Europe, the template is : LTER_EU_XX_YY(Y); For East Asia-Pacific: LTER_AP_XX_YY(Y); for North America: LTER_NAM_XX_YY(Y); for South America: LTER_SAM_XX_YY(Y); for Southern Africa: LTER_SAF_XX_YY(Y); where XX is the 2-letter ISO country code and YY(Y) represents a sequential number. Use (Y) for a subsite. Please make sure that the number is not used for any site in your country. For example: LTER_EU_AT_001. For other networks than LTER a different prefix for the network identification is used. If you are part of the Critical Zones or Soiltrek Network, then the format for your code is: CZO_EU_XX_YY(Y); where XX is the 2-letter country code and YY(Y) represents a number. For example: CZO_FR_01 or RBV_FR_100.",
+            "Recommendation & Hints": "",
             "Format": "Text(64)",
             "Multiplicity": "[0..1]",
             "Required": {
@@ -846,6 +846,21 @@
               "Ecotron - ECOTRON"
             ],
             "Comment": "",
+            "Changes from Version 1.0": ""
+          },
+          "ICOS Site Code": {
+            "field_name": "field_icos_site_code",
+            "Definition": "ICOS Station Code",
+            "Recommendation & Hints": "",
+            "Format": "Text(64)",
+            "Multiplicity": "[0..1]",
+            "Required": {
+              "LTER Europe": "FALSE",
+              "ILTER": "FALSE"
+            },
+            "Example": "",
+            "Reference list": "",
+            "Comment": "Please enter the respective ICOS network code of this site (full url)",
             "Changes from Version 1.0": ""
           }
         }
