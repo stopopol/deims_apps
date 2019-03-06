@@ -659,7 +659,7 @@
         }
       }
     },
-    "Network affiliation and Network Specific Information": {
+    "Network affiliation and network specific information": {
       "Is your site part of any network or project?": {
         "field_name": "field_network",
         "Definition": "Specify whether your site is part of any networks or projects",
