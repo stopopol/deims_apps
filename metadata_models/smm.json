@@ -883,7 +883,6 @@
           "Complex Site - SITE, where more then one ecosystem type is observed",
           "Simple Site - SITE, where one ecosystem type is observed",
           "Sub Site - SITE, which is part of a site (umbrella site) or platform, e.g. in case of a thematic site cluster of glacier sites, which are described as one entity",
-          "Plot - observation plot within a site",
           "nA - not applicable"
         ],
         "Comment": "",
