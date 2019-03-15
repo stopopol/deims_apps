@@ -1374,30 +1374,6 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Operation costs": {
-          "field_name": "field_site_ops_cost",
-          "Definition": "The yearly operation costs are the total sum of costs needed for the operation of the site. This includes all costs of maintenance, energy consumption or land rent. It also includes cost for lab analysis of the permanent monitoring program. Costs for campaigns are not included in the yearly operation costs. The operation costs are given in €.",
-          "Recommendation & Hints": "please give an estimate on the yearly operational costs for the site. This includes maintenance and operation of all kind of infrastructure existing at or belonging to the site.",
-          "Format": "text (LOV)",
-          "Multiplicity": "[0..1]",
-          "Dependency": "",
-          "Required": {
-            "LTER Europe": "FALSE",
-            "ILTER": "FALSE"
-          },
-          "Example": "50-100 k",
-          "Reference list": [
-            "_unknown",
-            "0-10 k",
-            "10-30 k",
-            "30-100 k",
-            "100-300 k",
-            "300-500 k",
-            ">500 k"
-          ],
-          "Comment": "",
-          "Changes from Version 1.0": ""
-        },
         "Operation notes": {
           "field_name": "field_site_ops_notes",
           "Definition": "Additional textual description about the operation of the site. This can contain additional information which is not covered by the other items.",
@@ -1414,22 +1390,6 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Site visit interval": {
-          "field_name": "field_site_ops_sampling_intr",
-          "Definition": "The interval (in days) that staff visits the site to collect sampling information or carry out observations, e.g. every 30 days",
-          "Recommendation & Hints": "",
-          "Format": "integer",
-          "Multiplicity": "[0..1]",
-          "Dependency": "",
-          "Required": {
-            "LTER Europe": "FALSE",
-            "ILTER": "FALSE"
-          },
-          "Example": "4",
-          "Reference list": "",
-          "Comment": "",
-          "Changes from Version 1.0": ""
-        },
         "Maintenance interval": {
           "field_name": "field_site_ops_maint_freq",
           "Definition": "Frequency in which maintenance personnel is visiting the site",
@@ -1442,6 +1402,22 @@
             "ILTER": "FALSE"
           },
           "Example": "7",
+          "Reference list": "",
+          "Comment": "",
+          "Changes from Version 1.0": ""
+        },
+        "Site visit interval": {
+          "field_name": "field_site_ops_sampling_intr",
+          "Definition": "The interval (in days) that staff visits the site to collect sampling information or carry out observations, e.g. every 30 days",
+          "Recommendation & Hints": "",
+          "Format": "integer",
+          "Multiplicity": "[0..1]",
+          "Dependency": "",
+          "Required": {
+            "LTER Europe": "FALSE",
+            "ILTER": "FALSE"
+          },
+          "Example": "4",
           "Reference list": "",
           "Comment": "",
           "Changes from Version 1.0": ""
@@ -1553,22 +1529,6 @@
           "Distributed over multiple institutions",
           "Other"
         ],
-        "Comment": "",
-        "Changes from Version 1.0": ""
-      },
-      "Data storage location number": {
-        "field_name": "field_site_datastornum",
-        "Definition": "The number of storage locations is including the storage locations within an organisation as well as the storage locations situated at other organisations (e.g. data repositories).",
-        "Recommendation & Hints": "",
-        "Format": "",
-        "Multiplicity": "[0..1]",
-        "Dependency": "",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
-        "Example": "4",
-        "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
