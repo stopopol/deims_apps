@@ -1,8 +1,8 @@
 {
   "name": "Site Metadata Model",
   "abbreviation": "SMM",
-  "version": 1.13,
-  "releaseDate": "2019-02-04T00:00:00.000Z",
+  "version": 1.14,
+  "releaseDate": "2019-03-15T00:00:00.000Z",
   "scope": "A 'Site' is defined as a basic generic in-situ observation or experimentation facility (of any size and organisation level), where the collection of e.g. bio-physical, environmental, biological or socio-ecological data is conducted. The Site Metadata Model (SMM) describes the metadata elements of a monitoring or experimentation site. The metadata model is based on requirements defined by target stakeholder groups (e.g. ILTER/LTER) and research projects (e.g. EnvEurope, ExpeER, eLTER H2020 or EcoPotential). It defines metadata elements about the organisation (e.g. contact, information, networks), the location, the observation characteristics (e.g. climate, habitats) or available equipment to name just a few. The basic metadata elements are in line with the data specification of the INSPIRE data theme Environmental Monitoring Facilities (EF). An initial mapping was done within the EnvEurope project showing the basic overall compliance.",
   "content": {
     "Name and general description": {
@@ -269,8 +269,8 @@
       },
       "Site boundaries": {
         "field_name": "field_geo_bounding_box",
-        "Definition": "Delineation of the site boundaries or the bounding box.",
-        "Recommendation & Hints": "Please delineate the site boundaries on the map. The minimal requirement is the bounding box of your site.",
+        "Definition": "the geographic extent covering the area of all measurement infrastructures including measurement devices (e.g. soil respiration chambers) as well as permanent plots (e.g. soil sampling)",
+        "Recommendation & Hints": "Please delineate the geographic extent covering the area of all measurement infrastructures including measurement devices (e.g. soil respiration chambers) as well as permanent plots (e.g. soil sampling).",
         "Format": "Map/WKT Text field",
         "Multiplicity": "[0..1]",
         "Required": {
