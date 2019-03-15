@@ -1414,9 +1414,9 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Sampling interval": {
+        "Site visit interval": {
           "field_name": "field_site_ops_sampling_intr",
-          "Definition": "The frequency in which samples are taken from the site",
+          "Definition": "The interval (in days) that staff visits the site to collect sampling information or carry out observations, e.g. every 30 days",
           "Recommendation & Hints": "",
           "Format": "integer",
           "Multiplicity": "[0..1]",
