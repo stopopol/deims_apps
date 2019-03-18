@@ -1,8 +1,8 @@
 {
   "name": "Dataset Metadata Model",
   "abbreviation": "DSMM",
-  "version": 1.04,
-  "releaseDate": "2018-07-24T00:00:00.000Z",
+  "version": 1.05,
+  "releaseDate": "2019-03-18T00:00:00.000Z",
   "scope": "The dataset metadata model (DSMM) is based on requirements defined by the target stakeholder groups. The user requirements for the content were harmonized with the INSPIRE metadata regulation and implemented using Ecological Metadata Language (EML) metadata specification, version 2.1.1. EnvEurope focused on the EML metadata standard (stemming from the US LTER activities) but also provides an interface to discover ISO compliant metadata based on XSLT transformation EML2ISO developed in the project and Geonetwork opensource CSW implementation.",
   "content": {
     "Title": {
@@ -168,6 +168,19 @@
         "Example": "",
         "Reference list": "",
         "Comment": ""
+      },
+      "Data policy URL": {
+        "field_name": "field_data_policy_url",
+        "Definition": "Link to website which provides further information on the data policy for the site. The web address is composed of the web link and a title which is shown.",
+        "Recommendation & Hints": "",
+        "Format": "text",
+        "Multiplicity": "[0..1]",
+        "Dependency": "",
+        "Required": false,
+        "Example": "",
+        "Reference list": "http://www.umweltbundesamt.at/umwelt/luft/messnetz/zoebelboden/",
+        "Comment": "",
+        "Changes from Version 1.0": ""
       }
     },
     "Online distribution": {
