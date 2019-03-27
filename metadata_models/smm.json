@@ -350,7 +350,7 @@
         "Temperature": {
           "Air Temperature - average annual": {
             "field_name": "field_temperature_average_annual",
-            "Definition": "Temperature characteristics of the site. The temperature characteristics are composed of the mean annual temperature, the monthly average of the coldest month (e.g. January) as the annual minimum temperature and the average of the hottest month (e.g. July) as the annual maximum temperature. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The temperature is given in [°C].",
+            "Definition": "Temperature characteristics of the site. The temperature characteristics are composed of the mean annual air temperature, the monthly average of the coldest month (e.g. January) as the annual minimum temperature and the average of the hottest month (e.g. July) as the annual maximum temperature. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The temperature is given in [°C].",
             "Recommendation & Hints": "This element consists of three values (annual average, minimum and maximum) of the air temperature. If possible site data should be used to calculate the mean, minimum and maximum air temperature based on a 10 or 30 years period. If no long term site data are available please use data or values from a comparable climatic station near to the site.",
             "Format": "numeric(double) in [°C]",
             "Multiplicity": "[0..1]",
@@ -366,7 +366,7 @@
           "Air Temperature - from": {
             "field_name": "field_site_temp_min",
             "Definition": "Temperature characteristics of the site. The temperature characteristics are composed of the mean annual temperature, the monthly average of the coldest month (e.g. January) as the annual minimum temperature and the average of the hottest month (e.g. July) as the annual maximum temperature. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The temperature is given in [°C].",
-            "Recommendation & Hints": "Temperature characteristics of the site. The temperature characteristics are composed of the mean annual temperature, the monthly average of the coldest month (e.g. January) as the annual minimum temperature and the average of the hottest month (e.g. July) as the annual maximum temperature. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The temperature is given in [°C].",
+            "Recommendation & Hints": "Temperature characteristics of the site. The temperature characteristics are composed of the mean annual air temperature, the monthly average of the coldest month (e.g. January) as the annual minimum temperature and the average of the hottest month (e.g. July) as the annual maximum temperature. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The temperature is given in [°C].",
             "Multiplicity": "[0..1]",
             "Required": {
               "LTER Europe": "FALSE",
@@ -379,7 +379,7 @@
           },
           "Air Temperature - to": {
             "field_name": "field_site_temp_max",
-            "Definition": "Temperature characteristics of the site. The temperature characteristics are composed of the mean annual temperature, the monthly average of the coldest month (e.g. January) as the annual minimum temperature and the average of the hottest month (e.g. July) as the annual maximum temperature. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The temperature is given in [°C].",
+            "Definition": "Temperature characteristics of the site. The temperature characteristics are composed of the mean annual temperature, the monthly average of the coldest month (e.g. January) as the annual minimum air temperature and the average of the hottest month (e.g. July) as the annual maximum temperature. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The temperature is given in [°C].",
             "Recommendation & Hints": "This element consists of three values (annual average, minimum and maximum) of the air temperature. If possible site data should be used to calculate the mean, minimum and maximum air temperature based on a 10 or 30 years period. If no long term site data are available please use data or values from a comparable climatic station near to the site.",
             "Format": "numeric(double) in [m] above or below sea level",
             "Multiplicity": "[0..1]",
