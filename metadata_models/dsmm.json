@@ -155,6 +155,17 @@
           "No access"
         ],
         "Comment": ""
+      },
+      "Recommended citation": {
+        "field_name": "field_citation",
+        "Definition": "Defines the way this dataset should be cited.",
+        "Recommendation & Hints": "Here you can put a text describing how you would like this dataset to be cited.",
+        "Format": "",
+        "Multiplicity": "[1..n]",
+        "Required": false,
+        "Example": "Wohner, C., Peterseil, J., Poursanidis, D., Kliment, T., Wilson, M., Mirtl, M., & Chrysoulakis, N. (2019). DEIMS-SDR – A web portal to document research sites and their associated data. Ecological Informatics, 51, 15–24. https://doi.org/10.1016/j.ecoinf.2019.01.005",
+        "Reference list": "",
+        "Comment": ""
       }
     },
     "Intellectual rights": {
