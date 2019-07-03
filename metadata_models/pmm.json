@@ -93,7 +93,7 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "URL": {
+      "Web Address": {
         "field_name": "field_url",
         "Definition": "The data type 'Online information' is defined as link to web resources about the person or organisation. It can be either a personal webpage or the webpage the affiliated organisation. In case of a organisation it is the organisation webpage.",
         "Recommendation & Hints": "",
