@@ -116,18 +116,6 @@
         "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
-      },
-      "Fax": {
-        "field_name": "field_fax",
-        "Definition": "Contact information for persons and organisations composed of the address and phone details.",
-        "Recommendation & Hints": "",
-        "Format": "",
-        "Multiplicity": "[0..1]",
-        "Required": false,
-        "Example": "",
-        "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
       }
     },
     "Organization": {
