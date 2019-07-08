@@ -5,7 +5,7 @@
   "releaseDate": "2019-03-15T00:00:00.000Z",
   "scope": "A 'Site' is defined as a basic generic in-situ observation or experimentation facility (of any size and organisation level), where the collection of e.g. bio-physical, environmental, biological or socio-ecological data is conducted. The Site Metadata Model (SMM) describes the metadata elements of a monitoring or experimentation site. The metadata model is based on requirements defined by target stakeholder groups (e.g. ILTER/LTER) and research projects (e.g. EnvEurope, ExpeER, eLTER H2020 or EcoPotential). It defines metadata elements about the organisation (e.g. contact, information, networks), the location, the observation characteristics (e.g. climate, habitats) or available equipment to name just a few. The basic metadata elements are in line with the data specification of the INSPIRE data theme Environmental Monitoring Facilities (EF). An initial mapping was done within the EnvEurope project showing the basic overall compliance.",
   "content": {
-    "Name and general description": {
+    "Name and General Description": {
       "Site name": {
         "field_name": "field_site_sitelong",
         "Definition": "Name identifying the documented observation and/or experimentation facility (site, e.g LTER Site or LTSER Platform).",
@@ -148,7 +148,7 @@
         "Changes from Version 1.0": "field was added to the Site Metadata Model"
       }
     },
-    "Site contact details": {
+    "Site Contact Details": {
       "Contact: Site manager": {
         "field_name": "field_person_contact",
         "Definition": "Reference to the contact person responsible for the site. The person could be either the principal investigator (PI, co-PI), the information manager (IM), the site manager (SM) or a technician (TE). The details for the person/organisation needs to be specified in the persons module (PEMM).",
@@ -243,9 +243,9 @@
       "Country": {
         "field_name": "field_ilter_network_country",
         "Definition": "Country the site is located in.",
-        "Recommendation & Hints": "Please provide the name of the country in which the observation or experimentation facility is located. This might be different from the LTER member network. It describes in which country the site is located, even if the member network is located in another country. Please select a country from the Reference list.",
+        "Recommendation & Hints": "Please provide the name of the country in which the observation or experimentation facility is located. This might be different from network affiliation. It describes in which country the site is located, even if the network is located in another country. If your site is transnational, please select as many countries as necessary.",
         "Format": "Reference list",
-        "Multiplicity": "[1..1]",
+        "Multiplicity": "[1..n]",
         "Required": true,
         "Example": "Austria",
         "Reference list": "location_get_iso3166_list() https://www.iso.org/obp/ui/#home",
