@@ -1214,30 +1214,6 @@
     },
     "Infrastructure and operation": {
       "Infrastructure": {
-        "Infrastructure value": {
-          "field_name": "field_site_inf_val",
-          "Definition": "The cumulative infrastructure value is the total sum of investments for infrastructure (e.g. buildings, roads, labs), instrumentation (e.g. devices, sensors) and other related costs (e.g. energy provision, land purchase) for the setup, establishment and operation of the site since the establishment or the site. It does not contain the yearly operation and maintenance costs. The cumulative infrastructure value is given in €.",
-          "Recommendation & Hints": "Please give an estimate on the cumulative infrastructure value (in €) of all investments for the setup and instrumentation of the site since the establishment. This includes all kind of infrastructure existing at or belonging to the site. If no historic values are available please make the estimation on the estimation of the current costs for setting up the current devices based on actual costs.",
-          "Format": "text (LOV)",
-          "Multiplicity": "[0..1]",
-          "Dependency": "",
-          "Required": {
-            "LTER Europe": "TRUE",
-            "ILTER": "FALSE"
-          },
-          "Example": "50-100 k",
-          "Reference list": [
-            "_unknown",
-            "0-50 k",
-            "100-700 k",
-            "50-100 k",
-            "700-2000 k",
-            "2000-5000 k",
-            ">5000 k"
-          ],
-          "Comment": "",
-          "Changes from Version 1.0": ""
-        },
         "Infrastructure notes": {
           "field_name": "field_site_inf_notes",
           "Definition": "Additional textual description about the infrastructure present at the site. This can contain additional information which is not covered by the other items.",
@@ -1425,27 +1401,6 @@
       }
     },
     "Data sharing policy": {
-      "Data request format": {
-        "field_name": "field_site_datareq",
-        "Definition": "The data type 'Data request format' describes on how the data can be requested from the site.",
-        "Recommendation & Hints": "Please provide information how the data can be requested from the site (external and internal).",
-        "Format": "text (LOV)",
-        "Multiplicity": "[0..1]",
-        "Dependency": "",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
-        "Example": "Offline (Mail or Telephone)",
-        "Reference list": [
-          "N/A",
-          "Offline (Mail or Telephone)",
-          "Online (Reference for access)",
-          "Other"
-        ],
-        "Comment": "",
-        "Changes from Version 1.0": ""
-      },
       "General data policy": {
         "field_name": "field_dataset_rights",
         "Definition": "Information on the General Data Policy which is applied to share and publish the data and information from the site.",
@@ -1530,33 +1485,6 @@
           "Other"
         ],
         "Comment": "",
-        "Changes from Version 1.0": ""
-      },
-      "Data storage format": {
-        "field_name": "field_site_dataformat",
-        "Definition": "The data type 'Data storage format' describes the different formats in which the data are available and managed.",
-        "Recommendation & Hints": "Please provide information about in which data formats the data are managed or provided to the end users.",
-        "Format": "text (LOV)",
-        "Multiplicity": "[0..n]",
-        "Dependency": "",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "FALSE"
-        },
-        "Example": "Proprietary file format",
-        "Reference list": [
-          "N/A",
-          "Paper",
-          "Proprietary file format",
-          "Relational Database",
-          "Spatial data file (GIS)",
-          "Spatial database (GIS)",
-          "Structured file or spreadsheet",
-          "unstructured file",
-          "XML Database",
-          "Other"
-        ],
-        "Comment": "is already included in Infrastructure. In the next version field needs to be deleted.",
         "Changes from Version 1.0": ""
       },
       "Data services": {
