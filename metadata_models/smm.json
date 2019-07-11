@@ -1,8 +1,8 @@
 {
   "name": "Site Metadata Model",
   "abbreviation": "SMM",
-  "version": 1.14,
-  "releaseDate": "2019-03-15T00:00:00.000Z",
+  "version": 1.15,
+  "releaseDate": "2019-07-11T00:00:00.000Z",
   "scope": "A 'Site' is defined as a basic generic in-situ observation or experimentation facility (of any size and organisation level), where the collection of e.g. bio-physical, environmental, biological or socio-ecological data is conducted. The Site Metadata Model (SMM) describes the metadata elements of a monitoring or experimentation site. The metadata model is based on requirements defined by target stakeholder groups (e.g. ILTER/LTER) and research projects (e.g. EnvEurope, ExpeER, eLTER H2020 or EcoPotential). It defines metadata elements about the organisation (e.g. contact, information, networks), the location, the observation characteristics (e.g. climate, habitats) or available equipment to name just a few. The basic metadata elements are in line with the data specification of the INSPIRE data theme Environmental Monitoring Facilities (EF). An initial mapping was done within the EnvEurope project showing the basic overall compliance.",
   "content": {
     "Name and General Description": {
@@ -41,21 +41,6 @@
         "Reference list": "",
         "Comment": "automatically generated",
         "Changes from Version 1.0": "field added"
-      },
-      "Size": {
-        "field_name": "field_site_size",
-        "Definition": "Size of the site in hectare (ha). The size refers to the boundary of the catchment, the observed area or the relevant area for extrapolation dependent on the observed ecosystem type (e.g. forest, lake, rivers).",
-        "Recommendation & Hints": "Please provide the size of the site in hectares. 1 hectare = 1 square kilometer /100 OR hectares = square kilometres X 100. The estimation of the size refers to the observed area of the site. This could either be the observed catchment area, the observed area defined by the bounding boundary of the observation devices, or the relevant area for extrapolation depending on the observed ecosystem type (e.g. forest, lake, glacier, ...). In addition to the estimation of the size a separate dataset with the site boundaries should be provided as open dataset.",
-        "Format": "Float(Double)",
-        "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
-        "Example": "90.5",
-        "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
       },
       "Site description": {
         "field_name": "field_site_description",
@@ -239,7 +224,7 @@
         "Changes from Version 1.0": ""
       }
     },
-    "Geographic location": {
+    "Geographic and Spatial Characteristics": {
       "Country": {
         "field_name": "field_ilter_network_country",
         "Definition": "Country the site is located in.",
@@ -263,6 +248,21 @@
           "ILTER": "TRUE"
         },
         "Example": "Latitude: 46.00936 Longitude: 8.56796",
+        "Reference list": "",
+        "Comment": "",
+        "Changes from Version 1.0": ""
+      },
+      "Size": {
+        "field_name": "field_site_size",
+        "Definition": "Size of the site in hectare (ha). The size refers to the boundary of the catchment, the observed area or the relevant area for extrapolation dependent on the observed ecosystem type (e.g. forest, lake, rivers).",
+        "Recommendation & Hints": "Please provide the size of the site in hectares. 1 hectare = 1 square kilometer /100 OR hectares = square kilometres X 100. The estimation of the size refers to the observed area of the site. This could either be the observed catchment area, the observed area defined by the bounding boundary of the observation devices, or the relevant area for extrapolation depending on the observed ecosystem type (e.g. forest, lake, glacier, ...). In addition to the estimation of the size a separate dataset with the site boundaries should be provided as open dataset.",
+        "Format": "Float(Double)",
+        "Multiplicity": "[0..1]",
+        "Required": {
+          "LTER Europe": "TRUE",
+          "ILTER": "TRUE"
+        },
+        "Example": "90.5",
         "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
