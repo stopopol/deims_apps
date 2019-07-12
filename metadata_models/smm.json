@@ -224,7 +224,7 @@
         "Changes from Version 1.0": ""
       }
     },
-    "Geographic and Spatial Characteristics": {
+    "Geographic Location and Extent": {
       "Country": {
         "field_name": "field_ilter_network_country",
         "Definition": "Country the site is located in.",
