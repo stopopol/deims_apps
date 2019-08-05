@@ -207,8 +207,8 @@
       },
       "Data digitally available": {
         "field_name": "field_availability",
-        "Definition": "",
-        "Recommendation & Hints": "",
+        "Definition": "Indication if the data are available in digital format.",
+        "Recommendation & Hints": "Please indicate, if the data are available in digital format.",
         "Format": "boolean",
         "Multiplicity": "[0..1]",
         "Required": false,
