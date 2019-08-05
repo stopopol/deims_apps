@@ -182,13 +182,13 @@
         "field_name": "field_availability",
         "Definition": "Indicate if data is available online.",
         "Recommendation & Hints": "",
-        "Format": "bool",
-        "Multiplicity": "[1..1]",
+        "Format": "link",
+        "Multiplicity": "[0..1]",
         "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
+          "LTER Europe": "false",
+          "ILTER": "false"
         },
-        "Example": "true",
+        "Example": "www.something.something/source",
         "Reference List": "",
         "Comment": "",
         "Changes from Version 1.0": ""
