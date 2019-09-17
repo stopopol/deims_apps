@@ -880,9 +880,9 @@
         "Example": "Simple Site",
         "Reference list": [
           "Platform - is defined as LTSER Platform (Long-Term Socio-Ecological Research): Modular LTER-facility consisting of sites which are located in an area with defined boundaries. Besides this physical component, LTSER-Platforms provide multiple services like the networking of client groups (e.g. research, local stakeholders), data management, communication and representation (management component). The elements of LTSER Platforms represent the main habitats, land use forms and practices relevant for the broader region (up to 10000 km²) and cover all scales and levels relevant for LTSER (from local to landscape). LTSER-Platforms should represent economic and social units or coincide/overlap with such units where adequate information on land use history, economy and demography is available to allow for socio-ecological research.",
-          "Complex Site - SITE, where more then one ecosystem type is observed",
-          "Simple Site - SITE, where one ecosystem type is observed",
-          "Sub Site - SITE, which is part of a site (umbrella site) or platform, e.g. in case of a thematic site cluster of glacier sites, which are described as one entity",
+          "Complex Site - site, where more than one ecosystem type is observed",
+          "Simple Site - site, where one ecosystem type is observed",
+          "Sub Site - site, which is part of a site (umbrella site) or platform, e.g. in case of a thematic site cluster of glacier sites, which are described as one entity",
           "nA - not applicable"
         ],
         "Comment": "",
