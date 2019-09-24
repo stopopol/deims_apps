@@ -1,8 +1,8 @@
 {
   "name": "Site Metadata Model",
   "abbreviation": "SMM",
-  "version": 1.15,
-  "releaseDate": "2019-07-11T00:00:00.000Z",
+  "version": 1.2,
+  "releaseDate": "2019-09-24T00:00:00.000Z",
   "scope": "A 'Site' is defined as a basic generic in-situ observation or experimentation facility (of any size and organisation level), where the collection of e.g. bio-physical, environmental, biological or socio-ecological data is conducted. The Site Metadata Model (SMM) describes the metadata elements of a monitoring or experimentation site. The metadata model is based on requirements defined by target stakeholder groups (e.g. ILTER/LTER) and research projects (e.g. EnvEurope, ExpeER, eLTER H2020 or EcoPotential). It defines metadata elements about the organisation (e.g. contact, information, networks), the location, the observation characteristics (e.g. climate, habitats) or available equipment to name just a few. The basic metadata elements are in line with the data specification of the INSPIRE data theme Environmental Monitoring Facilities (EF). An initial mapping was done within the EnvEurope project showing the basic overall compliance.",
   "content": {
     "Name and General Description": {
@@ -278,21 +278,6 @@
           "ILTER": "FALSE"
         },
         "Example": "boundaries or bounding box represented as POLYGON ((13.8043 48.2759, 15.4358 48.2759, 15.4358 47.2718, 13.8043 47.2718, 13.8043 48.2759)))",
-        "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
-      },
-      "Shapefile": {
-        "field_name": "field_upload_shapefile",
-        "Definition": "Shapefile representing the boundaries of the site using the geographic projections ETRS89 (EPSG: 4258) for within Europe and WGS84 (EPSG: 4326) for outside Europe.",
-        "Recommendation & Hints": "Please upload the zipped shapefile with geographic projection (Europe: ETRS89 (EPSG:4258), outside Europe WGS84 (EPSG:4326)). If you don't have a shapefile at hand you can easily create one at: http://gis.ucla.edu/apps/click2shp/. You can also easily edit existing shapefiles at http://www.mapshaper.org/. Files must be less than 10 MB. Allowed file types: zip 7z. Please provide site boundaries and internal organisation (e.g. observation plots) as documented dataset. All datasets are linked with the site.",
-        "Format": "binary file - zipped shapefile",
-        "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
-        "Example": "NP_Kalkalpen_ETRS89.zip",
         "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
