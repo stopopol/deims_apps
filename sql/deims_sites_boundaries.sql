@@ -5,7 +5,7 @@ name.`field_site_sitelong_value` AS name,
 CONCAT('https://deims.org/', basetable.`uuid`) AS deimsid,
 basetable.`nid`,
 
-ST_MPOLYFROMWKB (`field_geo_bounding_box_geom`) AS geom
+ST_GEOMCOLLFROMWKB(`field_geo_bounding_box_geom`) AS geom
 
 
 FROM `node` basetable
