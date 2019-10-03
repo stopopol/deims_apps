@@ -612,7 +612,7 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Soil": {
+        "Soils": {
           "field_name": "field_soils",
           "Definition": "Textual description of the soil characteristics of the site.",
           "Recommendation & Hints": "Please provide a textual description of the soils present at the site (e.g. brown earth).",
