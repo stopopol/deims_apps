@@ -13,7 +13,7 @@
         "Format": "Text(255)",
         "Multiplicity": "[1..1]",
         "Required": true,
-        "Example": "Zöbelboden",
+        "Example": "LTER Zöbelboden",
         "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
