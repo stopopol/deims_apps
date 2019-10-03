@@ -149,7 +149,7 @@
       "Contact: Site owner": {
         "field_name": "field_contact_site_owner",
         "Definition": "Reference to the contact person/organisation owning the site. The details for the person/organisation needs to be specified in the persons module (PEMM).",
-        "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
+        "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person. If the person/organisation is not in the list, please add first the person/organisation using the respective form.",
         "Format": "Reference to [content type PERSON]",
         "Multiplicity": "[1..n]",
         "Required": {
