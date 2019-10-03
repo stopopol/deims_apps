@@ -105,7 +105,7 @@
       "Sub site name(s)": {
         "field_name": "field_subsite_name",
         "Definition": "Reference to the child elements of a LTSER Platform. The relation could either be a spatial or thematic.",
-        "Recommendation & Hints": "Please provide the reference to the sites (by Site name) which belong to the LTSER Platform.",
+        "Recommendation & Hints": "Please provide the reference to the sites which belong to the platform/umbrella site (by Site name).",
         "Format": "Reference to Site name [content type site]",
         "Multiplicity": "[0..n]",
         "Required": {
