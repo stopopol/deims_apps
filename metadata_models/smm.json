@@ -195,7 +195,7 @@
     "Metadata details": {
       "Metadata provider": {
         "field_name": "field_person_metadata_provider",
-        "Definition": "Provides the full name of person(s), who created the documentation for the site. The details for the organisation needs to be specified in the persons module (PMM).",
+        "Definition": "Provides the full name of person(s) or organisation, who created the documentation for the site.",
         "Recommendation & Hints": "By typing the name of a person, the system provides a list of people matching the query. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
         "Format": "Reference to [content type PERSON]",
         "Multiplicity": "[1..n]",
