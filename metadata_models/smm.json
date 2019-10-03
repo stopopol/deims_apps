@@ -164,7 +164,7 @@
       "Contact: Funding agency": {
         "field_name": "field_contact_funding_agency",
         "Definition": "Reference to the contact person/organisation or the responsible national authority for funding and strategic decisions about the site. This could be e.g. the Ministry of Science as responsible national authority. The details for the person/organisation needs to be specified in the persons module (PEMM).",
-        "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
+        "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person/organisation. If the person/organisation is not in the list, please add first the person/organisation using the respective form.",
         "Format": "Reference to [content type PERSON]",
         "Multiplicity": "[1..n]",
         "Required": {
