@@ -526,7 +526,7 @@
           "Comment": "The classification and the cardinality need to be discussed. It is used for a global assessment of the main habitat types.",
           "Changes from Version 1.0": "The fields for ecosystem types from SMM 1.0 were merged into one multi-value field. This includes the following fields: Ecosystem type, Additional Ecosystem type 1, Additional Ecosystem type 2"
         },
-        "Biogeographic region": {
+        "Biogeographical region": {
           "field_name": "field_site_eu_biogeo_region",
           "Definition": "Assignment of the site to a biogeographic region (EEA, 2002) based on the spatial location and the site characteristics. Map: Biogeographic regions of Europe (EEA 2012).",
           "Recommendation & Hints": "Please provide the biogeographic region according to the list. Please select the values from the list.",
