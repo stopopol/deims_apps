@@ -117,7 +117,7 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "EnvThes keywords": {
+      "Keywords": {
         "field_name": "field_keywords_envthes",
         "Definition": "Provides a set of related keywords characterising the site derived from the controlled vocabulary implemented by EnvThes - thesaurus for long term ecological research, monitoring, experiments EnvThes and other environmentally related thesauri as Catalogue of Life, EUNIS Habitats and INSPIRE Spatial Data Themes. Additional concepts can be defined as free keywords.",
         "Recommendation & Hints": "The field provides an autocomplete function, which allows selecting the values from the list. Begin typing a keyword. Select the one that most resembles the concept you want. You may add as many keywords as you need.",
@@ -137,7 +137,7 @@
       "Contact: Site manager": {
         "field_name": "field_person_contact",
         "Definition": "Reference to the contact person responsible for the site. The person could be either the principal investigator (PI, co-PI), the information manager (IM), the site manager (SM) or a technician (TE). The details for the person/organisation needs to be specified in the persons module (PEMM).",
-        "Recommendation & Hints": "Please provide the reference (Person) to the person responsible for the site. Please start typing the name of the person. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
+        "Recommendation & Hints": "Please provide the reference to the person or organisation responsible for the site. Please start typing the name of the person/organisation. If the person/organisation is not in the list, please add first the person/organisation using the respective form.",
         "Format": "Reference to [content type PERSON]",
         "Multiplicity": "[1..n]",
         "Required": true,
