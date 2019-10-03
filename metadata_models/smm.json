@@ -286,7 +286,7 @@
         "Elevation - average": {
           "field_name": "field_elevation_average",
           "Definition": "Average and Bounding elevation range for the site (observation or experimentation facility).",
-          "Recommendation & Hints": "This element consists of two numbers (minimum and maximum altitudes) and the average altitude defining height above or below the sea level. As a default vertical coordinate reference system of bounding altitudes is used Mean sea level height (EPSG: 5714). Negative values are below sea level.",
+          "Recommendation & Hints": "This element consists of two numbers (minimum and maximum altitudes) and the average altitude defining height above or below the sea level. As a default vertical coordinate reference system of bounding altitudes Mean sea level height (EPSG: 5714) is used. Negative values are below sea level.",
           "Format": "numeric(double) in [m] above or below sea level",
           "Multiplicity": "[0..1]",
           "Required": {
@@ -301,7 +301,7 @@
         "Elevation - from": {
           "field_name": "field_elevation_lowest",
           "Definition": "Average and Bounding elevation range for the site (observation or experimentation facility).",
-          "Recommendation & Hints": "This element consists of two numbers (minimum and maximum altitudes) and the average altitude defining height above or below the sea level. As a default vertical coordinate reference system of bounding altitudes is used Mean sea level height (EPSG: 5714). Negative values are below sea level.",
+          "Recommendation & Hints": "This element consists of two numbers (minimum and maximum altitudes) and the average altitude defining height above or below the sea level. As a default vertical coordinate reference system of bounding altitudes Mean sea level height (EPSG: 5714) is used. Negative values are below sea level.",
           "Format": "numeric(double) in [m] above or below sea level",
           "Multiplicity": "[0..1]",
           "Required": {
@@ -316,7 +316,7 @@
         "Elevation - to": {
           "field_name": "field_elevation_maximum_",
           "Definition": "Average and Bounding elevation range for the site (observation or experimentation facility).",
-          "Recommendation & Hints": "This element consists of two numbers (minimum and maximum altitudes) and the average altitude defining height above or below the sea level. As a default vertical coordinate reference system of bounding altitudes is used Mean sea level height (EPSG: 5714). Negative values are below sea level.",
+          "Recommendation & Hints": "This element consists of two numbers (minimum and maximum altitudes) and the average altitude defining height above or below the sea level. As a default vertical coordinate reference system of bounding altitudes Mean sea level height (EPSG: 5714) is used. Negative values are below sea level.",
           "Format": "numeric(double) in [m] above or below sea level",
           "Multiplicity": "[0..1]",
           "Required": {
