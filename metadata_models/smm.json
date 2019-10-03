@@ -120,7 +120,7 @@
       "EnvThes keywords": {
         "field_name": "field_keywords_envthes",
         "Definition": "Provides a set of related keywords characterising the site derived from the controlled vocabulary implemented by EnvThes - thesaurus for long term ecological research, monitoring, experiments EnvThes and other environmentally related thesauri as Catalogue of Life, EUNIS Habitats and INSPIRE Spatial Data Themes. Additional concepts can be defined as free keywords.",
-        "Recommendation & Hints": "The field provides an autocomplete function, which allows selecting the values from the list. Begin typing a keyword. Select the one that most resembles the concept you want. You may add as many keywords as you need. The current version of EnvThes is cached in DEIMS-SDR. Therefore minor differences between the current version on the webserver and in DEIMS-SDR can occur. Updates of EnvThes in DEIMS-SDR are done automatically including updates of concepts.",
+        "Recommendation & Hints": "The field provides an autocomplete function, which allows selecting the values from the list. Begin typing a keyword. Select the one that most resembles the concept you want. You may add as many keywords as you need.",
         "Format": "Predefined hierarchically structured concepts",
         "Multiplicity": "[0..n]",
         "Required": {
