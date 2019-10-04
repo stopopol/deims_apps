@@ -854,8 +854,8 @@
     "Site classification": {
       "Site type (spatial design)": {
         "field_name": "field_site_eu_site_type",
-        "Definition": "Type of the site of platform according to their inner heterogeneity. Simple sites are classical LTER sites measuring ecosystem processes in one or a very limited number of habitats. Complex sites are classical LTSER sites investigating processes and fluxes on a landscape or regional level or form the bracket over a number of LTER or simple sites.",
-        "Recommendation & Hints": "Please select the site type from the list.",
+        "Definition": "Describes the heterogeneity of the observation facility and the addressed gradient (environmental and spatial). Simple sites are defined by addressing a limited number of ecosystems or covering a small spatial scale (e.g. less than 10km²). Complex sites are defined by addressing a broad range of ecosystem types or covering a larger spatial scale. Complex sites are investigating e.g. processes and fluxes on a landscape or regional scale.",
+        "Recommendation & Hints": "Please use the site type to describe the internal complexity of the site in addition to any network specific site classification. In terms of LTER Simple sites are e.g. classical LTER sites measuring ecosystem processes in one or a very limited number of habitats. Complex sites in contrast are classical LTSER sites investigating processes and fluxes on a landscape or regional level or form the bracket over a number of LTER or simple sites.",
         "Format": "text",
         "Multiplicity": "[0..1]",
         "Required": {
@@ -864,10 +864,10 @@
         },
         "Example": "Simple Site",
         "Reference list": [
-          "Platform - is defined as LTSER Platform (Long-Term Socio-Ecological Research): Modular LTER-facility consisting of sites which are located in an area with defined boundaries. Besides this physical component, LTSER-Platforms provide multiple services like the networking of client groups (e.g. research, local stakeholders), data management, communication and representation (management component). The elements of LTSER Platforms represent the main habitats, land use forms and practices relevant for the broader region (up to 10000 km²) and cover all scales and levels relevant for LTSER (from local to landscape). LTSER-Platforms should represent economic and social units or coincide/overlap with such units where adequate information on land use history, economy and demography is available to allow for socio-ecological research.",
-          "Complex Site - site, where more than one ecosystem type is observed",
-          "Simple Site - site, where one ecosystem type is observed",
-          "Sub Site - site, which is part of a site (umbrella site) or platform, e.g. in case of a thematic site cluster of glacier sites, which are described as one entity",
+          "Platform - is defined as any facility consisting of sites which are located in an area with defined boundaries. Besides this physical component, a platform provides multiple services like the networking of client groups (e.g. research, local stakeholders), data management, communication and representation (management component). The elements of platforms represent the main habitats, land use forms and practices relevant for the broader region (up to 10 000 km²) and cover all scales and levels (from local to landscape). Platforms can also represent economic and social units or coincide/overlap with such units where adequate information on land use history, economy and demography is available to allow for socio-ecological research.",
+          "Complex Site - Site, where more than one ecosystem type is observed",
+          "Simple Site - Site, where one ecosystem type is observed",
+          "Sub Site - Site, which is part of a site (umbrella site) or platform, e.g. in case of a thematic site cluster of glacier sites, which are described as one entity",
           "nA - not applicable"
         ],
         "Comment": "",
