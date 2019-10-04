@@ -648,7 +648,7 @@
       "Is your site part of any network or project?": {
         "field_name": "field_network",
         "Definition": "Specify whether your site is part of any networks or projects",
-        "Recommendation & Hints": "Please check yes or no. If you select yes, the 'Networks/Project' field will appear.",
+        "Recommendation & Hints": "Please check yes or no. If you select yes, the 'Affiliation' field will appear.",
         "Format": "boolean",
         "Multiplicity": "[1..1]",
         "Required": true,
@@ -663,7 +663,7 @@
       "Affiliation": {
         "field_name": "field_networks_term_ref",
         "Definition": "Description in which other networks or projects the site is listed. The information is composed of the name of the network and the identifier or the short name of the site within this network or project. This comprises global, international as well as national or regional networks and projects, if relevant. The assignment of the network or project is based on the network or project abbreviation, e.g. EU-BON, EnvEurope, ExpeER or GLORIA, which is managed as extensible vocabulary. The short name is the abbreviation of the site within this network or project.",
-        "Recommendation & Hints": "Please select the site type from the list. Only networks in addition to the LTER network needs to be listed here. There are several levels: International (global), Regional (more than one country. Regional Networks may be specifically identified, for example, European), National (pertains only to one country or a part of one country). Enter other networks or projects to which your site does or did belong. If the site is not assigned to another additional project or network, please select 'none'.",
+        "Recommendation & Hints": "Please select any network/project/research infrastructure affiliation from the list. Should any relevant network/project/research infrastructure be missing from the list, please contact us.",
         "Format": "text",
         "Multiplicity": "[1..n]",
         "Dependency": "field_network",
@@ -671,7 +671,7 @@
           "LTER Europe": "FALSE",
           "ILTER": "FALSE"
         },
-        "Example": "UNECE ICP Integrated Monitoring, EcoPotential, eLTER H2020",
+        "Example": "ICP Forests Level 2, EcoPotential, eLTER H2020",
         "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": "reorganised structure"
