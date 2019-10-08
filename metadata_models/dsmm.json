@@ -54,9 +54,9 @@
       },
       "Contact": {
         "field_name": "field_person_contact",
-        "Definition": "Provides the full name of person(s), who serve(s) as contact point(s).",
-        "Recommendation & Hints": "By typing the name of a person, the system provides a list of people matching the query. If none available, it's strongly recommended to first create a person metadata using the editing form available and then return back to dataset metadata definition.",
-        "Format": "Reference to [Content Type] PERSON",
+        "Definition": "Provides the full name of person(s)/organisation(s), who serve(s) as contact point(s).",
+        "Recommendation & Hints": "By typing the name of a person/organisation, the system provides a list of people/organisations matching the query. If no fitting entity is available, it's strongly recommended to first create a person/organisation metadata using the editing form available and then return back to dataset metadata form.",
+        "Format": "Reference to [Content Type] PERSON/ORGANISATION",
         "Multiplicity": "[1..n]",
         "Required": true,
         "Example": "Alessandro Oggioni",
