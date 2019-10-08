@@ -19,8 +19,8 @@
     "Identification": {
       "Related site": {
         "field_name": "field_dataset_site_name_ref",
-        "Definition": "Value uniquely identifying a dataset. Its final form is composed of the Site Code retrieved from the Site Name and an unique identifier defined be proposed template.",
-        "Recommendation & Hints": "The identifier shall contain standardized codes of the Network and the Site that are derived from the Site Name. Additionally it should identify the dataset within your working environment (network, organization, laboratory, parameters observed, time coverage, etc.) with internal codes used. By typing the site name the system provides a list of sites matching the query. If none available, it's strongly recommended to first create a site metadata using the editing form available and then return back to dataset metadata definition.",
+        "Definition": "Reference to the site which is associated with the dataset. The relation could either be a spatial or thematic.",
+        "Recommendation & Hints": "Select the site that is associated with this dataset from the list. Should the site not exist yet, please create one using the respective form.",
         "Format": "Reference to [Content Type] SITE",
         "Multiplicity": "[1..1]",
         "Required": true,
