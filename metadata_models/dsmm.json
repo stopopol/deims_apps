@@ -207,7 +207,7 @@
           "Reference list": "",
           "Comment": ""
         },
-        "Online location": {
+        "Online locator": {
           "field_name": "field_online_locator",
           "Definition": "Web address is the 'navigation section' of a metadata record pointing users to the location (URL) where a dataset can be retrieved directly, or provides information about how to acquire a dataset.",
           "Recommendation & Hints": "",
