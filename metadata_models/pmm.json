@@ -164,7 +164,7 @@
       "ORCID": {
         "field_name": "field_person_orcid",
         "Definition": "Non-proprietary alphanumeric code to uniquely identify scientific and other academic authors and contributors.",
-        "Recommendation & Hints": "Please provide the name of the country in which the observation or experimentation facility is located. This might be different from the LTER member network. It describes in which country the site is located, even if the member network is located in another country. Please select a country from the Reference list.",
+        "Recommendation & Hints": "",
         "Format": "Reference list",
         "Multiplicity": "[0..1]",
         "Required": false,
