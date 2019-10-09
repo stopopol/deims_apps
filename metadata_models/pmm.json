@@ -118,16 +118,16 @@
         "Changes from Version 1.0": ""
       }
     },
-    "Organization": {
-      "Organization": {
-        "field_name": "field_organization",
-        "Definition": "The organization name that this person is affiliated with. If the \"Person\" is an Organization, then this field can be left blank or if the \"Person/Organization\" is part of a larger organization, then this field can be used for the larger organization. For example, the \"Person\" is \"Gilat Agricultural Research Station\", the organization might be \"Ministry of Agriculture\"",
+    "Organisation": {
+      "Organisation": {
+        "field_name": "field_organisation",
+        "Definition": "The organisation name that this person is affiliated with.",
         "Recommendation & Hints": "",
-        "Format": "Reference to [content type PERSON]",
+        "Format": "Reference to [content type ORGANISATION]",
         "Multiplicity": "[0..1]",
         "Required": false,
         "Example": "Environment Agency Austria",
-        "Reference list": "Reference to [content type ORGANIZATION]",
+        "Reference list": "Reference to [content type ORGANIZSTION]",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
