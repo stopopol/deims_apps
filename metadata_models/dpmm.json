@@ -180,7 +180,7 @@
     "Availability": {
       "Source": {
         "field_name": "field_availability",
-        "Definition": "Indicate if data is available online.",
+        "Definition": "If data is available online, please provide a reference to it.",
         "Recommendation & Hints": "",
         "Format": "link",
         "Multiplicity": "[0..1]",
