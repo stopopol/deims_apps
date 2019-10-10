@@ -59,7 +59,7 @@
       "Data Product Type": {
         "field_name": "field_data_product_type",
         "Definition": "Reference to the thematic content of the data product.",
-        "Recommendation & Hints": "Classification of the data product according to data product types specified in the taxonomy. Please select a relevant category from the list, which describes the thematic context of the data product. If new categories are needed, please use the 'Provide feeback' link to post the request.",
+        "Recommendation & Hints": " Classification of the data product according to data product types specified in the taxonomy. Please select a relevant category from the list, which describes the thematic context of the data product. If new categories are needed, please use the 'Contact' form to post the request.",
         "Format": "Reference to [taxonomy DATA PRODUCT]",
         "Multiplicity": "[1..1]",
         "Required": true,
