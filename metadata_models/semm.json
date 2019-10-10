@@ -85,13 +85,13 @@
       },
       "Contact": {
         "field_name": "field_person_contact",
-        "Definition": "Person that is associated with the sensor",
+        "Definition": "Person/Organisation that is associated with the sensor",
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": "[1..n]",
         "Required": true,
         "Example": "",
-        "Reference list": "",
+        "Reference list": "Content Type PERSON/ORGANISATION",
         "Comment": ""
       }
     },
