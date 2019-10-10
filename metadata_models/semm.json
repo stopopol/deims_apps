@@ -98,8 +98,8 @@
     "Geographic": {
       "Is the sensor mobile": {
         "field_name": "field_mobile",
-        "Definition": "State whether or not the sensor is mobile",
-        "Recommendation & Hints": "",
+        "Definition": "Describes whether or not the sensor is moving or in a fixed position.",
+        "Recommendation & Hints": "State whether or not the sensor is mobile, e.g. is the sensor mounted on a fixed installation or on board of a research vessel.",
         "Format": "",
         "Multiplicity": "[1..1]",
         "Required": true,
