@@ -83,7 +83,7 @@
       "Parameters": {
         "field_name": "field_parameters_taxonomy",
         "Definition": "Description of the observed parameters and parameter groups at the site. The parameter is defined as property of the ecosystem or a ecosystem compartment which can be observed either by sensors or humans, e.g. pH, species number, radiation.",
-        "Recommendation & Hints": "Please indicate the parameters observed at the site. Please record every parameter for the site platform in one line. More than one entry is possible. The reference list is defined by the entries in EnvThes Measure and is frequently updated.",
+        "Recommendation & Hints": "Please indicate the parameters observed at the site. Please record every measured parameter. The reference list is defined by the entries in EnvThes category 'measure'",
         "Format": "Text (LOV)",
         "Multiplicity": "[0..n]",
         "Dependency": "",
