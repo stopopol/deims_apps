@@ -313,7 +313,7 @@
         "Comment": ""
       }
     },
-    "Methods description I": {
+    "Method description I": {
       "Method": {
         "field_name": "field_related_links",
         "Definition": "Provides repeated sets of elements that document a series of procedures followed to produce any dataset object.",
@@ -359,7 +359,7 @@
         "Comment": ""
       }
     },
-    "Methods description II": {
+    "Method description II": {
       "Spatial scale/design": {
         "field_name": "field_spatial_scale",
         "Definition": "This is defined as the spatial reference for the observation. It is composed of the sub-fields Observation Spatial Scale and the Observation Spatial Design. It completes the method description by providing structured information on the sampling part. \nThe Sampling Spatial Scale is defined as the geographic reference area sampled during the observation event. This ranges small scale plot observations to continental or global scale. The Sampling Spatial Design is defined as the statistical design for the data collection. This ranges from full area coverage to single point observations. ",
