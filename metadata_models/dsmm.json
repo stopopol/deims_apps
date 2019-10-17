@@ -1,7 +1,7 @@
 {
   "name": "Dataset Metadata Model",
   "abbreviation": "DSMM",
-  "version": 1.07,
+  "version": 1.06,
   "releaseDate": "2019-10-07T00:00:00.000Z",
   "scope": "The dataset metadata model (DSMM) is based on requirements defined by the target stakeholder groups. The user requirements for the content were harmonized with the INSPIRE metadata regulation and implemented using Ecological Metadata Language (EML) metadata specification, version 2.1.1. EnvEurope focused on the EML metadata standard (stemming from the US LTER activities) but also provides an interface to discover ISO compliant metadata based on XSLT transformation EML2ISO developed in the project and Geonetwork opensource CSW implementation.",
   "content": {
@@ -263,9 +263,7 @@
           ],
           "Comment": "Consists of three subfields (Distribution Function, Distribution URL, Email), depending on choice in distribution function distribution url and email are visible and required "
         }
-      }
-    },
-    "Data sources": {
+      },
       "Data sources": {
         "field_name": "field_data_sources",
         "Definition": "A data source is defined as a physical data upload of a dataset to DEIMS. A data source is described by a number of fields, describing the structure of the data file. For a dataset MD record [0..n] data files can be physically uploaded and described.",
