@@ -138,7 +138,18 @@
         "Comment": "Added to form, but not used in metadata exports."
       }
     },
-    "Access and use constraints": {
+    "Intellectual rights": {
+      "Recommended citation": {
+        "field_name": "field_citation",
+        "Definition": "Defines the way this dataset should be cited.",
+        "Recommendation & Hints": "Here you can put a text describing how you would like this dataset to be cited.",
+        "Format": "",
+        "Multiplicity": "[1..n]",
+        "Required": false,
+        "Example": "Wohner, C., Peterseil, J., Poursanidis, D., Kliment, T., Wilson, M., Mirtl, M., & Chrysoulakis, N. (2019). DEIMS-SDR – A web portal to document research sites and their associated data. Ecological Informatics, 51, 15–24. https://doi.org/10.1016/j.ecoinf.2019.01.005",
+        "Reference list": "",
+        "Comment": ""
+      },
       "Principal and granted permission": {
         "field_name": "field_access_use_termref",
         "Definition": "Provide a list of rules defining permissions granted for a dataset.",
@@ -156,19 +167,6 @@
         ],
         "Comment": ""
       },
-      "Recommended citation": {
-        "field_name": "field_citation",
-        "Definition": "Defines the way this dataset should be cited.",
-        "Recommendation & Hints": "Here you can put a text describing how you would like this dataset to be cited.",
-        "Format": "",
-        "Multiplicity": "[1..n]",
-        "Required": false,
-        "Example": "Wohner, C., Peterseil, J., Poursanidis, D., Kliment, T., Wilson, M., Mirtl, M., & Chrysoulakis, N. (2019). DEIMS-SDR – A web portal to document research sites and their associated data. Ecological Informatics, 51, 15–24. https://doi.org/10.1016/j.ecoinf.2019.01.005",
-        "Reference list": "",
-        "Comment": ""
-      }
-    },
-    "Intellectual rights": {
       "Intellectual rights": {
         "field_name": "field_dataset_rights",
         "Definition": "Intellectual Rights provides a list of rights management statements for the dataset, or reference a URL (web address) that provides such information. Rights information encompasses Intellectual Property Rights (IPR), copyright, and various property rights. Moreover these rights might include detailed requirements for use, requirements for attribution, or other requirements the owner would like to impose.",
