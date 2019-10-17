@@ -131,6 +131,21 @@
         "Reference list": "http://vocabs.ceh.ac.uk/evn/tbl/envthes.evn",
         "Comment": "",
         "Changes from Version 1.0": "field was added to the Site Metadata Model"
+      },
+      "Metadata Update Date": {
+        "field_name": "field_date",
+        "Definition": "Provides date of metadata creation or last update.",
+        "Recommendation & Hints": "Is automatically generated and cannot be entered manually",
+        "Format": "Date as YYYY-MM-DD",
+        "Multiplicity": "[1..1]",
+        "Required": {
+          "LTER Europe": "TRUE",
+          "ILTER": "TRUE"
+        },
+        "Example": "2017-08-22",
+        "Reference list": "",
+        "Comment": "Generated automatically",
+        "Changes from Version 1.0": ""
       }
     },
     "Site Contact Details": {
@@ -190,9 +205,7 @@
         "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
-      }
-    },
-    "Metadata details": {
+      },
       "Metadata provider": {
         "field_name": "field_person_metadata_provider",
         "Definition": "Provides the full name of person(s) or organisation, who created the documentation for the site.",
@@ -206,21 +219,6 @@
         "Example": "Kobler, Johannes",
         "Reference list": "Reference to [content type PERSON]",
         "Comment": "",
-        "Changes from Version 1.0": ""
-      },
-      "Metadata Update Date": {
-        "field_name": "field_date",
-        "Definition": "Provides date of metadata creation or last update.",
-        "Recommendation & Hints": "Is automatically generated and cannot be entered manually",
-        "Format": "Date as YYYY-MM-DD",
-        "Multiplicity": "[1..1]",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
-        "Example": "2017-08-22",
-        "Reference list": "",
-        "Comment": "Generated automatically",
         "Changes from Version 1.0": ""
       }
     },
