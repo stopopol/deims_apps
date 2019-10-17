@@ -16,7 +16,7 @@
       "Reference list": "",
       "Comment": ""
     },
-    "Identification": {
+    "General Information": {
       "Related site": {
         "field_name": "field_dataset_site_name_ref",
         "Definition": "Reference to the site which is associated with the dataset. The relation could either be a spatial or thematic.",
@@ -26,6 +26,28 @@
         "Required": true,
         "Example": "Zone Atelier Seine - France",
         "Reference list": "[Content Type] SITE",
+        "Comment": ""
+      },
+      "Abstract": {
+        "field_name": "field_abstract",
+        "Definition": "A brief overview of the dataset being documented.",
+        "Recommendation & Hints": "The dataset abstract is a succinct description that shall include: A brief summary with the most important details that summarise the data aggregated in this dataset. Coverage: linguistic transcriptions of the extent or location in addition to the bounding box. Main attributes - e.g. values of the parameters X,Y within the time frame T1-T2, etc. Data sources, Legal references. Importance of the work. Do not use unexplained acronyms. Summarise the most important details in the first sentence or first 100 characters.",
+        "Format": "text",
+        "Multiplicity": "[1..1]",
+        "Required": true,
+        "Example": "Dataset provides monthly precipitation data collected at different weather stations that are closest to Lake Santo Parmense and Lake Scuro Parmense. We provide a long-term dataset (1951-2010) collected at two stations near the town of Bosco di Corniglio. In particular, from 1951 to 1998 precipitation data were collected at the weather station of Bosco Centrale. Between 1999 and july 2000 the station was out of order (no data available) and from 2001 the Bosco Centrale weather station was substituted by the Bosco di Corniglio station. The two weather stations are less than 1 km apart and they are about 6 km far from Lake Santo Parmense and 7 km far from Lake Scuro Parmense. We also provide a shorter dataset of precipitation data collected from 1994 to 2010 at the weather station of Lagdei. This station is closer to our sampling sites (about 1 km from Lake Santo Parmense and 5 km from Lake Scuro Parmense), but a shorter time series is available. All weather stations are managed by the Environmental Protection Agency of the Emilia-Romagna region (ARPA Emilia-Romagna).",
+        "Reference list": "",
+        "Comment": ""
+      },
+      "Date range": {
+        "field_name": "field_date_range\t",
+        "Definition": "Defines the time period covered by the content of the dataset. This period may be expressed as a time (an individual date) or date ranges (interval of dates/From-To) or a mix of individual and interval dates.",
+        "Recommendation & Hints": "",
+        "Format": "Date",
+        "Multiplicity": "[1..1]",
+        "Required": true,
+        "Example": "",
+        "Reference list": "From date: 01/01/2014; To date: 12/31/2014",
         "Comment": ""
       },
       "UUID": {
@@ -84,19 +106,6 @@
         "Multiplicity": "[0..1]",
         "Required": false,
         "Example": "English",
-        "Reference list": "",
-        "Comment": ""
-      }
-    },
-    "Abstract": {
-      "Abstract": {
-        "field_name": "field_abstract",
-        "Definition": "A brief overview of the dataset being documented.",
-        "Recommendation & Hints": "The dataset abstract is a succinct description that shall include: A brief summary with the most important details that summarise the data aggregated in this dataset. Coverage: linguistic transcriptions of the extent or location in addition to the bounding box. Main attributes - e.g. values of the parameters X,Y within the time frame T1-T2, etc. Data sources, Legal references. Importance of the work. Do not use unexplained acronyms. Summarise the most important details in the first sentence or first 100 characters.",
-        "Format": "text",
-        "Multiplicity": "[1..1]",
-        "Required": true,
-        "Example": "Dataset provides monthly precipitation data collected at different weather stations that are closest to Lake Santo Parmense and Lake Scuro Parmense. We provide a long-term dataset (1951-2010) collected at two stations near the town of Bosco di Corniglio. In particular, from 1951 to 1998 precipitation data were collected at the weather station of Bosco Centrale. Between 1999 and july 2000 the station was out of order (no data available) and from 2001 the Bosco Centrale weather station was substituted by the Bosco di Corniglio station. The two weather stations are less than 1 km apart and they are about 6 km far from Lake Santo Parmense and 7 km far from Lake Scuro Parmense. We also provide a shorter dataset of precipitation data collected from 1994 to 2010 at the weather station of Lagdei. This station is closer to our sampling sites (about 1 km from Lake Santo Parmense and 5 km from Lake Scuro Parmense), but a shorter time series is available. All weather stations are managed by the Environmental Protection Agency of the Emilia-Romagna region (ARPA Emilia-Romagna).",
         "Reference list": "",
         "Comment": ""
       }
@@ -284,19 +293,6 @@
         "Required": true,
         "Example": "Zöbelboden_IP1, Zöbelboden_IP2, Zöbelboden_IP3",
         "Reference list": "Reference to [Content Type] Observation location",
-        "Comment": ""
-      }
-    },
-    "Temporal extent": {
-      "Date range": {
-        "field_name": "field_date_range\t",
-        "Definition": "Defines the time period covered by the content of the dataset. This period may be expressed as a time (an individual date) or date ranges (interval of dates/From-To) or a mix of individual and interval dates.",
-        "Recommendation & Hints": "",
-        "Format": "Date",
-        "Multiplicity": "[1..1]",
-        "Required": true,
-        "Example": "",
-        "Reference list": "From date: 01/01/2014; To date: 12/31/2014",
         "Comment": ""
       }
     },
