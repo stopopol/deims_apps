@@ -132,7 +132,7 @@
         "Comment": "Mandatory for being INSPIRE-compliant"
       }
     },
-    "Parameters": {
+    "Observations": {
       "Parameters": {
         "field_name": "field_parameters_taxonomy",
         "Definition": "Description of the observed parameters and parameter groups. The parameter is defined as property of the ecosystem or a ecosystem compartment which can be observed either by sensors or humans, e.g. pH, species number, radiation.",
@@ -143,60 +143,30 @@
         "Example": "pH",
         "Reference list": "",
         "Comment": "Added to form, but not used in metadata exports."
-      }
-    },
-    "Intellectual rights": {
-      "Recommended citation": {
-        "field_name": "field_citation",
-        "Definition": "Defines the way this dataset should be cited.",
-        "Recommendation & Hints": "Here you can put a text describing how you would like this dataset to be cited.",
-        "Format": "",
-        "Multiplicity": "[1..n]",
-        "Required": false,
-        "Example": "Wohner, C., Peterseil, J., Poursanidis, D., Kliment, T., Wilson, M., Mirtl, M., & Chrysoulakis, N. (2019). DEIMS-SDR – A web portal to document research sites and their associated data. Ecological Informatics, 51, 15–24. https://doi.org/10.1016/j.ecoinf.2019.01.005",
-        "Reference list": "",
-        "Comment": ""
       },
-      "Principal and granted permission": {
-        "field_name": "field_access_use_termref",
-        "Definition": "Provide a list of rules defining permissions granted for a dataset.",
-        "Recommendation & Hints": "It is recommended that the 3-year rule be implemented and that the data owner must take specific actions to change this.",
-        "Format": "",
-        "Multiplicity": "[1..n]",
-        "Required": false,
-        "Example": "Research >> Free for access",
-        "Reference list": [
-          "Free for access",
-          "Free for access and use upon request",
-          "Other restrictions according to rules defined in intellectual rights",
-          "Restricted access defined in detail in intellectual property information",
-          "No access"
-        ],
-        "Comment": ""
-      },
-      "Intellectual rights": {
-        "field_name": "field_dataset_rights",
-        "Definition": "Intellectual Rights provides a list of rights management statements for the dataset, or reference a URL (web address) that provides such information. Rights information encompasses Intellectual Property Rights (IPR), copyright, and various property rights. Moreover these rights might include detailed requirements for use, requirements for attribution, or other requirements the owner would like to impose.",
-        "Recommendation & Hints": "Select an option from the list, if any matching. If none matching, use an option Other IPR and provide free textual description, or if IPR information available on an online source, paste the URL pointing to this source. For multiple selection use the CTRL button.",
-        "Format": "",
+      "Species Groups": {
+        "field_name": "field_bio_classification",
+        "Definition": "Provides information about the taxonomic classification of the organisms represented in the dataset.",
+        "Recommendation & Hints": "This field is applicable only for biotic data, e.g. when biotic diversity has been chosen in the Keyword tab. Depending on the content of the dataset, provide information about the most common level of taxonomy aggregation (e.g. plants: family, marine invertebrates: phylum or class, etc.) Recommendation is to use common catalogue of species, for example, GBIF, or EUNIS.",
+        "Format": "text (LOV)",
         "Multiplicity": "[0..n]",
         "Required": false,
         "Example": "",
         "Reference list": "",
         "Comment": ""
-      },
-      "Data policy URL": {
-        "field_name": "field_data_policy_url",
-        "Definition": "Link to website which provides further information on the data policy for the site. The web address is composed of the web link and a title which is shown.",
-        "Recommendation & Hints": "",
-        "Format": "text",
-        "Multiplicity": "[0..1]",
-        "Dependency": "",
-        "Required": false,
-        "Example": "",
-        "Reference list": "http://www.umweltbundesamt.at/umwelt/luft/messnetz/zoebelboden/",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+      }
+    },
+    "Geographic": {
+      "Bounding box, elevation, etc.": {
+        "field_name": "field_related_sites",
+        "Definition": "The Geographic reference for the dataset is done by the entity type Observation location, which is the location, where specific observations are done. By grouping the information the entity type Observation location can be reused. An Observation location describes the observation plots within a SITE (e.g. LTER SITE or LTSER PLATFORM).The Observation location is the extent of the dataset in the geographic space, given as a bounding box. Defining the coordinates of a boundary rectangle representing the dataset area on a map allows the discovery by geographical area. It consists of: Northern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Southern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Western bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east) and Eastern bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east). In addition the bounding altitudes, images and additional details can be provided.",
+        "Recommendation & Hints": "Please select an Observation location from the list, or create a new one with 'Create Observation location' if missing. For the Observation location the bounding box shall be as small as possible and shall be expressed in decimal degree with a precision of at least two decimals. The coordinates of the bounding boxes shall be expressed in any geodetic coordinate reference system with the Greenwich Prime Meridian. You can define bounding box either by drawing a polygon on a map or inserting manually the bounding coordinates. To activate drawing functionality and to (move, delete, reshape) use the editing tool-bar in the right top corner of the map. If you would like to define more bounding coordinates, please add more Observation location for the dataset MD record.",
+        "Format": "Reference to [Content Type] Observation location",
+        "Multiplicity": "[1..n]",
+        "Required": true,
+        "Example": "Zöbelboden_IP1, Zöbelboden_IP2, Zöbelboden_IP3",
+        "Reference list": "Reference to [Content Type] Observation location",
+        "Comment": ""
       }
     },
     "Online distribution": {
@@ -274,32 +244,6 @@
         "Definition": "A data source is defined as a physical data upload of a dataset to DEIMS. A data source is described by a number of fields, describing the structure of the data file. For a dataset MD record [0..n] data files can be physically uploaded and described.",
         "Recommendation & Hints": "The concept of the data source is used, when data files are physically uploaded to DEIMS. This is not recommended. Please used the 'online distribution link' instead, pointing to an online resource, e.g. file uploaded to B2SHARE.",
         "Format": "",
-        "Multiplicity": "[0..n]",
-        "Required": false,
-        "Example": "",
-        "Reference list": "",
-        "Comment": ""
-      }
-    },
-    "Geographic": {
-      "Bounding box, elevation, etc.": {
-        "field_name": "field_related_sites",
-        "Definition": "The Geographic reference for the dataset is done by the entity type Observation location, which is the location, where specific observations are done. By grouping the information the entity type Observation location can be reused. An Observation location describes the observation plots within a SITE (e.g. LTER SITE or LTSER PLATFORM).The Observation location is the extent of the dataset in the geographic space, given as a bounding box. Defining the coordinates of a boundary rectangle representing the dataset area on a map allows the discovery by geographical area. It consists of: Northern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Southern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Western bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east) and Eastern bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east). In addition the bounding altitudes, images and additional details can be provided.",
-        "Recommendation & Hints": "Please select an Observation location from the list, or create a new one with 'Create Observation location' if missing. For the Observation location the bounding box shall be as small as possible and shall be expressed in decimal degree with a precision of at least two decimals. The coordinates of the bounding boxes shall be expressed in any geodetic coordinate reference system with the Greenwich Prime Meridian. You can define bounding box either by drawing a polygon on a map or inserting manually the bounding coordinates. To activate drawing functionality and to (move, delete, reshape) use the editing tool-bar in the right top corner of the map. If you would like to define more bounding coordinates, please add more Observation location for the dataset MD record.",
-        "Format": "Reference to [Content Type] Observation location",
-        "Multiplicity": "[1..n]",
-        "Required": true,
-        "Example": "Zöbelboden_IP1, Zöbelboden_IP2, Zöbelboden_IP3",
-        "Reference list": "Reference to [Content Type] Observation location",
-        "Comment": ""
-      }
-    },
-    "Taxonomic coverage": {
-      "Biological classification": {
-        "field_name": "field_bio_classification",
-        "Definition": "Provides information about the taxonomic classification of the organisms represented in the dataset.",
-        "Recommendation & Hints": "This field is applicable only for biotic data, e.g. when biotic diversity has been chosen in the Keyword tab. Depending on the content of the dataset, provide information about the most common level of taxonomy aggregation (e.g. plants: family, marine invertebrates: phylum or class, etc.) Recommendation is to use common catalogue of species, for example, GBIF, or EUNIS.",
-        "Format": "text (LOV)",
         "Multiplicity": "[0..n]",
         "Required": false,
         "Example": "",
@@ -452,6 +396,60 @@
           "_not_applicable"
         ],
         "Comment": ""
+      }
+    },
+    "Intellectual rights": {
+      "Recommended citation": {
+        "field_name": "field_citation",
+        "Definition": "Defines the way this dataset should be cited.",
+        "Recommendation & Hints": "Here you can put a text describing how you would like this dataset to be cited.",
+        "Format": "",
+        "Multiplicity": "[1..n]",
+        "Required": false,
+        "Example": "Wohner, C., Peterseil, J., Poursanidis, D., Kliment, T., Wilson, M., Mirtl, M., & Chrysoulakis, N. (2019). DEIMS-SDR – A web portal to document research sites and their associated data. Ecological Informatics, 51, 15–24. https://doi.org/10.1016/j.ecoinf.2019.01.005",
+        "Reference list": "",
+        "Comment": ""
+      },
+      "Principal and granted permission": {
+        "field_name": "field_access_use_termref",
+        "Definition": "Provide a list of rules defining permissions granted for a dataset.",
+        "Recommendation & Hints": "It is recommended that the 3-year rule be implemented and that the data owner must take specific actions to change this.",
+        "Format": "",
+        "Multiplicity": "[1..n]",
+        "Required": false,
+        "Example": "Research >> Free for access",
+        "Reference list": [
+          "Free for access",
+          "Free for access and use upon request",
+          "Other restrictions according to rules defined in intellectual rights",
+          "Restricted access defined in detail in intellectual property information",
+          "No access"
+        ],
+        "Comment": ""
+      },
+      "Intellectual rights": {
+        "field_name": "field_dataset_rights",
+        "Definition": "Intellectual Rights provides a list of rights management statements for the dataset, or reference a URL (web address) that provides such information. Rights information encompasses Intellectual Property Rights (IPR), copyright, and various property rights. Moreover these rights might include detailed requirements for use, requirements for attribution, or other requirements the owner would like to impose.",
+        "Recommendation & Hints": "Select an option from the list, if any matching. If none matching, use an option Other IPR and provide free textual description, or if IPR information available on an online source, paste the URL pointing to this source. For multiple selection use the CTRL button.",
+        "Format": "",
+        "Multiplicity": "[0..n]",
+        "Required": false,
+        "Example": "",
+        "Reference list": "",
+        "Comment": ""
+      },
+      "Data policy URL": {
+        "field_name": "field_data_policy_url",
+        "Definition": "Link to website which provides further information on the data policy for the site. The web address is composed of the web link and a title which is shown.",
+        "Recommendation & Hints": "",
+        "Format": "text",
+        "Multiplicity": "[0..1]",
+        "Dependency": "",
+        "Required": false,
+        "Example": "",
+        "Reference list": "http://www.umweltbundesamt.at/umwelt/luft/messnetz/zoebelboden/",
+        "Comment": "",
+        "Changes from Version 1.0": ""
       }
     },
     "Reporting": {
