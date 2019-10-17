@@ -62,7 +62,7 @@
         "Comment": "automatically generated"
       }
     },
-    "Responsible parties": {
+    "Contact Details": {
       "Owner/Creator": {
         "field_name": "field_person_creator",
         "Definition": "Provides the full name of person(s), who created the dataset.",
