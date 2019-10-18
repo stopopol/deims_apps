@@ -1,11 +1,11 @@
 {
   "name": "Site Metadata Model",
   "abbreviation": "SMM",
-  "version": 1.2,
-  "releaseDate": "2019-09-24T00:00:00.000Z",
+  "version": 1.21,
+  "releaseDate": "2019-10-18T00:00:00.000Z",
   "scope": "A 'Site' is defined as a basic generic in-situ observation or experimentation facility (of any size and organisation level), where the collection of e.g. bio-physical, environmental, biological or socio-ecological data is conducted. The Site Metadata Model (SMM) describes the metadata elements of a monitoring or experimentation site. The metadata model is based on requirements defined by target stakeholder groups (e.g. ILTER/LTER) and research projects (e.g. EnvEurope, ExpeER, eLTER H2020 or EcoPotential). It defines metadata elements about the organisation (e.g. contact, information, networks), the location, the observation characteristics (e.g. climate, habitats) or available equipment to name just a few. The basic metadata elements are in line with the data specification of the INSPIRE data theme Environmental Monitoring Facilities (EF). An initial mapping was done within the EnvEurope project showing the basic overall compliance.",
   "content": {
-    "Name and General Description": {
+    "General Information": {
       "Site name": {
         "field_name": "field_site_sitelong",
         "Definition": "Name identifying the documented observation and/or experimentation facility (site, e.g LTER Site or LTSER Platform).",
