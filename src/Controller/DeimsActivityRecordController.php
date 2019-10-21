@@ -62,7 +62,7 @@ class DeimsActivityRecordController extends ControllerBase {
 		$activity_information['general']['keywords']= $DeimsFieldController->parseEntityReferenceField($node->get('field_keywords'));
 		$activity_information['general']['dateRange']['from'] = (!is_null($node->get('field_date_range')->value)) ? ($node->get('field_date_range')->value) : null;
 		$activity_information['general']['dateRange']['to'] = (!is_null($node->get('field_date_range')->end_value)) ? ($node->get('field_date_range')->end_value) : null;
-		$activity_information['boundaries'] = $this->parseSiteGeography($node->get('field_related_site'));
+		$activity_information['boundaries'] = (!is_null($node->get('field_related_site')->entity)) ? (($node->get('field_related_site')->entity->field_boundaries->value)) : null;	
 		$activity_information['availability']['digitally'] = (!is_null($node->get('field_data_available')->value)) ? (($node->get('field_data_available')->value == 1) ? true : false) : null;	
 		$activity_information['availability']['forEcopotential'] = (!is_null($node->get('field_data_available_ecopot')->value)) ? (($node->get('field_data_available_ecopot')->value == 1) ? true : false) : null;	
 		$activity_information['availability']['openData'] = (!is_null($node->get('field_open_data')->value)) ? (($node->get('field_open_data')->value == 1) ? true : false) : null;	
@@ -76,10 +76,4 @@ class DeimsActivityRecordController extends ControllerBase {
 		
   }
 
-  public function parseSiteGeography($field) {
-	if ($field->entity) {
-		return $field->entity->field_boundaries->value;
-	}
-  }
 }
-
