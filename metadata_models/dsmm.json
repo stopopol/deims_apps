@@ -13,8 +13,8 @@
       "Multiplicity": "[1..1]",
       "Required": true,
       "Example": "Precipitation measured near Lake Santo Parmense and Lake Scuro Parmense (1951-2010)",
-      "Reference list": "",
-      "Comment": ""
+      "Comment": "",
+      "Reference list": ""
     },
     "General Information": {
       "Related site": {
@@ -26,6 +26,17 @@
         "Required": true,
         "Example": "Zone Atelier Seine - France",
         "Reference list": "[Content Type] SITE",
+        "Comment": ""
+      },
+      "Related activity": {
+        "field_name": "field_related_activity",
+        "Definition": "Reference to the activity which is associated with the dataset. The relation could either be a spatial or thematic.",
+        "Recommendation & Hints": "Select the activity that is associated with this dataset from the list. Should the activity not exist yet, please create one using the respective form.",
+        "Format": "Reference to [Content Type] Activity",
+        "Multiplicity": "[0..1]",
+        "Required": true,
+        "Example": "Zöbelboden Precipitation",
+        "Reference list": "[Content Type] Activity",
         "Comment": ""
       },
       "Abstract": {
