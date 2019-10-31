@@ -3,7 +3,6 @@ CREATE OR REPLACE VIEW deims_all_sites AS
 SELECT 
 name.`field_name_value` AS name,
 CONCAT('https://deims.org/', basetable.`uuid`) as deimsid,
-basetable.`nid`,
 coordinates.`field_coordinates_lat`, 
 coordinates.`field_coordinates_lon`,
 msl.`field_elevation_avg_value`,
