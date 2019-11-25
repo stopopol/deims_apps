@@ -141,7 +141,7 @@
         "Definition": "Description of the spatial resolution of the data. This describes the spatial design for the data collection, e.g. area covering observations or grid points.",
         "Recommendation & Hints": "Please select the appropriate value from the list. If there are deviations or important issues to be mentioned, please describe that in addition in the abstract.",
         "Format": "Reference [Taxonomy] Spatial Resolution (Data Products)",
-        "Multiplicity": "[0..n]",
+        "Multiplicity": "[0..1]",
         "Required": true,
         "Example": "",
         "Reference List": [
