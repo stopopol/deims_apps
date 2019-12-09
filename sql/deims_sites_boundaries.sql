@@ -1,18 +1,27 @@
 CREATE OR REPLACE VIEW deims_sites_boundaries AS
 
 SELECT 
-name.`field_site_sitelong_value` AS name,
-CONCAT('https://deims.org/', basetable.`uuid`) AS deimsid,
-basetable.`nid`,
+name.`field_name_value` AS name,
+CONCAT('https://deims.org/', basetable.`uuid`) as deimsid,
+msl.`field_elevation_avg_value`,
 
-ST_GEOMCOLLFROMWKB(`field_geo_bounding_box_geom`) AS geom
-
+POLYFROMTEXT(concat(
+		'Polygon((', 
+			boundaries.`field_boundaries_left`	, ' ', boundaries.`field_boundaries_bottom` 	, ', ', 	
+			boundaries.`field_boundaries_right`	, ' ', boundaries.`field_boundaries_bottom`		, ', ',	
+			boundaries.`field_boundaries_right`	, ' ', boundaries.`field_boundaries_top`		, ', ',
+			boundaries.`field_boundaries_left`	, ' ', boundaries.`field_boundaries_top`		, ', ',	
+			boundaries.`field_boundaries_left`	, ' ', boundaries.`field_boundaries_bottom`		, 
+		'))'
+	)) AS geom
 
 FROM `node` basetable
-INNER JOIN `field_data_field_geo_bounding_box` coordinates
-ON coordinates.`entity_id` = basetable.`nid`
 
-INNER JOIN `field_data_field_site_sitelong` AS name
+INNER JOIN `node__field_name` as name
 ON name.`entity_id` = basetable.`nid`
 
-WHERE `field_geo_bounding_box_geo_type` = 'polygon' OR `field_geo_bounding_box_geo_type` = 'multipolygon'
+LEFT JOIN `node__field_elevation_avg` as msl
+ON msl.`entity_id` = basetable.`nid`
+
+INNER JOIN `node__field_boundaries` boundaries
+ON boundaries.`entity_id` = basetable.`nid`
