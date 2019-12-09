@@ -1,38 +1,41 @@
-CREATE OR REPLACE VIEW acc_all_sites AS
+CREATE OR REPLACE VIEW acc_all_sites  AS
 
-select
+SELECT 
+name.`field_name_value` AS name,
+CONCAT('https://deims.org/', basetable.`uuid`) as deimsid,
+coordinates.`field_coordinates_lat`, 
+coordinates.`field_coordinates_lon`,
+msl.`field_elevation_avg_value`,
 
-`name`.`field_site_sitelong_value` AS `name`, 
-`basetable`.`uuid`                            AS `deimsid`, 
-`basetable`.`nid`                             AS `nid`, 
-`network`.`title`                             AS `network`, 
-`classi`.`field_site_eu_classification_value` AS `classification`, 
-`coordinates`.`field_coordinates_lat`         AS `field_coordinates_lat`, 
-`coordinates`.`field_coordinates_lon`         AS `field_coordinates_lon`, 
-msl.`field_elevation_average_value`,
-Point(`coordinates`.`field_coordinates_lon`, `coordinates`.`field_coordinates_lat`)  AS `geom` 
+point(`coordinates`.`field_coordinates_lon`,`coordinates`.`field_coordinates_lat`) AS `geom` 
 
+FROM `node` basetable
+INNER JOIN `node__field_coordinates` coordinates
+ON coordinates.`entity_id` = basetable.`nid`
 
-FROM  `node` `basetable` 
+INNER JOIN `node__field_name` as name
+ON name.`entity_id` = basetable.`nid`
 
-JOIN `field_data_field_declaration_status_accredi` `acc` 
-ON `acc`.`entity_id` = `basetable`.`nid` 
-AND  `acc`.`field_declaration_status_accredi_value` = 'acc_formal'
-
-JOIN `field_data_field_ilter_national_network_nam` `ilter` 
-ON `ilter`.`entity_id` = `basetable`.`nid`
-
-LEFT JOIN `field_data_field_site_eu_classification` `classi` 
-ON `classi`.`entity_id` = `basetable`.`nid` 
-
-JOIN `field_data_field_coordinates` `coordinates` 
-ON `coordinates`.`entity_id` = `basetable`.`nid`
-
-JOIN `field_data_field_site_sitelong` `name` 
-ON `name`.`entity_id` = `basetable`.`nid`
-
-LEFT JOIN `field_data_field_elevation_average` msl
+LEFT JOIN `node__field_elevation_avg` as msl
 ON msl.`entity_id` = basetable.`nid`
- 
-JOIN `node` `network` 
-ON `ilter`.`field_ilter_national_network_nam_target_id` = `network`.`nid`
+
+LEFT JOIN `node__field_site_status` as status
+ON status.`entity_id` = basetable.`nid`
+
+-- join via entity_id and paragraph_id
+
+INNER JOIN `node__field_affiliation` as affiliation
+ON affiliation.`entity_id` = basetable.`nid`
+
+INNER JOIN `paragraph__field_network_verified` as verified
+ON verified.`entity_id` = affiliation.`field_affiliation_target_id`
+
+INNER JOIN `paragraph__field_network` as network
+ON network.`entity_id` = affiliation.`field_affiliation_target_id`
+
+WHERE 
+	coordinates.`field_coordinates_lat` AND 
+	verified.`field_network_verified_value` = 1 AND 
+	network.`field_network_target_id` IN (219, 255, 232, 244, 215, 229, 216, 249, 236, 220, 212, 211, 245, 223, 10463, 10723, 230, 231, 233, 235, 237, 238, 240, 241, 242, 243, 247, 248, 250, 217, 218, 221, 222, 226, 227, 228, 209, 208, 239, 210) 
+	
+	AND NOT status.`field_site_status_value` = 'abandoned'
