@@ -26,4 +26,4 @@ ON msl.`entity_id` = basetable.`nid`
 INNER JOIN `node__field_boundaries` boundaries
 ON boundaries.`entity_id` = basetable.`nid`
 
-WHERE `field_boundaries_geo_type` IN ('polygon', 'multipolygon')
+WHERE NOT boundaries.`field_boundaries_geo_type` = 'point'
