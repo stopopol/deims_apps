@@ -1,7 +1,7 @@
 {
   "name": "Site Metadata Model",
   "abbreviation": "SMM",
-  "version": 1.30,
+  "version": 1.3,
   "releaseDate": "2020-01-14T00:00:00.000Z",
   "scope": "A 'Site' is defined as a basic generic in-situ observation or experimentation facility (of any size and organisation level), where the collection of e.g. bio-physical, environmental, biological or socio-ecological data is conducted. The Site Metadata Model (SMM) describes the metadata elements of a monitoring or experimentation site. The metadata model is based on requirements defined by target stakeholder groups (e.g. ILTER/LTER) and research projects (e.g. EnvEurope, ExpeER, eLTER H2020 or EcoPotential). It defines metadata elements about the organisation (e.g. contact, information, networks), the location, the observation characteristics (e.g. climate, habitats) or available equipment to name just a few. The basic metadata elements are in line with the data specification of the INSPIRE data theme Environmental Monitoring Facilities (EF). An initial mapping was done within the EnvEurope project showing the basic overall compliance.",
   "content": {
@@ -21,7 +21,7 @@
       "Short name": {
         "field_name": "field_name_short",
         "Definition": "Short version of site name",
-        "Recommendation & Hints": " Enter either a site's short name  or acronym. In certain applications the short name might be used if the full site name exceeds a certain amount of characters, e.g. for map labels.",
+        "Recommendation & Hints": "Enter either a site's short name  or acronym. In certain applications the short name might be used if the full site name exceeds a certain amount of characters, e.g. for map labels.",
         "Format": "Text(60)",
         "Multiplicity": "[0..1]",
         "Required": false,
@@ -45,7 +45,7 @@
       "Site Description": {
         "field_name": "field_abstract",
         "Definition": "A short textual description of the site or platform which includes the location, biophysical characteristics, a brief history, the main scientific purpose at present and major plans for future, a brief overall description of infrastructure, and a brief overall description of available data/information.",
-        "Recommendation & Hints": "Please provide a short site description which could also be used on the web site. This description should cover: a brief history of the LTER Site or LTSER Platform, the main scientific purpose at present and major plans for future, a brief overall description of infrastructure, and a brief overall description of available data/information. In the section ECOSYSTEM AND ENVIRONMENTAL CHARACTERISTICS additional detailed descriptions on Geology, Hydrology, Soils and Vegetation can be provided.",
+        "Recommendation & Hints": "Please provide a short site description which could also be used on the web site. This description should cover: a brief history of the site or platform, the main scientific purpose at present and major plans for future, a brief overall description of infrastructure, and a brief overall description of available data/information.",
         "Format": "Text",
         "Multiplicity": "[0..1]",
         "Required": {
@@ -74,8 +74,8 @@
       },
       "Images": {
         "field_name": "field_images",
-        "Definition": "Image showing a characteristic situation at the site. This can include instrumentation, observation plots, etc.",
-        "Recommendation & Hints": "Please provide an image showing a characteristic situation at the site. Please select the file from a directory and press the 'UPLOAD' button to upload the image to DEIMS-SDR. The formats can be png, jpg, jpeg or gif.",
+        "Definition": "Image showing a characteristic situation at the site. This can include instrumentation, observation plots, aerial imagery etc.",
+        "Recommendation & Hints": "Please provide an image showing a characteristic situation at the site.",
         "Format": "Image [png, jpg, jpeg, gif, ...]",
         "Multiplicity": "[0..n]",
         "Required": {
@@ -91,7 +91,7 @@
         "field_name": "field_parent_site",
         "Definition": "Reference to the parent LTSER Platform in which the site is located. The relation could either be a spatial or thematic.",
         "Recommendation & Hints": "Please provide the reference to the parent Platform/umbrella site in which the site is located (by Site name).",
-        "Format": "Reference to a Site name [content type site]",
+        "Format": "Reference to another site record",
         "Multiplicity": "[0..1]",
         "Required": {
           "LTER Europe": "FALSE",
@@ -104,9 +104,9 @@
       },
       "Subsite name(s)": {
         "field_name": "field_subsite_name",
-        "Definition": "Reference to the child elements of a LTSER Platform. The relation could either be a spatial or thematic.",
+        "Definition": "Reference to the child elements of a site/platform. The relation could either be a spatial or thematic.",
         "Recommendation & Hints": "Please provide the reference to the sites which belong to the platform/umbrella site (by Site name).",
-        "Format": "Reference to Site name [content type site]",
+        "Format": "Reference to a site record [content type site]",
         "Multiplicity": "[0..n]",
         "Required": {
           "LTER Europe": "FALSE",
@@ -151,19 +151,19 @@
     "Contact": {
       "Site Manager": {
         "field_name": "field_site_manager",
-        "Definition": "Reference to the contact person responsible for the site. The person could be either the principal investigator (PI, co-PI), the information manager (IM), the site manager (SM) or a technician (TE). The details for the person/organisation needs to be specified in the persons module (PEMM).",
+        "Definition": "Reference to the contact person responsible for the site. The person could be either the principal investigator (PI, co-PI), the information manager (IM), the site manager (SM) or a technician (TE).",
         "Recommendation & Hints": "Please provide the reference to the person or organisation responsible for the site. Please start typing the name of the person/organisation. If the person/organisation is not in the list, please add first the person/organisation using the respective form.",
         "Format": "Reference to [content type PERSON/ORGANISATION]",
         "Multiplicity": "[1..n]",
         "Required": true,
         "Example": "Dirnböck, Thomas",
-        "Reference list": "Reference to [content type PERSON]",
+        "Reference list": "Reference to [content type PERSON/ORGANISATION]",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
       "Site Owner": {
         "field_name": "field_site_owner",
-        "Definition": "Reference to the contact person/organisation owning the site. The details for the person/organisation needs to be specified in the persons module (PEMM).",
+        "Definition": "Reference to the contact person/organisation owning the site.",
         "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person. If the person/organisation is not in the list, please add first the person/organisation using the respective form.",
         "Format": "Reference to [content type PERSON/ORGANISATION]",
         "Multiplicity": "[1..n]",
@@ -178,7 +178,7 @@
       },
       "Funding Agency": {
         "field_name": "field_funding_agency",
-        "Definition": "Reference to the organisation or the responsible national authority for funding and strategic decisions about the site. This could be e.g. the Ministry of Science as responsible national authority. The details for the person/organisation needs to be specified in the persons module (PEMM).",
+        "Definition": "Reference to the organisation or the responsible national authority for funding and strategic decisions about the site. This could be e.g. the Ministry of Science as responsible national authority.",
         "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person/organisation. If the person/organisation is not in the list, please add first the person/organisation using the respective form.",
         "Format": "Reference to [content type ORGANISATION]",
         "Multiplicity": "[1..n]",
@@ -201,7 +201,7 @@
           "LTER Europe": "TRUE",
           "ILTER": "TRUE"
         },
-        "Example": "Kobler, Johannes",
+        "Example": "Dr. Testy McTestface",
         "Reference list": "Reference to [content type PERSON/ORGANISATION]",
         "Comment": "",
         "Changes from Version 1.0": ""
@@ -226,7 +226,7 @@
       "Country": {
         "field_name": "field_country",
         "Definition": "Country the site is located in.",
-        "Recommendation & Hints": "Please provide the name of the country in which the observation or experimentation facility is located. This might be different from network affiliation. It describes in which country the site is located, even if the network is located in another country. If your site is transnational, please select as many countries as necessary.",
+        "Recommendation & Hints": "Please provide the name of the country/countries in which the observation or experimentation facility is located. It describes in which country the site is geographically located, even if associated networks/RIs are located in another country. If your site is transnational, please select as many countries as necessary.",
         "Format": "Reference list",
         "Multiplicity": "[1..n]",
         "Required": true,
@@ -238,7 +238,7 @@
       "Size": {
         "field_name": "field_size",
         "Definition": "Size of the site in hectare (ha). The size refers to the boundary of the catchment, the observed area or the relevant area for extrapolation dependent on the observed ecosystem type (e.g. forest, lake, rivers).",
-        "Recommendation & Hints": "Please provide the size of the site in hectares. unit = hectare hectare = square kilometre /100 OR square kilometre  = hectare x 100. The estimation of the size refers to the observed area of the site. This could either be the observed catchment area, the observed area defined by the bounding boundary of the observation devices, or the relevant area for extrapolation depending on the observed ecosystem type (e.g. forest, lake, glacier, ...). In addition to the estimation of the size a separate dataset with the site boundaries should be provided as open dataset.",
+        "Recommendation & Hints": "Please provide the size of the site in hectares. unit = hectare hectare = square kilometre/100 OR square kilometre  = hectare x 100. The estimation of the size refers to the observed area of the site. This could either be the observed catchment area, the observed area defined by the bounding boundary of the observation devices, or the relevant area for extrapolation depending on the observed ecosystem type (e.g. forest, lake, glacier, ...). In addition to the estimation of the size a separate dataset with the site boundaries should be provided as open dataset.",
         "Format": "Float(Double)",
         "Multiplicity": "[0..1]",
         "Required": {
@@ -297,7 +297,7 @@
           "Changes from Version 1.0": ""
         }
       },
-      "Center Coordinates": {
+      "Centroid Coordinates": {
         "field_name": "field_coordinates",
         "Definition": "This is the location of the site in the geographic space, given as a center coordinates expressed in latitude and longitude in decimal degrees.",
         "Recommendation & Hints": "Please provide the center coordinates of the site in decimal degrees. Enter the center point latitude and longitude. Supports entering data as both Decimal Degrees (-122.340932) OR Degrees-Minutes-Seconds (-123° 49' 55.2\\\" W). Please be careful to display southern hemisphere latitude values as as \"-\" and western hemisphere latitudes as \"-\".",
@@ -314,15 +314,15 @@
       },
       "Boundaries": {
         "field_name": "field_boundaries",
-        "Definition": "the geographic extent covering the area of all measurement infrastructures including measurement devices (e.g. soil respiration chambers) as well as permanent plots (e.g. soil sampling)",
+        "Definition": "The geographic extent covering the area of all measurement infrastructures including measurement devices (e.g. soil respiration chambers) as well as permanent plots (e.g. soil sampling)",
         "Recommendation & Hints": "Please delineate the geographic extent covering the area of all measurement infrastructures including measurement devices (e.g. soil respiration chambers) as well as permanent plots (e.g. soil sampling).",
-        "Format": "Map/WKT Text field",
+        "Format": "Map/GeoJSON Text field",
         "Multiplicity": "[0..1]",
         "Required": {
           "LTER Europe": "FALSE",
           "ILTER": "FALSE"
         },
-        "Example": "boundaries or bounding box represented as POLYGON ((13.8043 48.2759, 15.4358 48.2759, 15.4358 47.2718, 13.8043 47.2718, 13.8043 48.2759)))",
+        "Example": "{\"type\":\"Polygon\",\"coordinates\":[[[-1.3458251953125,48.715370552577],[-1.3458251953125,47.963199868923],[-2.1258544921875,47.963199868923],[-2.1258544921875,48.715370552577],[-1.3458251953125,48.715370552577]]]}",
         "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
@@ -425,7 +425,7 @@
       "Biomes": {
         "Biome": {
           "field_name": "field_biome",
-          "Definition": "Assignment of the main habitat type based on the ILTER Reference list for biomes as well as the GEO-BON Reference list on biomes. Note: the list needs to be discussed in detail also on relation to the 'main ecosystem types'.",
+          "Definition": "Assignment of the main habitat type based on the ILTER Reference list for biomes as well as the GEO-BON Reference list on biomes.",
           "Recommendation & Hints": "Please provide the main habitat type (global classification) which is characterising the site. Please select the values from the list.",
           "Format": "Reference",
           "Multiplicity": "[0..1]",
@@ -525,7 +525,7 @@
       },
       "Biogeographical Region": {
         "field_name": "field_biogeographical_region",
-        "Definition": "Assignment of the site to a biogeographic region (EEA, 2002) based on the spatial location and the site characteristics. Map: Biogeographic regions of Europe (EEA 2012).",
+        "Definition": "Assignment of the site to a biogeographic region (EEA, 2016) based on the spatial location and the site characteristics. Map: Biogeographic regions of Europe (EEA 2016).",
         "Recommendation & Hints": "Please provide the biogeographic region according to the list. Please select the values from the list.",
         "Format": "text",
         "Multiplicity": "[0..1]",
@@ -642,7 +642,7 @@
     },
     "Network/Project/RI Affiliation": {
       "Is your site part of any network or project?": {
-        "field_name": "field_network",
+        "field_name": "field_affiliation_condition",
         "Definition": "Specify whether your site is part of any networks or projects",
         "Recommendation & Hints": "Please check yes or no. If you select yes, the 'Affiliation' field will appear.",
         "Format": "boolean",
@@ -658,8 +658,8 @@
       },
       "Affiliation": {
         "field_name": "field_affiliation",
-        "Definition": "Description in which networks/RIs the site is listed. The information is composed of the name of the network and the identifier or the short name of the site within this network or project. This comprises global, international as well as national or regional networks, if relevant.",
-        "Recommendation & Hints": "Please select any network/project/research infrastructure affiliation from the list. Should any relevant network/project/research infrastructure be missing from the list, please contact us.",
+        "Definition": "Description in which networks/RIs the site is listed. The information is composed of the name of the network and the identifier or the short name of the site within this network or project. This comprises global, international as well as national or regional networks, if relevant. Also includes the site code of the respective network if existant and a verification status that is set centrally based cooperations with the respective networks/RIs.",
+        "Recommendation & Hints": "Please select any network/research infrastructure affiliation from the list. Should any relevant network/research infrastructure be missing from the list, please contact us.",
         "Format": "reference",
         "Multiplicity": "[0..n]",
         "Dependency": "content type \"network\"",
@@ -690,22 +690,6 @@
       },
       "Network specific": {
         "LTER": {
-          "LTER member network": {
-            "field_name": "field_ilter_national_network_nam",
-            "Definition": "Affiliation of the site to a LTER network (or related network).",
-            "Recommendation & Hints": "",
-            "Format": "Reference to [content type 'LTER member network']",
-            "Multiplicity": "[1..1]",
-            "Dependency": "field_networks_term_ref",
-            "Required": {
-              "LTER Europe": "TRUE",
-              "ILTER": "TRUE"
-            },
-            "Example": "Austria (LTER-Austria)",
-            "Reference list": "Reference to [content type 'LTER member network']",
-            "Comment": "",
-            "Changes from Version 1.0": ""
-          },
           "LTER site code": {
             "field_name": "field__site_sitecode",
             "Definition": "Unique alpha-numeric identifier for the site (e.g. LTER Site or LTSER Platform) within the DEIMS-SDR ecosystem site registry. The site code is composed of a network identification, a country identification and a sequential number following the template LTER_[Regional Group]_[Network]_[SequentialNumber]. The site code is defined by the responsible network coordinators (e.g. LTER member network representative) and should be provided to the site manager.",
@@ -743,121 +727,6 @@
               "N/A - not applicable"
             ],
             "Comment": "",
-            "Changes from Version 1.0": ""
-          },
-          "LTER declaration status requested by site holder": {
-            "field_name": "field_site_eu_declaration_status",
-            "Definition": "Characterisation of a SITE (observation or experimentation facility) according to their level of implementation. This includes the following characteristics: technical aspects of work at the sites (intervals of basic sampling, technical maintenance...) basic infrastructure (power supply, all year access...) technical equipment data and IT infrastructure",
-            "Recommendation & Hints": "Please select the site type from the list. This can be used in order to reveal information requirements relevant for e.g. multi-site projects or identification as major research infrastructure. The classification was adopted at the 7th LTER-Europe conference in Lodz. Site co-ordinators are asked to apply this overall classification to their sites, but also provide detailed metadata on the above categories in order to facilitate quick responses to specific information requests on the network level, e.g. which sites do have all year access AND power supply AND weekly sampling.",
-            "Format": "text",
-            "Multiplicity": "[1..1]",
-            "Dependency": "field_networks_term_ref",
-            "Required": {
-              "LTER Europe": "TRUE",
-              "ILTER": "TRUE"
-            },
-            "Example": "Master site",
-            "Reference list": [
-              "Formal LTER facility",
-              "Potential LTER facility",
-              "Candidate LTER facility",
-              "N/A - not applicable"
-            ],
-            "Comment": "",
-            "Changes from Version 1.0": ""
-          },
-          "Accreditation status by LTER member network": {
-            "field_name": "field_site_eu__status_accred",
-            "Definition": "Represents the determination by LTER-Europe of the status of the site. It is not modifiable by the site.",
-            "Recommendation & Hints": "",
-            "Format": "text",
-            "Multiplicity": "[0..1]",
-            "Dependency": "field_networks_term_ref",
-            "Required": {
-              "LTER Europe": "FALSE",
-              "ILTER": "FALSE"
-            },
-            "Example": "Accredited formal LTER facility",
-            "Reference list": [
-              "Accredited formal LTER facility",
-              "Accepted as potential LTER facility",
-              "Rejected as LTER  facility"
-            ],
-            "Comment": "Cannot be edited by user",
-            "Changes from Version 1.0": ""
-          },
-          "Accreditation status by ILTER": {
-            "field_name": "field_declaration_status_accredi",
-            "Definition": "Status of the sites accredited by ILTER",
-            "Recommendation & Hints": "",
-            "Format": "text",
-            "Multiplicity": "[0..1]",
-            "Dependency": "field_networks_term_ref",
-            "Required": {
-              "LTER Europe": "FALSE",
-              "ILTER": "FALSE"
-            },
-            "Example": "Accredited formal LTER facility",
-            "Reference list": [
-              "Accredited formal LTER facility",
-              "Accepted as potential LTER facility",
-              "Rejected as LTER  facility"
-            ],
-            "Comment": "Cannot be edited by user",
-            "Changes from Version 1.0": ""
-          }
-        },
-        "Other networks": {
-          "ICP Forests Code": {
-            "field_name": "field_site_icpforests_code",
-            "Definition": "ICP Forests Station Code",
-            "Recommendation & Hints": "",
-            "Format": "Text(64)",
-            "Multiplicity": "[0..1]",
-            "Required": {
-              "LTER Europe": "FALSE",
-              "ILTER": "FALSE"
-            },
-            "Example": "",
-            "Reference list": "",
-            "Comment": "Please enter your ICP Forests Station code here",
-            "Changes from Version 1.0": ""
-          },
-          "Site classification ExpeER": {
-            "field_name": "field_site_expeer_classif",
-            "Definition": "Site classification based on ExpeER",
-            "Recommendation & Hints": "Please select the site type from the list.",
-            "Format": "text",
-            "Multiplicity": "[1..1]",
-            "Dependency": "field_networks_term_ref",
-            "Required": {
-              "LTER Europe": "FALSE",
-              "ILTER": "FALSE"
-            },
-            "Example": "Highly Instrumented Observational Site - HIOS",
-            "Reference list": [
-              "N/A - not applicable",
-              "Highly Instrumented Observational Site - HIOS",
-              "Highly Instrumented Observational and Experimental Site - HIOS/HIES",
-              "Highly Instrumented Experimental Site - HIES",
-              "Ecotron - ECOTRON"
-            ],
-            "Comment": "",
-            "Changes from Version 1.0": ""
-          },
-          "ICOS Site Code": {
-            "field_name": "field_icos_site_code",
-            "Definition": "ICOS Station Code",
-            "Recommendation & Hints": "",
-            "Format": "Text(64)",
-            "Multiplicity": "[0..1]",
-            "Required": {
-              "LTER Europe": "FALSE",
-              "ILTER": "FALSE"
-            },
-            "Example": "",
-            "Reference list": "",
-            "Comment": "Please enter the respective ICOS network code of this site (full url)",
             "Changes from Version 1.0": ""
           }
         }
@@ -958,7 +827,7 @@
       "Research Topics": {
         "field_name": "field_research_topics",
         "Definition": "Description of the research, experimentation or observation focus of the site.",
-        "Recommendation & Hints": "Please indicate the research topics tackled at the site. Select the research topic from the list provided in DEIMS-SDR. The list of research topics is defined by EnvThes Research Topics",
+        "Recommendation & Hints": "Please indicate the research topics tackled at the site. Select the research topic from the list provided in DEIMS-SDR. The list of research topics is defined by EnvThes Research Topics/Focus (http://vocabs.lter-europe.net/EnvThes/21603)",
         "Format": "Reference",
         "Multiplicity": "[0..n]",
         "Dependency": "",
@@ -974,7 +843,7 @@
       "Parameters": {
         "field_name": "field_parameters",
         "Definition": "Description of the observed parameters and parameter groups at the site. The parameter is defined as property of the ecosystem or a ecosystem compartment which can be observed either by sensors or humans, e.g. pH, species number, radiation.",
-        "Recommendation & Hints": "Please indicate the parameters observed at the site. Please record every parameter for the site platform in one line. More than one entry is possible. The Reference list is defined by the entries in EnvThes Measure and is frequently updated.",
+        "Recommendation & Hints": "Please indicate the parameters observed at the site. Please record every parameter for the site platform in one line. More than one entry is possible. The Reference list is defined by the entries in EnvThes parameter and is frequently updated (http://vocabs.lter-europe.net/EnvThes/20935)",
         "Format": "Text (LOV)",
         "Multiplicity": "[0..n]",
         "Dependency": "",
@@ -983,7 +852,7 @@
           "ILTER": "TRUE"
         },
         "Example": "pH",
-        "Reference list": "Taxonomy Parameter based on EnvThes Measure",
+        "Reference list": "Taxonomy Parameter based on EnvThes Measure (http://vocabs.lter-europe.net/EnvThes/20935)",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
