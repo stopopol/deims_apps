@@ -1,13 +1,13 @@
 {
   "name": "Site Metadata Model",
   "abbreviation": "SMM",
-  "version": 1.30,
+  "version": 1.21,
   "releaseDate": "2020-01-14T00:00:00.000Z",
   "scope": "A 'Site' is defined as a basic generic in-situ observation or experimentation facility (of any size and organisation level), where the collection of e.g. bio-physical, environmental, biological or socio-ecological data is conducted. The Site Metadata Model (SMM) describes the metadata elements of a monitoring or experimentation site. The metadata model is based on requirements defined by target stakeholder groups (e.g. ILTER/LTER) and research projects (e.g. EnvEurope, ExpeER, eLTER H2020 or EcoPotential). It defines metadata elements about the organisation (e.g. contact, information, networks), the location, the observation characteristics (e.g. climate, habitats) or available equipment to name just a few. The basic metadata elements are in line with the data specification of the INSPIRE data theme Environmental Monitoring Facilities (EF). An initial mapping was done within the EnvEurope project showing the basic overall compliance.",
   "content": {
-    "Site name": {
-      "field_name": "field_site_sitelong",
-      "Definition": "Name identifying the documented observation and/or experimentation facility (site, e.g LTER Site or LTSER Platform).",
+    "Site Name": {
+      "field_name": "field_name",
+      "Definition": "Name identifying the documented observation and/or experimentation facility (site).",
       "Recommendation & Hints": "The site name should be concise and precise, e.g. by a given named place. It should not contain unexplained acronyms or abbreviations. It is recommended a maximum length of 200 characters and keeping the similarity with the ‘official naming’ established in the community.",
       "Format": "Text(255)",
       "Multiplicity": "[1..1]",
@@ -19,7 +19,7 @@
     },
     "General": {
       "Short name": {
-        "field_name": "field_short_name",
+        "field_name": "field_name_short",
         "Definition": "Short version of site name",
         "Recommendation & Hints": " Enter either a site's short name  or acronym. In certain applications the short name might be used if the full site name exceeds a certain amount of characters, e.g. for map labels.",
         "Format": "Text(60)",
@@ -43,7 +43,7 @@
         "Changes from Version 1.0": "field added"
       },
       "Site Description": {
-        "field_name": "field_site_description",
+        "field_name": "field_abstract",
         "Definition": "A short textual description of the site or platform which includes the location, biophysical characteristics, a brief history, the main scientific purpose at present and major plans for future, a brief overall description of infrastructure, and a brief overall description of available data/information.",
         "Recommendation & Hints": "Please provide a short site description which could also be used on the web site. This description should cover: a brief history of the LTER Site or LTSER Platform, the main scientific purpose at present and major plans for future, a brief overall description of infrastructure, and a brief overall description of available data/information. In the section ECOSYSTEM AND ENVIRONMENTAL CHARACTERISTICS additional detailed descriptions on Geology, Hydrology, Soils and Vegetation can be provided.",
         "Format": "Text",
@@ -88,7 +88,7 @@
         "Changes from Version 1.0": ""
       },
       "Parent site name": {
-        "field_name": "field_parent_site_name",
+        "field_name": "field_parent_site",
         "Definition": "Reference to the parent LTSER Platform in which the site is located. The relation could either be a spatial or thematic.",
         "Recommendation & Hints": "Please provide the reference to the parent Platform/umbrella site in which the site is located (by Site name).",
         "Format": "Reference to a Site name [content type site]",
@@ -118,7 +118,7 @@
         "Changes from Version 1.0": ""
       },
       "Keywords": {
-        "field_name": "field_keywords_envthes",
+        "field_name": "field_keywords",
         "Definition": "Provides a set of related keywords characterising the site derived from the controlled vocabulary implemented by EnvThes - thesaurus for long term ecological research, monitoring, experiments EnvThes and other environmentally related thesauri as Catalogue of Life, EUNIS Habitats and INSPIRE Spatial Data Themes. Additional concepts can be defined as free keywords.",
         "Recommendation & Hints": "The field provides an autocomplete function, which allows selecting the values from the list. Begin typing a keyword. Select the one that most resembles the concept you want. You may add as many keywords as you need.",
         "Format": "Predefined hierarchically structured concepts",
@@ -150,10 +150,10 @@
     },
     "Contact": {
       "Site Manager": {
-        "field_name": "field_person_contact",
+        "field_name": "field_site_manager",
         "Definition": "Reference to the contact person responsible for the site. The person could be either the principal investigator (PI, co-PI), the information manager (IM), the site manager (SM) or a technician (TE). The details for the person/organisation needs to be specified in the persons module (PEMM).",
         "Recommendation & Hints": "Please provide the reference to the person or organisation responsible for the site. Please start typing the name of the person/organisation. If the person/organisation is not in the list, please add first the person/organisation using the respective form.",
-        "Format": "Reference to [content type PERSON]",
+        "Format": "Reference to [content type PERSON/ORGANISATION]",
         "Multiplicity": "[1..n]",
         "Required": true,
         "Example": "Dirnböck, Thomas",
@@ -162,52 +162,52 @@
         "Changes from Version 1.0": ""
       },
       "Site Owner": {
-        "field_name": "field_contact_site_owner",
+        "field_name": "field_site_owner",
         "Definition": "Reference to the contact person/organisation owning the site. The details for the person/organisation needs to be specified in the persons module (PEMM).",
         "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person. If the person/organisation is not in the list, please add first the person/organisation using the respective form.",
-        "Format": "Reference to [content type PERSON]",
+        "Format": "Reference to [content type PERSON/ORGANISATION]",
         "Multiplicity": "[1..n]",
         "Required": {
           "LTER Europe": "TRUE",
           "ILTER": "FALSE"
         },
         "Example": "Umweltbundesamt GmbH",
-        "Reference list": "Reference to [content type PERSON]",
+        "Reference list": "Reference to [content type PERSON/ORGANISATION]",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
       "Funding Agency": {
-        "field_name": "field_contact_funding_agency",
+        "field_name": "field_funding_agency",
         "Definition": "Reference to the contact person/organisation or the responsible national authority for funding and strategic decisions about the site. This could be e.g. the Ministry of Science as responsible national authority. The details for the person/organisation needs to be specified in the persons module (PEMM).",
         "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person/organisation. If the person/organisation is not in the list, please add first the person/organisation using the respective form.",
-        "Format": "Reference to [content type PERSON]",
+        "Format": "Reference to [content type PERSON/ORGANISATION]",
         "Multiplicity": "[1..n]",
         "Required": {
           "LTER Europe": "TRUE",
           "ILTER": "FALSE"
         },
         "Example": "Umweltbundesamt GmbH",
-        "Reference list": "Reference to [content type PERSON]",
+        "Reference list": "Reference to [content type PERSON/ORGANISATION]",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
       "Metadata Provider": {
-        "field_name": "field_person_metadata_provider",
+        "field_name": "field_metadata_provider",
         "Definition": "Provides the full name of the person(s) or organisation(s), who created the documentation for the site.",
         "Recommendation & Hints": "By typing the name of a person, the system provides a list of people matching the query. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
-        "Format": "Reference to [content type PERSON]",
+        "Format": "Reference to [content type PERSON/ORGANISATION]",
         "Multiplicity": "[1..n]",
         "Required": {
           "LTER Europe": "TRUE",
           "ILTER": "TRUE"
         },
         "Example": "Kobler, Johannes",
-        "Reference list": "Reference to [content type PERSON]",
+        "Reference list": "Reference to [content type PERSON/ORGANISATION]",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
       "Web Address": {
-        "field_name": "field_ilter_network_url",
+        "field_name": "field_url",
         "Definition": "Link to website which provides a description and further information about the site. The web address is composed of the web link (8.2) and a title (8.1) which is shown.",
         "Recommendation & Hints": "Web address title - provide a human readable title for the website. Web address URL - provide a URL (http://... or https://..)",
         "Format": "",
@@ -224,7 +224,7 @@
     },
     "Geographic": {
       "Country": {
-        "field_name": "field_ilter_network_country",
+        "field_name": "field_country",
         "Definition": "Country the site is located in.",
         "Recommendation & Hints": "Please provide the name of the country in which the observation or experimentation facility is located. This might be different from network affiliation. It describes in which country the site is located, even if the network is located in another country. If your site is transnational, please select as many countries as necessary.",
         "Format": "Reference list",
@@ -236,7 +236,7 @@
         "Changes from Version 1.0": ""
       },
       "Size": {
-        "field_name": "field_site_size",
+        "field_name": "field_size",
         "Definition": "Size of the site in hectare (ha). The size refers to the boundary of the catchment, the observed area or the relevant area for extrapolation dependent on the observed ecosystem type (e.g. forest, lake, rivers).",
         "Recommendation & Hints": "Please provide the size of the site in hectares. unit = hectare hectare = square kilometre /100 OR square kilometre  = hectare x 100. The estimation of the size refers to the observed area of the site. This could either be the observed catchment area, the observed area defined by the bounding boundary of the observation devices, or the relevant area for extrapolation depending on the observed ecosystem type (e.g. forest, lake, glacier, ...). In addition to the estimation of the size a separate dataset with the site boundaries should be provided as open dataset.",
         "Format": "Float(Double)",
@@ -252,7 +252,7 @@
       },
       "Elevation": {
         "Elevation (average)": {
-          "field_name": "field_elevation_average",
+          "field_name": "field_elevation_avg",
           "Definition": "Average and Bounding elevation range for the site (observation or experimentation facility).",
           "Recommendation & Hints": "This element consists of two numbers (minimum and maximum altitudes) and the average altitude defining height above or below the sea level. As a default vertical coordinate reference system of bounding altitudes Mean sea level height (EPSG: 5714) is used. Negative values are below sea level.",
           "Format": "numeric(double) in [m] above or below sea level",
@@ -267,7 +267,7 @@
           "Changes from Version 1.0": ""
         },
         "Elevation (min)": {
-          "field_name": "field_elevation_lowest",
+          "field_name": "field_elevation_min",
           "Definition": "Average and Bounding elevation range for the site (observation or experimentation facility).",
           "Recommendation & Hints": "This element consists of two numbers (minimum and maximum altitudes) and the average altitude defining height above or below the sea level. As a default vertical coordinate reference system of bounding altitudes Mean sea level height (EPSG: 5714) is used. Negative values are below sea level.",
           "Format": "numeric(double) in [m] above or below sea level",
@@ -282,7 +282,7 @@
           "Changes from Version 1.0": ""
         },
         "Elevation (max)": {
-          "field_name": "field_elevation_maximum_",
+          "field_name": "field_elevation_max",
           "Definition": "Average and Bounding elevation range for the site (observation or experimentation facility).",
           "Recommendation & Hints": "This element consists of two numbers (minimum and maximum altitudes) and the average altitude defining height above or below the sea level. As a default vertical coordinate reference system of bounding altitudes Mean sea level height (EPSG: 5714) is used. Negative values are below sea level.",
           "Format": "numeric(double) in [m] above or below sea level",
@@ -313,7 +313,7 @@
         "Changes from Version 1.0": ""
       },
       "Boundaries": {
-        "field_name": "field_geo_bounding_box",
+        "field_name": "field_boundaries",
         "Definition": "the geographic extent covering the area of all measurement infrastructures including measurement devices (e.g. soil respiration chambers) as well as permanent plots (e.g. soil sampling)",
         "Recommendation & Hints": "Please delineate the geographic extent covering the area of all measurement infrastructures including measurement devices (e.g. soil respiration chambers) as well as permanent plots (e.g. soil sampling).",
         "Format": "Map/WKT Text field",
@@ -331,7 +331,7 @@
     "Ecoystem and environmental characteristics": {
       "Temperature": {
         "Air Temperature - average annual": {
-          "field_name": "field_temperature_average_annual",
+          "field_name": "field_air_temp_avg",
           "Definition": "Temperature characteristics of the site. The temperature characteristics are composed of the mean annual air temperature, the monthly average of the coldest month (e.g. January) as the annual minimum temperature and the average of the hottest month (e.g. July) as the annual maximum temperature. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The temperature is given in [°C].",
           "Recommendation & Hints": "This element consists of three values (annual average, minimum and maximum) of the air temperature. If possible site data should be used to calculate the mean, minimum and maximum air temperature based on a 10 or 30 years period. If no long term site data are available please use data or values from a comparable climatic station near to the site.",
           "Format": "numeric(double) in [°C]",
@@ -345,8 +345,8 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Air Temperature - from": {
-          "field_name": "field_site_temp_min",
+        "Air Temperature Range (Monthly Minimum)": {
+          "field_name": "field_air_temp_min",
           "Definition": "Temperature characteristics of the site. The temperature characteristics are composed of the mean annual temperature, the monthly average of the coldest month (e.g. January) as the annual minimum temperature and the average of the hottest month (e.g. July) as the annual maximum temperature. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The temperature is given in [°C].",
           "Recommendation & Hints": "Temperature characteristics of the site. The temperature characteristics are composed of the mean annual air temperature, the monthly average of the coldest month (e.g. January) as the annual minimum temperature and the average of the hottest month (e.g. July) as the annual maximum temperature. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The temperature is given in [°C].",
           "Multiplicity": "[0..1]",
@@ -359,8 +359,8 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Air Temperature - to": {
-          "field_name": "field_site_temp_max",
+        "Air Temperature Range (Monthly Maximum)": {
+          "field_name": "field_air_temp_max",
           "Definition": "Temperature characteristics of the site. The temperature characteristics are composed of the mean annual temperature, the monthly average of the coldest month (e.g. January) as the annual minimum air temperature and the average of the hottest month (e.g. July) as the annual maximum temperature. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The temperature is given in [°C].",
           "Recommendation & Hints": "This element consists of three values (annual average, minimum and maximum) of the air temperature. If possible site data should be used to calculate the mean, minimum and maximum air temperature based on a 10 or 30 years period. If no long term site data are available please use data or values from a comparable climatic station near to the site.",
           "Format": "numeric(double) in [m] above or below sea level",
@@ -376,8 +376,8 @@
         }
       },
       "Precipitation": {
-        "Precipitation - average annual": {
-          "field_name": "field_precipitation_annual_ilter",
+        "Precipitation Annual": {
+          "field_name": "field_precipitation_annual",
           "Definition": "Precipitation characteristics of the site. The precipitation characteristics is composed of the total annual precipitation (sum), the long term average of the driest month with the lowest precipitation (based on the monthly sum of precipitation) as the annual minimum precipitation and the long term average of the wettest month with the highest precipitation (based on the monthly sum precipitation) as the annual maximum precipitation. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The precipitation is given in [mm].",
           "Recommendation & Hints": "This element consists of three values (annual average, minimum and maximum) of the precipitation. If possible site data should be used to calculate the mean, minimum and maximum precipitation based on a 10 or 30 years data period. If no long term site data are available please use data or values from a comparable climatic station near to the site.",
           "Format": "numeric(double) in [mm]",
@@ -391,8 +391,8 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Precipitation range (monthly minimum) from": {
-          "field_name": "field_site_precip_min",
+        "Precipitation Minimum Monthly": {
+          "field_name": "field_precipitation_min",
           "Definition": "Precipitation characteristics of the site. The precipitation characteristics is composed of the total annual precipitation (sum), the long term average of the dryest month with the lowest precipitation (based on the monthly sum of precipitation) as the annual minimum precipitation and the long term average of the wettest month with the highest precipitation (based on the monthly sum precipitation) as the annual maximum precipitation. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The precipitation is given in [mm].",
           "Recommendation & Hints": "This element consists of three values (annual average, minimum and maximum) of the precipitation. If possible site data should be used to calculate the mean, minimum and maximum precipitation based on a 10 or 30 years data period. If no long term site data are available please use data or values from a comparable climatic station near to the site.",
           "Format": "numeric(double) in [mm]",
@@ -406,8 +406,8 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Precipitation range (monthly maximum) to": {
-          "field_name": "field_site_precip_max",
+        "Precipitation Maximum Monthly": {
+          "field_name": "field_precipitation_max",
           "Definition": "Precipitation characteristics of the site. The precipitation characteristics is composed of the total annual precipitation (sum), the long term average of the dryest month with the lowest precipitation (based on the monthly sum of precipitation) as the annual minimum precipitation and the long term average of the wettest month with the highest precipitation (based on the montly sum precipitation) as the annual maximum precipitation. The mean, maximum and minimum values should be calculated on a climatic period (e.g. 10 or 30 years) based on data from the site or a near comparable climatic station. The precipitation is given in [mm].",
           "Recommendation & Hints": "This element consists of three values (annual average, minimum and maximum) of the precipitation. If possible site data should be used to calculate the mean, minimum and maximum precipitation based on a 10 or 30 years data period. If no long term site data are available please use data or values from a comparable climatic station near to the site.",
           "Format": "numeric(double) in [mm]",
@@ -424,7 +424,7 @@
       },
       "Biomes": {
         "Biome": {
-          "field_name": "field_site_biomeplus",
+          "field_name": "field_biome",
           "Definition": "Assignment of the main habitat type based on the ILTER Reference list for biomes as well as the GEO-BON Reference list on biomes. Note: the list needs to be discussed in detail also on relation to the 'main ecosystem types'.",
           "Recommendation & Hints": "Please provide the main habitat type (global classification) which is characterising the site. Please select the values from the list.",
           "Format": "Reference",
@@ -459,7 +459,7 @@
           "Changes from Version 1.0": ""
         },
         "GEO-BON Biome": {
-          "field_name": "field_site_geobon_biome",
+          "field_name": "field_geo_bon_biome",
           "Definition": "The GEO-BON Biome are defined as the main domain of the site (observation or experimental facility), classifying the site as terrestrial, aquatic, coastal or marine. The 'Biomes' field allows a more detailed classification on a global scale.",
           "Recommendation & Hints": "Please provide the main habitat type (global classification) which is characterising the site. Please select the values from the list.",
           "Format": "Reference",
@@ -482,7 +482,7 @@
         }
       },
       "Ecosystem and land use": {
-        "field_name": "field_ecosystem_and_land_use",
+        "field_name": "field_ecosystem_land_use",
         "Definition": "Assignment of the main habitat type based on list of main habitat types (or ecoregions) according to Olsen et al. 2001.",
         "Recommendation & Hints": "Please provide the main habitat type according to the list. Please select the values from the list.",
         "Format": "text",
@@ -524,7 +524,7 @@
         "Changes from Version 1.0": "The fields for ecosystem types from SMM 1.0 were merged into one multi-value field. This includes the following fields: Ecosystem type, Additional Ecosystem type 1, Additional Ecosystem type 2"
       },
       "Biogeographical Region": {
-        "field_name": "field_site_eu_biogeo_region",
+        "field_name": "field_biogeographical_region",
         "Definition": "Assignment of the site to a biogeographic region (EEA, 2002) based on the spatial location and the site characteristics. Map: Biogeographic regions of Europe (EEA 2012).",
         "Recommendation & Hints": "Please provide the biogeographic region according to the list. Please select the values from the list.",
         "Format": "text",
@@ -551,7 +551,7 @@
         "Changes from Version 1.0": ""
       },
       "EUNIS habitat": {
-        "field_name": "field_eunis_habitat_taxonomy",
+        "field_name": "field_eunis_habitat",
         "Definition": "Assignment of the habitat type based on the EEA, EUNIS Habitat types. Only the levels 1-3 are used.",
         "Recommendation & Hints": "Please provide the habitat type according to the list. Please select the values from the list.",
         "Format": "text",
@@ -865,7 +865,7 @@
     },
     "Site classification": {
       "Site Type (Spatial Design)": {
-        "field_name": "field_site_eu_site_type",
+        "field_name": "field_site_type",
         "Definition": "Describes the heterogeneity of the observation facility and the addressed gradient (environmental and spatial). Simple sites are defined by addressing a limited number of ecosystems or covering a small spatial scale (e.g. less than 10km²). Complex sites are defined by addressing a broad range of ecosystem types or covering a larger spatial scale. Complex sites are investigating e.g. processes and fluxes on a landscape or regional scale.",
         "Recommendation & Hints": "Please use the site type to describe the internal complexity of the site in addition to any network specific site classification. In terms of LTER Simple sites are e.g. classical LTER sites measuring ecosystem processes in one or a very limited number of habitats. Complex sites in contrast are classical LTSER sites investigating processes and fluxes on a landscape or regional level or form the bracket over a number of LTER or simple sites.",
         "Format": "text",
@@ -888,7 +888,7 @@
     },
     "Status and History": {
       "Site Status": {
-        "field_name": "field_site_status",
+        "field_name": "field_status",
         "Definition": "The site status describes the current status of the site, e.g. if it is planned or already existing. The site status is composed of the status value, the year of establishment of the site and in case the year when the site was closed.",
         "Recommendation & Hints": "Select the current status of the site from the list of values and provide beginning and end time of the operation of the site. In case the site is still operating the end time is kept blank. As year of site establishment select the year when substantial data was obtained and the operational period of the site started.",
         "Format": "Reference list",
@@ -907,7 +907,7 @@
         "Changes from Version 1.0": ""
       },
       "Year Established": {
-        "field_name": "field_year",
+        "field_name": "field_year_established",
         "Definition": "The site status describes the current status of the site, e.g. if it is planned or already existing. The site status is composed of the status value, the year of establishment of the site and in case the year when the site was closed.",
         "Recommendation & Hints": "Select the current status of the site from the list of values and provide beginning and end time of the operation of the site. In case the site is still operating the end time is kept blank. As year of site establishment select the year when substantial data was obtained and the operational period of the site started.",
         "Format": "Date as YYYY",
@@ -938,7 +938,7 @@
         "Changes from Version 1.0": ""
       },
       "History": {
-        "field_name": "field_site_history",
+        "field_name": "field_history",
         "Definition": "Textual description of the history of the site, e.g. changing monitoring or research objectives.",
         "Recommendation & Hints": "Please provide a short description that summarises the history of the site.",
         "Format": "Text",
@@ -956,7 +956,7 @@
     },
     "Focus, Design and Scale": {
       "Research Topics": {
-        "field_name": "field_research_topic_taxonomy",
+        "field_name": "field_research_topics",
         "Definition": "Description of the research, experimentation or observation focus of the site.",
         "Recommendation & Hints": "Please indicate the research topics tackled at the site. Select the research topic from the list provided in DEIMS-SDR. The list of research topics is defined by EnvThes Research Topics",
         "Format": "Reference",
@@ -972,7 +972,7 @@
         "Changes from Version 1.0": ""
       },
       "Parameters": {
-        "field_name": "field_parameters_taxonomy",
+        "field_name": "field_parameters",
         "Definition": "Description of the observed parameters and parameter groups at the site. The parameter is defined as property of the ecosystem or a ecosystem compartment which can be observed either by sensors or humans, e.g. pH, species number, radiation.",
         "Recommendation & Hints": "Please indicate the parameters observed at the site. Please record every parameter for the site platform in one line. More than one entry is possible. The Reference list is defined by the entries in EnvThes Measure and is frequently updated.",
         "Format": "Text (LOV)",
@@ -989,7 +989,7 @@
       },
       "Observation Design": {
         "Scale of observation": {
-          "field_name": "field_site_eu_design_scale",
+          "field_name": "field_scale_observation",
           "Definition": "Description of the scale and design of the observations at the site. The information is composed of the scale of the observation as the spatial and thematic extent of the observation at the site, e.g. if is addressing a complete catchment or sub-catchment as well as the design of the observation as the main focus of the effort, being mainly observation or in addition experimental.",
           "Recommendation & Hints": "This addresses the spatial and thematic scope of the observation program at the site. Please select the most appropriate value from the list.",
           "Format": "text (LOV)",
@@ -1011,7 +1011,7 @@
           "Changes from Version 1.0": ""
         },
         "Design of observation": {
-          "field_name": "field_site_eu_design_observ",
+          "field_name": "field_design_observation",
           "Definition": "Description of the scale and design of the observations at the site. The information is composed of the scale of the observation as the spatial and thematic extent of the observation at the site, e.g. if is addressing a complete catchment or sub-catchment as well as the design of the observation as the main focus of the effort, being mainly observation or in addition experimental.",
           "Recommendation & Hints": "This addresses the importance of observations at the site. Please select the most appropriate value from the list. Please also check the entries in the Experimental design field.",
           "Format": "text (LOV)",
@@ -1034,7 +1034,7 @@
       },
       "Experimentation Design": {
         "Scale of experimentation": {
-          "field_name": "field_site_eu_experiment_scale",
+          "field_name": "field_scale_experiments",
           "Definition": "Description of the scale and design of the experimentation at the site. The information is composed of the scale of the experiments as the spatial and thematic extent of the observation at the site, e.g. if is addressing a complete catchment or sub-catchment as well as the design of the experiments as the main focus of the efforts, being mainly experimental or in addition observation.",
           "Recommendation & Hints": "This addresses the spatial and thematic scope of the experiment program at the site. Please select the most appropriate value from the list.",
           "Format": "text (LOV)",
@@ -1056,7 +1056,7 @@
           "Changes from Version 1.0": ""
         },
         "Design of experimentation": {
-          "field_name": "field_site_eu_design_experiments",
+          "field_name": "field_design_experiments",
           "Definition": "Description of the scale and design of the experimentation at the site. The information is composed of the scale of the experiments as the spatial and thematic extent of the observation at the site, e.g. if is addressing a complete catchment or sub-catchment as well as the design of the experiments as the main focus of the efforts, being mainly experimental or in addition observation.",
           "Recommendation & Hints": "This addresses the importance of experiments at the site. Please select the most appropriate value from the list. Please also check the entries in the Observation design field.",
           "Format": "text (LOV)",
@@ -1080,7 +1080,7 @@
     },
     "Protection Status and Resource Management": {
       "Protection programme": {
-        "Protection program": {
+        "Protection programme": {
           "field_name": "field_site_protection_prog_ref",
           "Definition": "Description of the protection status of the site. The information is composed of the protection program (e.g. IUCN National Park), the cover of protected areas within the site and additional notes on the protection. As each site can be protected by different programs and therefore more than one values can be given.",
           "Recommendation & Hints": "Please select the protection program and an estimate of the share of the protected area within the site from the list of values. In addition textual notes can be given.",
@@ -1096,7 +1096,7 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Protection program cover": {
+        "Protection programme cover": {
           "field_name": "field_protection_program_cover",
           "Definition": "Description of the protection status of the site. The information is composed of the protection program (e.g. IUCN National Park), the cover of protected areas within the site and additional notes on the protection. As each site can be protected by different programs and therefore more than one values can be given.",
           "Recommendation & Hints": "Please select the protection program and an estimate of the share of the protected area within the site from the list of values. In addition textual notes can be given.",
@@ -1117,7 +1117,7 @@
           "Comment": "",
           "Changes from Version 1.0": ""
         },
-        "Protection program notes": {
+        "Protection programme notes": {
           "field_name": "field_protection_program_notes",
           "Definition": "Please select the protection program and an estimate of the share of the protected area within the site from the list of values. In addition textual notes can be given.",
           "Recommendation & Hints": "",
@@ -1136,7 +1136,7 @@
       },
       "Management of Resources": {
         "Management of Resources": {
-          "field_name": "field_site_mgtres",
+          "field_name": "field_management_resources",
           "Definition": "Is the site or parts of the site managed for resources such as forestry, fishery?",
           "Recommendation & Hints": "",
           "Format": "boolean",
@@ -1155,7 +1155,7 @@
           "Changes from Version 1.0": ""
         },
         "Management of Resources - Percentage": {
-          "field_name": "field_site_mgmnt_res_percent",
+          "field_name": "field_management_resources_pct",
           "Definition": "How much of the site is used for the management of resources , for example, forestry, fishery",
           "Recommendation & Hints": "",
           "Format": "text [LOV]",
@@ -1176,7 +1176,7 @@
           "Changes from Version 1.0": ""
         },
         "Management of Resources - Notes": {
-          "field_name": "field_site_mgtres_notes",
+          "field_name": "field_management_resources_notes",
           "Definition": "Additional notes to describe the management of resources",
           "Recommendation & Hints": "",
           "Format": "text",
@@ -1196,7 +1196,7 @@
     "Infrastructure and Operation": {
       "Infrastructure": {
         "Accessible All Year": {
-          "field_name": "field_site_access_allyear",
+          "field_name": "field_accessible_all_year",
           "Definition": "The data type 'Access to site' describes the accessibility of the site throughout the year. The information is composed of the general information on the accessibility, the general information if all parts of the site can be visited throughout the year and the type of vehicle/device which is needed to reach the site.",
           "Recommendation & Hints": "Please provide information on the accessibility of the research site throughout the year. This includes the general information on the accessibility, the general information if all parts of the site can be visited throughout the year and the type of vehicle/device which is needed to reach the site.",
           "Format": "boolean",
@@ -1215,7 +1215,7 @@
           "Changes from Version 1.0": ""
         },
         "All parts of Site accessible": {
-          "field_name": "field_site_allparts_access",
+          "field_name": "field_all_parts_accessible",
           "Definition": "State whether or not all parts of the site can be accessed",
           "Recommendation & Hints": "",
           "Format": "boolean",
@@ -1234,7 +1234,7 @@
           "Changes from Version 1.0": ""
         },
         "Access Type": {
-          "field_name": "field_site_access_type",
+          "field_name": "field_access_type",
           "Definition": "What kind of vehicle is required to access the site?",
           "Recommendation & Hints": "",
           "Format": "text (LOV)",
@@ -1257,7 +1257,7 @@
           "Changes from Version 1.0": ""
         },
         "Permanent Power Supply": {
-          "field_name": "field_site_inf_perm_powersup",
+          "field_name": "field_permanent_power_supply",
           "Definition": "Information on the availability of permanent power at the site.",
           "Recommendation & Hints": "Please provide information on the availability of permanent power at the research site throughout the year. The includes the general information on the availability (48.1) or power. The amount of permanent power produced or available as well as the location of the production devices for the power is provided with the information on the infrastructure.",
           "Format": "boolean",
@@ -1295,7 +1295,7 @@
           }
         },
         "Infrastructure notes": {
-          "field_name": "field_site_inf_notes",
+          "field_name": "field_infrastructure_notes",
           "Definition": "Additional textual description about the infrastructure present at the site. This can contain additional information which is not covered by the other items.",
           "Recommendation & Hints": "Please provide additional information on the infrastructure which are not covered by the other items.",
           "Format": "text",
@@ -1494,7 +1494,7 @@
         "Changes from Version 1.0": ""
       },
       "Data Notes": {
-        "field_name": "field_site_data_notes",
+        "field_name": "field_data_notes",
         "Definition": "The data type 'Data notes' describes other relevant information on data management and data exchange which are not covered by the other items of the section on data management and data exchange.",
         "Recommendation & Hints": "Please provide a textual description on information which is not covered by the other items.",
         "Format": "text",
