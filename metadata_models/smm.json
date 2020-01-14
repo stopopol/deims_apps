@@ -1,7 +1,7 @@
 {
   "name": "Site Metadata Model",
   "abbreviation": "SMM",
-  "version": 1.21,
+  "version": 1.30,
   "releaseDate": "2020-01-14T00:00:00.000Z",
   "scope": "A 'Site' is defined as a basic generic in-situ observation or experimentation facility (of any size and organisation level), where the collection of e.g. bio-physical, environmental, biological or socio-ecological data is conducted. The Site Metadata Model (SMM) describes the metadata elements of a monitoring or experimentation site. The metadata model is based on requirements defined by target stakeholder groups (e.g. ILTER/LTER) and research projects (e.g. EnvEurope, ExpeER, eLTER H2020 or EcoPotential). It defines metadata elements about the organisation (e.g. contact, information, networks), the location, the observation characteristics (e.g. climate, habitats) or available equipment to name just a few. The basic metadata elements are in line with the data specification of the INSPIRE data theme Environmental Monitoring Facilities (EF). An initial mapping was done within the EnvEurope project showing the basic overall compliance.",
   "content": {
@@ -178,9 +178,9 @@
       },
       "Funding Agency": {
         "field_name": "field_funding_agency",
-        "Definition": "Reference to the contact person/organisation or the responsible national authority for funding and strategic decisions about the site. This could be e.g. the Ministry of Science as responsible national authority. The details for the person/organisation needs to be specified in the persons module (PEMM).",
+        "Definition": "Reference to the organisation or the responsible national authority for funding and strategic decisions about the site. This could be e.g. the Ministry of Science as responsible national authority. The details for the person/organisation needs to be specified in the persons module (PEMM).",
         "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person/organisation. If the person/organisation is not in the list, please add first the person/organisation using the respective form.",
-        "Format": "Reference to [content type PERSON/ORGANISATION]",
+        "Format": "Reference to [content type ORGANISATION]",
         "Multiplicity": "[1..n]",
         "Required": {
           "LTER Europe": "TRUE",
