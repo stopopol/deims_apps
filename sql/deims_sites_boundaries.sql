@@ -5,7 +5,8 @@ name.`field_name_value` AS name,
 CONCAT('https://deims.org/', basetable.`uuid`) as deimsid,
 msl.`field_elevation_avg_value`,
 
-boundaries.field_boundaries_value AS geom
+
+CONVERT(boundaries.field_boundaries_value  USING utf8) as geom
 
 FROM `node` basetable
 
@@ -17,3 +18,5 @@ ON msl.`entity_id` = basetable.`nid`
 
 INNER JOIN `node__field_boundaries` boundaries
 ON boundaries.`entity_id` = basetable.`nid`
+
+where boundaries.`field_boundaries_geo_type` = 'Polygon' OR boundaries.`field_boundaries_geo_type` = 'MultiPolygon'
