@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW deims_sites_boundaries AS
+CREATE OR REPLACE VIEW deims_sites_bboxes AS
 
 SELECT 
 name.`field_name_value` AS name,
