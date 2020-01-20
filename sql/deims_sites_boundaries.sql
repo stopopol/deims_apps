@@ -5,15 +5,7 @@ name.`field_name_value` AS name,
 CONCAT('https://deims.org/', basetable.`uuid`) as deimsid,
 msl.`field_elevation_avg_value`,
 
-POLYFROMTEXT(concat(
-		'Polygon((', 
-			boundaries.`field_boundaries_left`	, ' ', boundaries.`field_boundaries_bottom` 	, ', ', 	
-			boundaries.`field_boundaries_right`	, ' ', boundaries.`field_boundaries_bottom`		, ', ',	
-			boundaries.`field_boundaries_right`	, ' ', boundaries.`field_boundaries_top`		, ', ',
-			boundaries.`field_boundaries_left`	, ' ', boundaries.`field_boundaries_top`		, ', ',	
-			boundaries.`field_boundaries_left`	, ' ', boundaries.`field_boundaries_bottom`		, 
-		'))'
-	)) AS geom
+boundaries.field_boundaries_value AS geom
 
 FROM `node` basetable
 
