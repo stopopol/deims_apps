@@ -1,3 +1,4 @@
+
 CREATE OR REPLACE VIEW deims_sites_boundaries AS
 
 SELECT 
@@ -5,8 +6,7 @@ name.`field_name_value` AS name,
 CONCAT('https://deims.org/', basetable.`uuid`) as deimsid,
 msl.`field_elevation_avg_value`,
 
-
-CONVERT(boundaries.field_boundaries_value  USING utf8) as geom
+ST_GeomFromText(boundaries.field_boundaries_value  ) as geom
 
 FROM `node` basetable
 
