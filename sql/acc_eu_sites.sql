@@ -36,6 +36,6 @@ ON network.`entity_id` = affiliation.`field_affiliation_target_id`
 WHERE 
 	coordinates.`field_coordinates_lat` AND 
 	verified.`field_network_verified_value` = 1 AND 
-	network.`field_network_target_id` IN (10463, 10723, 230, 231, 233, 235, 237, 238, 240, 241, 242, 243, 247, 248, 250, 217, 218, 221, 222, 226, 227, 228, 209, 208, 239, 210) 
+	network.`field_network_target_id` = 12974
 	
 	AND NOT status.`field_site_status_value` = 'abandoned'
