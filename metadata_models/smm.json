@@ -721,7 +721,7 @@
       "Site Type (Spatial Design)": {
         "field_name": "field_site_type",
         "Definition": "Describes the heterogeneity of the observation facility and the addressed gradient (environmental and spatial). Simple sites are defined by addressing a limited number of ecosystems or covering a small spatial scale (e.g. less than 10km²). Complex sites are defined by addressing a broad range of ecosystem types or covering a larger spatial scale. Complex sites are investigating e.g. processes and fluxes on a landscape or regional scale.",
-        "Recommendation & Hints": "Please use the site type to describe the internal complexity of the site in addition to any network specific site classification. In terms of LTER Simple sites are e.g. classical LTER sites measuring ecosystem processes in one or a very limited number of habitats. Complex sites in contrast are classical LTSER sites investigating processes and fluxes on a landscape or regional level or form the bracket over a number of LTER or simple sites.",
+        "Recommendation & Hints": "Please use the site type to describe the internal complexity of the site in addition to any network specific site classification.",
         "Format": "text",
         "Multiplicity": "[0..1]",
         "Required": {
