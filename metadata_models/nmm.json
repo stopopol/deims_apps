@@ -80,7 +80,7 @@
       "Comment": "",
       "Changes from Version 1.0": ""
     },
-    "belongs to": {
+    "Belongs to": {
       "field_name": "field_belongs_to",
       "Definition": "Other networks/network groups or research infrastructure associated",
       "Recommendation & Hints": "",
