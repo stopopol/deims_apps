@@ -79,21 +79,21 @@
       "Reference list": "",
       "Comment": "",
       "Changes from Version 1.0": ""
-    }
-  },
-  "belongs to": {
-    "field_name": "field_belongs_to",
-    "Definition": "Other networks/network groups or research infrastructure associated",
-    "Recommendation & Hints": "",
-    "Format": "Reference to [content type NETWORK]",
-    "Multiplicity": "[0..n]",
-    "Required": {
-      "LTER Europe": "FALSE",
-      "ILTER": "FALSE"
     },
-    "Example": "GERI",
-    "Reference list": "Reference to [content type NETWORK]",
-    "Comment": "",
-    "Changes from Version 1.0": ""
+    "belongs to": {
+      "field_name": "field_belongs_to",
+      "Definition": "Other networks/network groups or research infrastructure associated",
+      "Recommendation & Hints": "",
+      "Format": "Reference to [content type NETWORK]",
+      "Multiplicity": "[0..n]",
+      "Required": {
+        "LTER Europe": "FALSE",
+        "ILTER": "FALSE"
+      },
+      "Example": "GERI",
+      "Reference list": "Reference to [content type NETWORK]",
+      "Comment": "",
+      "Changes from Version 1.0": ""
+    }
   }
 }
