@@ -1,24 +1,31 @@
 CREATE OR REPLACE VIEW `ecopotential_sites` AS 
-SELECT
 
-`NAME`.`field_site_sitelong_value`                                                 AS name,
-CONCAT('https://deims.org/', basetable.`uuid`)                                     AS deimsid,
-`basetable`.`nid`                                                                  AS nid,
-`coordinates`.`field_coordinates_lat`                                              AS field_coordinates_lat,
-`coordinates`.`field_coordinates_lon`                                              AS field_coordinates_lon,
-msl.`field_elevation_average_value`,
-point(`coordinates`.`field_coordinates_lon`,`coordinates`.`field_coordinates_lat`) AS `geom`
+SELECT 
+name.`field_name_value` AS name,
+CONCAT('https://deims.org/', basetable.`uuid`) as deimsid,
+coordinates.`field_coordinates_lat`, 
+coordinates.`field_coordinates_lon`,
+msl.`field_elevation_avg_value`,
 
-FROM   `node` `basetable` 
-JOIN   `field_data_field_coordinates` `coordinates` 
-ON `coordinates`.`entity_id` = `basetable`.`nid`
+point(`coordinates`.`field_coordinates_lon`,`coordinates`.`field_coordinates_lat`) AS `geom` 
 
-JOIN   `field_data_field_site_sitelong` `NAME` 
-ON    `NAME`.`entity_id` = `basetable`.`nid`
+FROM `node` basetable
+INNER JOIN `node__field_coordinates` coordinates
+ON coordinates.`entity_id` = basetable.`nid`
 
-LEFT JOIN `field_data_field_elevation_average` msl
+INNER JOIN `node__field_name` as name
+ON name.`entity_id` = basetable.`nid`
+
+LEFT JOIN `node__field_elevation_avg` as msl
 ON msl.`entity_id` = basetable.`nid`
 
-JOIN   `field_data_field_networks_term_ref` `project_networks` 
-ON     `project_networks`.`entity_id` = `basetable`.`nid`
-WHERE `project_networks`.`field_networks_term_ref_tid` = 52260
+LEFT JOIN `node__field_site_status` as status
+ON status.`entity_id` = basetable.`nid`
+
+-- join via entity_id and paragraph_id
+
+LEFT JOIN `node__field_projects` as projects
+ON projects.`entity_id` = basetable.`nid`
+
+
+WHERE projects.`field_projects_target_id` = 52260
