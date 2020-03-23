@@ -153,11 +153,11 @@
         "field_name": "field_site_manager",
         "Definition": "Reference to the contact person responsible for the site. The person could be either the principal investigator (PI, co-PI), the information manager (IM), the site manager (SM) or a technician (TE).",
         "Recommendation & Hints": "Please provide the reference to the person or organisation responsible for the site. Please start typing the name of the person/organisation. If the person/organisation is not in the list, please add first the person/organisation using the respective form.",
-        "Format": "Reference to [content type PERSON/ORGANISATION]",
+        "Format": "Reference to [content type PERSON]",
         "Multiplicity": "[1..n]",
         "Required": true,
         "Example": "Dirnböck, Thomas",
-        "Reference list": "Reference to [content type PERSON/ORGANISATION]",
+        "Reference list": "Reference to [content type PERSON]",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
