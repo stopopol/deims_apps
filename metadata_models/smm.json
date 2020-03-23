@@ -161,11 +161,11 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "Site Owner": {
+      "Operating Organisation": {
         "field_name": "field_site_owner",
-        "Definition": "Reference to the contact person/organisation owning the site.",
-        "Recommendation & Hints": "Please provide the reference to the person/organisation responsible for the site. Please start typing the name of the person. If the person/organisation is not in the list, please add first the person/organisation using the respective form.",
-        "Format": "Reference to [content type PERSON/ORGANISATION]",
+        "Definition": "Organisation operating the site and its monitoring programme(s)",
+        "Recommendation & Hints": "Please provide the reference to the organisation responsible for the site. Please start typing the name of the organisation. If the organisation is not in the list, please add first the organisation using the respective form.",
+        "Format": "Reference to [content type ORGANISATION]",
         "Multiplicity": "[1..n]",
         "Required": {
           "LTER Europe": "TRUE",
