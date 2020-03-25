@@ -7,6 +7,4 @@ for code in `jq .[].id.suffix deims_datasets.json | sed "s/\"//g"`; do  echo $co
 wget  -O  deims_activities.json https://deims.org/api/activities
 for code in `jq .[].id.suffix deims_activities.json | sed "s/\"//g"`; do  echo $code; wget "https://pydeims.dev.klimeto.com/gmd/activity?uuid=${code}" -O ${code}_activity.xml; done
 
-rm deims_sites.json
-rm deims_datasets.json
-rm deims_activities.json
+rm deims_sites.json deims_datasets.json deims_activities.json
