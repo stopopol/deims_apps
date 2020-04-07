@@ -225,7 +225,7 @@
     "Geographic": {
       "Country": {
         "field_name": "field_country",
-        "Definition": "Country the site is located in.",
+        "Definition": "Country the site is located in",
         "Recommendation & Hints": "Please provide the name of the country/countries in which the observation or experimentation facility is located. It describes in which country the site is geographically located, even if associated networks/RIs are located in another country. If your site is transnational, please select as many countries as necessary.",
         "Format": "Reference list",
         "Multiplicity": "[1..n]",
@@ -300,7 +300,7 @@
       "Centroid Coordinates": {
         "field_name": "field_coordinates",
         "Definition": "This is the location of the site in the geographic space, given as a center coordinates expressed in latitude and longitude in decimal degrees.",
-        "Recommendation & Hints": "Please provide the centre coordinates of the site by placing a marker on the map (resize your browser window if the canvas is not clearly visible) or directly paste the coordinates as geojson, e.g.\n{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"Point\",\"coordinates\":[13.166908,46.583028]}}]}\n\nPasting incorrect geojson data might break the form. ",
+        "Recommendation & Hints": "Please provide the centre coordinates of the site by placing a marker on the map (resize your browser window if the canvas is not clearly visible) or directly paste the coordinates (longitude and latitude, or easting and northing) as geojson, e.g.\n{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"Point\",\"coordinates\":[13.166908,46.583028]}}]}\n\nPasting incorrect geojson data might break the form. ",
         "Format": "Number(decimal) for each center coordinate, format XX.XXXXX",
         "Multiplicity": "[1..1]",
         "Required": {
