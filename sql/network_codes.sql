@@ -17,9 +17,9 @@ ON name.`entity_id` = basetable.`nid`
 LEFT JOIN `node__field_affiliation` as affiliation
 ON affiliation.`entity_id` = basetable.`nid`
 
-LEFT JOIN `paragraph__field_network_verified` as verified
-ON verified.`entity_id` = affiliation.`field_affiliation_target_id`
-
 LEFT JOIN `paragraph__field_network` as network
 ON network.`entity_id` = affiliation.`field_affiliation_target_id`
 
+JOIN `node__field_affiliation` as affiliation2
+ON affiliation2.`entity_id` = basetable.`nid`
+WHERE  affiliation2.`field_network_target_id` = 12825
