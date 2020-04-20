@@ -5,7 +5,6 @@ CREATE OR REPLACE VIEW to_be_accredited AS
 SELECT DISTINCT
 name.`field_name_value` AS name,
 CONCAT('https://deims.org/', basetable.`uuid`) as deimsid,
-network.`field_network_target_id`
 
 FROM `node` basetable
 
