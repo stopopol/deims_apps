@@ -1,5 +1,6 @@
 
 # This script tells you what sites co-located ICOS - LTER sites
+# python 3.8.2
 
 import csv
 import urllib.request
@@ -9,7 +10,7 @@ import json
 url = "https://deims.org/api/sites?format=csv"
 csv_stream = urllib.request.urlopen(url)
 csvfile = csv.reader(codecs.iterdecode(csv_stream, 'utf-8'),  delimiter=';')
-next(csvfile) # ignore first row
+next(csvfile) # ignore first ro
 
 counter_var = 0
 print ("The following sites are ICOS-ILTER co-located:")
@@ -29,9 +30,13 @@ for line in csvfile:
         icos = False 
         ilter = False
         for network in network_attributes: 
-            network_element = network.get('network').get('id').get('suffix')
-            if network_element == '80633d38-4c85-4ee0-a4ce-7bbbd99c888c': icos = True
-            if network_element == '1aa7ccb2-a14b-43d6-90ac-5e0a6bc1d65b': ilter = True
+            try:
+                network_id = network.get('network').get('id').get('suffix')
+            except:
+                print("An exception occurred with record: " + site_json_url)
+                continue
+            if network_id == '80633d38-4c85-4ee0-a4ce-7bbbd99c888c': icos = True
+            if network_id == '1aa7ccb2-a14b-43d6-90ac-5e0a6bc1d65b': ilter = True
         if (icos == True and ilter == True): 
             print("https://deims.org/"+ line[2] + ' ' + parsed_site_json.get('title')) 
 
