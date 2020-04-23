@@ -9,7 +9,7 @@ import json
 url = "https://deims.org/api/sites?format=csv"
 csv_stream = urllib.request.urlopen(url)
 csvfile = csv.reader(codecs.iterdecode(csv_stream, 'utf-8'),  delimiter=';')
-next(csvfile) # ignore first ro
+next(csvfile) # ignore first row
 
 counter_var = 0
 print ("The following sites are ICOS-ILTER co-located:")
