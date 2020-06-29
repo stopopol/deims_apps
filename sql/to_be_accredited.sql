@@ -14,7 +14,7 @@ ON coordinates.`entity_id` = basetable.`nid`
 INNER JOIN `node__field_name` as name
 ON name.`entity_id` = basetable.`nid`
 
-INNER JOIN `node__field_site_status` as status
+INNER JOIN `node__field_status` as status
 ON status.`entity_id` = basetable.`nid`
 
 INNER JOIN `node__field_metadata_provider` as metadata_provider
