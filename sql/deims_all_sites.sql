@@ -19,7 +19,8 @@ ON name.`entity_id` = basetable.`nid`
 LEFT JOIN `node__field_elevation_avg` as msl
 ON msl.`entity_id` = basetable.`nid`
 
-LEFT JOIN `node__field_site_status` as status
+LEFT JOIN `node__field_status` as status
 ON status.`entity_id` = basetable.`nid`
 
-WHERE coordinates.`field_coordinates_lat` AND NOT status.`field_site_status_value` = 'abandoned'
+WHERE coordinates.`field_coordinates_lat` AND NOT status.`field_status_target_id` = 54180
+-- 54180 is term number for closed sites
