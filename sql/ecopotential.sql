@@ -19,7 +19,7 @@ ON name.`entity_id` = basetable.`nid`
 LEFT JOIN `node__field_elevation_avg` as msl
 ON msl.`entity_id` = basetable.`nid`
 
-LEFT JOIN `node__field_site_status` as status
+LEFT JOIN `node__field_status` as status
 ON status.`entity_id` = basetable.`nid`
 
 -- join via entity_id and paragraph_id
