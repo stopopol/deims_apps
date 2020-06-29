@@ -19,7 +19,7 @@ ON name.`entity_id` = basetable.`nid`
 LEFT JOIN `node__field_elevation_avg` as msl
 ON msl.`entity_id` = basetable.`nid`
 
-LEFT JOIN `node__field_site_status` as status
+LEFT JOIN `node__field_status` as status
 ON status.`entity_id` = basetable.`nid`
 
 -- join via entity_id and paragraph_id
@@ -38,4 +38,4 @@ WHERE
 	verified.`field_network_verified_value` = 1 AND 
 	network.`field_network_target_id` = 12967 
 	
-	AND NOT status.`field_site_status_value` = 'abandoned'
+	AND NOT status.`field_status_target_id` = 54180
