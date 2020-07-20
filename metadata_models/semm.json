@@ -203,7 +203,7 @@
           "Required": false,
           "Example": "",
           "Reference list": "",
-          "Comment": "One UOM per measurement"
+          "Comment": "One unit of measurement per measurement"
         }
       }
     }
