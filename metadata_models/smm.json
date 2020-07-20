@@ -658,7 +658,7 @@
       },
       "Affiliation": {
         "field_name": "field_affiliation",
-        "Definition": "Description in which networks/RIs the site is listed. The information is composed of the name of the network and the identifier or the short name of the site within this network or project. This comprises global, international as well as national or regional networks, if relevant. Also includes the site code of the respective network if existant and a verification status that is set centrally based cooperations with the respective networks/RIs.",
+        "Definition": "Description in which networks/RIs the site is listed. The information is composed of the name of the network and the identifier or the short name of the site within this network or project. This comprises global, international as well as national or regional networks, if relevant. It also includes the site code of the respective network if existant and a verification status that is set centrally based cooperations with the respective networks/RIs.",
         "Recommendation & Hints": "Please select any network/research infrastructure affiliation from the list. Should any relevant network/research infrastructure be missing from the list, please contact us.",
         "Format": "reference",
         "Multiplicity": "[0..n]",
