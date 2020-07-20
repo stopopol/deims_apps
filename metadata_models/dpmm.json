@@ -1,5 +1,5 @@
 {
-  "name": "Data Product Metadata Model",
+  "name": "Activity Metadata Model",
   "abbreviation": "DPMM",
   "version": 1.01,
   "releaseDate": "2018-01-01T00:00:00.000Z",
@@ -166,8 +166,8 @@
     "Availability": {
       "Source": {
         "field_name": "field_availability",
-        "Definition": "If data is available online, please provide a reference to it.",
-        "Recommendation & Hints": "",
+        "Definition": "",
+        "Recommendation & Hints": "If data is available online, please provide a reference to it.",
         "Format": "link",
         "Multiplicity": "[0..1]",
         "Required": {
