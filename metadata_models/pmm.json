@@ -1,13 +1,13 @@
 {
   "name": "Person Metadata Model",
   "abbreviation": "PMM",
-  "version": 1.01,
-  "releaseDate": "2018-01-02T00:00:00.000Z",
+  "version": 1.02,
+  "releaseDate": "2020-07-02T00:00:00.000Z",
   "scope": "The person data model describes the metadata elements of any person record on DEIMS-SDR. It provides a source for metadata provider, contact points and site managers (basic contact information). The required information is a the full name. The person data model applies for physical persons, e.g. researcher or administrative persons.",
   "content": {
     "General information": {
       "Name": {
-        "field_name": "field_name",
+        "field_name": "field_person_name",
         "Definition": "The data type 'Full name' is defined as the full name of a physical or administrative person (organisation). It is composed of the title (1.1), the first name (1.2) and the last name (1.3). Title and first name does not apply to organisations.",
         "Recommendation & Hints": "Please provide the full name for the person. In case of a organisation the name of the organisation is provided in 1.3 Last name. For physical persons please provide title, first and last name.",
         "Format": "Text(255)",
