@@ -73,7 +73,7 @@
         "Comment": ""
       },
       "Keywords": {
-        "field_name": "field_keywords_envthes",
+        "field_name": "field_keywords",
         "Definition": "Describes the sensor with keywords",
         "Recommendation & Hints": "",
         "Format": "",
