@@ -120,7 +120,7 @@
         "Comment": "Is mandatory if sensor is stationary"
       },
       "Position (elevation)": {
-        "field_name": "field_elevation_average",
+        "field_name": "field_elevation_avg",
         "Definition": "Elevation in [m] above or below sea level",
         "Recommendation & Hints": "",
         "Format": "number",
