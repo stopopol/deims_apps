@@ -249,17 +249,6 @@
           ],
           "Comment": "Consists of three subfields (Distribution Function, Distribution URL, Email), depending on choice in distribution function distribution url and email are visible and required "
         }
-      },
-      "Data sources": {
-        "field_name": "field_data_sources",
-        "Definition": "A data source is defined as a physical data upload of a dataset to DEIMS. A data source is described by a number of fields, describing the structure of the data file. For a dataset MD record [0..n] data files can be physically uploaded and described.",
-        "Recommendation & Hints": "The concept of the data source is used, when data files are physically uploaded to DEIMS. This is not recommended. Please used the 'online distribution link' instead, pointing to an online resource, e.g. file uploaded to B2SHARE.",
-        "Format": "",
-        "Multiplicity": "[0..n]",
-        "Required": false,
-        "Example": "",
-        "Reference list": "",
-        "Comment": ""
       }
     },
     "Method I": {
