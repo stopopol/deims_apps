@@ -135,7 +135,7 @@
     },
     "Specialities": {
       "Speciality": {
-        "field_name": "field_person_specialty_term",
+        "field_name": "field_specialities",
         "Definition": "Description of domain/field of work a person is proficient in.",
         "Recommendation & Hints": "",
         "Format": "Text (LOV)",
