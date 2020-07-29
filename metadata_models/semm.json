@@ -132,7 +132,7 @@
         "Comment": "Is mandatory if sensor is mobile"
       },
       "Trajectory": {
-        "field_name": "field_geo_bounding_box",
+        "field_name": "field_boundaries",
         "Definition": "Describes the trajectory of the sensor ",
         "Recommendation & Hints": "",
         "Format": "",
@@ -156,7 +156,7 @@
         "Comment": ""
       },
       "resultAcquisitionSource": {
-        "field_name": "field_resultacquisitionsource",
+        "field_name": "field_result_acquisition_source",
         "Definition": "Categories for different types of the ResultAcquisitionSource.",
         "Recommendation & Hints": "",
         "Format": "",
@@ -172,7 +172,7 @@
         "Comment": ""
       },
       "media monitored": {
-        "field_name": "field_parameters_taxonomy",
+        "field_name": "field_parameters",
         "Definition": "Describes the media(s) that are observed/measured by the sensor",
         "Recommendation & Hints": "",
         "Format": "",
@@ -184,7 +184,7 @@
       },
       "Observation(s)": {
         "Measure": {
-          "field_name": "",
+          "field_name": "field_observation",
           "Definition": "",
           "Recommendation & Hints": "",
           "Format": "",
