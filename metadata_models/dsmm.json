@@ -121,7 +121,7 @@
     },
     "Keywords": {
       "Keywords": {
-        "field_name": "field_keywords_envthes",
+        "field_name": "field_keywords",
         "Definition": "Provides a set of related keywords describing the content of the dataset derived from the controlled vocabulary implemented by EnvThes - thesaurus for long term ecological research, monitoring, experiments EnvThes and other environmentally related thesauri as the EUNIS Habitats. Additional concepts can be defined as free keywords.",
         "Recommendation & Hints": "",
         "Format": "",
