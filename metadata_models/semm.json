@@ -1,8 +1,8 @@
 {
   "name": "Sensor Metadata Model",
   "abbreviation": "SeMM",
-  "version": 0.9,
-  "releaseDate": "2019-10-09T00:00:00.000Z",
+  "version": 0.91,
+  "releaseDate": "2020-07-09T00:00:00.000Z",
   "scope": "The Sensor Metadata Model (SeMM) describes the metadata elements of a device, module, or subsystem whose purpose is to detect events or changes in its environment or its observation time series",
   "content": {
     "General information": {
@@ -40,7 +40,7 @@
         "Comment": "Automatically generated"
       },
       "Related site": {
-        "field_name": "field_parent_site_name",
+        "field_name": "field_related_site",
         "Definition": "The location, where specific observations are carried out",
         "Recommendation & Hints": "",
         "Format": "",
