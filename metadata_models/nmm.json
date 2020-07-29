@@ -1,8 +1,8 @@
 {
   "name": "Network Metadata Model",
   "abbreviation": "NMM",
-  "version": 1.11,
-  "releaseDate": "2020-03-09T00:00:00.000Z",
+  "version": 1.12,
+  "releaseDate": "2020-07-09T00:00:00.000Z",
   "scope": "The network metadata model (NMM) is a generalised entity meant to be able to describe a variety of research networks, network groups or research infrastructures",
   "content": {
     "UUID": {
@@ -91,6 +91,21 @@
         "ILTER": "FALSE"
       },
       "Example": "GERI",
+      "Reference list": "Reference to [content type NETWORK]",
+      "Comment": "",
+      "Changes from Version 1.0": ""
+    },
+     "Consists of": {
+      "field_name": "field_consists_of",
+      "Definition": "Other networks/network groups or research infrastructure associated",
+      "Recommendation & Hints": "",
+      "Format": "Reference to [content type NETWORK]",
+      "Multiplicity": "[0..n]",
+      "Required": {
+        "LTER Europe": "FALSE",
+        "ILTER": "FALSE"
+      },
+      "Example": "LTER AUstria",
       "Reference list": "Reference to [content type NETWORK]",
       "Comment": "",
       "Changes from Version 1.0": ""
