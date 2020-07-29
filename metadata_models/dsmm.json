@@ -51,7 +51,7 @@
         "Comment": ""
       },
       "Date range": {
-        "field_name": "field_date_range\t",
+        "field_name": "field_date_range",
         "Definition": "Defines the time period covered by the content of the dataset. This period may be expressed as a time (an individual date) or date ranges (interval of dates/From-To) or a mix of individual and interval dates.",
         "Recommendation & Hints": "",
         "Format": "Date",
@@ -145,7 +145,7 @@
     },
     "Observation": {
       "Parameters": {
-        "field_name": "field_parameters_taxonomy",
+        "field_name": "field_parameters",
         "Definition": "Description of the observed parameters and parameter groups. The parameter is defined as property of the ecosystem or a ecosystem compartment which can be observed either by sensors or humans, e.g. pH, species number, radiation.",
         "Recommendation & Hints": "",
         "Format": "",
@@ -169,7 +169,7 @@
     },
     "Geographic": {
       "Bounding box, elevation, etc.": {
-        "field_name": "field_related_sites",
+        "field_name": "field_observation_location",
         "Definition": "The Geographic reference for the dataset is done by the entity type Observation location, which is the location, where specific observations are done. By grouping the information the entity type Observation location can be reused. An Observation location describes the observation plots within a SITE (e.g. LTER SITE or LTSER PLATFORM).The Observation location is the extent of the dataset in the geographic space, given as a bounding box. Defining the coordinates of a boundary rectangle representing the dataset area on a map allows the discovery by geographical area. It consists of: Northern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Southern bound coordinate of the limit of the dataset extent, expressed in latitude in decimal degrees (positive north), Western bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east) and Eastern bound coordinate of the limit of the dataset extent, expressed in longitude in decimal degrees (positive east). In addition the bounding altitudes, images and additional details can be provided.",
         "Recommendation & Hints": "Please select an Observation location from the list, or create a new one with 'Create Observation location' if missing. For the Observation location the bounding box shall be as small as possible and shall be expressed in decimal degree with a precision of at least two decimals. The coordinates of the bounding boxes shall be expressed in any geodetic coordinate reference system with the Greenwich Prime Meridian. You can define bounding box either by drawing a polygon on a map or inserting manually the bounding coordinates. To activate drawing functionality and to (move, delete, reshape) use the editing tool-bar in the right top corner of the map. If you would like to define more bounding coordinates, please add more Observation location for the dataset MD record.",
         "Format": "Reference to [Content Type] Observation location",
