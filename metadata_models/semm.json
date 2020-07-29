@@ -6,7 +6,7 @@
   "scope": "The Sensor Metadata Model (SeMM) describes the metadata elements of a device, module, or subsystem whose purpose is to detect events or changes in its environment or its observation time series",
   "content": {
     "General information": {
-      "Name/ID\n": {
+      "Name/ID": {
         "field_name": "title",
         "Definition": "Custom name or identifier that describes the sensor.",
         "Recommendation & Hints": "",
@@ -84,7 +84,7 @@
         "Comment": ""
       },
       "Contact": {
-        "field_name": "field_person_contact",
+        "field_name": "field_contact",
         "Definition": "Person/Organisation that is associated with the sensor",
         "Recommendation & Hints": "",
         "Format": "",
