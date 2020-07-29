@@ -67,7 +67,7 @@
         "Changes from Version 1.0": ""
       },
       "Parameters": {
-        "field_name": "field_parameters_taxonomy",
+        "field_name": "field_parameters",
         "Definition": "Description of the observed parameters and parameter groups at the site. The parameter is defined as property of the ecosystem or a ecosystem compartment which can be observed either by sensors or humans, e.g. pH, species number, radiation.",
         "Recommendation & Hints": "Please indicate the parameters observed at the site. Please record every measured parameter. The reference list is defined by the entries in EnvThes category 'measure'",
         "Format": "Text (LOV)",
@@ -80,7 +80,7 @@
         "Changes from Version 1.0": ""
       },
       "Keywords": {
-        "field_name": "field_keywords_envthes",
+        "field_name": "field_keywords",
         "Definition": "Provides a set of related keywords describing the content of the dataset derived from the controlled vocabulary implemented by EnvThes - thesaurus for long term ecological research, monitoring, experiments EnvThes and other environmentally related thesauri as EUNIS Habitats and INSPIRE Spatial Data Themes. Additional concepts can be defined as free keywords.",
         "Recommendation & Hints": "",
         "Format": "Reference to [Taxonomy] LTER Controlled Vocabulary",
