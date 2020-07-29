@@ -121,7 +121,7 @@
     },
     "Records": {
       "ORCID": {
-        "field_name": "field_person_orcid",
+        "field_name": "field_orcid",
         "Definition": "Non-proprietary alphanumeric code to uniquely identify scientific and other academic authors and contributors.",
         "Recommendation & Hints": "",
         "Format": "Reference list",
