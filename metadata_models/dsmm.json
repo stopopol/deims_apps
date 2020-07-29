@@ -18,7 +18,7 @@
     },
     "General": {
       "Related site": {
-        "field_name": "field_dataset_site_name_ref",
+        "field_name": "field_related_site",
         "Definition": "Reference to the site which is associated with the dataset. The relation could either be a spatial or thematic.",
         "Recommendation & Hints": "Select the site that is associated with this dataset from the list. Should the site not exist yet, please create one using the respective form.",
         "Format": "Reference to [Content Type] SITE",
