@@ -471,19 +471,6 @@
           "Other directive"
         ],
         "Comment": ""
-      },
-      "Related information": {
-        "Related publications": {
-          "field_name": "field_related_publications",
-          "Definition": "Link to publication related to the dataset",
-          "Recommendation & Hints": "",
-          "Format": "",
-          "Multiplicity": "[0..n]",
-          "Required": false,
-          "Example": "",
-          "Reference list": "",
-          "Comment": ""
-        }
       }
     }
   }
