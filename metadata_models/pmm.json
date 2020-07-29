@@ -107,7 +107,7 @@
         "Changes from Version 1.0": ""
       },
       "Networks/Projects": {
-        "field_name": "field_networks_term_ref",
+        "field_name": "field_networks",
         "Definition": "Description in which other networks or projects the person/organisation is participating. This comprises global, international as well as national or regional networks and projects, if relevant. The assignment of the network or project is based on the network or project abbreviation, e.g. EU-BON, EnvEurope, ExpeER or GLORIA, which is managed as extensible vocabulary. The short name is the abbreviation of the research site within this network or project.",
         "Recommendation & Hints": "There are several levels: International (global), Regional (more than one country. Regional Networks may be specifically identified, for example, European), National (pertains only to one country or a part of one country). Enter other networks or projects to which the person/organisation does or did belong to.",
         "Format": "",
@@ -115,22 +115,6 @@
         "Required": false,
         "Example": "",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
-      },
-      "LTER member network": {
-        "field_name": "field_ilter_national_network_nam",
-        "Definition": "Affiliation of the site to a LTER network (or related network).",
-        "Recommendation & Hints": "",
-        "Format": "Reference to [content type 'LTER member network']",
-        "Multiplicity": "[0..1]",
-        "Dependency": "field_networks_term_ref",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
-        "Example": "Austria (LTER-Austria)",
-        "Reference list": "Reference to [content type 'LTER member network']",
         "Comment": "",
         "Changes from Version 1.0": ""
       }
