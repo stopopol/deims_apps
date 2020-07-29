@@ -933,7 +933,7 @@
     "Protection Status and Resource Management": {
       "Protection programme": {
         "Protection programme": {
-          "field_name": "field_site_protection_prog_ref",
+          "field_name": "field_protection_programme",
           "Definition": "Description of the protection status of the site. The information is composed of the protection program (e.g. IUCN National Park), the cover of protected areas within the site and additional notes on the protection. As each site can be protected by different programs and therefore more than one values can be given.",
           "Recommendation & Hints": "Please select the protection program and an estimate of the share of the protected area within the site from the list of values. In addition textual notes can be given.",
           "Format": "text (LOV)",
