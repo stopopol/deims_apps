@@ -253,7 +253,7 @@
     },
     "Method I": {
       "Method": {
-        "field_name": "field_related_links",
+        "field_name": "field_method",
         "Definition": "Provides repeated sets of elements that document a series of procedures followed to produce any dataset object.",
         "Recommendation & Hints": "If the method description is available online (e.g. previous research resulting in new methodologies, guidelines, specifications, and standards) provide the Method title and URL pointing to the description. This information shall include information about procedure steps, software used within individual steps, source data and any quality measures taken. All information included here should help future data user to evaluate and understand more about the dataset content, thus allow the user to determine whether he/she would be able to combine the dataset within his/her workflows.",
         "Format": "",
@@ -264,7 +264,7 @@
         "Comment": ""
       },
       "Method description": {
-        "field_name": "field_methods",
+        "field_name": "field_method_description",
         "Definition": "Provides repeated sets of elements that document a series of procedures followed to produce any dataset object.",
         "Recommendation & Hints": "",
         "Format": "text",
