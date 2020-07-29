@@ -30,31 +30,6 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "Position": {
-        "field_name": "field_person_role",
-        "Definition": "The attribute 'Position' is defined as the role or position the person has within the organisation. For organisations this information is kept blank.",
-        "Recommendation & Hints": "Please provide information on the role and position the person has within the organisation or research network/site. For organisations this information is kept blank.",
-        "Format": "Text",
-        "Multiplicity": "[0..1]",
-        "Required": false,
-        "Example": "Lead Principal Investigator",
-        "Reference list": [
-          "COPI|Researcher",
-          "SC|Site Coordinator",
-          "NC|Network Coordinator",
-          "IM|Information Manager",
-          "FA|Faculty Associate",
-          "PDA|Post Doctoral Associate",
-          "OP|Other Professional",
-          "GS|Graduate Student",
-          "US|Undergraduate Student",
-          "OS|Other Staff",
-          "I|Interested Party",
-          "LPI|Lead Principal Investigator"
-        ],
-        "Comment": "",
-        "Changes from Version 1.0": ""
-      },
       "Photo": {
         "field_name": "field_images",
         "Definition": "Photograph of person or logo of a organisation.",
