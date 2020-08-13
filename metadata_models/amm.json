@@ -32,7 +32,7 @@
       },
       "Related Site": {
         "field_name": "field_parent_site_name",
-        "Definition": "Reference to the parent LTSER Platform in which the site is located. The relation could either be a spatial or thematic.",
+        "Definition": "Reference to the site where this activity is carried out.",
         "Recommendation & Hints": "Please provide the reference to the LTSER Platform (by Site name) in which the site is located.",
         "Format": "Reference to a Site name [content type site]",
         "Multiplicity": "[0..1]",
