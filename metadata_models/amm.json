@@ -183,7 +183,7 @@
         "field_name": "field_site_data_notes",
         "Definition": "",
         "Recommendation & Hints": "",
-        "Format": "link",
+        "Format": "text",
         "Multiplicity": "[0..1]",
         "Required": false,
         "Example": "",
