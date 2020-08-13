@@ -223,11 +223,11 @@
       "Responsible party": {
         "field_name": "field_person_creator",
         "Definition": "Provides the full name of the organisation/person(s), who created the dataset and/or who serve as contact points.",
-        "Recommendation & Hints": "By typing the name of a person/organisation, the system provides a list of people/organisation matching the query. If none available, it's strongly recommended to first create a person/organisation using the respective form and then return back to dataset metadata definition.",
+        "Recommendation & Hints": "By typing the name of a person/organisation, the system provides a list of people/organisation matching the query. If none available, it's strongly recommended to first create a person/organisation using the respective form and then return back to the metadata form.",
         "Format": "Reference [Content Type] Person",
         "Multiplicity": "[1..n]",
         "Required": false,
-        "Example": "Johannes Kobler",
+        "Example": "John Doe",
         "Reference List": "Reference [Content Type] Organisation/Person",
         "Comment": "",
         "Changes from Version 1.0": ""
