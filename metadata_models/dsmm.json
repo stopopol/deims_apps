@@ -57,8 +57,8 @@
         "Format": "Date",
         "Multiplicity": "[1..1]",
         "Required": true,
-        "Example": "",
-        "Reference list": "From date: 01/01/2014; To date: 12/31/2014",
+        "Example": "From date: 01/01/2014; To date: 12/31/2014",
+        "Reference list": "",
         "Comment": ""
       },
       "UUID": {
