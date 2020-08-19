@@ -19,7 +19,7 @@
     "General": {
       "Related site": {
         "field_name": "field_related_site",
-        "Definition": "Reference to the site which is associated with the dataset. The relation could either be a spatial or thematic.",
+        "Definition": "Reference to the site which is associated with the dataset.",
         "Recommendation & Hints": "Select the site that is associated with this dataset from the list. Should the site not exist yet, please create one using the respective form.",
         "Format": "Reference to [Content Type] SITE",
         "Multiplicity": "[1..n]",
@@ -30,7 +30,7 @@
       },
       "Related activity": {
         "field_name": "field_related_activity",
-        "Definition": "Reference to the activity which is associated with the dataset. The relation could either be a spatial or thematic.",
+        "Definition": "Reference to the activity which is associated with the dataset.",
         "Recommendation & Hints": "Select the activity that is associated with this dataset from the list. Should the activity not exist yet, please create one using the respective form.",
         "Format": "Reference to [Content Type] Activity",
         "Multiplicity": "[0..1]",
