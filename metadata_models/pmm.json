@@ -17,30 +17,6 @@
         "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": ""
-      },
-      "Title (academic)": {
-        "field_name": "field_person_title",
-        "Definition": "Add all academic degrees you hold",
-        "Recommendation & Hints": "",
-        "Format": "",
-        "Multiplicity": "[0..1]",
-        "Required": false,
-        "Example": "MSc",
-        "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
-      },
-      "Photo": {
-        "field_name": "field_images",
-        "Definition": "Photograph of person or logo of a organisation.",
-        "Recommendation & Hints": "Please provide a photograph for the person or a logo for the organisation. You can use any of this image types: png, gif, jpg or jpeg.",
-        "Format": "Image [png, jpg, jpeg, gif, ...]",
-        "Multiplicity": "[0..1]",
-        "Required": false,
-        "Example": "",
-        "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
       }
     },
     "Contact information": {
