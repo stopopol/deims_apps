@@ -23,7 +23,7 @@
     "Network name": {
       "field_name": "field_name",
       "Definition": "Official name identifying the network, network group or research infrastructure.",
-      "Recommendation & Hints": "The network name should be concise and precise, e.g. by a given named place. It should not contain unexplained acronyms or abbreviations. It is recommended a maximum length of 200 characters and keeping the similarity with the ‘official naming’ established in the community.",
+      "Recommendation & Hints": "The network name should be concise and precise. It is recommended to provide an acronym and the full name with a maximum length of 200 characters.",
       "Format": "Text(255)",
       "Multiplicity": "[1..1]",
       "Required": {
