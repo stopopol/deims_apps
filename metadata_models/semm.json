@@ -41,7 +41,7 @@
       },
       "Related site": {
         "field_name": "field_related_site",
-        "Definition": "The location, where specific observations are carried out",
+        "Definition": "The site at which specific observations are carried out",
         "Recommendation & Hints": "",
         "Format": "",
         "Multiplicity": true,
@@ -53,12 +53,12 @@
       "sensorType": {
         "field_name": "field_sensortype",
         "Definition": "Type of sensor, usually further qualified by an application specific code space",
-        "Recommendation & Hints": "",
+        "Recommendation & Hints": "Please specify the site from the dropdown menu, at which the specific measurements/observations are carried out.",
         "Format": "",
         "Multiplicity": "[1..1]",
         "Required": true,
         "Example": "",
-        "Reference list": "",
+        "Reference list": "Site List",
         "Comment": ""
       },
       "Description": {
