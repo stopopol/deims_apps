@@ -643,7 +643,7 @@
     "Network/Project/RI Affiliation": {
       "Is your site part of any network or project?": {
         "field_name": "field_affiliation_condition",
-        "Definition": "Specify whether your site is part of any networks or projects",
+        "Definition": "Specify whether your site is part of any networks, research infrastructures or projects",
         "Recommendation & Hints": "Please check yes or no. If you select yes, the 'Affiliation' field will appear.",
         "Format": "boolean",
         "Multiplicity": "[1..1]",
