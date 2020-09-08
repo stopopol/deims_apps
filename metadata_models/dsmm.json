@@ -304,7 +304,7 @@
         "Recommendation & Hints": "A researcher is establishing a regular sampling grid of biodiversity plots in a catchment. In this case the sampling spatial scale refers to the reference area covered which is the ‘catchment’. The spatial design of the observation is ‘regular’ in this case.\nA researcher establishes a number of climate station on reference locations without statistical design within the research site (e.g. one at the valley bottom and one at the mountain top). In this case the sampling spatial scale depends to the research site, e.g. ‘catchment’ or ‘landscape’, and the sampling spatial design reflects a ‘vertical profile’. In case the climate stations are unrelated, the sampling spatial design is ‘single point’. ",
         "Format": "",
         "Multiplicity": "[1..n]",
-        "Required": true,
+        "Required": false,
         "Example": "",
         "Reference list": {
           "spatial design": [
@@ -339,7 +339,7 @@
         "Recommendation & Hints": "If a sensor is installed continuously measuring air temperature (e.g. each 5 minutes) which is aggregated and provided as half hourly mean the Sampling Time Span is set to ‘30-minutes’ as the best matching concept. The data value provided integrates on all values collected in the defined Sampling Time Span or observation interval. If sample based observations are collected, e.g. nutrient content of soil water using lysimeter, and the sample bottles are collected every week and stored. Every four weeks the mixed sample is analysed providing a data value for the month. In this case the Sampling Time Span is ‘monthly’ as the value integrated over the four weekly samples collected. In case of a vegetation survey which is repeated every 5 years, the Sampling Time Span is set to ‘every 2-5 years’.",
         "Format": "",
         "Multiplicity": "[1..n]",
-        "Required": true,
+        "Required": false,
         "Example": "30-minutes",
         "Reference list": [
           "single measurement",
@@ -371,7 +371,7 @@
         "Recommendation & Hints": "If a sensor is installed continuously measuring air temperature (e.g. each 5 minutes) which is aggregated and provided as half hourly mean the Minimum Sampling Unit is set to ‘minutes’ as the best matching concept. The single observation data in some cases is not stored. In case of Eddy-Flux data both the basic observation and the aggregated calculated fluxes are provided. If sample based observations are collected, e.g. nutrient content of soil water using lysimeter, and the sample bottles are collected every week and stored. Every four weeks the mixed sample is analysed providing a data value for the month. In this case the Minimum Sampling Unit is ‘weekly’ as every week as soil water sample is taken. In case of a vegetation survey which is repeated every 5 years, the Minimum Sampling Unit is ‘not applicable’ as no in-between measurements are taken.",
         "Format": "",
         "Multiplicity": "[1..n]",
-        "Required": true,
+        "Required": false,
         "Example": "minutes",
         "Reference list": [
           "single measurement",
