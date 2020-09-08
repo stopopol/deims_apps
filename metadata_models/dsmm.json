@@ -1,8 +1,8 @@
 {
   "name": "Dataset Metadata Model",
   "abbreviation": "DSMM",
-  "version": 1.07,
-  "releaseDate": "2020-07-07T00:00:00.000Z",
+  "version": 1.08,
+  "releaseDate": "2020-09-07T00:00:00.000Z",
   "scope": "The dataset metadata model (DSMM) is based on requirements defined by the target stakeholder groups. The user requirements for the content were harmonized with the INSPIRE metadata regulation and implemented using Ecological Metadata Language (EML) metadata specification, version 2.1.1. EnvEurope focused on the EML metadata standard (stemming from the US LTER activities) but also provides an interface to discover ISO compliant metadata based on XSLT transformation EML2ISO developed in the project and Geonetwork opensource CSW implementation.",
   "content": {
     "Title": {
