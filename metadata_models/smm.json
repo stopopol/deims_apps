@@ -314,8 +314,8 @@
       },
       "Boundaries": {
         "field_name": "field_boundaries",
-        "Definition": "The geographic extent covering the area of all measurement infrastructures including measurement devices (e.g. soil respiration chambers) as well as permanent plots (e.g. soil sampling)",
-        "Recommendation & Hints": "Please delineate the geographic extent covering the area of all measurement infrastructures including measurement devices (e.g. soil respiration chambers) as well as permanent plots (e.g. soil sampling).",
+        "Definition": "The geographic extent covering the area of all measurement infrastructures including measurement devices (e.g. hydrological observations, soil respiration chambers) as well as permanent plots (e.g. vegetation surveys, soil sampling)",
+        "Recommendation & Hints": "Please delineate the geographic extent covering the area of all measurement infrastructures including measurement devices (e.g. hydrological observations, soil respiration chambers) as well as permanent plots (e.g. vegetation surveys, soil sampling).",
         "Format": "Map/GeoJSON Text field",
         "Multiplicity": "[0..1]",
         "Required": {
