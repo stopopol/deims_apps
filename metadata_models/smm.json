@@ -2,7 +2,7 @@
   "name": "Site Metadata Model",
   "abbreviation": "SMM",
   "version": 1.3,
-  "releaseDate": "2020-11-23T00:00:00.000Z",
+  "releaseDate": "2020-11-30T00:00:00.000Z",
   "scope": "A 'Site' is defined as a basic generic in-situ observation or experimentation facility (of any size and organisation level), where the collection of e.g. bio-physical, environmental, biological or socio-ecological data is conducted. The Site Metadata Model (SMM) describes the metadata elements of a monitoring or experimentation site. The metadata model is based on requirements defined by target stakeholder groups (e.g. ILTER/LTER) and research projects (e.g. EnvEurope, ExpeER, eLTER H2020 or EcoPotential). It defines metadata elements about the organisation (e.g. contact, information, networks), the location, the observation characteristics (e.g. climate, habitats) or available equipment to name just a few. The basic metadata elements are in line with the data specification of the INSPIRE data theme Environmental Monitoring Facilities (EF). An initial mapping was done within the EnvEurope project showing the basic overall compliance.",
   "content": {
     "General": {
@@ -897,6 +897,24 @@
           "Comment": "The information is linked to Observation design. The link needs to be discussed in the next release of the data model for the site. This field should not be considered for LTSER Platforms.",
           "Changes from Version 1.0": ""
         }
+      }
+    },
+    "Protection Status and Resource Management": {
+      "Protection Level (IUCN category)": {
+        "field_name": "field_protection_level",
+        "Definition": "Description of the level of nature protection which is applied for the whole or a part of the site or platforms. For this as a general classification the IUCN Protected Areas Categories are used to ensure consistency.",
+        "Recommendation & Hints": "Should your site be located within or overlapping with a protected area/conservation area, e.g. Natura2000, a National Park or a Habitat/Species Management Area, please select the IUCN category which applies best to your national protected area classification.",
+        "Format": "Reference",
+        "Multiplicity": "[0..n]",
+        "Dependency": "",
+        "Required": {
+          "LTER Europe": "FALSE",
+          "ILTER": "FALSE"
+        },
+        "Example": "Category Ib – Wilderness Area",
+        "Reference list": "http://dd.eionet.europa.eu/vocabulary/cdda/IucnCategoryValue/",
+        "Comment": "",
+        "Changes from Version 1.0": ""
       }
     },
     "Infrastructure and Operation": {
