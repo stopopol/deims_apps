@@ -1,0 +1,111 @@
+{
+  "name": "Observation Location Metadata Model",
+  "abbreviation": "OLMM",
+  "version": 1.00,
+  "releaseDate": "2021-03-02T00:00:00.000Z",
+  "scope": "An 'Observation Location' is defined as ...",
+  "content": {
+    "Name": {
+      "field_name": "field_name",
+      "Definition": "Name identifying the documented observation and/or experimentation facility (site).",
+      "Recommendation & Hints": "The site name should be concise and precise, e.g. by a given named place. It should not contain unexplained acronyms or abbreviations. It is recommended a maximum length of 200 characters and keeping the similarity with the ‘official naming’ established in the community.",
+      "Format": "Text(255)",
+      "Multiplicity": "[1..1]",
+      "Required": true,
+      "Example": "LTER Zöbelboden",
+      "Reference list": "",
+      "Comment": "",
+      "Changes from Version 1.0": ""
+    },
+    "General Description": {
+      "field_name": "field_abstract",
+      "Definition": "A short textual description of the site or platform which includes the location, biophysical characteristics, a brief history, the main scientific purpose at present and major plans for future, a brief overall description of infrastructure, and a brief overall description of available data/information.",
+      "Recommendation & Hints": "Please provide a short site description which could also be used on the web site. This description should cover: a brief history of the site or platform, the main scientific purpose at present and major plans for future, a brief overall description of infrastructure, and a brief overall description of available data/information.",
+      "Format": "Text",
+      "Multiplicity": "[0..1]",
+      "Required": {
+        "LTER Europe": "TRUE",
+        "ILTER": "TRUE"
+      },
+      "Example": "The Zöbelboden was established in 1992 as the only Integrated Monitoring station in Austria under the UN Convention on long-range transboundary air pollution (CLRTAP). In 2006 it became part of LTER Austria. The Zöbelboden covers a small forested catchment (90 ha) of a karstic mountain range (500 to 950 m above sea level) in the Kalkalpen national park. Monitoring and research is focussing on air pollution effects on forested catchments and its interaction with climate change. The Zöbelboden represents one of the best known karst catchments in Europe with long-term data series of the major components of its ecosystems. The Zöbelboden is managed by the Umweltbundesamt GmbH. Sampling of chemical specimen is done by local staff. Chemical analyses are carried out by the laboratory of the Umweltbundesamt in Vienna. All data and metadata from monitoring and research projects are stored in a semantically structured database.",
+      "Reference list": "",
+      "Comment": "",
+      "Changes from Version 1.0": ""
+    },
+    "Images": {
+      "field_name": "field_images",
+      "Definition": "Image showing a characteristic situation at the site. This can include instrumentation, observation plots, aerial imagery etc.",
+      "Recommendation & Hints": "Please provide an image showing a characteristic situation at the site.",
+      "Format": "Image [png, jpg, jpeg, gif, ...]",
+      "Multiplicity": "[0..n]",
+      "Required": {
+        "LTER Europe": "FALSE",
+        "ILTER": "FALSE"
+      },
+      "Example": "",
+      "Reference list": "",
+      "Comment": "Not mandatory, but highly recommended",
+      "Changes from Version 1.0": ""
+    },
+    "Related site": {
+      "field_name": "field_parent_site",
+      "Definition": "Reference to the parent LTSER Platform in which the site is located. The relation could either be a spatial or thematic.",
+      "Recommendation & Hints": "Please provide the reference to the parent Platform/umbrella site in which the site is located (by Site name).",
+      "Format": "Reference to another site record",
+      "Multiplicity": "[0..1]",
+      "Required": {
+        "LTER Europe": "FALSE",
+        "ILTER": "FALSE"
+      },
+      "Example": "LTSER Platform Eisenwurzen (EW)",
+      "Reference list": "see [content type] site",
+      "Comment": "",
+      "Changes from Version 1.0": ""
+    },
+    "Elevation (min)": {
+      "field_name": "field_elevation_min",
+      "Definition": "Average and Bounding elevation range for the site (observation or experimentation facility).",
+      "Recommendation & Hints": "This element consists of three numbers (minimum, maximum and average altitudes) defining height above or below the sea level. As a default vertical coordinate reference system of bounding altitudes Mean sea level height (EPSG: 5714) is used. Negative values are below sea level.",
+      "Format": "numeric(double) in [m] above or below sea level",
+      "Multiplicity": "[0..1]",
+      "Required": {
+        "LTER Europe": "TRUE",
+        "ILTER": "FALSE"
+      },
+      "Example": 520,
+      "Reference list": "",
+      "Comment": "",
+      "Changes from Version 1.0": ""
+    },
+    "Elevation (max)": {
+      "field_name": "field_elevation_max",
+      "Definition": "Average and Bounding elevation range for the site (observation or experimentation facility).",
+      "Recommendation & Hints": "This element consists of three numbers (minimum, maximum and average altitudes) defining height above or below the sea level. As a default vertical coordinate reference system of bounding altitudes Mean sea level height (EPSG: 5714) is used. Negative values are below sea level.",
+      "Format": "numeric(double) in [m] above or below sea level",
+      "Multiplicity": "[0..1]",
+      "Required": {
+        "LTER Europe": "TRUE",
+        "ILTER": "FALSE"
+      },
+      "Example": 990,
+      "Reference list": "",
+      "Comment": "",
+      "Changes from Version 1.0": ""
+    },
+    "Boundaries": {
+      "field_name": "field_boundaries",
+      "Definition": "The geographic extent covering the area of all measurement infrastructures including measurement devices (e.g. hydrological observations, soil respiration chambers) as well as permanent plots (e.g. vegetation surveys, soil sampling)",
+      "Recommendation & Hints": "Please delineate the geographic extent covering the area of all measurement infrastructures including measurement devices (e.g. hydrological observations, soil respiration chambers) as well as permanent plots (e.g. vegetation surveys, soil sampling).",
+      "Format": "Map/GeoJSON Text field",
+      "Multiplicity": "[0..1]",
+      "Required": {
+        "LTER Europe": "FALSE",
+        "ILTER": "FALSE"
+      },
+      "Example": "{\"type\":\"Polygon\",\"coordinates\":[[[-1.3458251953125,48.715370552577],[-1.3458251953125,47.963199868923],[-2.1258544921875,47.963199868923],[-2.1258544921875,48.715370552577],[-1.3458251953125,48.715370552577]]]}",
+      "Reference list": "",
+      "Comment": "",
+      "Changes from Version 1.0": ""
+    }
+  }
+}
