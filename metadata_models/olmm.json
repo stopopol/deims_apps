@@ -7,12 +7,12 @@
   "content": {
     "Name": {
       "field_name": "field_name",
-      "Definition": "Name identifying the documented observation and/or experimentation facility (site).",
-      "Recommendation & Hints": "The site name should be concise and precise, e.g. by a given named place. It should not contain unexplained acronyms or abbreviations. It is recommended a maximum length of 200 characters and keeping the similarity with the ‘official naming’ established in the community.",
+      "Definition": "Name identifying the documented observation location.",
+      "Recommendation & Hints": "The observation location name should be concise and precise, e.g. by a given named place. It should not contain unexplained acronyms or abbreviations. It is recommended a maximum length of 200 characters and keeping the similarity with the ‘official naming’ established in the community.",
       "Format": "Text(255)",
       "Multiplicity": "[1..1]",
       "Required": true,
-      "Example": "LTER Zöbelboden",
+      "Example": "LTER Zöbelboden - Intensive Plot 1",
       "Reference list": "",
       "Comment": "",
       "Changes from Version 1.0": ""
@@ -33,7 +33,7 @@
       "Changes from Version 1.0": ""
     },
     "Observation Location Type": {
-      "field_name": "field_site_type",
+      "field_name": "field_location_type",
       "Definition": "Describes the heterogeneity of the observation facility and the addressed gradient (environmental and spatial). Simple sites are defined by addressing a limited number of ecosystems or covering a small spatial scale (e.g. less than 10km²). Complex sites are defined by addressing a broad range of ecosystem types or covering a larger spatial scale. Complex sites are investigating e.g. processes and fluxes on a landscape or regional scale.",
       "Recommendation & Hints": "Please use the site type to describe the internal complexity of the site in addition to any network specific site classification.",
       "Format": "text",
@@ -42,13 +42,12 @@
         "LTER Europe": "TRUE",
         "ILTER": "TRUE"
       },
-      "Example": "Simple Site",
+      "Example": "Hydrological catchment",
       "Reference list": [
-        "Platform - is defined as any facility consisting of sites which are located in an area with defined boundaries. Besides this physical component, a platform provides multiple services like the networking of client groups (e.g. research, local stakeholders), data management, communication and representation (management component). The elements of platforms represent the main habitats, land use forms and practices relevant for the broader region (up to 10 000 km²) and cover all scales and levels (from local to landscape). Platforms can also represent economic and social units or coincide/overlap with such units where adequate information on land use history, economy and demography is available to allow for socio-ecological research.",
-        "Complex Site - Site, where more than one ecosystem type is observed",
-        "Simple Site - Site, where one ecosystem type is observed",
-        "Sub Site - Site, which is part of a site (umbrella site) or platform, e.g. in case of a thematic site cluster of glacier sites, which are described as one entity",
-        "nA - not applicable"
+        "Hydrological Catchment - The geographical area of land bounded by watersheds draining towards the lowest point of the watershed (e.g river, basin reservoir or ocean).",
+        "Plot - Geographical boundary coordinates of a small scale area in which a parameter is recorded in a spatially continuous fashion (e.g. drone or camera-based monitoring) or in which sensors/sampling locations for a specific parameter are arranged in close proximity to each other",
+        "Survey area - Geographical area that spatially bound sampling activities in during specific surveys, campaigns or a project",
+        "Sampling Area/Sampling Points - Geographical locations/coordinates that define the sampling location either as area or as discrete point"
       ],
       "Comment": "",
       "Changes from Version 1.0": ""
@@ -69,7 +68,7 @@
       "Changes from Version 1.0": ""
     },
     "Related site": {
-      "field_name": "field_parent_site",
+      "field_name": "field_related_site",
       "Definition": "Reference to the parent LTSER Platform in which the site is located. The relation could either be a spatial or thematic.",
       "Recommendation & Hints": "Please provide the reference to the parent Platform/umbrella site in which the site is located (by Site name).",
       "Format": "Reference to another site record",
