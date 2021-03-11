@@ -547,6 +547,52 @@
         "Comment": "The EUNIS classification is only applicable for European sites. Discussion on the level of entries which should be used",
         "Changes from Version 1.0": ""
       },
+      "Landforms": {
+        "field_name": "field_landforms",
+        "Definition": "This field describes the geomorphological landform, i.e. the feature of the solid surface of the Earth, which your site is composed of.",
+        "Recommendation & Hints": "Please tick the landform(s) that your site is composed of. You can select multiple landforms if necessary. Should the list of values be insufficient, feel free to contact us and we will consider extending it.",
+        "Format": "text",
+        "Multiplicity": "[0..n]",
+        "Required": {
+          "LTER Europe": "FALSE",
+          "ILTER": "FALSE"
+        },
+        "Example": "Island",
+        "Reference list": {
+            "Aeolian": [
+                "Desert"
+            ],
+            "Coastal and oceanic":[
+                "Bay/Gulf",
+                "Coast",
+                "Island",
+                "Lagoon",
+                "Ocean"
+            ],
+            "Continental Plain": [
+                "Desert"
+            ],
+            "Depression": [
+                "Basin",
+                "Cave"
+            ],
+            "Fluvial and limnic": [
+                "Canyon",
+                "Delta",
+                "Lake",
+                "River"
+            ],
+            "Mountainous": [
+                "Hill",
+                "Mountain",
+                "Plateau",
+                "Valley"
+            ],
+           "not applicable/not relevant": []
+        },
+        "Comment": "",
+        "Changes from Version 1.0": ""
+      },
       "Additional characteristics": {
         "Geology": {
           "field_name": "field_geology",
