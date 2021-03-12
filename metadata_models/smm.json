@@ -44,8 +44,8 @@
       },
       "Site Description": {
         "field_name": "field_abstract",
-        "Definition": "A short textual description of the site or platform which includes the location, biophysical characteristics, a brief history, the main scientific purpose at present and major plans for future, a brief overall description of infrastructure, and a brief overall description of available data/information.",
-        "Recommendation & Hints": "Please provide a short site description which could also be used on the web site. This description should cover: a brief history of the site or platform, the main scientific purpose at present and major plans for future, a brief overall description of infrastructure, and a brief overall description of available data/information.",
+        "Definition": "A short textual description of the site or platform which includes the location, biophysical characteristics, a brief history, the main scientific purpose.",
+        "Recommendation & Hints": "Please provide a short site description. This description could cover: a brief history of the site, the main scientific purpose.",
         "Format": "Text",
         "Multiplicity": "[0..1]",
         "Required": {
