@@ -1,9 +1,9 @@
 {
-  "name": "Observation Location Metadata Model",
+  "name": "Location Metadata Model",
   "abbreviation": "OLMM",
   "version": 1.01,
   "releaseDate": "2021-03-02T00:00:00.000Z",
-  "scope": "An 'Observation Location' is defined as ...",
+  "scope": "A 'Location' is defined as ...",
   "content": {
     "Name": {
       "field_name": "field_name",
@@ -32,7 +32,7 @@
       "Comment": "",
       "Changes from Version 1.0": ""
     },
-    "Observation Location Type": {
+    "Location Type": {
       "field_name": "field_location_type",
       "Definition": "Describes the heterogeneity of the observation facility and the addressed gradient (environmental and spatial). Simple sites are defined by addressing a limited number of ecosystems or covering a small spatial scale (e.g. less than 10km²). Complex sites are defined by addressing a broad range of ecosystem types or covering a larger spatial scale. Complex sites are investigating e.g. processes and fluxes on a landscape or regional scale.",
       "Recommendation & Hints": "Please use the site type to describe the internal complexity of the site in addition to any network specific site classification.",
