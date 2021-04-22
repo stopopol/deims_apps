@@ -827,7 +827,7 @@
       "Observation Design": {
         "Scale of observation": {
           "field_name": "field_scale_observation",
-          "Definition": "Description of the scale and design of the observations at the site. The information is composed of the scale of the observation as the spatial and thematic extent of the observation at the site, e.g. if is addressing a complete catchment or sub-catchment as well as the design of the observation as the main focus of the effort, being mainly observation or in addition experimental.",
+          "Definition": "	Description of the scale and design of the observations at the site. The information is composed of the scale of the observation as the spatial and thematic extent of the observation at the site, e.g. if is addressing a complete catchment or sub-catchment as well as the design of the observation as the main focus of the effort, being mainly observation or in addition experimental.",
           "Recommendation & Hints": "This addresses the spatial and thematic scope of the observation program at the site. Please select the most appropriate value from the list.",
           "Format": "text (LOV)",
           "Multiplicity": "[0..1]",
