@@ -77,9 +77,6 @@ ON power_supply.`entity_id` = basetable.`nid`
 INNER JOIN `node__field_permanent_operation` as permanent_operation
 ON permanent_operation.`entity_id` = basetable.`nid`
 
-INNER JOIN `node__field_site_datastorloc` as storage_location
-ON storage_location.`entity_id` = basetable.`nid`
-
 INNER JOIN `node__field_abstract` as abstract
 ON abstract.`entity_id` = basetable.`nid`
 
