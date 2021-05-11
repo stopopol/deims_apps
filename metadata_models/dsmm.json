@@ -22,7 +22,7 @@
         "Definition": "Reference to the site which is associated with the dataset.",
         "Recommendation & Hints": "Select the site that is associated with this dataset from the list. Should the site not exist yet, please create one using the respective form.",
         "Format": "Reference to [Content Type] SITE",
-        "Multiplicity": "[1..n]",
+        "Multiplicity": "[0..1]",
         "Required": true,
         "Example": "Zone Atelier Seine - France",
         "Reference list": "[Content Type] SITE",
