@@ -44,10 +44,10 @@
       },
       "Example": "Hydrological catchment",
       "Reference list": [
-        "Hydrological Catchment - The geographical area of land bounded by watersheds draining towards the lowest point of the watershed (e.g river, basin reservoir or ocean).",
-        "Plot - Geographical boundary coordinates of a small scale area in which a parameter is recorded in a spatially continuous fashion (e.g. drone or camera-based monitoring) or in which sensors/sampling locations for a specific parameter are arranged in close proximity to each other",
-        "Survey area - Geographical area that spatially bound sampling activities in during specific surveys, campaigns or a project",
-        "Sampling Area/Sampling Points - Geographical locations/coordinates that define the sampling location either as area or as discrete point"
+        "Hydrological Catchment - 1) An area from which surface runoff is carried away by a single drainage system. 2) The area of land bounded by watersheds draining into a river, basin or reservoir.",
+        "Sampling area - Area (e.g. points, plots, transects,) in which one or more variables are recorded in a spatially continuous manner (e.g. camera-based monitoring, field mapping, bird watching area) or in which sensors/sampling locations for a specific variable are arranged in close proximity to each other",
+        "Air shed - A geographical area within which the air frequently is confined or channeled, with all parts of the area thus being subject to similar conditions of air pollution.",
+        "not applicable"
       ],
       "Comment": "",
       "Changes from Version 1.0": ""
