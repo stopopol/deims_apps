@@ -3,7 +3,7 @@
   "abbreviation": "OLMM",
   "version": 1.01,
   "releaseDate": "2021-03-02T00:00:00.000Z",
-  "scope": "A 'Location' is defined as ...",
+  "scope": "Locations can be used to further detail the spatial structure of a site and provide geographic reference areas for datasets and observations.",
   "content": {
     "Name": {
       "field_name": "field_name",
