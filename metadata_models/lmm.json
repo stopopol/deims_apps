@@ -1,6 +1,6 @@
 {
   "name": "Location Metadata Model",
-  "abbreviation": "OLMM",
+  "abbreviation": "LMM",
   "version": 1.01,
   "releaseDate": "2021-03-02T00:00:00.000Z",
   "scope": "Locations can be used to further detail the spatial structure of a site and provide geographic reference areas for datasets and observations.",
