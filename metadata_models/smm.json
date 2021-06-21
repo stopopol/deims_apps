@@ -1195,8 +1195,8 @@
                     "LTER Europe": "FALSE",
                     "ILTER": "FALSE"
                 },
-                "Example": "",
-                "Reference list": "http://www.umweltbundesamt.at/umwelt/luft/messnetz/zoebelboden/",
+                "Example": "http://www.umweltbundesamt.at/umwelt/luft/messnetz/zoebelboden/",
+                "Reference list": "",
                 "Comment": "",
                 "Changes from Version 1.0": ""
             }
