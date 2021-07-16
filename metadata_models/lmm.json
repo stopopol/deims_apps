@@ -47,6 +47,8 @@
         "Hydrological Catchment - 1) An area from which surface runoff is carried away by a single drainage system. 2) The area of land bounded by watersheds draining into a river, basin or reservoir.",
         "Sampling area - Area (e.g. points, plots, transects,) in which one or more variables are recorded in a spatially continuous manner (e.g. camera-based monitoring, field mapping, bird watching area) or in which sensors/sampling locations for a specific variable are arranged in close proximity to each other",
         "Air shed - A geographical area within which the air frequently is confined or channeled, with all parts of the area thus being subject to similar conditions of air pollution.",
+        "Model area",
+        "Socio-ecological reference area",
         "not applicable"
       ],
       "Comment": "",
