@@ -744,10 +744,11 @@
                     "LTER Europe": "TRUE",
                     "ILTER": "TRUE"
                 },
-                "Example": "Stationary terrestrial site",
+                "Example": "Stationary land-based site",
                 "Reference list": [
                     "Platform",
-                    "Stationary terrestrial site",
+                    "Stationary land-based site",
+                    "Non-stationary land-based site",
                     "Research vessel",
                     "Mooring",
                     "Buoy(s)",
