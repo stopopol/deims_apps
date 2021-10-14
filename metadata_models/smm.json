@@ -919,7 +919,7 @@
         "Protection Status and Land Use": {
             "Protection Level (IUCN category)": {
                 "field_name": "field_protection_level",
-                "Definition": "Description of the level of nature protection which is applied for the whole or a part of the site or platforms. For this as a general classification the IUCN Protected Areas Categories are used to ensure consistency.",
+                "Definition": "Description of the level of nature protection which is applied for the whole or a part of the site or platform. For this as a general classification the IUCN Protected Areas Categories are used to ensure consistency.",
                 "Recommendation & Hints": "Should your site be located within or overlapping with a protected area/conservation area, e.g. Natura2000, a National Park or a Habitat/Species Management Area, please select the IUCN category which applies best to your national protected area classification.",
                 "Format": "Reference",
                 "Multiplicity": "[0..n]",
