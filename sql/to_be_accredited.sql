@@ -83,10 +83,6 @@ ON abstract.`entity_id` = basetable.`nid`
 INNER JOIN `node__field_site_manager` as site_manager
 ON site_manager.`entity_id` = basetable.`nid`
 
-INNER JOIN `node__field_purpose` as purpose
-ON purpose.`entity_id` = basetable.`nid`
-
-
 -- join via entity_id and paragraph_id
 
 LEFT JOIN `node__field_affiliation` as affiliation
@@ -121,5 +117,4 @@ AND  basetable.`nid` IN (
 	group by basetable.nid
 	having sum(case when network.`field_network_target_id` = 12833 then 1 else 0 end) = 0
 
-) 
-
+)
