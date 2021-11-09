@@ -24,8 +24,7 @@ WHERE verified.`field_network_verified_value` = 1
 -- filter by lter networks
 AND network.`field_network_target_id` IN (222, 243, 238, 10145, 248, 228, 250, 209, 230, 218, 240, 231, 210, 226, 221, 247, 233, 10463, 217, 242, 227, 241, 208, 224, 235, 239)
 
--- exclude all IDs that have ilter reference (nid 12833)
-AND NOT network.`field_network_target_id` = 12974
+-- exclude all IDs that have LTER Europe reference
 
 AND  basetable.`nid` IN (
 
@@ -41,7 +40,6 @@ AND  basetable.`nid` IN (
 	WHERE basetable.type = 'site'
 
 	group by basetable.nid
-	having sum(case when network.`field_network_target_id` = 12833 then 1 else 0 end) = 0
+	having sum(case when network.`field_network_target_id` = 12974 then 1 else 0 end) = 0
 
 )
-
