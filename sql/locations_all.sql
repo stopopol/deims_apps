@@ -4,7 +4,7 @@ SELECT
 name.`title` AS name,
 basetable.`uuid` as uuid,
 ST_GeomFromText(boundaries.field_boundaries_value) as geom,
-location_type_label.`name`
+location_type_label.`name` as type
 
 FROM `node` basetable
 
