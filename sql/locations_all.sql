@@ -1,3 +1,5 @@
+CREATE OR REPLACE VIEW deims_all_locations AS
+
 SELECT 
 name.`title` AS name,
 basetable.`uuid` as uuid,
