@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW deims_all_locations AS
+CREATE OR REPLACE VIEW deims_locations_all AS
 
 SELECT 
 name.`title` AS name,
