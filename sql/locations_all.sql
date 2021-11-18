@@ -15,7 +15,9 @@ INNER JOIN `node__field_boundaries` boundaries
 ON boundaries.`entity_id` = basetable.`nid`
 
 LEFT JOIN `node__field_location_type` location_type
-ON location_type.`entity_id` = basetable.`nid` WHERE basetable.`type` = 'observation_location'
+ON location_type.`entity_id` = basetable.`nid` 
 
 LEFT JOIN `taxonomy_term_field_data` location_type_label
 ON location_type.`field_location_type_target_id` = location_type_label.`name`
+
+WHERE basetable.`type` = 'observation_location'
