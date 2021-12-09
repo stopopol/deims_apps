@@ -55,7 +55,7 @@
       "Definition": "Image showing a the logo of a network/RI",
       "Recommendation & Hints": "",
       "Format": "Image [png, jpg, jpeg, gif, ...]",
-      "Multiplicity": "[0..n]",
+      "Multiplicity": "[0..1]",
       "Required": {
         "LTER Europe": "FALSE",
         "ILTER": "FALSE"
