@@ -8,7 +8,7 @@
     "General information": {
       "Name": {
         "field_name": "field_person_name",
-        "Definition": "The data type 'Full name' is defined as the full name of a physical or administrative person (organisation). It is composed of the title (1.1), the first name (1.2) and the last name (1.3). Title and first name does not apply to organisations.",
+        "Definition": "The data type 'Full name' is defined as the full name of a physical or administrative person (organisation). It is composed of the title (1.1), the first name (1.2) and the last name (1.3).",
         "Recommendation & Hints": "Please provide the full name (Title, First Name, Last Name) for the person. In case of an organisation , please insert the name of the organisation in the field 1.3 Last name.",
         "Format": "Text(255)",
         "Multiplicity": "[1..1]",
