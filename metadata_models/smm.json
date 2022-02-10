@@ -951,7 +951,7 @@
             }
         },
         "Infrastructure and Operation": {
-            "Infrastructure": {
+            "Equipment": {
                 "Accessible All Year": {
                     "field_name": "field_accessible_all_year",
                     "Definition": "The data type 'Access to site' describes the accessibility of the site throughout the year. The information is composed of the general information on the accessibility, the general information if all parts of the site can be visited throughout the year and the type of vehicle/device which is needed to reach the site.",
@@ -1032,8 +1032,8 @@
                     "Comment": "",
                     "Changes from Version 1.0": ""
                 },
-                "Infrastructure": {
-                    "Infrastructure": {
+                "Equipment": {
+                    "Equipment": {
                         "field_name": "field_infrastructure",
                         "Definition": "Information on the equipment and infrastructure at the site. This includes all parts of the permanent (e.g. buildings), temporary (e.g. project installations) and mobile devices used at the site. It includes all different topics (e.g. maintenance, energy supply, supporting infrastructure, data infrastructure or observation devices).",
                         "Recommendation & Hints": "Please select the available devices or infrastructures from the list. If items are missing, please report them back to the DEIMS-SDR team using the Provide feedback button.",
@@ -1051,7 +1051,7 @@
                         "Changes from Version 1.0": "The field Infrastructure combines a series of fields from the SMM 1.0 version. This allows a bigger flexibility in terms of further requirements for documenting the devices and infrastructures at the site. The entries are managed using a taxonomy, which needs to be synchronised with EnvThes. The fields include not only physical infrastructure elements but also the data infrastructure. With the next version of the SMM model the data infrastructure fields need to be cleared. In the field infrastructure the following fields are included: Snow clearing equipment, Snow clearing frequency, Permanent power produced, Permanent power supply location, Data transmission within site, Data transmission type within site, Data transmission from site, Data transmission type from site, Temperature controlled container, Measuring tower, Measuring tower location, Marine platform, Staff room at site, Lodging at site, Number of beds at site, Data storage format, Data services"
                     }
                 },
-                "Infrastructure notes": {
+                "Equipment notes": {
                     "field_name": "field_infrastructure_notes",
                     "Definition": "Additional textual description about the infrastructure present at the site. This can contain additional information which is not covered by the other items.",
                     "Recommendation & Hints": "Please provide additional information on the infrastructure which are not covered by the other items.",
