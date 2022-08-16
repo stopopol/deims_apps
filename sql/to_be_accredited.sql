@@ -53,9 +53,6 @@ ON year_established.`entity_id` = basetable.`nid`
 INNER JOIN `node__field_parameters` as site_parameters
 ON site_parameters.`entity_id` = basetable.`nid`
 
-INNER JOIN `node__field_research_topics` as research_topics
-ON research_topics.`entity_id` = basetable.`nid`
-
 INNER JOIN `node__field_scale_observation` as scale_observation
 ON scale_observation.`entity_id` = basetable.`nid`
 
