@@ -80,6 +80,7 @@ ON abstract.`entity_id` = basetable.`nid`
 INNER JOIN `node__field_site_manager` as site_manager
 ON site_manager.`entity_id` = basetable.`nid`
 
+
 -- join via entity_id and paragraph_id
 
 LEFT JOIN `node__field_affiliation` as affiliation
@@ -92,6 +93,9 @@ LEFT JOIN `paragraph__field_network` as network
 ON network.`entity_id` = affiliation.`field_affiliation_target_id`
 
 WHERE verified.`field_network_verified_value` = 1 
+
+-- active sites only
+AND  status.`field_status_target_id` = 54183
 
 -- filter by lter networks
 AND network.`field_network_target_id` IN (219, 255, 219, 255, 232, 244, 215, 229, 216, 249, 236, 220, 212, 211, 245, 223, 10463, 10723, 230, 231, 233, 235, 237, 238, 240, 241, 242, 243, 247, 248, 250, 217, 218, 221, 222, 226, 227, 228, 209, 208, 239, 210, 232, 244, 215, 229, 216, 249, 236, 220, 212, 211, 245, 223, 10463, 10723, 230, 231, 233, 235, 237, 238, 240, 241, 242, 243, 247, 248, 250, 217, 218, 221, 222, 226, 227, 228, 209, 208, 239, 210)
