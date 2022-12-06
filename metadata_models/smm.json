@@ -347,7 +347,7 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "Average Monthly Air Temperature (°C)": {
+      "Average Monthly Air Temperature": {
         "field_name": "field_air_temp\n",
         "Definition": "Long term mean of monthly air temperature in °C calculated for the standard reference period 1991-2020 or where not appropriate for the standard reference period 1961-1990.\nPlease enter one value for each month starting with January.",
         "Recommendation & Hints": "Long term mean of monthly air temperature in °C calculated for the standard reference period 1991-2020 or where not appropriate for the standard reference period 1961-1990.\nPlease enter one value for each month starting with January.",
