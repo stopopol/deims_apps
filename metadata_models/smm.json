@@ -74,8 +74,8 @@
       },
       "Images": {
         "field_name": "field_images",
-        "Definition": "Images showing a characteristic situations at the site. This can include instrumentation, observation plots, aerial imagery etc.",
-        "Recommendation & Hints": "Please provide images showing a characteristic situation at the site.",
+        "Definition": "Image showing a characteristic situation at the site. This can include instrumentation, observation plots, aerial imagery etc.",
+        "Recommendation & Hints": "Please provide an image showing a characteristic situation at the site.",
         "Format": "Image [png, jpg, jpeg, gif, ...]",
         "Multiplicity": "[0..n]",
         "Required": {
@@ -84,7 +84,7 @@
         },
         "Example": "",
         "Reference list": "",
-        "Comment": "Not mandatory, but highly recommended. The image that is listed first is used for the ISO19139 thumbnail generation",
+        "Comment": "Not mandatory, but highly recommended",
         "Changes from Version 1.0": ""
       },
       "Metadata Update Date": {
@@ -127,7 +127,7 @@
           "ILTER": "FALSE"
         },
         "Example": "Umweltbundesamt GmbH",
-        "Reference list": "Reference to [content type ORGANISATION]",
+        "Reference list": "Reference to [content type PERSON/ORGANISATION]",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -142,7 +142,7 @@
           "ILTER": "FALSE"
         },
         "Example": "Umweltbundesamt GmbH",
-        "Reference list": "Reference to [content type ORGANISATION]",
+        "Reference list": "Reference to [content type PERSON/ORGANISATION]",
         "Comment": "",
         "Changes from Version 1.0": ""
       },
@@ -150,14 +150,14 @@
         "field_name": "field_metadata_provider",
         "Definition": "Provides the full name of the person(s) or organisation(s), who created the documentation for the site.",
         "Recommendation & Hints": "By typing the name of a person, the system provides a list of people matching the query. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
-        "Format": "Reference to [content type PERSON]",
+        "Format": "Reference to [content type PERSON/ORGANISATION]",
         "Multiplicity": "[1..n]",
         "Required": {
           "LTER Europe": "TRUE",
           "ILTER": "TRUE"
         },
         "Example": "Dr. Testy McTestface",
-        "Reference list": "Reference to [content type PERSON]",
+        "Reference list": "Reference to [content type PERSON/ORGANISATION]",
         "Comment": "",
         "Changes from Version 1.0": ""
       }
@@ -351,7 +351,7 @@
         "Definition": "Long term average sum of monthly precipitation in mm calculated for the standard reference period 1991-2020 or where not appropriate for the standard reference period 1961-1990.\nPlease enter one value for each month starting with January.",
         "Recommendation & Hints": "Long term average sum of monthly precipitation in mm calculated for the standard reference period 1991-2020 or where not appropriate for the standard reference period 1961-1990.\nPlease enter one value for each month starting with January.",
         "Format": "numeric(double) in [mm]",
-        "Multiplicity": "[0..12]",
+        "Multiplicity": "[0..1]",
         "Required": {
           "LTER Europe": "FALSE",
           "ILTER": "FALSE"
@@ -1081,24 +1081,22 @@
         "Comment": "",
         "Changes from Version 1.0": ""
       },
-      "Equipment (copy)": {
-        "Equipment": {
-          "field_name": "field_infrastructure",
-          "Definition": "Information on the equipment and infrastructure at the site. This includes all parts of the permanent (e.g. buildings), temporary (e.g. project installations) and mobile devices used at the site. It includes all different topics (e.g. maintenance, energy supply, supporting infrastructure, data infrastructure or observation devices).",
-          "Recommendation & Hints": "Please select the available devices or infrastructures from the list. If items are missing, please report them back to the DEIMS-SDR team using the Provide feedback button.",
-          "Format": "Reference [Taxonomy] Infrastructure",
-          "Multiplicity": "[0..n]",
-          "Dependency": "",
-          "Required": {
-            "LTER Europe": "TRUE",
-            "ILTER": "TRUE",
-            "Ecopotential": "TRUE"
-          },
-          "Example": "",
-          "Reference list": "",
-          "Comment": "",
-          "Changes from Version 1.0": "The field Infrastructure combines a series of fields from the SMM 1.0 version. This allows a bigger flexibility in terms of further requirements for documenting the devices and infrastructures at the site. The entries are managed using a taxonomy, which needs to be synchronised with EnvThes. The fields include not only physical infrastructure elements but also the data infrastructure. With the next version of the SMM model the data infrastructure fields need to be cleared. In the field infrastructure the following fields are included: Snow clearing equipment, Snow clearing frequency, Permanent power produced, Permanent power supply location, Data transmission within site, Data transmission type within site, Data transmission from site, Data transmission type from site, Temperature controlled container, Measuring tower, Measuring tower location, Marine platform, Staff room at site, Lodging at site, Number of beds at site, Data storage format, Data services"
-        }
+      "Equipment": {
+        "field_name": "field_infrastructure",
+        "Definition": "Information on the equipment and infrastructure at the site. This includes all parts of the permanent (e.g. buildings), temporary (e.g. project installations) and mobile devices used at the site. It includes all different topics (e.g. maintenance, energy supply, supporting infrastructure, data infrastructure or observation devices).",
+        "Recommendation & Hints": "Please select the available devices or infrastructures from the list. If items are missing, please report them back to the DEIMS-SDR team using the Provide feedback button.",
+        "Format": "Reference [Taxonomy] Infrastructure",
+        "Multiplicity": "[0..n]",
+        "Dependency": "",
+        "Required": {
+          "LTER Europe": "TRUE",
+          "ILTER": "TRUE",
+          "Ecopotential": "TRUE"
+        },
+        "Example": "",
+        "Reference list": "",
+        "Comment": "",
+        "Changes from Version 1.0": "The field Infrastructure combines a series of fields from the SMM 1.0 version. This allows a bigger flexibility in terms of further requirements for documenting the devices and infrastructures at the site. The entries are managed using a taxonomy, which needs to be synchronised with EnvThes. The fields include not only physical infrastructure elements but also the data infrastructure. With the next version of the SMM model the data infrastructure fields need to be cleared. In the field infrastructure the following fields are included: Snow clearing equipment, Snow clearing frequency, Permanent power produced, Permanent power supply location, Data transmission within site, Data transmission type within site, Data transmission from site, Data transmission type from site, Temperature controlled container, Measuring tower, Measuring tower location, Marine platform, Staff room at site, Lodging at site, Number of beds at site, Data storage format, Data services"
       },
       "Equipment notes": {
         "field_name": "field_infrastructure_notes",
