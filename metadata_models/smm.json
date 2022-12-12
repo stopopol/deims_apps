@@ -351,7 +351,7 @@
         "Definition": "Long term average sum of monthly precipitation in mm calculated for the standard reference period 1991-2020 or where not appropriate for the standard reference period 1961-1990.\nPlease enter one value for each month starting with January.",
         "Recommendation & Hints": "Long term average sum of monthly precipitation in mm calculated for the standard reference period 1991-2020 or where not appropriate for the standard reference period 1961-1990.\nPlease enter one value for each month starting with January.",
         "Format": "numeric(double) in [mm]",
-        "Multiplicity": "[0..1]",
+        "Multiplicity": "[0..12]",
         "Required": {
           "LTER Europe": "FALSE",
           "ILTER": "FALSE"
