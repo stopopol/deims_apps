@@ -932,6 +932,67 @@
       }
     },
     "Operation": {
+      "Accessible All Year": {
+        "field_name": "field_accessible_all_year",
+        "Definition": "The data type 'Access to site' describes the accessibility of the site throughout the year. The information is composed of the general information on the accessibility, the general information if all parts of the site can be visited throughout the year and the type of vehicle/device which is needed to reach the site.",
+        "Recommendation & Hints": "Please provide information on the accessibility of the research site throughout the year. This includes the general information on the accessibility, the general information if all parts of the site can be visited throughout the year and the type of vehicle/device which is needed to reach the site.",
+        "Format": "boolean",
+        "Multiplicity": "[0..1]",
+        "Dependency": "",
+        "Required": {
+          "LTER Europe": "TRUE",
+          "ILTER": "TRUE"
+        },
+        "Example": "",
+        "Reference list": [
+          "yes",
+          "no"
+        ],
+        "Comment": "",
+        "Changes from Version 1.0": ""
+      },
+      "All parts of Site accessible": {
+        "field_name": "field_all_parts_accessible",
+        "Definition": "State whether or not all parts of the site can be accessed",
+        "Recommendation & Hints": "",
+        "Format": "boolean",
+        "Multiplicity": "[0..1]",
+        "Dependency": "",
+        "Required": {
+          "LTER Europe": "FALSE",
+          "ILTER": "FALSE"
+        },
+        "Example": "",
+        "Reference list": [
+          "yes",
+          "no"
+        ],
+        "Comment": "",
+        "Changes from Version 1.0": ""
+      },
+      "Access Type": {
+        "field_name": "field_access_type",
+        "Definition": "What kind of vehicle is required to access the site?",
+        "Recommendation & Hints": "",
+        "Format": "text (LOV)",
+        "Multiplicity": "[0..1]",
+        "Dependency": "",
+        "Required": {
+          "LTER Europe": "FALSE",
+          "ILTER": "FALSE"
+        },
+        "Example": "",
+        "Reference list": [
+          "boat",
+          "cable car",
+          "dirt road (4WD)",
+          "footpath /trail",
+          "paved road",
+          "regular car"
+        ],
+        "Comment": "",
+        "Changes from Version 1.0": ""
+      },
       "Permanent Operation": {
         "field_name": "field_permanent_operation",
         "Definition": "The data type 'Permanent operation' describes if a site is operated permanently throughout the year. It is composed of the general information on the permanent operation, the interval and frequency in which samples are taken from the site and the interval and frequency in which maintenance personnel is visiting the site. Permanent operation is defined that the whole year in regular intervals samples are taken and collected by the sampling personnel visiting the site. In part of the year (e.g. winter) the frequency might be less than in others (e.g. summer).",
@@ -1001,67 +1062,6 @@
       }
     },
     "Equipment": {
-      "Accessible All Year": {
-        "field_name": "field_accessible_all_year",
-        "Definition": "The data type 'Access to site' describes the accessibility of the site throughout the year. The information is composed of the general information on the accessibility, the general information if all parts of the site can be visited throughout the year and the type of vehicle/device which is needed to reach the site.",
-        "Recommendation & Hints": "Please provide information on the accessibility of the research site throughout the year. This includes the general information on the accessibility, the general information if all parts of the site can be visited throughout the year and the type of vehicle/device which is needed to reach the site.",
-        "Format": "boolean",
-        "Multiplicity": "[0..1]",
-        "Dependency": "",
-        "Required": {
-          "LTER Europe": "TRUE",
-          "ILTER": "TRUE"
-        },
-        "Example": "",
-        "Reference list": [
-          "yes",
-          "no"
-        ],
-        "Comment": "",
-        "Changes from Version 1.0": ""
-      },
-      "All parts of Site accessible": {
-        "field_name": "field_all_parts_accessible",
-        "Definition": "State whether or not all parts of the site can be accessed",
-        "Recommendation & Hints": "",
-        "Format": "boolean",
-        "Multiplicity": "[0..1]",
-        "Dependency": "",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
-        "Example": "",
-        "Reference list": [
-          "yes",
-          "no"
-        ],
-        "Comment": "",
-        "Changes from Version 1.0": ""
-      },
-      "Access Type": {
-        "field_name": "field_access_type",
-        "Definition": "What kind of vehicle is required to access the site?",
-        "Recommendation & Hints": "",
-        "Format": "text (LOV)",
-        "Multiplicity": "[0..1]",
-        "Dependency": "",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
-        "Example": "",
-        "Reference list": [
-          "boat",
-          "cable car",
-          "dirt road (4WD)",
-          "footpath /trail",
-          "paved road",
-          "regular car"
-        ],
-        "Comment": "",
-        "Changes from Version 1.0": ""
-      },
       "Permanent Power Supply": {
         "field_name": "field_permanent_power_supply",
         "Definition": "Information on the availability of permanent power at the site.",
