@@ -676,34 +676,6 @@
         "Reference list": "",
         "Comment": "",
         "Changes from Version 1.0": "reorganised structure"
-      },
-      "Network specific": {
-        "LTER": {
-          "LTER site classification/category": {
-            "field_name": "field_site_eu_classification",
-            "Definition": "Characterisation of a SITE (observation or experimentation facility) according to their level of implementation. This includes the following characteristics: technical aspects of work at the sites (intervals of basic sampling, technical maintenance...) basic infrastructure (power supply, all year access...) technical equipment data and IT infrastructure",
-            "Recommendation & Hints": "Please select the site type from the list. This can be used in order to reveal information requirements relevant for e.g. multi-site projects or identification as major research infrastructure. The classification was adopted at the 7th LTER-Europe conference in Lodz. Site co-ordinators are asked to apply this overall classification to their sites, but also provide detailed metadata on the above categories in order to facilitate quick responses to specific information requests on the network level, e.g. which sites do have all year access AND power supply AND weekly sampling.",
-            "Format": "text",
-            "Multiplicity": "[1..1]",
-            "Dependency": "field_networks_term_ref",
-            "Required": {
-              "LTER Europe": "TRUE",
-              "ILTER": "TRUE"
-            },
-            "Example": "Master site",
-            "Reference list": [
-              "ad Site classification LTER Europe",
-              "LTSER - is defined as LTSER Platform (Long-Term Socio-Ecological Research): Modular LTER-facility consisting of sites which are located in an area with defined boundaries. Besides this physical component, LTSER-Platforms provide multiple services like the networking of client groups (e.g. research, local stakeholders), data management, communication and representation (management component). The elements of LTSER Platforms represent the main habitats, land use forms and practices relevant for the broader region (up to 10000 km²) and cover all scales and levels relevant for LTSER (from local to landscape). LTSER-Platforms should represent economic and social units or coincide/overlap with such units where adequate information on land use history, economy and demography is available to allow for socio-ecological research.",
-              "MASTER SITE - is defined as Master LTER Site (Synonyms: 'top site'; 'supersite'; 'LTER hub'; 'HIS=Highly Instrumented Site'; M-Site): Highly instrumented and permanently operated sites, featuring an ecosystem approach in terms of combining regular sampling (weekly as standard), permanent measurements and inventories at appropriate intervals across drivers and ecosystem compartments . Design of sites customized according to the ecological profile of the site and enabling integrated analyses across system strata (geosphere to atmosphere) and covering therefore required spatial scales. Experimental approaches shall be existent or possible. All year access and power supply must be secured in order to enable e.g. measurement of climate data according to international standards. A maximum of other networks and/or related projects shall have been using this category of site (e.g. EMEP, CarboEurope, UNECE ICPs, national monitoring networks...). Operation for at least 10 years. The intention is to flag sites, which can be considered as key ecosystem research infrastructures on the European scale.",
-              "REGULAR SITE - is defined as LTER Site (Synonyms: 'regular' LTER site; R-Site): In principle, these sites comply with the description of Master LTER Sites, but differ in volume of instrumentation as well as multi use and availability of long-term data across all ecosystem compartments and disciplines.",
-              "EMERGING SITE - is defined as Emerging LTER Site (Synonyms: 'pilot LTER site'; E-Site) which is a recently established LTER Sites (3-5 years of observation) being developed towards a higher category",
-              "EXTENSIVE SITE - is defined as Extensive LTER Site (Synonyms: 'pilot LTER site'; E-Site) which is a LTER Site with specific long-term monitoring and/or specific scientific foci and therefore not following the full ecosystem approach (e.g. for reasons of limited considered spatial scale). Extensive LTER Sites may emphasize the long-term monitoring (observation), but there must be an explicit research component.",
-              "N/A - not applicable"
-            ],
-            "Comment": "",
-            "Changes from Version 1.0": ""
-          }
-        }
       }
     },
     "Status and History": {
@@ -899,6 +871,30 @@
           "Comment": "The information is linked to Observation design. The link needs to be discussed in the next release of the data model for the site. This field should not be considered for LTSER Platforms.",
           "Changes from Version 1.0": ""
         }
+      },
+      "LTER Site Classification": {
+        "field_name": "field_site_eu_classification",
+        "Definition": "Characterisation of a SITE (observation or experimentation facility) according to their level of implementation. This includes the following characteristics: technical aspects of work at the sites (intervals of basic sampling, technical maintenance...) basic infrastructure (power supply, all year access...) technical equipment data and IT infrastructure",
+        "Recommendation & Hints": "Please select the site type from the list. This can be used in order to reveal information requirements relevant for e.g. multi-site projects or identification as major research infrastructure. The classification was adopted at the 7th LTER-Europe conference in Lodz. Site co-ordinators are asked to apply this overall classification to their sites, but also provide detailed metadata on the above categories in order to facilitate quick responses to specific information requests on the network level, e.g. which sites do have all year access AND power supply AND weekly sampling.",
+        "Format": "text",
+        "Multiplicity": "[1..1]",
+        "Dependency": "field_networks_term_ref",
+        "Required": {
+          "LTER Europe": "TRUE",
+          "ILTER": "TRUE"
+        },
+        "Example": "Master site",
+        "Reference list": [
+          "ad Site classification LTER Europe",
+          "LTSER - is defined as LTSER Platform (Long-Term Socio-Ecological Research): Modular LTER-facility consisting of sites which are located in an area with defined boundaries. Besides this physical component, LTSER-Platforms provide multiple services like the networking of client groups (e.g. research, local stakeholders), data management, communication and representation (management component). The elements of LTSER Platforms represent the main habitats, land use forms and practices relevant for the broader region (up to 10000 km²) and cover all scales and levels relevant for LTSER (from local to landscape). LTSER-Platforms should represent economic and social units or coincide/overlap with such units where adequate information on land use history, economy and demography is available to allow for socio-ecological research.",
+          "MASTER SITE - is defined as Master LTER Site (Synonyms: 'top site'; 'supersite'; 'LTER hub'; 'HIS=Highly Instrumented Site'; M-Site): Highly instrumented and permanently operated sites, featuring an ecosystem approach in terms of combining regular sampling (weekly as standard), permanent measurements and inventories at appropriate intervals across drivers and ecosystem compartments . Design of sites customized according to the ecological profile of the site and enabling integrated analyses across system strata (geosphere to atmosphere) and covering therefore required spatial scales. Experimental approaches shall be existent or possible. All year access and power supply must be secured in order to enable e.g. measurement of climate data according to international standards. A maximum of other networks and/or related projects shall have been using this category of site (e.g. EMEP, CarboEurope, UNECE ICPs, national monitoring networks...). Operation for at least 10 years. The intention is to flag sites, which can be considered as key ecosystem research infrastructures on the European scale.",
+          "REGULAR SITE - is defined as LTER Site (Synonyms: 'regular' LTER site; R-Site): In principle, these sites comply with the description of Master LTER Sites, but differ in volume of instrumentation as well as multi use and availability of long-term data across all ecosystem compartments and disciplines.",
+          "EMERGING SITE - is defined as Emerging LTER Site (Synonyms: 'pilot LTER site'; E-Site) which is a recently established LTER Sites (3-5 years of observation) being developed towards a higher category",
+          "EXTENSIVE SITE - is defined as Extensive LTER Site (Synonyms: 'pilot LTER site'; E-Site) which is a LTER Site with specific long-term monitoring and/or specific scientific foci and therefore not following the full ecosystem approach (e.g. for reasons of limited considered spatial scale). Extensive LTER Sites may emphasize the long-term monitoring (observation), but there must be an explicit research component.",
+          "N/A - not applicable"
+        ],
+        "Comment": "",
+        "Changes from Version 1.0": ""
       }
     },
     "Protection Level and Land Use": {
