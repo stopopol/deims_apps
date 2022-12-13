@@ -119,7 +119,7 @@
           "ILTER": "FALSE"
         },
         "Example": "Umweltbundesamt GmbH",
-        "Reference list": "Reference to [content type PERSON/ORGANISATION]",
+        "Reference list": "Reference to [content type ORGANISATION]",
         "Comment": ""
       },
       "Funding Agency": {
@@ -133,21 +133,21 @@
           "ILTER": "FALSE"
         },
         "Example": "Umweltbundesamt GmbH",
-        "Reference list": "Reference to [content type PERSON/ORGANISATION]",
+        "Reference list": "Reference to [content type ORGANISATION]",
         "Comment": ""
       },
       "Metadata Provider": {
         "field_name": "field_metadata_provider",
         "Definition": "Provides the full name of the person(s) or organisation(s), who created the documentation for the site.",
         "Recommendation & Hints": "By typing the name of a person, the system provides a list of people matching the query. If the person is not in the list, please add first the person/organisation in the Person MD Edit Form.",
-        "Format": "Reference to [content type PERSON/ORGANISATION]",
+        "Format": "Reference to [content type PERSON]",
         "Multiplicity": "[1..n]",
         "Required": {
           "LTER Europe": "TRUE",
           "ILTER": "TRUE"
         },
         "Example": "Dr. Testy McTestface",
-        "Reference list": "Reference to [content type PERSON/ORGANISATION]",
+        "Reference list": "Reference to [content type PERSON]",
         "Comment": ""
       }
     },
