@@ -247,7 +247,7 @@
         },
         "Example": "{\"type\":\"Polygon\",\"coordinates\":[[[-1.3458251953125,48.715370552577],[-1.3458251953125,47.963199868923],[-2.1258544921875,47.963199868923],[-2.1258544921875,48.715370552577],[-1.3458251953125,48.715370552577]]]}",
         "Reference list": "",
-        "Comment": ""
+        "Comment": "If you want to describe additional geographic information regarding your site, e.g. the hydrological catchment, you can add \"locations\" under “Add new content” and link these locations to a pre-existing site record. Click here to directly open a new tab and add a new location."
       }
     },
     "Observed Properties": {
