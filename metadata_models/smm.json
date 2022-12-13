@@ -15,8 +15,7 @@
         "Required": true,
         "Example": "LTER Zöbelboden",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Short name": {
         "field_name": "field_name_short",
@@ -27,8 +26,7 @@
         "Required": false,
         "Example": "Zöbelboden",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "DEIMS.ID": {
         "field_name": "field_deims_id",
@@ -39,8 +37,7 @@
         "Required": true,
         "Example": "https://deims.org/8eda49e9-1f4e-4f3e-b58e-e0bb25dc32a6",
         "Reference list": "",
-        "Comment": "automatically generated",
-        "Changes from Version 1.0": "field added"
+        "Comment": "automatically generated"
       },
       "Site Description": {
         "field_name": "field_abstract",
@@ -54,8 +51,7 @@
         },
         "Example": "The Zöbelboden was established in 1992 as the only Integrated Monitoring station in Austria under the UN Convention on long-range transboundary air pollution (CLRTAP). In 2006 it became part of LTER Austria. The Zöbelboden covers a small forested catchment (90 ha) of a karstic mountain range (500 to 950 m above sea level) in the Kalkalpen national park. Monitoring and research is focussing on air pollution effects on forested catchments and its interaction with climate change. The Zöbelboden represents one of the best known karst catchments in Europe with long-term data series of the major components of its ecosystems. The Zöbelboden is managed by the Umweltbundesamt GmbH. Sampling of chemical specimen is done by local staff. Chemical analyses are carried out by the laboratory of the Umweltbundesamt in Vienna. All data and metadata from monitoring and research projects are stored in a semantically structured database.",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Web Address": {
         "field_name": "field_url",
@@ -69,8 +65,7 @@
         },
         "Example": "http://www.umweltbundesamt.at/umwelt/luft/messnetz/zoebelboden/",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Images": {
         "field_name": "field_images",
@@ -84,8 +79,7 @@
         },
         "Example": "",
         "Reference list": "",
-        "Comment": "Not mandatory, but highly recommended",
-        "Changes from Version 1.0": ""
+        "Comment": "Not mandatory, but highly recommended"
       },
       "Metadata Update Date": {
         "field_name": "field_date",
@@ -99,8 +93,7 @@
         },
         "Example": "2017-08-22",
         "Reference list": "",
-        "Comment": "Generated automatically",
-        "Changes from Version 1.0": ""
+        "Comment": "Generated automatically"
       }
     },
     "Contact": {
@@ -113,8 +106,7 @@
         "Required": true,
         "Example": "Dirnböck, Thomas",
         "Reference list": "Reference to [content type PERSON]",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Operating Organisation": {
         "field_name": "field_site_owner",
@@ -128,8 +120,7 @@
         },
         "Example": "Umweltbundesamt GmbH",
         "Reference list": "Reference to [content type PERSON/ORGANISATION]",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Funding Agency": {
         "field_name": "field_funding_agency",
@@ -143,8 +134,7 @@
         },
         "Example": "Umweltbundesamt GmbH",
         "Reference list": "Reference to [content type PERSON/ORGANISATION]",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Metadata Provider": {
         "field_name": "field_metadata_provider",
@@ -158,8 +148,7 @@
         },
         "Example": "Dr. Testy McTestface",
         "Reference list": "Reference to [content type PERSON/ORGANISATION]",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       }
     },
     "Geographic": {
@@ -172,8 +161,7 @@
         "Required": true,
         "Example": "Austria",
         "Reference list": "location_get_iso3166_list() https://www.iso.org/obp/ui/#home",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Size": {
         "field_name": "field_size",
@@ -187,8 +175,7 @@
         },
         "Example": "90.5",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Elevation": {
         "Elevation (average)": {
@@ -203,8 +190,7 @@
           },
           "Example": 956,
           "Reference list": "",
-          "Comment": "",
-          "Changes from Version 1.0": ""
+          "Comment": ""
         },
         "Elevation (min)": {
           "field_name": "field_elevation_min",
@@ -218,8 +204,7 @@
           },
           "Example": 520,
           "Reference list": "",
-          "Comment": "",
-          "Changes from Version 1.0": ""
+          "Comment": ""
         },
         "Elevation (max)": {
           "field_name": "field_elevation_max",
@@ -233,8 +218,7 @@
           },
           "Example": 990,
           "Reference list": "",
-          "Comment": "",
-          "Changes from Version 1.0": ""
+          "Comment": ""
         }
       },
       "Centroid Coordinates": {
@@ -249,8 +233,7 @@
         },
         "Example": "Latitude: 46.00936 Longitude: 8.56796",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Boundaries": {
         "field_name": "field_boundaries",
@@ -264,8 +247,7 @@
         },
         "Example": "{\"type\":\"Polygon\",\"coordinates\":[[[-1.3458251953125,48.715370552577],[-1.3458251953125,47.963199868923],[-2.1258544921875,47.963199868923],[-2.1258544921875,48.715370552577],[-1.3458251953125,48.715370552577]]]}",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       }
     },
     "Observed Properties": {
@@ -282,8 +264,7 @@
         },
         "Example": "pH",
         "Reference list": "Taxonomy Parameter based on EnvThes Measure (http://vocabs.lter-europe.net/EnvThes/20935)",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       }
     },
     "Climatic Characteristics": {
@@ -299,8 +280,7 @@
         },
         "Example": "1991-2020",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Air Temperature - average annual": {
         "field_name": "field_air_temp_avg",
@@ -314,8 +294,7 @@
         },
         "Example": "Temperature - average annual [°C]: 7.2",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Average Monthly Air Temperature": {
         "field_name": "field_air_temp\n",
@@ -328,8 +307,7 @@
         },
         "Example": "",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Precipitation Annual": {
         "field_name": "field_precipitation_annual",
@@ -343,8 +321,7 @@
         },
         "Example": "980",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Average Monthly Precipitation (mm)": {
         "field_name": "field_precipitation",
@@ -358,8 +335,7 @@
         },
         "Example": "25",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       }
     },
     "Ecosystem and environmental characteristics": {
@@ -396,8 +372,7 @@
             "Tundra",
             "Urban"
           ],
-          "Comment": "",
-          "Changes from Version 1.0": ""
+          "Comment": ""
         },
         "GEO-BON Biome": {
           "field_name": "field_geo_bon_biome",
@@ -418,8 +393,7 @@
             "Fresh water rivers",
             "Terrestrial"
           ],
-          "Comment": "",
-          "Changes from Version 1.0": ""
+          "Comment": ""
         }
       },
       "Ecosystem type": {
@@ -461,8 +435,7 @@
           "4.4|Tropical upwelling",
           "4.5|Tropical coral"
         ],
-        "Comment": "The classification and the cardinality need to be discussed. It is used for a global assessment of the main habitat types.",
-        "Changes from Version 1.0": "The fields for ecosystem types from SMM 1.0 were merged into one multi-value field. This includes the following fields: Ecosystem type, Additional Ecosystem type 1, Additional Ecosystem type 2"
+        "Comment": "The classification and the cardinality need to be discussed. It is used for a global assessment of the main habitat types."
       },
       "Biogeographical Region": {
         "field_name": "field_biogeographical_region",
@@ -488,8 +461,7 @@
           "Pannonian",
           "Steppic"
         ],
-        "Comment": "Classification is focussing on European scale, an extension to global level needs to be discussed.",
-        "Changes from Version 1.0": ""
+        "Comment": "Classification is focussing on European scale, an extension to global level needs to be discussed."
       },
       "EUNIS habitat": {
         "field_name": "field_eunis_habitat",
@@ -515,8 +487,7 @@
           "J. Constructed, industrial and other artificial habitats",
           "X. Habitat complexes"
         ],
-        "Comment": "The EUNIS classification is only applicable for European sites. Discussion on the level of entries which should be used",
-        "Changes from Version 1.0": ""
+        "Comment": "The EUNIS classification is only applicable for European sites. Discussion on the level of entries which should be used"
       },
       "Landforms": {
         "field_name": "field_landforms",
@@ -563,8 +534,7 @@
 
           ]
         },
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Additional characteristics": {
         "Geology": {
@@ -579,8 +549,7 @@
           },
           "Example": "The site is characterised by crystalline bed rock ...",
           "Reference list": "",
-          "Comment": "",
-          "Changes from Version 1.0": ""
+          "Comment": ""
         },
         "Hydrology": {
           "field_name": "field_hydrology",
@@ -594,8 +563,7 @@
           },
           "Example": "The site is characterised by karst ...",
           "Reference list": "",
-          "Comment": "",
-          "Changes from Version 1.0": ""
+          "Comment": ""
         },
         "Soils": {
           "field_name": "field_soils",
@@ -609,8 +577,7 @@
           },
           "Example": "The site is characterised by fertile brown soils with a high content of ...",
           "Reference list": "",
-          "Comment": "",
-          "Changes from Version 1.0": ""
+          "Comment": ""
         },
         "Vegetation": {
           "field_name": "field_vegetation",
@@ -624,8 +591,7 @@
           },
           "Example": "The site is characterised by beech forests ..",
           "Reference list": "",
-          "Comment": "",
-          "Changes from Version 1.0": ""
+          "Comment": ""
         }
       }
     },
@@ -642,8 +608,7 @@
           "YES",
           "NO"
         ],
-        "Comment": "",
-        "Changes from Version 1.0": "field added"
+        "Comment": ""
       },
       "Affiliation": {
         "field_name": "field_affiliation",
@@ -658,8 +623,7 @@
         },
         "Example": "LTER Austria, ICP Forests",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": "reorganised structure"
+        "Comment": ""
       },
       "Projects": {
         "field_name": "field_projects",
@@ -674,8 +638,7 @@
         },
         "Example": "E-Shape (H2020)",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": "reorganised structure"
+        "Comment": ""
       }
     },
     "Status and History": {
@@ -693,8 +656,7 @@
         "Reference list": [
           "https://codes.wmo.int/wmdr/ReportingStatus"
         ],
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Year Established": {
         "field_name": "field_year_established",
@@ -708,8 +670,7 @@
         },
         "Example": "2003",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Year Closed": {
         "field_name": "field_year_closed",
@@ -724,8 +685,7 @@
         },
         "Example": "2020",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       }
     },
     "Type, Design and Scale": {
@@ -749,8 +709,7 @@
           "Buoy(s)",
           "nA - not applicable"
         ],
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Parent site name": {
         "field_name": "field_parent_site",
@@ -764,8 +723,7 @@
         },
         "Example": "LTSER Platform Eisenwurzen (EW)",
         "Reference list": "see [content type] site",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Subsite name(s)": {
         "field_name": "field_subsite_name",
@@ -779,8 +737,7 @@
         },
         "Example": "Zöbelboden LTER - Austria",
         "Reference list": "see [content type] site",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Observation Design": {
         "Scale of observation": {
@@ -802,8 +759,7 @@
             "plot without link to explicit catchment",
             "sub-catchment within catchment"
           ],
-          "Comment": "The information is linked to Experimental design. The link needs to be discussed in the next release of the data model for the site. This field should not be considered for LTSER Platforms.",
-          "Changes from Version 1.0": ""
+          "Comment": "The information is linked to Experimental design. The link needs to be discussed in the next release of the data model for the site. This field should not be considered for LTSER Platforms."
         },
         "Design of observation": {
           "field_name": "field_design_observation",
@@ -823,8 +779,7 @@
             "partly observation",
             "no observation"
           ],
-          "Comment": "The information is linked to Experimental design. The link needs to be discussed in the next release of the data model for the site. This field should not be considered for LTSER Platforms.",
-          "Changes from Version 1.0": ""
+          "Comment": "The information is linked to Experimental design. The link needs to be discussed in the next release of the data model for the site. This field should not be considered for LTSER Platforms."
         }
       },
       "Experimentation Design": {
@@ -847,8 +802,7 @@
             "plot scale",
             "not applicable"
           ],
-          "Comment": "The information is linked to Observation design. The link needs to be discussed in the next release of the data model for the site. This field should not be considered for LTSER Platforms.",
-          "Changes from Version 1.0": ""
+          "Comment": "The information is linked to Observation design. The link needs to be discussed in the next release of the data model for the site. This field should not be considered for LTSER Platforms."
         },
         "Design of experimentation": {
           "field_name": "field_design_experiments",
@@ -868,8 +822,7 @@
             "partly experimentation",
             "no experimentation"
           ],
-          "Comment": "The information is linked to Observation design. The link needs to be discussed in the next release of the data model for the site. This field should not be considered for LTSER Platforms.",
-          "Changes from Version 1.0": ""
+          "Comment": "The information is linked to Observation design. The link needs to be discussed in the next release of the data model for the site. This field should not be considered for LTSER Platforms."
         }
       },
       "LTER Site Classification": {
@@ -893,8 +846,7 @@
           "EXTENSIVE SITE - is defined as Extensive LTER Site (Synonyms: 'pilot LTER site'; E-Site) which is a LTER Site with specific long-term monitoring and/or specific scientific foci and therefore not following the full ecosystem approach (e.g. for reasons of limited considered spatial scale). Extensive LTER Sites may emphasize the long-term monitoring (observation), but there must be an explicit research component.",
           "N/A - not applicable"
         ],
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       }
     },
     "Protection Level and Land Use": {
@@ -911,8 +863,7 @@
         },
         "Example": "Category Ib – Wilderness Area",
         "Reference list": "http://dd.eionet.europa.eu/vocabulary/cdda/IucnCategoryValue/",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Land use": {
         "field_name": "field_management_of_resources",
@@ -927,8 +878,7 @@
         },
         "Example": "Category Ib – Wilderness Area",
         "Reference list": "http://dd.eionet.europa.eu/vocabulary/cdda/IucnCategoryValue/",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       }
     },
     "Operation": {
@@ -948,8 +898,7 @@
           "yes",
           "no"
         ],
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "All parts of Site accessible": {
         "field_name": "field_all_parts_accessible",
@@ -967,8 +916,7 @@
           "yes",
           "no"
         ],
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Access Type": {
         "field_name": "field_access_type",
@@ -990,8 +938,7 @@
           "paved road",
           "regular car"
         ],
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Permanent Operation": {
         "field_name": "field_permanent_operation",
@@ -1009,8 +956,7 @@
           "yes",
           "no"
         ],
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Operation Notes": {
         "field_name": "field_operation_notes",
@@ -1025,8 +971,7 @@
         },
         "Example": "The Zöbelboden is managed by the Umweltbundesamt GmbH. Sampling of chemical specimen is done by local staff of the Kalkalpen national park. Chemical analyses are carried out by the laboratory of the Umweltbundesamt in Vienna. Maintenance is done on a regular basis by a local contractor.",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Site Visit Interval": {
         "field_name": "field_site_ops_sampling_intr",
@@ -1041,8 +986,7 @@
         },
         "Example": "4",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Maintenance Interval": {
         "field_name": "field_site_ops_maint_freq",
@@ -1057,8 +1001,7 @@
         },
         "Example": "7",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       }
     },
     "Equipment": {
@@ -1078,8 +1021,7 @@
           "yes",
           "no"
         ],
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Equipment": {
         "field_name": "field_infrastructure",
@@ -1095,8 +1037,7 @@
         },
         "Example": "",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": "The field Infrastructure combines a series of fields from the SMM 1.0 version. This allows a bigger flexibility in terms of further requirements for documenting the devices and infrastructures at the site. The entries are managed using a taxonomy, which needs to be synchronised with EnvThes. The fields include not only physical infrastructure elements but also the data infrastructure. With the next version of the SMM model the data infrastructure fields need to be cleared. In the field infrastructure the following fields are included: Snow clearing equipment, Snow clearing frequency, Permanent power produced, Permanent power supply location, Data transmission within site, Data transmission type within site, Data transmission from site, Data transmission type from site, Temperature controlled container, Measuring tower, Measuring tower location, Marine platform, Staff room at site, Lodging at site, Number of beds at site, Data storage format, Data services"
+        "Comment": ""
       },
       "Equipment notes": {
         "field_name": "field_infrastructure_notes",
@@ -1111,8 +1052,7 @@
         },
         "Example": "Zöbelboden covers a small forested catchment (90 ha) of a karstic mountain range in the Kalkalpen national park. Meteorological and air pollution monitoring is carried out at a clearing area (EMEP station; includes measurement of fog deposition) and on a tower (45 m height). Three intensive plots exist for the detailed measurement of element fluxes through the main forest types (bi-weekly to monthly analyses of deposition and soil water). Catchment runoff chemistry is measured at the main spring with a measuring weir (weekly analyses) and through irregular sampling at all other springs. Additional karst-hydrological measurements are in place in the main rivers surrounding the ...",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       }
     },
     "Data Sharing Policy": {
@@ -1143,8 +1083,7 @@
           "The data provider is given and agrees to a statement of uses to which the dataset will be put",
           "Other"
         ],
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       },
       "Data Policy Notes": {
         "field_name": "field_site_data_policy",
@@ -1159,8 +1098,7 @@
         },
         "Example": "In general an open data policy is applied for scientific purposes. In addition aggregated data can be obtained free and open from the UNECE ICP IM Data portal. ...",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": "field added"
+        "Comment": ""
       },
       "Data Policy URL": {
         "field_name": "field_data_policy_url",
@@ -1175,8 +1113,7 @@
         },
         "Example": "http://www.umweltbundesamt.at/umwelt/luft/messnetz/zoebelboden/",
         "Reference list": "",
-        "Comment": "",
-        "Changes from Version 1.0": ""
+        "Comment": ""
       }
     },
     "Project Related Fields": {
