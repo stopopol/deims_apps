@@ -69,7 +69,7 @@ for layer in doc['WMS_Capabilities']['Capability']['Layer']['Layer']:
         "mapDataDefinition": {
             "data": [
                 {
-                    "path": "https://elter.datalabs.ceh.ac.uk/geoserver/ows?version=1.3.0", # this is the getcapabilities link
+                    "path": "https://elter.datalabs.ceh.ac.uk/geoserver/ows?version=1.3.0",
                     "epsgCode": epsg_code,
                     "type": "POLYGON",
                     "features": {
