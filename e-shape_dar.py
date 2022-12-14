@@ -21,10 +21,8 @@ from datetime import datetime
 
 with open('getcapabilities.xml') as fd:
     doc = xmltodict.parse(fd.read())
-    
-list_of_layers = doc['WMS_Capabilities']['Capability']['Layer']['Layer']
 
-for layer in list_of_layers:
+for layer in doc['WMS_Capabilities']['Capability']['Layer']['Layer']:
 
     record_uuid = str(uuid.uuid4())
     
