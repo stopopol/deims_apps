@@ -39,10 +39,10 @@ for layer in doc['WMS_Capabilities']['Capability']['Layer']['Layer']:
             period = keyword[6:]
             continue
         
-        keyword_dict = {
+        formatted_keyword = {
           "value": keyword,
         }
-        keywords_to_be_printed.append(keyword_dict)
+        keywords_to_be_printed.append(formatted_keyword)
 
     # fetch EPSG code    
     for value in crs:
