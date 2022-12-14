@@ -1,5 +1,4 @@
 import xmltodict
-import pprint
 import json
 import uuid
 import os
@@ -96,7 +95,7 @@ for layer in list_of_layers:
         "mapViewable": False,
         "incomingCitationCount": 0,
         "authors": [] # NEEDS TO BE DISCUSSED
-   }
+    }
 
     filename= record_uuid + ".json"
     base_dir = os.getcwd() + '/json_for_dar'
