@@ -36,7 +36,19 @@ for layer in doc['WMS_Capabilities']['Capability']['Layer']['Layer']:
             site_record = deims.getSiteById(deims_suffix)
             continue
         if "time: " in keyword:
-            period = keyword[6:]
+            time_string = keyword[6:]
+            
+            if "-" in time_string:
+                time_values = time_string.split('-')
+                period = {
+                    "begin": time_values[0], # might be necessary to have start/end date with days and months, not just year
+                    "end": time_values[1] # might be necessary to have start/end date with days and months, not just year
+                }
+            
+            else:
+                # might be necessary to have start/end date with days and months, not just year
+                period = {"begin": time_string}
+
             continue
         
         formatted_keyword = {
@@ -54,14 +66,12 @@ for layer in doc['WMS_Capabilities']['Capability']['Layer']['Layer']:
         "uri": "https://catalogue.lter-europe.net/id/" + record_uuid,
         "type": "signpost",
         "title": layer['Title'],
-        "description": layer['Abstract'],
+        "description": layer['Abstract'], # we could add a sentence that the metadata record was generated automatically
         "metadataDate": str(datetime.now()),
         "resourceIdentifiers": {"code": "https://catalogue.lter-europe.net/id/" + record_uuid},
         "descriptiveKeywords": [{"keywords": keywords_to_be_printed}],
         "responsibleParties": [], # NEEDS TO BE DISCUSSED
-        "temporalExtents": [{
-            "begin": period
-        }],
+        "temporalExtents": period,
         "supplemental": [], # NEEDS TO BE DISCUSSED IF WE NEED IT
         "service": {
             "type": "WMS"
