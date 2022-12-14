@@ -72,8 +72,8 @@ for layer in list_of_layers:
                     "epsgCode": epsg_code,
                     "type": "POLYGON",
                     "features": {
-                        "name": x['Name'],
-                        "label": x['Title'],
+                        "name": layer['Name'],
+                        "label": layer['Title'],
                         "style": {
                             "colour": "#000000"
                         }
