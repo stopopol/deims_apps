@@ -16,6 +16,9 @@ from datetime import datetime
 # it's easier to manually download the getcapabilites xml and put it in this folder as 'getcapabilities.xml'
 # https://elter.datalabs.ceh.ac.uk/geoserver/ows?service=wms&version=1.3.0&request=GetCapabilities
 
+# also you should manually empty the folder 'json_for_dar' before running this scripts as the 
+# uuids used for the filenames are always generated from scratch
+
 with open('getcapabilities.xml') as fd:
     doc = xmltodict.parse(fd.read())
     
