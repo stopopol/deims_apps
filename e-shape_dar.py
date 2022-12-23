@@ -1,24 +1,3 @@
-import xmltodict
-import json
-import uuid
-import os
-import deims # might be necessary to pip install it via the terminal first :(
-from datetime import datetime
-
-#
-# e-shape DAR metadata generation script
-#
-# This script takes information from a GeoServer GetCapabilities 1.3 link 
-# and generates metadata records from it to be imported
-# in the eLTER DAR (https://catalogue.lter-europe.net/).
-#
-# GetCapabilities URL of GeoServer:
-# it's easier to manually download the getcapabilites xml and put it in this folder as 'getcapabilities.xml'
-# https://elter.datalabs.ceh.ac.uk/geoserver/ows?service=wms&version=1.3.0&request=GetCapabilities
-
-# also you should manually empty the folder 'json_for_dar' before running this scripts as the 
-# uuids used for the filenames are always generated from scratch
-
 with open('getcapabilities.xml') as fd:
     doc = xmltodict.parse(fd.read())
 
@@ -28,9 +7,52 @@ for layer in doc['WMS_Capabilities']['Capability']['Layer']['Layer']:
     
     # add 'e-shape' as keyword to every layer
     keywords_to_be_printed = [{"value": "H2020 e-shape"}]
-    
+    authors = None
     # process keywords for site information and temporal extent
     for keyword in layer['KeywordList']['Keyword']:
+        uri = None
+        
+        if "variable: " in keyword:
+            data_product_type = keyword[10:]
+            if data_product_type == "Phenology":
+                keyword = "Phenology"
+                uri = "https://vocabs.lter-europe.net/EnvThes/21647"
+                authors = [{
+                  "individualName": "Saverio Vicario",
+                  "organisationName": "CNR",
+                  "role": "author",
+                  "email": "saverio.vicario@iia.cnr.it",
+                  "nameIdentifier": "https://orcid.org/0000-0003-1140-0483",
+                }]
+            if data_product_type == "Hydroperiod":
+                keyword = "Hydroperiod"
+                authors = [{
+                  "individualName": "Ioannis Manakos",
+                  "organisationName": "CERTH",
+                  "role": "author",
+                  "email": "imanakos@iti.gr",
+                  "nameIdentifier": "https://orcid.org/0000-0001-6833-294X",
+                }]
+            if data_product_type == "snowcover":
+                uri = "https://vocabs.lter-europe.net/EnvThes/21559"
+                keyword = "snowCover"
+                authors = [
+                    {
+                      "individualName": "Maria Adamo",
+                      "organisationName": "CNR",
+                      "role": "author",
+                      "email": "adamo@iia.cnr.it",
+                      "nameIdentifier": "https://orcid.org/0000-0003-3030-4884",
+                    },
+                    {
+                      "individualName": "Chiara Riciardi",
+                      "organisationName": "CERTH",
+                      "role": "author",
+                      "email": "'chiara.richiardi@iia.cnr.it",
+                      "nameIdentifier": "https://orcid.org/0000-0002-2370-7768",
+                    }
+                ]
+        
         if "site: " in keyword:
             deims_suffix = keyword[6:]
             site_record = deims.getSiteById(deims_suffix)
@@ -51,9 +73,16 @@ for layer in doc['WMS_Capabilities']['Capability']['Layer']['Layer']:
 
             continue
         
-        formatted_keyword = {
-          "value": keyword,
-        }
+        if uri:
+            formatted_keyword = {
+                "value": keyword,
+                "uri": uri
+            }
+        else:
+            formatted_keyword = {
+                "value": keyword
+            }
+       
         keywords_to_be_printed.append(formatted_keyword)
 
     # fetch EPSG code    
@@ -70,7 +99,7 @@ for layer in doc['WMS_Capabilities']['Capability']['Layer']['Layer']:
         "metadataDate": str(datetime.now()),
         "resourceIdentifiers": {"code": "https://catalogue.lter-europe.net/id/" + record_uuid},
         "descriptiveKeywords": [{"keywords": keywords_to_be_printed}],
-        "responsibleParties": [], # NEEDS TO BE DISCUSSED
+        "responsibleParties": authors,
         "temporalExtents": period,
         "supplemental": [], # NEEDS TO BE DISCUSSED IF WE NEED IT
         "service": {
@@ -105,7 +134,7 @@ for layer in doc['WMS_Capabilities']['Capability']['Layer']['Layer']:
         "linkedDocument": False,
         "mapViewable": False,
         "incomingCitationCount": 0,
-        "authors": [] # NEEDS TO BE DISCUSSED
+        "authors": authors
     }
 
     filename= record_uuid + ".json"
