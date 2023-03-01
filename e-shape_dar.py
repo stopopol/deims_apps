@@ -33,6 +33,14 @@ for layer in doc['WMS_Capabilities']['Capability']['Layer']['Layer']:
                   "email": "imanakos@iti.gr",
                   "nameIdentifier": "https://orcid.org/0000-0001-6833-294X",
                 }]
+            if data_product_type == "GPP":
+                keyword = "GPP"
+                uri = "http://vocabs.lter-europe.net/EnvThes/21074"
+                authors = [{
+                  "individualName": "Mario Alberto Fruentes-Monjarez",
+                  "organisationName": "Deltares",
+                  "role": "author",
+                }]
             if data_product_type == "snowcover":
                 uri = "https://vocabs.lter-europe.net/EnvThes/21559"
                 keyword = "snowCover"
@@ -56,6 +64,13 @@ for layer in doc['WMS_Capabilities']['Capability']['Layer']['Layer']:
         if "site: " in keyword:
             deims_suffix = keyword[6:]
             site_record = deims.getSiteById(deims_suffix)
+            continue
+        if "https://doi.org/" in keyword: 
+            doi = {
+                "name": "B2Share",
+                "description": "Download data on B2Share",
+                "url": keyword
+            }
             continue
         if "time: " in keyword:
             time_string = keyword[6:]
@@ -84,9 +99,9 @@ for layer in doc['WMS_Capabilities']['Capability']['Layer']['Layer']:
             }
        
         keywords_to_be_printed.append(formatted_keyword)
-
+ 
     # fetch EPSG code    
-    for value in crs:
+    for value in layer['CRS']:
         if "EPSG:" in value:
             epsg_code=value[5:]
     
@@ -101,7 +116,7 @@ for layer in doc['WMS_Capabilities']['Capability']['Layer']['Layer']:
         "descriptiveKeywords": [{"keywords": keywords_to_be_printed}],
         "responsibleParties": authors,
         "temporalExtents": period,
-        "supplemental": [], # NEEDS TO BE DISCUSSED IF WE NEED IT
+        "supplemental": [doi],
         "service": {
             "type": "WMS"
         },
