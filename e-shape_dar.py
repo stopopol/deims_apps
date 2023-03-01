@@ -78,8 +78,8 @@ for layer in doc['WMS_Capabilities']['Capability']['Layer']['Layer']:
             if "-" in time_string:
                 time_values = time_string.split('-')
                 period = {
-                    "begin": time_values[0], # might be necessary to have start/end date with days and months, not just year
-                    "end": time_values[1] # might be necessary to have start/end date with days and months, not just year
+                    "begin": time_values[0] + '-01-01',
+                    "end": time_values[1] + '-01-01'
                 }
             
             else:
