@@ -104,6 +104,12 @@ for layer in doc['WMS_Capabilities']['Capability']['Layer']['Layer']:
     for value in layer['CRS']:
         if "EPSG:" in value:
             epsg_code=value[5:]
+            
+    # boundaries    
+    westBoundLongitude = layer['EX_GeographicBoundingBox']["westBoundLongitude"]
+    eastBoundLongitude = layer['EX_GeographicBoundingBox']["eastBoundLongitude"]
+    southBoundLatitude = layer['EX_GeographicBoundingBox']["southBoundLatitude"]
+    northBoundLatitude = layer['EX_GeographicBoundingBox']["northBoundLatitude"]
     
     record = {
         "id": record_uuid,
@@ -116,6 +122,31 @@ for layer in doc['WMS_Capabilities']['Capability']['Layer']['Layer']:
         "descriptiveKeywords": [{"keywords": keywords_to_be_printed}],
         "responsibleParties": authors,
         "temporalExtents": period,
+        "boundingBoxes": [
+             {
+              "westBoundLongitude": westBoundLongitude,
+              "eastBoundLongitude": eastBoundLongitude,
+              "southBoundLatitude": southBoundLatitude,
+              "northBoundLatitude": northBoundLatitude,
+              "bounds":  {
+                    "type": "Feature",      
+                    "properties": {},      
+                    "geometry": {        
+                        "type": "Polygon",      
+                        "coordinates": [
+                            [
+                                [westBoundLongitude, southBoundLatitude], 
+                                [westBoundLongitude, northBoundLatitude], 
+                                [eastBoundLongitude, northBoundLatitude], 
+                                [eastBoundLongitude, southBoundLatitude], 
+                                [westBoundLongitude, southBoundLatitude]
+                            ]
+                        ]      
+                    }
+                },
+              "coordinates": f"[[[{westBoundLongitude}, {southBoundLatitude}], [{westBoundLongitude}, {northBoundLatitude}], [{eastBoundLongitude}, {northBoundLatitude}], [{eastBoundLongitude}, {southBoundLatitude}], [{westBoundLongitude}, {southBoundLatitude}]]]"
+            }
+        ],
         "supplemental": [doi],
         "service": {
             "type": "WMS"
