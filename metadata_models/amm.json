@@ -3,7 +3,7 @@
   "abbreviation": "AMM",
   "version": 1.1,
   "releaseDate": "2019-10-28T00:00:00.000Z",
-  "scope": "The Activity Metadata Model (DPMM) describe the metadata elements of a Data Product. The metadata model is based on requirements defined by research projects (e.g. EcoPotential) as well as target stakeholder groups (e.g. LTER). The concept of ‘data product’ was added in order to allow a summarised description of a series of data. By this a fast overview on available data sources in a protected area can be created without a full description of each single dataset. This needs to be the logical second step and can not be replaced by the information on the data products.",
+  "scope": "The Activity Metadata Model (DPMM) describe the metadata elements of an activity. The metadata model is based on requirements defined by research projects (e.g. EcoPotential) as well as target stakeholder groups (e.g. LTER). The concept of ‘data product’ was added in order to allow a summarised description of a series of data. By this a fast overview on available data sources in a protected area can be created without a full description of each single dataset. This needs to be the logical second step and can not be replaced by the information on the data products.",
   "content": {
     "Title": {
       "field_name": "title",
