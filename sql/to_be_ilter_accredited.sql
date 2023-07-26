@@ -1,4 +1,4 @@
-CREATE OR REPLACE VIEW to_be_accredited AS
+CREATE OR REPLACE VIEW to_be_ilter_accredited AS
 
 -- get all sites and their completeness and print affiliation
 
