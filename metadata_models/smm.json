@@ -1,8 +1,8 @@
 {
   "name": "Site Metadata Model",
   "abbreviation": "SMM",
-  "version": 1.41,
-  "releaseDate": "2022-05-27T00:00:00.000Z",
+  "version": 1.42,
+  "releaseDate": "2023-07-27T00:00:00.000Z",
   "scope": "A 'Site' is as an in-situ observation or experimentation facility, delimited in space, but varying in size and complexity of the internal organisational and observational design, for the collection of data covering e.g. biogeophysical, biotic or socio-ecological characteristics and processes. The Site Metadata Model (SMM) describes the metadata elements of a monitoring or experimentation site. The metadata model is based on requirements defined by target stakeholder groups (e.g. ILTER/eLTER) and research projects (e.g. eLTER PLUS or e-shape). It defines metadata elements about the organisation (e.g. contact, information, networks), the location, the observation characteristics (e.g. climate, habitats) or available equipment to name just a few. The basic metadata elements are in line with the data specification of the INSPIRE data theme Environmental Monitoring Facilities (EF). An initial mapping was done within the EnvEurope project showing the basic overall compliance.",
   "content": {
     "General": {
@@ -530,9 +530,7 @@
             "Plateau",
             "Valley"
           ],
-          "not applicable/not relevant": [
-
-          ]
+          "not applicable/not relevant": []
         },
         "Comment": ""
       },
@@ -711,33 +709,19 @@
         ],
         "Comment": ""
       },
-      "Parent site name": {
-        "field_name": "field_parent_site",
-        "Definition": "Reference to the parent LTSER Platform in which the site is located. The relation could either be a spatial or thematic.",
-        "Recommendation & Hints": "Please provide the reference to the parent Platform/umbrella site in which the site is located (by Site name).",
-        "Format": "Reference to another site record",
-        "Multiplicity": "[0..1]",
-        "Required": {
-          "LTER Europe": "FALSE",
-          "ILTER": "FALSE"
-        },
-        "Example": "LTSER Platform Eisenwurzen (EW)",
-        "Reference list": "see [content type] site",
-        "Comment": ""
-      },
-      "Subsite name(s)": {
-        "field_name": "field_subsite_name",
-        "Definition": "Reference to the child elements of a site/platform. The relation could either be a spatial or thematic.",
-        "Recommendation & Hints": "Please provide the reference to the sites which belong to the platform/umbrella site (by Site name).",
-        "Format": "Reference to a site record [content type site]",
+      "Relationships to other sites": {
+        "field_name": "field_related_sites_paragraph",
+        "Definition": "Reference to all sites that are related. The relation could either be a spatial or thematic.",
+        "Recommendation & Hints": "Indicate all sites that are related and how they are related.",
+        "Format": "Paragraph",
         "Multiplicity": "[0..n]",
         "Required": {
           "LTER Europe": "FALSE",
           "ILTER": "FALSE"
         },
-        "Example": "Zöbelboden LTER - Austria",
+        "Example": "belongs to 'LTSER Platform Eisenwurzen (EW)'",
         "Reference list": "see [content type] site",
-        "Comment": ""
+        "Comment": "This field consists of subfields to link to other sites and describe the type of relationship"
       },
       "Observation Design": {
         "Scale of observation": {
@@ -1116,8 +1100,6 @@
         "Comment": ""
       }
     },
-    "Project Related Fields": {
-
-    }
+    "Project Related Fields": {}
   }
 }
