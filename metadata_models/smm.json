@@ -231,7 +231,7 @@
           "LTER Europe": "TRUE",
           "ILTER": "TRUE"
         },
-        "Example": "{"type":"Point","coordinates":[14.444136161386,47.842246069311]}",
+        "Example": "{\"type\":\"Point\",\"coordinates\":[14.444136161386,47.842246069311]}",
         "Reference list": "",
         "Comment": ""
       },
