@@ -84,6 +84,21 @@
       "Comment": "",
       "Changes from Version 1.0": ""
     },
+    "Site": {
+      "field_name": "field_size_ha",
+      "Definition": "Size of location in hectares. Calculated automatically",
+      "Recommendation & Hints": "",
+      "Format": "numeric(double)",
+      "Multiplicity": "[1..1]",
+      "Required": {
+        "LTER Europe": "TRUE",
+        "ILTER": "True"
+      },
+      "Example": 10.13,
+      "Reference list": "",
+      "Comment": "",
+      "Changes from Version 1.0": ""
+    },
     "Elevation (min)": {
       "field_name": "field_elevation_min",
       "Definition": "Average and Bounding elevation range for the site (observation or experimentation facility).",
