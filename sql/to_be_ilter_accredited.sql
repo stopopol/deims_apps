@@ -29,7 +29,7 @@ ON elevation_min.`entity_id` = basetable.`nid`
 INNER JOIN `node__field_elevation_max` as elevation_max
 ON elevation_max.`entity_id` = basetable.`nid`
 
-INNER JOIN `node__field_size` as site_size
+INNER JOIN `node__field_size_ha` as site_size
 ON site_size.`entity_id` = basetable.`nid`
 
 INNER JOIN `node__field_air_temp_avg` as air_temp_avg
