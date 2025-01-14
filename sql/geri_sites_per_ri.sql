@@ -8,7 +8,32 @@ JSON_ARRAYAGG(network.`field_network_target_id`),
 CASE
 	WHEN JSON_CONTAINS(JSON_ARRAYAGG(network.`field_network_target_id`), '12966', '$') THEN 1
 	ELSE 0
-END AS "NEON"
+END AS "NEON",
+
+CASE
+	WHEN JSON_CONTAINS(JSON_ARRAYAGG(network.`field_network_target_id`), '220', '$') THEN 1
+	ELSE 0
+END AS "CERN",
+
+CASE
+	WHEN JSON_CONTAINS(JSON_ARRAYAGG(network.`field_network_target_id`), '245', '$') THEN 1
+	ELSE 0
+END AS "TERN",
+
+CASE
+	WHEN JSON_CONTAINS(JSON_ARRAYAGG(network.`field_network_target_id`), '219', '$') THEN 1
+	ELSE 0
+END AS "SAEON",
+
+CASE
+	WHEN JSON_CONTAINS(JSON_ARRAYAGG(network.`field_network_target_id`), '12825', '$') THEN 1
+	ELSE 0
+END AS "ICOS",
+
+CASE
+	WHEN JSON_CONTAINS(JSON_ARRAYAGG(tags.`field_tags_target_id`), '54741', '$') THEN 1
+	ELSE 0
+END AS "eLTER"
 
 
 FROM `node` basetable 
@@ -21,6 +46,9 @@ ON affiliation.`entity_id` = basetable.`nid`
 
 RIGHT JOIN `paragraph__field_network` as network
 ON network.`entity_id` = affiliation.`field_affiliation_target_id`
+
+LEFT JOIN `node__field_tags` as tags
+ON tags.`entity_id` = basetable.`nid`
 
 WHERE basetable.`nid` IN (
 
