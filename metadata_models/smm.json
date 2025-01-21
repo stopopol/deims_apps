@@ -165,8 +165,8 @@
       },
       "Size": {
         "field_name": "field_size_ha",
-        "Definition": "Size of the site in hectare (ha). The size refers to the boundary of the catchment, the observed area or the relevant area for extrapolation dependent on the observed ecosystem type (e.g. forest, lake, rivers).",
-        "Recommendation & Hints": "Please provide the size of the site in hectares. unit = hectare hectare = square kilometre x 100 OR square kilometre  = hectare/100. The estimation of the size refers to the observed area of the site. This could either be the observed catchment area, the observed area defined by the bounding boundary of the observation devices, or the relevant area for extrapolation depending on the observed ecosystem type (e.g. forest, lake, glacier, ...). If you provide a valid geometry in the boundaries field the size will be calculated automatically.",
+        "Definition": "Size of the site in hectare (ha)",
+        "Recommendation & Hints": "Please provide the size of the site in hectares. unit = hectare hectare = square kilometre /100 OR square kilometre = hectare x 100. The estimation of the size refers to the observed area of the site defined by the bounding boundaries of observation devices or sampling locations. Information on the extent of hydrological catchments or extrapolation areas should be provided as separate locations using the respective form. If you provide valid boundaries in the "boundaries" field the value for the size field will be calculated automatically.",
         "Format": "Numeric(Double)",
         "Multiplicity": "[0..1]",
         "Required": {
