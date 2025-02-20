@@ -1,8 +1,8 @@
 {
   "name": "Site Metadata Model",
   "abbreviation": "SMM",
-  "version": 1.42,
-  "releaseDate": "2023-11-27T00:00:00.000Z",
+  "version": 1.43,
+  "releaseDate": "2025-02-20T00:00:00.000Z",
   "scope": "A 'Site' is as an in-situ observation or experimentation facility, delimited in space, but varying in size and complexity of the internal organisational and observational design, for the collection of data covering e.g. biogeophysical, biotic or socio-ecological characteristics and processes. The Site Metadata Model (SMM) describes the metadata elements of a monitoring or experimentation site. The metadata model is based on requirements defined by target stakeholder groups (e.g. ILTER/eLTER) and research projects (e.g. eLTER PLUS or e-shape). It defines metadata elements about the organisation (e.g. contact, information, networks), the location, the observation characteristics (e.g. climate, habitats) or available equipment to name just a few. The basic metadata elements are in line with the data specification of the INSPIRE data theme Environmental Monitoring Facilities (EF). An initial mapping was done within the EnvEurope project showing the basic overall compliance.",
   "content": {
     "General": {
@@ -657,7 +657,7 @@
       "Site Status": {
         "field_name": "field_status",
         "Definition": "The site status describes the current status of the site, e.g. if it is planned or already existing. The site status is composed of the status value, the year of establishment of the site and in case the year when the site was closed.",
-        "Recommendation & Hints": "Select the current status of the site from the list of values and provide beginning and end time of the operation of the site. As year of site establishment select the year when substantial data was obtained and the operational period of the site started. The list of values are taken from the WMO Codes Registry.",
+        "Recommendation & Hints": "Select the current status of the site from the list of values and provide the start time of the operation of the site. As year of site establishment select the year when substantial data was obtained and the operational period of the site started. The list of values are taken from the WMO Codes Registry.",
         "Format": "Reference list",
         "Multiplicity": "[0..1]",
         "Required": {
