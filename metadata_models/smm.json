@@ -224,7 +224,7 @@
       "Centroid or Representative Coordinates": {
         "field_name": "field_coordinates",
         "Definition": "This is the location of the site in the geographic space, given as a centre or representative coordinates expressed in latitude and longitude in decimal degrees.",
-        "Recommendation & Hints": "Please provide the centre or representative coordinates of the site by placing a marker on the map (resize your browser window if the canvas is not clearly visible) or directly paste the coordinates (longitude and latitude, or easting and northing) as geojson, e.g.\n{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"Point\",\"coordinates\":[13.166908,46.583028]}}]}\n\nPasting incorrect geojson data might break the form. ",
+        "Recommendation & Hints": "Please provide the centre or representative coordinates of the site (i.e. one point) by placing a marker on the map (resize your browser window if the canvas is not clearly visible) or directly paste the coordinates (longitude and latitude, or easting and northing) as geojson, e.g.\n{\"type\":\"FeatureCollection\",\"features\":[{\"type\":\"Feature\",\"properties\":{},\"geometry\":{\"type\":\"Point\",\"coordinates\":[13.166908,46.583028]}}]}\n\nPasting incorrect geojson data might break the form. ",
         "Format": "Point coordinates as GeoJSON",
         "Multiplicity": "[1..1]",
         "Required": {
