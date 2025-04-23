@@ -1,8 +1,8 @@
 {
   "name": "Sensor Metadata Model",
   "abbreviation": "SeMM",
-  "version": 0.91,
-  "releaseDate": "2020-07-09T00:00:00.000Z",
+  "version": 0.95,
+  "releaseDate": "2025-04-23T00:00:00.000Z",
   "scope": "The Sensor Metadata Model (SeMM) describes the metadata elements of a device, module, or subsystem whose purpose is to detect events or changes in its environment or its observation time series",
   "content": {
     "General information": {
@@ -126,10 +126,21 @@
         "Format": "number",
         "Multiplicity": "[0..1]",
         "Required": false,
-        "Dependency": "field_mobile",
         "Example": "",
         "Reference list": "",
-        "Comment": "Is mandatory if sensor is mobile"
+        "Comment": "Is mandatory if sensor is stationary"
+      },
+      "Installation Height (m)": {
+        "field_name": "field_installation_height",
+        "Definition": "Height at which a sensor is installed in metres (e.g. 0,00 for ground level; 1,00 for one metre above ground level or -0,10 for ten centimetres below ground level)",
+        "Recommendation & Hints": "",
+        "Format": "number",
+        "Multiplicity": "[0..1]",
+        "Required": false,
+        "Dependency": "",
+        "Example": "",
+        "Reference list": "",
+        "Comment": "Is mandatory if sensor is stationary"
       },
       "Trajectory": {
         "field_name": "field_boundaries",
