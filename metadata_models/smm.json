@@ -657,7 +657,7 @@
       "Site Status": {
         "field_name": "field_status",
         "Definition": "The site status describes the current status of the site, e.g. if it is planned or already existing. The site status is composed of the status value, the year of establishment of the site and in case the year when the site was closed.",
-        "Recommendation & Hints": "Select the current status of the site from the list of values and provide the start time of the operation of the site. As year of site establishment select the year when substantial data was obtained and the operational period of the site started. The list of values are taken from the WMO Codes Registry.",
+        "Recommendation & Hints": "Select the current status of the site from the list of values and provide the start time of the operation of the site. As year of site establishment select the year when substantial data was obtained and the operational period of the site started. When creating new site records this value is to 'operational' by default. Setting a site status to "closed" will automatically remove all affiliation from the site.",
         "Format": "Reference list",
         "Multiplicity": "[0..1]",
         "Required": {
