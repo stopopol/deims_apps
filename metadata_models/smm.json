@@ -69,8 +69,8 @@
       },
       "Images": {
         "field_name": "field_images",
-        "Definition": "Image showing a characteristic situation at the site. This can include instrumentation, observation plots, aerial imagery etc.",
-        "Recommendation & Hints": "Please provide an image showing a characteristic situation at the site.",
+        "Definition": "Image(s) showing a characteristic situation at the site. This can include instrumentation, observation plots, aerial imagery etc.",
+        "Recommendation & Hints": "Please provide images that offer a representative impression of your site. These may include aerial photos taken by drones, typical site activities, and photographs of installations, equipment, or infrastructure. <b>Note:</b> The first image at the top will be used to generate metadata records shared with other groups and systems, such as GEOSS.",
         "Format": "Image [png, jpg, jpeg, gif, ...]",
         "Multiplicity": "[0..n]",
         "Required": {
@@ -1117,3 +1117,4 @@
     "Project Related Fields": {}
   }
 }
+
