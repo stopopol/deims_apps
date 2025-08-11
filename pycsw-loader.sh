@@ -20,7 +20,6 @@ curl -s https://deims.org/api/activities | for code in $(jq .[].id.suffix | sed 
 # check firewall issues
 # bash script might have to be adjusted for unix using $ dos2unix pycsw.sh
 
-
 # Find all files containing "service not found"
 # grep -Flr "Internal Server Error" /home/ubuntu/cswdatabase/iso19139_files/
 
