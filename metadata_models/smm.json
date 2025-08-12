@@ -55,7 +55,7 @@
       },
       "Web Address": {
         "field_name": "field_url",
-        "Definition": "Link to website which provides a description and further information about the site. The web address is composed of the web link (8.2) and a title (8.1) which is shown.",
+        "Definition": "You may enter one or multiple URLs directing to an official website, data service, or repository hosting datasets relevant to this site. The web address is composed of the web link and a title which is shown.",
         "Recommendation & Hints": "Web address title - provide a human readable title for the website. Web address URL - provide a URL (http://... or https://..)",
         "Format": "",
         "Multiplicity": "[0..n]",
@@ -1117,5 +1117,6 @@
     "Project Related Fields": {}
   }
 }
+
 
 
