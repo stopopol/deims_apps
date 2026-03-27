@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEIMS-SDR</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500&family=Nunito+Sans:wght@400;600;700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+
+  <style>
+    /* ─────────────────────────────────────────────────────────────
+       COLOUR PALETTE
+       Transparent/none : #00000000  → page background (pure white)
+       Coral/salmon      : #f4b23e   → accent / highlights
+       Teal dark         : #257372   → sidebar, primary action
+       Sky blue light    : #a8d2ef   → hover states, table head bg
+       Lime green        : #97cd59   → active/success indicators
+       Warm sand (dim)   : #cac784   → muted badges, borders
+       Teal mid (dim)    : #1e6d76   → secondary tones
+    ───────────────────────────────────────────────────────────── */
+    :root {
+      --bg:            #ffffff;
+      --surface:       #ffffff;
+      --surface2:      #f0f7fb;
+      --border:        rgba(202,199,132,0.35);
+      --border-solid:  #d8d8c0;
+
+      --sidebar-bg:    #257372;
+      --sidebar-dark:  #1b5453;
+      --sidebar-bd:    #1e6d76;
+
+      --accent:        #f4b23e;
+      --accent-hover:  #e09e2a;
+      --accent-light:  rgba(244,178,62,0.12);
+
+      --teal-mid:      #1e6d76;
+      --teal-light:    #a8d2ef;
+      --teal-soft:     rgba(168,210,239,0.25);
+      --green:         #97cd59;
+
+      --text:          #1a2e2b;
+      --text-muted:    #5a7a72;
+      --text-s:        #d6ede8;
+      --text-s-muted:  #7fbfb8;
+
+      --danger:        #c0392b;
+      --sidebar-w:     290px;
+      --radius:        6px;
+      --font-head:     'Nunito Sans', sans-serif;
+      --font-mono:     'Source Code Pro', monospace;
+      --shadow-sm:     0 1px 3px rgba(37,115,114,.08), 0 2px 8px rgba(37,115,114,.06);
+      --shadow:        0 2px 8px rgba(37,115,114,.1),  0 4px 20px rgba(37,115,114,.07);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; background: var(--bg); color: var(--text); font-family: var(--font-mono); font-size: 13px; }
+    button { cursor: pointer; border: none; background: none; font: inherit; color: inherit; }
+    select { font: inherit; color: inherit; }
+    a { color: var(--teal-mid); text-decoration: none; }
+    a:hover { color: var(--accent); }
+
+    /* ── App shell ─────────────────────────────────────────────── */
+    .app {
+      display: grid;
+      grid-template-columns: var(--sidebar-w) 1fr;
+      grid-template-rows: 1fr;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       SIDEBAR
+    ═══════════════════════════════════════════════════════════ */
+    .sidebar {
+      background: var(--sidebar-bg);
+      border-right: 1px solid var(--sidebar-bd);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* Logo */
+    .sidebar-logo {
+      padding: 18px 18px 14px;
+      border-bottom: 1px solid rgba(255,255,255,.1);
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      text-decoration: none;
+    }
+    .logo-img-wrap {
+      width: 42px; height: 42px;
+      border-radius: 7px;
+      background: #fff;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0,0,0,.15);
+    }
+    .logo-img-wrap img { width: 36px; height: 36px; object-fit: contain; }
+    #deims-logo-svg { display: none; }
+
+    .logo-text { display: flex; flex-direction: column; gap: 2px; }
+    .logo-name {
+      font-family: var(--font-head);
+      font-weight: 900;
+      font-size: 17px;
+      color: #fff;
+      letter-spacing: 0.4px;
+      line-height: 1;
+    }
+    .logo-sub {
+      font-size: 10px;
+      color: var(--text-s-muted);
+      font-family: var(--font-head);
+      font-weight: 600;
+    }
+
+    /* eLTER badge */
+    .elter-badge {
+      margin: 11px 13px 0;
+      padding: 6px 11px;
+      border-radius: 5px;
+      background: rgba(255,255,255,.1);
+      border: 1px solid rgba(255,255,255,.15);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    .elter-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+      box-shadow: 0 0 6px var(--green);
+    }
+    .elter-label {
+      font-size: 11px;
+      color: var(--text-s);
+      font-family: var(--font-head);
+      font-weight: 600;
+    }
+    .elter-label strong { color: #c4e8b4; }
+
+    /* Filter scroll */
+    .sidebar-filters {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .sidebar-filters::-webkit-scrollbar { width: 3px; }
+    .sidebar-filters::-webkit-scrollbar-thumb { background: rgba(255,255,255,.15); border-radius: 2px; }
+
+    .filter-section-label {
+      font-family: var(--font-head);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: var(--text-s-muted);
+      padding: 8px 6px 3px;
+    }
+    .filter-group { display: flex; flex-direction: column; gap: 3px; margin-bottom: 3px; }
+    .filter-label {
+      font-size: 11px;
+      color: var(--text-s);
+      padding: 0 6px;
+      font-family: var(--font-head);
+      font-weight: 600;
+    }
+
+    /* ── Dropdown: NO moving arrow on hover ── */
+    .filter-select {
+      appearance: none;
+      -webkit-appearance: none;
+      background-color: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius);
+      padding: 8px 11px;
+      width: 100%;
+      color: #d6ede8;
+      font-size: 12px;
+      font-family: var(--font-mono);
+      transition: border-color .15s, background-color .15s;
+      box-sizing: border-box;
+    }
+    .filter-select::placeholder { color: var(--text-s-muted); opacity: 1; }
+    .filter-select:hover {
+      border-color: rgba(244,178,62,.5);
+      background-color: rgba(255,255,255,.12);
+    }
+    .filter-select:focus {
+      outline: none;
+      border-color: var(--accent);
+      background-color: rgba(255,255,255,.12);
+      box-shadow: 0 0 0 2px rgba(244,178,62,.25);
+    }
+
+    /* ── jQuery UI autocomplete dropdown themed to sidebar ── */
+    .ui-autocomplete {
+      background: #1b5453 !important;
+      border: 1px solid rgba(255,255,255,.15) !important;
+      border-radius: var(--radius) !important;
+      box-shadow: 0 8px 24px rgba(0,0,0,.35) !important;
+      font-family: var(--font-mono) !important;
+      font-size: 12px !important;
+      max-height: 220px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      z-index: 9999 !important;
+      padding: 4px 0 !important;
+    }
+    .ui-menu-item-wrapper {
+      padding: 7px 12px !important;
+      color: #d6ede8 !important;
+      border-radius: 0 !important;
+      border: none !important;
+      cursor: pointer;
+    }
+    .ui-menu-item-wrapper.ui-state-active,
+    .ui-menu-item-wrapper.ui-state-focus {
+      background: rgba(244,178,62,.2) !important;
+      color: #fff !important;
+      border: none !important;
+      margin: 0 !important;
+    }
+    /* hide jQuery UI's default widget chrome */
+    .ui-helper-hidden-accessible { display: none; }
+    .ui-widget { font-family: var(--font-mono); }
+    .ui-widget-content { background: none; border: none; }
+
+    /* Sidebar buttons */
+    .sidebar-actions {
+      padding: 12px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 13px;
+      border-radius: var(--radius);
+      padding: 10px 16px;
+      width: 100%;
+      letter-spacing: 0.3px;
+      transition: background .15s, transform .1s, box-shadow .15s;
+      box-shadow: 0 2px 8px rgba(244,178,62,.4);
+    }
+    .btn-primary:hover { background: var(--accent-hover); }
+    .btn-primary:active { transform: scale(.98); }
+    .btn-ghost {
+      color: var(--text-s-muted);
+      font-size: 12px;
+      padding: 7px 16px;
+      border-radius: var(--radius);
+      width: 100%;
+      text-align: center;
+      font-family: var(--font-head);
+      font-weight: 600;
+      transition: color .15s, background .15s;
+    }
+    .btn-ghost:hover { color: var(--text-s); background: rgba(255,255,255,.08); }
+
+    /* ═══════════════════════════════════════════════════════════
+       MAIN COLUMN
+    ═══════════════════════════════════════════════════════════ */
+    .main {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: var(--bg);
+    }
+
+    /* Topbar */
+    .topbar {
+      height: 56px;
+      padding: 0 22px;
+      border-bottom: 1px solid var(--border-solid);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+      background: var(--surface);
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      z-index: 5;
+    }
+    .topbar-title {
+      font-family: var(--font-head);
+      font-size: 15px;
+      font-weight: 700;
+      flex: 1;
+      color: var(--teal-mid);
+    }
+    .topbar-meta { font-size: 12px; color: var(--text-muted); font-family: var(--font-head); }
+    #result-count { color: var(--teal-mid); font-weight: 700; }
+
+    /* View toggle */
+    .view-toggle {
+      display: flex;
+      background: var(--surface2);
+      border: 1px solid var(--border-solid);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .toggle-btn {
+      padding: 6px 13px;
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-head);
+      font-weight: 600;
+      transition: background .15s, color .15s;
+    }
+    .toggle-btn svg { width: 14px; height: 14px; }
+    .toggle-btn.active { background: var(--sidebar-bg); color: #fff; }
+    .toggle-btn:not(.active):hover { background: var(--teal-light); color: var(--teal-mid); }
+
+    .btn-login {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      color: var(--sidebar-bg);
+      background: var(--accent);
+      border-radius: var(--radius);
+      white-space: nowrap;
+      transition: background .15s, color .15s;
+      box-shadow: 0 1px 4px rgba(244,178,62,.35);
+      text-decoration: none;
+    }
+    .btn-login:hover { background: var(--accent-hover); color: #fff; }
+
+    .btn-export {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 13px;
+      font-size: 12px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      color: var(--sidebar-bg);
+      background: var(--surface);
+      border: 1px solid var(--border-solid);
+      border-radius: var(--radius);
+      white-space: nowrap;
+      transition: background .15s, border-color .15s;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .btn-export svg { width: 13px; height: 13px; flex-shrink: 0; }
+    .btn-export:hover { background: var(--surface2); border-color: var(--sidebar-bg); color: var(--sidebar-bg); }
+
+    /* ═══════════════════════════════════════════════════════════
+       CONTENT AREA
+    ═══════════════════════════════════════════════════════════ */
+    .content {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* States */
+    .state-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background: var(--bg);
+      z-index: 10;
+    }
+    .state-overlay.hidden { display: none; }
+    .state-icon-wrap {
+      width: 52px; height: 52px;
+      border-radius: 50%;
+      background: var(--teal-soft);
+      display: grid;
+      place-items: center;
+    }
+    .state-icon-wrap svg { width: 24px; height: 24px; color: var(--sidebar-bg); }
+    .state-title { font-family: var(--font-head); font-size: 16px; font-weight: 700; color: var(--text-muted); }
+    .state-sub   { font-size: 12px; color: var(--text-muted); opacity: .7; font-family: var(--font-head); }
+
+    .spinner {
+      width: 28px; height: 28px;
+      border: 2px solid var(--border-solid);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .error-badge {
+      background: #fef0ee;
+      border: 1px solid #f5c6c0;
+      color: var(--danger);
+      border-radius: var(--radius);
+      padding: 8px 16px;
+      font-size: 12px;
+      max-width: 420px;
+      text-align: center;
+      font-family: var(--font-head);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       TABLE VIEW
+    ═══════════════════════════════════════════════════════════ */
+    #view-table {
+      height: 100%;
+      overflow: auto;
+      padding: 20px 22px;
+    }
+    #view-table::-webkit-scrollbar { width: 5px; height: 5px; }
+    #view-table::-webkit-scrollbar-thumb { background: var(--border-solid); border-radius: 3px; }
+    #view-table.hidden { display: none; }
+
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      background: var(--surface);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border-solid);
+    }
+
+    /* Coloured header band */
+    .data-table thead tr { background: var(--sidebar-bg); }
+    .data-table th {
+      text-align: left;
+      padding: 10px 14px;
+      font-family: var(--font-head);
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: var(--text-s);
+      border-bottom: 2px solid var(--accent);
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+    }
+    .data-table th:hover { color: #fff; }
+    .sort-icon { margin-left: 4px; opacity: .4; }
+    .data-table th.sorted .sort-icon { opacity: 1; color: var(--accent); }
+
+    .data-table tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background .1s;
+    }
+    .data-table tbody tr:nth-child(even) { background: rgba(168,210,239,.07); }
+    .data-table tbody tr:hover { background: var(--teal-soft); }
+
+    .data-table td {
+      padding: 9px 14px;
+      color: var(--text);
+      max-width: 320px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .data-table td.muted { color: var(--text-muted); }
+    .data-table td a {
+      color: var(--teal-mid);
+      font-weight: 500;
+    }
+    .data-table td a:hover { color: var(--accent); }
+
+    /* Changed date badge */
+    .date-badge {
+      display: inline-block;
+      background: rgba(202,199,132,.25);
+      border: 1px solid rgba(202,199,132,.5);
+      border-radius: 3px;
+      padding: 1px 6px;
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       MAP VIEW
+    ═══════════════════════════════════════════════════════════ */
+    #view-map { height: 100%; position: relative; }
+    #view-map.hidden { display: none; }
+    #map { height: 100%; width: 100%; }
+
+    .leaflet-popup-content-wrapper {
+      background: var(--surface) !important;
+      color: var(--text) !important;
+      border: 1px solid var(--border-solid) !important;
+      border-radius: var(--radius) !important;
+      font-family: var(--font-mono) !important;
+      font-size: 12px !important;
+      box-shadow: 0 8px 24px rgba(37,115,114,.18) !important;
+    }
+    .leaflet-popup-tip { background: var(--surface) !important; }
+    .popup-title {
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 13px;
+      color: var(--sidebar-bg);
+      margin-bottom: 7px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--accent);
+      line-height: 1.3;
+    }
+    .popup-row { display: flex; gap: 8px; margin-top: 4px; align-items: baseline; }
+    .popup-key  { color: var(--text-muted); min-width: 60px; font-family: var(--font-head); font-size: 11px; }
+    .popup-val  { color: var(--teal-mid); font-weight: 500; }
+    .popup-link { color: var(--accent) !important; font-size: 11px; margin-top: 7px; display: block; }
+
+    /* Custom circular marker colour */
+    .deims-marker {
+      background: var(--accent);
+      border: 2px solid var(--sidebar-bg);
+      border-radius: 50%;
+      box-shadow: 0 1px 4px rgba(0,0,0,.3);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════════════════ */
+    .footer {
+      flex-shrink: 0;
+      background: var(--surface);
+      border-top: 1px solid var(--border-solid);
+      padding: 8px 22px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+      font-size: 11px;
+      color: var(--text-muted);
+      font-family: var(--font-head);
+    }
+    .footer-copy { font-weight: 700; color: var(--text-muted); white-space: nowrap; }
+    .footer a {
+      color: var(--text-muted);
+      transition: color .15s;
+      white-space: nowrap;
+    }
+    .footer a:hover { color: var(--accent); }
+    .footer-sep { color: var(--border-solid); user-select: none; }
+    .footer-powered {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      white-space: nowrap;
+    }
+    .footer-powered .elter-dot-sm {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+      box-shadow: 0 0 4px var(--green);
+    }
+    .footer-powered a { color: var(--teal-mid); font-weight: 700; }
+    .footer-powered a:hover { color: var(--accent); }
+	
+    /* ═══════════════════════════════════════════════════════════
+       Modals (text boxes)
+    ═══════════════════════════════════════════════════════════ */	
+	
+	.modal {
+	  position: fixed;
+	  inset: 0;
+	  background: rgba(0,0,0,.4);
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  z-index: 9999;
+	}
+
+	.modal.hidden {
+	  display: none;
+	}
+
+	.modal-box {
+	  background: white;
+	  padding: 20px;
+	  border-radius: 8px;
+	  max-width: 400px;
+	  width: 90%;
+	  box-shadow: 0 10px 30px rgba(0,0,0,.2);
+	  position: relative;
+	  font-family: var(--font-head);
+	}
+
+	#modal-close {
+	  position: absolute;
+	  top: 8px;
+	  right: 10px;
+	  font-size: 18px;
+	  cursor: pointer;
+	}
+  </style>
+</head>
+<body>
+<div class="app">
+
+  <!-- ══════ SIDEBAR ══════ -->
+  <aside class="sidebar">
+
+    <a class="sidebar-logo" href="https://deims.org" target="_blank" rel="noopener">
+      <div class="logo-img-wrap">
+        <img
+          id="deims-logo-img"
+          src="https://deims.org/sites/default/files/2023-04/deims_logo_v3.png"
+          alt="DEIMS logo"
+          onerror="this.style.display='none'; document.getElementById('deims-logo-svg').style.display='block';"
+        />
+        <svg id="deims-logo-svg" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="38" height="38" rx="6" fill="#257372"/>
+          <path d="M19 7C11 7 9 16 14 20.5C16.5 23 19 30 19 30C19 30 21.5 23 24 20.5C29 16 27 7 19 7Z"
+                fill="#fff" opacity=".9"/>
+          <circle cx="19" cy="18" r="4" fill="#257372"/>
+        </svg>
+      </div>
+      <div class="logo-text">
+        <span class="logo-name">DEIMS.org</span>
+        <span class="logo-sub">Your Environmental Monitoring and Research Site Registry</span>
+      </div>
+    </a>
+
+    <div class="sidebar-filters">
+      <span class="filter-section-label">Filters</span>
+
+      <div class="filter-group">
+        <span class="filter-label">Country</span>
+        <input class="filter-select" id="filter-country-input" type="text" placeholder="All countries" autocomplete="off" />
+        <input type="hidden" id="filter-country" value="" />
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Operating organisation</span>
+        <input class="filter-select" id="filter-organisation" type="text" placeholder="All organisations" autocomplete="off" />
+        <input type="hidden" id="filter-organisation-val" value="" />
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Network</span>
+        <input class="filter-select" id="filter-network" type="text" placeholder="All networks" autocomplete="off" />
+        <input type="hidden" id="filter-network-val" value="" />
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Project</span>
+        <input class="filter-select" id="filter-project" type="text" placeholder="All projects" autocomplete="off" />
+        <input type="hidden" id="filter-project-val" value="" />
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Habitat</span>
+        <input class="filter-select" id="filter-habitat" type="text" placeholder="All habitats" autocomplete="off" />
+        <input type="hidden" id="filter-habitat-val" value="" />
+      </div>
+
+      <div class="filter-group">
+        <span class="filter-label">Observed Property</span>
+        <input class="filter-select" id="filter-obsproperty" type="text" placeholder="All observed properties" autocomplete="off" />
+        <input type="hidden" id="filter-obsproperty-val" value="" />
+      </div>
+
+
+
+    <div class="sidebar-actions">
+      <button class="btn-ghost" id="btn-reset">Reset filters</button>
+    </div>
+  </aside>
+
+  <!-- ══════ MAIN ══════ -->
+  <main class="main">
+
+    <div class="topbar">
+      <span class="topbar-meta"><span id="result-count">—</span> results</span>
+      <span style="flex:1"></span>
+      <div class="view-toggle">
+
+        <button class="toggle-btn active" id="btn-map-view">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/>
+            <line x1="9" y1="3" x2="9" y2="18"/>
+            <line x1="15" y1="6" x2="15" y2="21"/>
+          </svg>
+          Map
+        </button>
+		<button class="toggle-btn" id="btn-table-view">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M3 9h18M3 15h18M9 3v18"/>
+          </svg>
+          Table
+        </button>
+      </div>
+      <button class="btn-export" id="btn-export">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="7 10 12 15 17 10"/>
+          <line x1="12" y1="15" x2="12" y2="3"/>
+        </svg>
+        Export
+      </button>
+      <a href="#" class="btn-login">Login to contribute</a>
+    </div>
+
+    <div class="content">
+      <!-- Loading -->
+      <div class="state-overlay" id="state-loading">
+        <div class="spinner"></div>
+        <span class="state-title">Loading records …</span>
+      </div>
+
+      <!-- Empty -->
+      <div class="state-overlay hidden" id="state-empty">
+        <div class="state-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            <line x1="8" y1="11" x2="14" y2="11"/>
+          </svg>
+        </div>
+        <span class="state-title">No results found</span>
+        <span class="state-sub">Try adjusting your filters</span>
+      </div>
+
+      <!-- Error -->
+      <div class="state-overlay hidden" id="state-error">
+        <div class="state-icon-wrap" style="background:#fef0ee">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="12" y1="8" x2="12" y2="12"/>
+            <line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+        </div>
+        <span class="state-title">Something went wrong</span>
+        <div class="error-badge" id="error-message">Unknown error</div>
+      </div>
+
+      <!-- Table view -->
+      <div id="view-table" class="hidden">
+        <table class="data-table">
+          <thead id="table-head"></thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+
+      <!-- Map view -->
+      <div id="view-map" class="hidden">
+        <div id="map"></div>
+      </div>
+    </div><!-- /content -->
+	
+	<!--- Texts for modal boxes--->
+	<div id="footer-modal" class="modal hidden">
+	  <div class="modal-box">
+		<button id="modal-close">×</button>
+		<div id="modal-content">Default text</div>
+	  </div>
+	</div>
+	
+
+    <!-- ══════ FOOTER ══════ -->
+    <footer class="footer">
+      <span class="footer-copy">© 2026 XYZ</span>
+      <span class="footer-sep">·</span>
+      <a href="#">Terms</a>
+      <span class="footer-sep">·</span>
+      <a href="#">Imprint</a>
+      <span class="footer-sep">·</span>
+      <a href="#">Privacy</a>
+      <span class="footer-sep">·</span>
+      <a href="#">Accessibility</a>
+      <span class="footer-sep">·</span>
+      <a href="#">Contact</a>
+      <span class="footer-sep">·</span>
+      <a href="#">Docs</a>
+      <span class="footer-sep">·</span>
+      <a href="#">API</a>
+      <span class="footer-sep">·</span>
+      <a href="#">Changelog</a>
+      <span class="footer-sep">·</span>
+      <a href="#">About</a>
+      <span class="footer-powered">
+        powered by <a href="https://elter-ri.eu" target="_blank" rel="noopener">eLTER RI</a>
+      </span>
+    </footer>
+
+  </main>
+</div><!-- /app -->
+
+<script>
+// ─────────────────────────────────────────────────────────────────────────────
+// API CONFIG
+// ─────────────────────────────────────────────────────────────────────────────
+const API_BASE   = 'https://deims.org/api/sites';
+
+// ─────────────────────────────────────────────────────────────────────────────
+// HELPERS
+// ─────────────────────────────────────────────────────────────────────────────
+
+/** Parse "POINT (lng lat)" → { lat, lng } */
+function parsePoint(coordStr) {
+  if (!coordStr) return null;
+  const m = coordStr.match(/POINT\s*\(\s*([\d.\-]+)\s+([\d.\-]+)\s*\)/i);
+  if (!m) return null;
+  return { lng: parseFloat(m[1]), lat: parseFloat(m[2]) };
+}
+
+/** Full DEIMS URL from id object */
+function siteURL(item) {
+  return (item.id?.prefix ?? '') + (item.id?.suffix ?? '');
+}
+
+
+/** Format ISO date string to readable date */
+function fmtDate(iso) {
+  if (!iso) return '—';
+  return iso.slice(0, 10);
+}
+
+async function fetchJSON(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+  return res.json();
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// STATE
+// ─────────────────────────────────────────────────────────────────────────────
+let allData     = [];   // raw data from API (unfiltered)
+let currentData = [];   // filtered view
+let currentView = 'map';
+let leafletMap  = null;
+let mapMarkers  = null;
+let sortState   = { col: 'changed', dir: -1 };
+
+// ─────────────────────────────────────────────────────────────────────────────
+// LOAD DATA (on page load + re-apply)
+// ─────────────────────────────────────────────────────────────────────────────
+async function loadData() {
+  showState('loading');
+  try {
+    const country = document.getElementById('filter-country').value;
+    const url = country ? `${API_BASE}?country=${encodeURIComponent(country)}` : API_BASE;
+    const json = await fetchJSON(url);
+    allData = Array.isArray(json) ? json : [];
+
+    populateFilterOptions(allData);
+    applyClientFilters();
+  } catch (err) {
+    console.error(err);
+    document.getElementById('error-message').textContent = err.message;
+    showState('error');
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// CLIENT-SIDE FILTERING
+// ─────────────────────────────────────────────────────────────────────────────
+function applyClientFilters() {
+  currentData = allData;
+
+  document.getElementById('result-count').textContent = currentData.length;
+
+  if (currentData.length === 0) { showState('empty'); return; }
+  showState(null);
+  renderCurrentView();
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// POPULATE FILTER DROPDOWNS (from data)
+// ─────────────────────────────────────────────────────────────────────────────
+let filtersPopulated = false;
+function populateFilterOptions(data) {
+  // Country filter is a static ISO list — nothing to populate dynamically here
+}
+
+function populateSelect(id, options) {
+  const sel = document.getElementById(id);
+  options.forEach(opt => {
+    const el = document.createElement('option');
+    el.value       = typeof opt === 'object' ? opt.value : opt;
+    el.textContent = typeof opt === 'object' ? opt.label : opt;
+    sel.appendChild(el);
+  });
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// TABLE RENDER
+// ─────────────────────────────────────────────────────────────────────────────
+function renderTable(data) {
+  // Always apply current sort before rendering
+  const sorted = sortState.col
+    ? [...data].sort((a, b) =>
+        String(a[sortState.col] ?? '').localeCompare(String(b[sortState.col] ?? ''), undefined, { numeric: true }) * sortState.dir
+      )
+    : data;
+
+  // Build thead
+  const cols = [
+    { key: 'title',   label: 'Title' },
+    { key: 'changed', label: 'Last updated' },
+  ];
+
+  const thead = document.getElementById('table-head');
+  thead.innerHTML = `<tr>${cols.map(c => `
+    <th data-col="${c.key}" class="${sortState.col === c.key ? 'sorted' : ''}">
+      ${c.label}
+      <span class="sort-icon">${sortState.col === c.key ? (sortState.dir === 1 ? '↑' : '↓') : '↕'}</span>
+    </th>`).join('')}</tr>`;
+
+  thead.querySelectorAll('th').forEach(th => {
+    th.addEventListener('click', () => {
+      const col = th.dataset.col;
+      sortState.dir = sortState.col === col ? -sortState.dir : 1;
+      sortState.col = col;
+      renderTable(data);
+    });
+  });
+
+  // Build tbody
+  const tbody = document.getElementById('table-body');
+  tbody.innerHTML = sorted.map(item => {
+    const url = siteURL(item);
+    return `<tr>
+      <td title="${item.title}">
+        ${url ? `<a href="${url}" target="_blank" rel="noopener">${item.title}</a>` : item.title}
+      </td>
+      <td><span class="date-badge">${fmtDate(item.changed)}</span></td>
+    </tr>`;
+  }).join('');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Modals
+// ─────────────────────────────────────────────────────────────────────────────
+
+
+function setupFooterModals() {
+  const modal = document.getElementById('footer-modal');
+  const content = document.getElementById('modal-content');
+  const closeBtn = document.getElementById('modal-close');
+
+  // Default texts per link (optional mapping)
+  const texts = {
+    Terms: "These are the terms...",
+    Imprint: "Legal imprint info...",
+    Privacy: "Privacy policy goes here...",
+    Contact: "Contact us at xyz...",
+  };
+
+  document.querySelectorAll('.footer a').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      const label = link.textContent.trim();
+
+      // Use mapped text or fallback
+      content.textContent = texts[label] || "Default text for " + label;
+
+      modal.classList.remove('hidden');
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  });
+
+  // click outside to close
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.classList.add('hidden');
+    }
+  });
+}
+
+// run once
+setupFooterModals();
+
+// ─────────────────────────────────────────────────────────────────────────────
+// MAP RENDER
+// ─────────────────────────────────────────────────────────────────────────────
+
+function removeLeafletFlag() {
+  const el = document.querySelector('.leaflet-attribution-flag');
+  if (el) el.remove();
+}
+
+function initMap() {
+  if (leafletMap) return;
+  leafletMap = L.map('map').setView([47.5, 13.5], 7);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 18,
+  }).addTo(leafletMap);
+  mapMarkers = L.layerGroup().addTo(leafletMap);
+}
+
+function renderMap(data) {
+  initMap();
+  removeLeafletFlag();
+  mapMarkers.clearLayers();
+  const bounds = [];
+
+  data.forEach(item => {
+    const coords = parsePoint(item.coordinates);
+    if (!coords) return;
+
+    const url = siteURL(item);
+
+    const popup = `
+      <div class="popup-title">${item.title}</div>
+      <div class="popup-row">
+        <span class="popup-key">Updated</span>
+        <span class="popup-val">${fmtDate(item.changed)}</span>
+      </div>
+      <div class="popup-row">
+        <span class="popup-key">Coords</span>
+        <span class="popup-val">${coords.lat.toFixed(4)}, ${coords.lng.toFixed(4)}</span>
+      </div>
+      ${url ? `<a class="popup-link" href="${url}" target="_blank" rel="noopener">↗ View on DEIMS-SDR</a>` : ''}
+    `;
+
+    // Use divIcon for styled circular marker in eLTER palette
+    const icon = L.divIcon({
+      className: 'deims-marker',
+      iconSize:  [12, 12],
+      iconAnchor:[6, 6],
+      popupAnchor:[0, -8],
+    });
+
+    L.marker([coords.lat, coords.lng], { icon })
+      .bindPopup(popup, { maxWidth: 300 })
+      .addTo(mapMarkers);
+
+    bounds.push([coords.lat, coords.lng]);
+  });
+
+  if (bounds.length) {
+    leafletMap.fitBounds(bounds, { padding: [36, 36], maxZoom: 14 });
+  }
+  setTimeout(() => leafletMap.invalidateSize(), 60);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// VIEW SWITCHING
+// ─────────────────────────────────────────────────────────────────────────────
+function showView(view) {
+  currentView = view;
+  document.getElementById('view-table').classList.toggle('hidden', view !== 'table');
+  document.getElementById('view-map').classList.toggle('hidden',  view !== 'map');
+  document.getElementById('btn-table-view').classList.toggle('active', view === 'table');
+  document.getElementById('btn-map-view').classList.toggle('active',  view === 'map');
+  if (view === 'map' && leafletMap) setTimeout(() => leafletMap.invalidateSize(), 60);
+}
+
+function renderCurrentView() {
+  if (currentView === 'table') renderTable(currentData);
+  else                          renderMap(currentData);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// OVERLAY STATES
+// ─────────────────────────────────────────────────────────────────────────────
+const STATE_IDS = ['loading', 'empty', 'error'];
+function showState(name) {
+  STATE_IDS.forEach(id =>
+    document.getElementById(`state-${id}`).classList.toggle('hidden', id !== name)
+  );
+  const showViews = (name === null);
+  document.getElementById('view-table').classList.toggle('hidden', !showViews || currentView !== 'table');
+  document.getElementById('view-map').classList.toggle('hidden',  !showViews || currentView !== 'map');
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// RESET
+// ─────────────────────────────────────────────────────────────────────────────
+function resetFilters() {
+  // clear autocomplete inputs and hidden values
+  ['filter-country','filter-organisation','filter-network','filter-project','filter-habitat','filter-obsproperty'].forEach(id => {
+    const hidden = document.getElementById(id);
+    if (hidden) hidden.value = '';
+    const input = document.getElementById(id + '-input');
+    if (input) input.value = '';
+  });
+  // Re-fetch from API with cleared filters
+  loadData();
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// EVENT LISTENERS
+// ─────────────────────────────────────────────────────────────────────────────
+document.getElementById('btn-export').addEventListener('click', () => {
+  const country = document.getElementById('filter-country').value;
+  const params = new URLSearchParams({ format: 'csv', filename: 'deims_export' });
+  if (country) params.set('country', country);
+  window.open(`${API_BASE}?${params.toString()}`, '_blank');
+});
+
+
+// autocomplete wired below in $(document).ready
+document.getElementById('btn-reset').addEventListener('click', resetFilters);
+
+document.getElementById('btn-table-view').addEventListener('click', () => {
+  showView('table');
+  if (currentData.length) renderTable(currentData);
+});
+document.getElementById('btn-map-view').addEventListener('click', () => {
+  showView('map');
+  if (currentData.length) renderMap(currentData);
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// INIT — load data immediately on page load
+// ─────────────────────────────────────────────────────────────────────────────
+showState('loading');
+loadData();
+</script>
+<script>
+$(function () {
+  const countryData = [{"label": "Afghanistan", "value": "AF"}, {"label": "Albania", "value": "AL"}, {"label": "Algeria", "value": "DZ"}, {"label": "Andorra", "value": "AD"}, {"label": "Angola", "value": "AO"}, {"label": "Antigua and Barbuda", "value": "AG"}, {"label": "Argentina", "value": "AR"}, {"label": "Armenia", "value": "AM"}, {"label": "Australia", "value": "AU"}, {"label": "Austria", "value": "AT"}, {"label": "Azerbaijan", "value": "AZ"}, {"label": "Bahamas", "value": "BS"}, {"label": "Bahrain", "value": "BH"}, {"label": "Bangladesh", "value": "BD"}, {"label": "Barbados", "value": "BB"}, {"label": "Belarus", "value": "BY"}, {"label": "Belgium", "value": "BE"}, {"label": "Belize", "value": "BZ"}, {"label": "Benin", "value": "BJ"}, {"label": "Bhutan", "value": "BT"}, {"label": "Bolivia", "value": "BO"}, {"label": "Bosnia and Herzegovina", "value": "BA"}, {"label": "Botswana", "value": "BW"}, {"label": "Brazil", "value": "BR"}, {"label": "Brunei", "value": "BN"}, {"label": "Bulgaria", "value": "BG"}, {"label": "Burkina Faso", "value": "BF"}, {"label": "Burundi", "value": "BI"}, {"label": "Cabo Verde", "value": "CV"}, {"label": "Cambodia", "value": "KH"}, {"label": "Cameroon", "value": "CM"}, {"label": "Canada", "value": "CA"}, {"label": "Central African Republic", "value": "CF"}, {"label": "Chad", "value": "TD"}, {"label": "Chile", "value": "CL"}, {"label": "China", "value": "CN"}, {"label": "Colombia", "value": "CO"}, {"label": "Comoros", "value": "KM"}, {"label": "Congo", "value": "CG"}, {"label": "Congo (DR)", "value": "CD"}, {"label": "Costa Rica", "value": "CR"}, {"label": "Croatia", "value": "HR"}, {"label": "Cuba", "value": "CU"}, {"label": "Cyprus", "value": "CY"}, {"label": "Czech Republic", "value": "CZ"}, {"label": "Denmark", "value": "DK"}, {"label": "Djibouti", "value": "DJ"}, {"label": "Dominica", "value": "DM"}, {"label": "Dominican Republic", "value": "DO"}, {"label": "Ecuador", "value": "EC"}, {"label": "Egypt", "value": "EG"}, {"label": "El Salvador", "value": "SV"}, {"label": "Equatorial Guinea", "value": "GQ"}, {"label": "Eritrea", "value": "ER"}, {"label": "Estonia", "value": "EE"}, {"label": "Eswatini", "value": "SZ"}, {"label": "Ethiopia", "value": "ET"}, {"label": "Fiji", "value": "FJ"}, {"label": "Finland", "value": "FI"}, {"label": "France", "value": "FR"}, {"label": "Gabon", "value": "GA"}, {"label": "Gambia", "value": "GM"}, {"label": "Georgia", "value": "GE"}, {"label": "Germany", "value": "DE"}, {"label": "Ghana", "value": "GH"}, {"label": "Greece", "value": "GR"}, {"label": "Grenada", "value": "GD"}, {"label": "Guatemala", "value": "GT"}, {"label": "Guinea", "value": "GN"}, {"label": "Guinea-Bissau", "value": "GW"}, {"label": "Guyana", "value": "GY"}, {"label": "Haiti", "value": "HT"}, {"label": "Honduras", "value": "HN"}, {"label": "Hungary", "value": "HU"}, {"label": "Iceland", "value": "IS"}, {"label": "India", "value": "IN"}, {"label": "Indonesia", "value": "ID"}, {"label": "Iran", "value": "IR"}, {"label": "Iraq", "value": "IQ"}, {"label": "Ireland", "value": "IE"}, {"label": "Israel", "value": "IL"}, {"label": "Italy", "value": "IT"}, {"label": "Jamaica", "value": "JM"}, {"label": "Japan", "value": "JP"}, {"label": "Jordan", "value": "JO"}, {"label": "Kazakhstan", "value": "KZ"}, {"label": "Kenya", "value": "KE"}, {"label": "Kiribati", "value": "KI"}, {"label": "Kuwait", "value": "KW"}, {"label": "Kyrgyzstan", "value": "KG"}, {"label": "Laos", "value": "LA"}, {"label": "Latvia", "value": "LV"}, {"label": "Lebanon", "value": "LB"}, {"label": "Lesotho", "value": "LS"}, {"label": "Liberia", "value": "LR"}, {"label": "Libya", "value": "LY"}, {"label": "Liechtenstein", "value": "LI"}, {"label": "Lithuania", "value": "LT"}, {"label": "Luxembourg", "value": "LU"}, {"label": "Madagascar", "value": "MG"}, {"label": "Malawi", "value": "MW"}, {"label": "Malaysia", "value": "MY"}, {"label": "Maldives", "value": "MV"}, {"label": "Mali", "value": "ML"}, {"label": "Malta", "value": "MT"}, {"label": "Marshall Islands", "value": "MH"}, {"label": "Mauritania", "value": "MR"}, {"label": "Mauritius", "value": "MU"}, {"label": "Mexico", "value": "MX"}, {"label": "Micronesia", "value": "FM"}, {"label": "Moldova", "value": "MD"}, {"label": "Monaco", "value": "MC"}, {"label": "Mongolia", "value": "MN"}, {"label": "Montenegro", "value": "ME"}, {"label": "Morocco", "value": "MA"}, {"label": "Mozambique", "value": "MZ"}, {"label": "Myanmar", "value": "MM"}, {"label": "Namibia", "value": "NA"}, {"label": "Nauru", "value": "NR"}, {"label": "Nepal", "value": "NP"}, {"label": "Netherlands", "value": "NL"}, {"label": "New Zealand", "value": "NZ"}, {"label": "Nicaragua", "value": "NI"}, {"label": "Niger", "value": "NE"}, {"label": "Nigeria", "value": "NG"}, {"label": "North Korea", "value": "KP"}, {"label": "North Macedonia", "value": "MK"}, {"label": "Norway", "value": "NO"}, {"label": "Oman", "value": "OM"}, {"label": "Pakistan", "value": "PK"}, {"label": "Palau", "value": "PW"}, {"label": "Panama", "value": "PA"}, {"label": "Papua New Guinea", "value": "PG"}, {"label": "Paraguay", "value": "PY"}, {"label": "Peru", "value": "PE"}, {"label": "Philippines", "value": "PH"}, {"label": "Poland", "value": "PL"}, {"label": "Portugal", "value": "PT"}, {"label": "Qatar", "value": "QA"}, {"label": "Romania", "value": "RO"}, {"label": "Russia", "value": "RU"}, {"label": "Rwanda", "value": "RW"}, {"label": "Saint Kitts and Nevis", "value": "KN"}, {"label": "Saint Lucia", "value": "LC"}, {"label": "Saint Vincent and the Grenadines", "value": "VC"}, {"label": "Samoa", "value": "WS"}, {"label": "San Marino", "value": "SM"}, {"label": "Sao Tome and Principe", "value": "ST"}, {"label": "Saudi Arabia", "value": "SA"}, {"label": "Senegal", "value": "SN"}, {"label": "Serbia", "value": "RS"}, {"label": "Seychelles", "value": "SC"}, {"label": "Sierra Leone", "value": "SL"}, {"label": "Singapore", "value": "SG"}, {"label": "Slovakia", "value": "SK"}, {"label": "Slovenia", "value": "SI"}, {"label": "Solomon Islands", "value": "SB"}, {"label": "Somalia", "value": "SO"}, {"label": "South Africa", "value": "ZA"}, {"label": "South Korea", "value": "KR"}, {"label": "South Sudan", "value": "SS"}, {"label": "Spain", "value": "ES"}, {"label": "Sri Lanka", "value": "LK"}, {"label": "Sudan", "value": "SD"}, {"label": "Suriname", "value": "SR"}, {"label": "Sweden", "value": "SE"}, {"label": "Switzerland", "value": "CH"}, {"label": "Syria", "value": "SY"}, {"label": "Taiwan", "value": "TW"}, {"label": "Tajikistan", "value": "TJ"}, {"label": "Tanzania", "value": "TZ"}, {"label": "Thailand", "value": "TH"}, {"label": "Timor-Leste", "value": "TL"}, {"label": "Togo", "value": "TG"}, {"label": "Tonga", "value": "TO"}, {"label": "Trinidad and Tobago", "value": "TT"}, {"label": "Tunisia", "value": "TN"}, {"label": "Turkey", "value": "TR"}, {"label": "Turkmenistan", "value": "TM"}, {"label": "Tuvalu", "value": "TV"}, {"label": "Uganda", "value": "UG"}, {"label": "Ukraine", "value": "UA"}, {"label": "United Arab Emirates", "value": "AE"}, {"label": "United Kingdom", "value": "GB"}, {"label": "United States", "value": "US"}, {"label": "Uruguay", "value": "UY"}, {"label": "Uzbekistan", "value": "UZ"}, {"label": "Vanuatu", "value": "VU"}, {"label": "Venezuela", "value": "VE"}, {"label": "Vietnam", "value": "VN"}, {"label": "Yemen", "value": "YE"}, {"label": "Zambia", "value": "ZM"}, {"label": "Zimbabwe", "value": "ZW"}];
+
+  $('#filter-country-input').autocomplete({
+    source: function (req, res) {
+      const term = req.term.toLowerCase();
+      res(countryData.filter(c => c.label.toLowerCase().includes(term)));
+    },
+    minLength: 0,
+    select: function (event, ui) {
+      $(this).val(ui.item.label);
+      $('#filter-country').val(ui.item.value);
+      loadData();
+      return false;
+    },
+    change: function (event, ui) {
+      if (!ui.item) {
+        $(this).val('');
+        $('#filter-country').val('');
+        loadData();
+      }
+    }
+  }).on('focus', function () {
+    $(this).autocomplete('search', '');
+  });
+});
+</script>
+
+</body>
+</html>
